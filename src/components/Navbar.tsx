@@ -2,7 +2,7 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { 
   Shield, 
   BookOpen, 
@@ -21,18 +21,37 @@ import {
   Compass,
   Trophy,
   Sparkles,
-  ExternalLink
+  User,
+  UserCheck,
+  LogOut,
+  KeyRound
 } from 'lucide-react';
 import { ACADEMY_CONFIG } from '@/lib/constants';
+import { getCurrentUser, logoutUser, CadetSession } from '@/lib/auth';
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<'courses' | 'tests' | null>(null);
+  const [activeDropdown, setActiveDropdown] = useState<'courses' | 'tests' | 'user' | null>(null);
   const [mobileCoursesOpen, setMobileCoursesOpen] = useState(false);
   const [mobileTestsOpen, setMobileTestsOpen] = useState(false);
+  const [currentUser, setCurrentUser] = useState<CadetSession | null>(null);
   const pathname = usePathname();
+  const router = useRouter();
   const navContainerRef = useRef<HTMLDivElement>(null);
   const dropdownTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  // Sync auth state
+  useEffect(() => {
+    const user = getCurrentUser();
+    setCurrentUser(user);
+
+    const handleAuthChange = () => {
+      setCurrentUser(getCurrentUser());
+    };
+
+    window.addEventListener('bfa_auth_changed', handleAuthChange);
+    return () => window.removeEventListener('bfa_auth_changed', handleAuthChange);
+  }, []);
 
   // Close dropdown on route change
   useEffect(() => {
@@ -51,7 +70,7 @@ export default function Navbar() {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-  const handleMouseEnter = (menu: 'courses' | 'tests') => {
+  const handleMouseEnter = (menu: 'courses' | 'tests' | 'user') => {
     if (dropdownTimeoutRef.current) {
       clearTimeout(dropdownTimeoutRef.current);
     }
@@ -62,6 +81,12 @@ export default function Navbar() {
     dropdownTimeoutRef.current = setTimeout(() => {
       setActiveDropdown(null);
     }, 200);
+  };
+
+  const handleSignOut = () => {
+    logoutUser();
+    setCurrentUser(null);
+    router.push('/login');
   };
 
   return (
@@ -83,6 +108,44 @@ export default function Navbar() {
           </div>
 
           <div className="flex items-center gap-4 text-gray-300">
+            {/* Top Quick Auth Links (if not logged in) */}
+            {!currentUser ? (
+              <div className="hidden lg:flex items-center gap-3 text-[11px]">
+                <Link href="/login" className="text-gray-300 hover:text-honor-gold flex items-center gap-1 font-medium transition-colors">
+                  <User className="w-3 h-3 text-honor-gold" />
+                  <span>Cadet Login</span>
+                </Link>
+                <span className="text-gray-600">|</span>
+                <Link href="/register" className="text-honor-gold hover:underline font-bold transition-colors">
+                  New Registration
+                </Link>
+                <span className="text-gray-600">|</span>
+                <Link href="/admin/login" className="text-gray-400 hover:text-white flex items-center gap-1 transition-colors">
+                  <Lock className="w-3 h-3 text-gray-500" />
+                  <span>Admin</span>
+                </Link>
+                <span className="text-gray-600">|</span>
+              </div>
+            ) : (
+              <div className="hidden lg:flex items-center gap-3 text-[11px]">
+                <Link 
+                  href={currentUser.role === 'admin' ? '/admin/courses' : '/portal/dashboard'} 
+                  className="text-honor-gold font-bold hover:underline flex items-center gap-1"
+                >
+                  <UserCheck className="w-3.5 h-3.5" />
+                  <span>{currentUser.role === 'admin' ? 'Officer HQ' : `Cadet: ${currentUser.full_name}`}</span>
+                </Link>
+                <button 
+                  onClick={handleSignOut}
+                  className="text-gray-400 hover:text-red-400 flex items-center gap-1 transition-colors"
+                >
+                  <LogOut className="w-3 h-3" />
+                  <span>Sign Out</span>
+                </button>
+                <span className="text-gray-600">|</span>
+              </div>
+            )}
+
             <a 
               href={`tel:${ACADEMY_CONFIG.phoneRaw}`}
               className="hover:text-honor-gold flex items-center gap-1.5 transition-colors font-medium"
@@ -124,7 +187,7 @@ export default function Navbar() {
             {/* Home */}
             <Link
               href="/"
-              className={`px-3.5 py-2 rounded-lg text-sm font-semibold transition-all ${
+              className={`px-3 py-2 rounded-lg text-sm font-semibold transition-all ${
                 pathname === '/' 
                   ? 'bg-[#2A5A44] text-honor-gold border border-honor-gold/40' 
                   : 'text-gray-200 hover:text-white hover:bg-[#2A5A44]/60'
@@ -141,7 +204,7 @@ export default function Navbar() {
             >
               <button
                 onClick={() => setActiveDropdown(activeDropdown === 'courses' ? null : 'courses')}
-                className={`px-3.5 py-2 rounded-lg text-sm font-semibold flex items-center gap-1.5 transition-all ${
+                className={`px-3 py-2 rounded-lg text-sm font-semibold flex items-center gap-1.5 transition-all ${
                   activeDropdown === 'courses' || pathname.startsWith('/courses')
                     ? 'bg-[#2A5A44] text-honor-gold border border-honor-gold/40' 
                     : 'text-gray-200 hover:text-white hover:bg-[#2A5A44]/60'
@@ -376,7 +439,7 @@ export default function Navbar() {
             >
               <button
                 onClick={() => setActiveDropdown(activeDropdown === 'tests' ? null : 'tests')}
-                className={`px-3.5 py-2 rounded-lg text-sm font-semibold flex items-center gap-1.5 transition-all ${
+                className={`px-3 py-2 rounded-lg text-sm font-semibold flex items-center gap-1.5 transition-all ${
                   activeDropdown === 'tests' || pathname.startsWith('/tests') || pathname.startsWith('/portal/leaderboard')
                     ? 'bg-[#2A5A44] text-honor-gold border border-honor-gold/40' 
                     : 'text-gray-200 hover:text-white hover:bg-[#2A5A44]/60'
@@ -453,7 +516,7 @@ export default function Navbar() {
             {/* Admission & Roll Slip */}
             <Link
               href="/admission-form"
-              className={`px-3.5 py-2 rounded-lg text-sm font-semibold flex items-center gap-1.5 transition-all ${
+              className={`px-3 py-2 rounded-lg text-sm font-semibold flex items-center gap-1.5 transition-all ${
                 pathname === '/admission-form' 
                   ? 'bg-[#2A5A44] text-honor-gold border border-honor-gold/40' 
                   : 'text-gray-200 hover:text-white hover:bg-[#2A5A44]/60'
@@ -463,28 +526,67 @@ export default function Navbar() {
               <span>Admission & Roll Slip</span>
             </Link>
 
-            {/* Admin Suite */}
-            <Link
-              href="/admin/courses"
-              className={`px-3 py-2 rounded-lg text-xs font-semibold flex items-center gap-1.5 transition-all ${
-                pathname.startsWith('/admin') 
-                  ? 'bg-[#2A5A44] text-honor-gold border border-honor-gold/40' 
-                  : 'text-gray-300 hover:text-white hover:bg-[#2A5A44]/40'
-              }`}
-              title="Admin Portal"
-            >
-              <Lock className="w-3.5 h-3.5 text-gray-400" />
-              <span>Admin</span>
-            </Link>
+            {/* Cadet Portal Direct Link (if logged in) or Admin */}
+            {currentUser ? (
+              <Link
+                href={currentUser.role === 'admin' ? '/admin/courses' : '/portal/dashboard'}
+                className={`px-3 py-2 rounded-lg text-sm font-semibold flex items-center gap-1.5 transition-all ${
+                  pathname.startsWith('/portal/dashboard') || pathname.startsWith('/admin')
+                    ? 'bg-[#2A5A44] text-honor-gold border border-honor-gold/40' 
+                    : 'text-emerald-300 hover:text-white hover:bg-[#2A5A44]/60'
+                }`}
+              >
+                <UserCheck className="w-4 h-4 text-emerald-400" />
+                <span>{currentUser.role === 'admin' ? 'Officer Portal' : 'My Dashboard'}</span>
+              </Link>
+            ) : (
+              <Link
+                href="/admin/login"
+                className={`px-2.5 py-2 rounded-lg text-xs font-semibold flex items-center gap-1 transition-all ${
+                  pathname.startsWith('/admin') 
+                    ? 'bg-[#2A5A44] text-honor-gold border border-honor-gold/40' 
+                    : 'text-gray-300 hover:text-white hover:bg-[#2A5A44]/40'
+                }`}
+                title="Admin Officer Portal"
+              >
+                <Lock className="w-3.5 h-3.5 text-gray-400" />
+                <span>Admin</span>
+              </Link>
+            )}
           </nav>
 
-          {/* Right Action: WhatsApp CTA Button */}
-          <div className="hidden sm:flex items-center gap-3">
+          {/* Right Action: Auth CTA + WhatsApp CTA Button */}
+          <div className="hidden sm:flex items-center gap-2.5">
+            {!currentUser ? (
+              <div className="flex items-center gap-2">
+                <Link
+                  href="/login"
+                  className="px-3 py-2 rounded-xl text-xs font-bold text-gray-200 hover:text-white hover:bg-[#2A5A44] transition-colors border border-transparent hover:border-[#2A5A44]"
+                >
+                  Cadet Sign In
+                </Link>
+                <Link
+                  href="/register"
+                  className="px-3.5 py-2 rounded-xl text-xs font-bold text-honor-gold bg-[#0F261C] border border-honor-gold/60 hover:border-honor-gold hover:bg-[#183B2B] transition-all shadow-sm"
+                >
+                  Register
+                </Link>
+              </div>
+            ) : (
+              <Link
+                href={currentUser.role === 'admin' ? '/admin/courses' : '/portal/dashboard'}
+                className="px-3 py-2 rounded-xl text-xs font-bold text-honor-gold bg-[#0F261C] border border-honor-gold/60 hover:bg-[#183B2B] flex items-center gap-1.5 transition-all"
+              >
+                <User className="w-3.5 h-3.5 text-honor-gold" />
+                <span className="max-w-[100px] truncate">{currentUser.full_name}</span>
+              </Link>
+            )}
+
             <a
               href={`https://wa.me/${ACADEMY_CONFIG.phoneRaw}?text=${encodeURIComponent('Assalam-o-Alaikum Sir Faryad Tabassum, I want admission guidance for The Best Forces Academy courses.')}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#25D366] hover:bg-[#20ba5a] text-white px-4 py-2.5 rounded-xl text-sm font-bold flex items-center gap-2 shadow-lg transition-all hover:scale-105 active:scale-95"
+              className="bg-[#25D366] hover:bg-[#20ba5a] text-white px-3.5 py-2.5 rounded-xl text-xs font-bold flex items-center gap-1.5 shadow-lg transition-all hover:scale-105 active:scale-95"
             >
               <MessageCircle className="w-4 h-4 fill-white" />
               <span>WhatsApp Sir Faryad</span>
@@ -508,11 +610,59 @@ export default function Navbar() {
       {mobileMenuOpen && (
         <div className="xl:hidden bg-[#0F261C] border-b border-[#2A5A44] px-4 pt-3 pb-8 space-y-3 max-h-[85vh] overflow-y-auto">
           
+          {/* User Status Bar in Mobile */}
+          {currentUser ? (
+            <div className="p-3 rounded-xl bg-[#183B2B] border border-honor-gold/40 flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <div className="w-8 h-8 rounded-lg bg-[#0F261C] text-honor-gold flex items-center justify-center font-bold">
+                  <User className="w-4 h-4" />
+                </div>
+                <div>
+                  <div className="text-xs font-bold text-white">{currentUser.full_name}</div>
+                  <div className="text-[10px] text-honor-gold">Roll: {currentUser.roll_number}</div>
+                </div>
+              </div>
+              <div className="flex items-center gap-2">
+                <Link
+                  href={currentUser.role === 'admin' ? '/admin/courses' : '/portal/dashboard'}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="px-2.5 py-1 text-[11px] font-bold rounded-lg bg-emerald-600 text-white"
+                >
+                  Dashboard
+                </Link>
+                <button
+                  onClick={handleSignOut}
+                  className="p-1 text-gray-400 hover:text-red-400"
+                  title="Sign Out"
+                >
+                  <LogOut className="w-4 h-4" />
+                </button>
+              </div>
+            </div>
+          ) : (
+            <div className="grid grid-cols-2 gap-2 pb-2 border-b border-[#2A5A44]">
+              <Link
+                href="/login"
+                onClick={() => setMobileMenuOpen(false)}
+                className="py-2.5 text-center text-xs font-bold rounded-xl bg-[#2A5A44] text-white hover:bg-[#346E53]"
+              >
+                Cadet Sign In
+              </Link>
+              <Link
+                href="/register"
+                onClick={() => setMobileMenuOpen(false)}
+                className="py-2.5 text-center text-xs font-bold rounded-xl bg-honor-gold text-[#0F261C] hover:bg-[#d4ab3b]"
+              >
+                Register Cadet
+              </Link>
+            </div>
+          )}
+
           {/* Home Link */}
           <Link
             href="/"
             onClick={() => setMobileMenuOpen(false)}
-            className="block px-3 py-2.5 rounded-lg text-sm font-bold text-gray-200 hover:text-white hover:bg-[#2A5A44]"
+            className="block px-3 py-2 rounded-lg text-sm font-bold text-gray-200 hover:text-white hover:bg-[#2A5A44]"
           >
             Home
           </Link>
@@ -640,14 +790,14 @@ export default function Navbar() {
             <span>Admission Form & Roll Slip</span>
           </Link>
 
-          {/* Admin Portal */}
+          {/* Officer Command Center Link */}
           <Link
-            href="/admin/courses"
+            href="/admin/login"
             onClick={() => setMobileMenuOpen(false)}
-            className="flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-semibold text-gray-400 hover:text-white"
+            className="flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-semibold text-gray-400 hover:text-honor-gold"
           >
             <Lock className="w-3.5 h-3.5" />
-            <span>Admin Portal</span>
+            <span>Officer Command Portal</span>
           </Link>
 
           {/* Mobile WhatsApp Button */}
