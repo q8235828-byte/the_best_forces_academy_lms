@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1100" viewBox="0 0 800 1100" style="background:#ffffff; font-family:'Segoe UI',Arial,sans-serif;">
+  <!-- Border -->
+  <rect x="25" y="25" width="750" height="1050" fill="#ffffff" stroke="#183B2B" stroke-width="4"/>
+  <rect x="32" y="32" width="736" height="1036" fill="none" stroke="#C59B27" stroke-width="1.5"/>
+
+  <!-- Header Header Logo / Insignia -->
+  <circle cx="400" cy="85" r="30" fill="#183B2B" stroke="#C59B27" stroke-width="2"/>
+  <text x="400" y="93" font-size="22" font-weight="bold" fill="#C59B27" text-anchor="middle">★</text>
+
+  <!-- Board Title -->
+  <text x="400" y="145" text-anchor="middle" font-size="19" font-weight="900" fill="#0F261C" letter-spacing="1">
+    BOARD OF INTERMEDIATE &amp; SECONDARY EDUCATION, RAWALPINDI
+  </text>
+  <text x="400" y="170" text-anchor="middle" font-size="13" font-weight="bold" fill="#183B2B" letter-spacing="2">
+    PROVISIONAL RESULT INTIMATION
+  </text>
+  <text x="400" y="195" text-anchor="middle" font-size="14" font-weight="800" fill="#222">
+    SECONDARY SCHOOL CERTIFICATE (ANNUAL) EXAMINATION, 2021
+  </text>
+
+  <line x1="50" y1="215" x2="750" y2="215" stroke="#183B2B" stroke-width="2"/>
+
+  <!-- Candidate Details Table -->
+  <text x="60" y="250" font-size="12" font-weight="bold" fill="#666">ROLL NO.</text>
+  <text x="180" y="250" font-size="16" font-weight="900" fill="#0F261C">294180</text>
+
+  <text x="480" y="250" font-size="12" font-weight="bold" fill="#666">GROUP:</text>
+  <text x="560" y="250" font-size="14" font-weight="900" fill="#0F261C">SCIENCE</text>
+
+  <text x="60" y="285" font-size="12" font-weight="bold" fill="#666">CANDIDATE NAME:</text>
+  <text x="210" y="285" font-size="15" font-weight="900" fill="#0F261C">HAMZA TARIQ</text>
+
+  <text x="480" y="285" font-size="12" font-weight="bold" fill="#666">B-FORM / CNIC:</text>
+  <text x="600" y="285" font-size="13" font-weight="bold" fill="#183B2B" font-family="monospace">37405-8192345-1</text>
+
+  <text x="60" y="320" font-size="12" font-weight="bold" fill="#666">FATHER'S NAME:</text>
+  <text x="210" y="320" font-size="14" font-weight="800" fill="#222">TARIQ MEHMOOD</text>
+
+  <text x="480" y="320" font-size="12" font-weight="bold" fill="#666">DATE OF BIRTH:</text>
+  <text x="600" y="320" font-size="13" font-weight="bold" fill="#0F261C">15/09/2005</text>
+
+  <text x="60" y="355" font-size="12" font-weight="bold" fill="#666">INSTITUTION / DISTRICT:</text>
+  <text x="240" y="355" font-size="13" font-weight="800" fill="#0F261C">CADET COLLEGE HASAN ABDAL, RAWALPINDI</text>
+
+  <line x1="50" y1="375" x2="750" y2="375" stroke="#ccc" stroke-width="1"/>
+
+  <!-- Marks Table Header -->
+  <rect x="50" y="390" width="700" height="32" fill="#183B2B"/>
+  <text x="65" y="412" font-size="12" font-weight="bold" fill="#ffffff">SUBJECT</text>
+  <text x="350" y="412" font-size="12" font-weight="bold" fill="#ffffff">MAX MARKS</text>
+  <text x="500" y="412" font-size="12" font-weight="bold" fill="#ffffff">MARKS OBTAINED</text>
+  <text x="680" y="412" font-size="12" font-weight="bold" fill="#ffffff">STATUS</text>
+
+  <!-- Rows -->
+  <g font-size="12" fill="#333">
+    <rect x="50" y="422" width="700" height="28" fill="#f8fafc"/>
+    <text x="65" y="441">ENGLISH (COMPULSORY)</text>
+    <text x="375" y="441">150</text>
+    <text x="535" y="441" font-weight="bold">138</text>
+    <text x="680" y="441" fill="#183B2B" font-weight="bold">PASS</text>
+
+    <rect x="50" y="450" width="700" height="28" fill="#ffffff"/>
+    <text x="65" y="469">URDU (COMPULSORY)</text>
+    <text x="375" y="469">150</text>
+    <text x="535" y="469" font-weight="bold">135</text>
+    <text x="680" y="469" fill="#183B2B" font-weight="bold">PASS</text>
+
+    <rect x="50" y="478" width="700" height="28" fill="#f8fafc"/>
+    <text x="65" y="497">ISLAMIC EDUCATION / ETHICS</text>
+    <text x="375" y="497">100</text>
+    <text x="535" y="497" font-weight="bold">94</text>
+    <text x="680" y="497" fill="#183B2B" font-weight="bold">PASS</text>
+
+    <rect x="50" y="506" width="700" height="28" fill="#ffffff"/>
+    <text x="65" y="525">PAKISTAN STUDIES</text>
+    <text x="375" y="525">100</text>
+    <text x="535" y="525" font-weight="bold">91</text>
+    <text x="680" y="525" fill="#183B2B" font-weight="bold">PASS</text>
+
+    <rect x="50" y="534" width="700" height="28" fill="#f8fafc"/>
+    <text x="65" y="553">MATHEMATICS (SCIENCE)</text>
+    <text x="375" y="553">150</text>
+    <text x="535" y="553" font-weight="bold">144</text>
+    <text x="680" y="553" fill="#183B2B" font-weight="bold">PASS</text>
+
+    <rect x="50" y="562" width="700" height="28" fill="#ffffff"/>
+    <text x="65" y="581">PHYSICS (THEORY + PRACTICAL)</text>
+    <text x="375" y="581">150</text>
+    <text x="535" y="581" font-weight="bold">142</text>
+    <text x="680" y="581" fill="#183B2B" font-weight="bold">PASS</text>
+
+    <rect x="50" y="590" width="700" height="28" fill="#f8fafc"/>
+    <text x="65" y="609">CHEMISTRY (THEORY + PRACTICAL)</text>
+    <text x="375" y="609">150</text>
+    <text x="535" y="609" font-weight="bold">136</text>
+    <text x="680" y="609" fill="#183B2B" font-weight="bold">PASS</text>
+
+    <rect x="50" y="618" width="700" height="28" fill="#ffffff"/>
+    <text x="65" y="637">COMPUTER SCIENCE</text>
+    <text x="375" y="637">150</text>
+    <text x="535" y="637" font-weight="bold">106</text>
+    <text x="680" y="637" fill="#183B2B" font-weight="bold">PASS</text>
+  </g>
+
+  <!-- Total Summary Banner -->
+  <rect x="50" y="660" width="700" height="50" fill="#0F261C" rx="8"/>
+  <text x="80" y="692" font-size="15" font-weight="bold" fill="#C59B27">TOTAL MARKS: 1100</text>
+  <text x="320" y="692" font-size="16" font-weight="900" fill="#ffffff">MARKS OBTAINED: 986</text>
+  <text x="560" y="692" font-size="15" font-weight="900" fill="#4ade80">GRADE: A-ONE (A+)</text>
+
+  <text x="400" y="735" text-anchor="middle" font-size="13" font-weight="bold" fill="#183B2B" font-style="italic">
+    The candidate has passed and obtained marks: Nine Hundred Eighty-Six Only.
+  </text>
+
+  <!-- Footer Signatures -->
+  <line x1="50" y1="760" x2="750" y2="760" stroke="#ccc" stroke-width="1"/>
+  
+  <text x="80" y="800" font-size="11" font-weight="bold" fill="#666">DATED: 16-07-2021</text>
+  <text x="80" y="818" font-size="10" fill="#999">SYSTEM VERIFIED SERIAL: RWP-9281726</text>
+
+  <g transform="translate(560, 780)">
+    <line x1="0" y1="0" x2="150" y2="0" stroke="#333" stroke-width="1.5"/>
+    <text x="75" y="16" text-anchor="middle" font-size="11" font-weight="900" fill="#183B2B">CONTROLLER OF EXAMINATIONS</text>
+    <text x="75" y="30" text-anchor="middle" font-size="9" fill="#666">BISE RAWALPINDI</text>
+  </g>
+</svg>

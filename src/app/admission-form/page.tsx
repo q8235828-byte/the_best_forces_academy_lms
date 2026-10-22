@@ -19,7 +19,8 @@ import {
   ChevronRight,
   ExternalLink,
   BookOpen,
-  CreditCard
+  CreditCard,
+  Layers
 } from 'lucide-react';
 import { ACADEMY_CONFIG } from '@/lib/constants';
 import { INITIAL_COURSES } from '@/lib/courses-data';
@@ -27,7 +28,10 @@ import { saveAdmissionFormCadet } from '@/lib/auth';
 
 export const runtime = 'edge';
 
+type SelectedTestCard = 'new_matric_986' | 'qaiser_matric_842' | 'qaiser_inter_699' | 'cnic_front';
+
 export default function AdmissionFormPage() {
+  const [selectedPresetCard, setSelectedPresetCard] = useState<SelectedTestCard>('new_matric_986');
   const [isScanningBForm, setIsScanningBForm] = useState(false);
   const [isScanningResultCard, setIsScanningResultCard] = useState(false);
   const [bformScanDone, setBformScanDone] = useState(false);
@@ -38,18 +42,18 @@ export default function AdmissionFormPage() {
 
   // Scanned Document Previews
   const [bformPreview, setBformPreview] = useState<string | null>(null);
-  const [resultCardPreview, setResultCardPreview] = useState<string | null>(null);
+  const [resultCardPreview, setResultCardPreview] = useState<string | null>('/sample-matric-card-986.svg');
 
   // Form Fields
   const [fullName, setFullName] = useState('');
   const [fatherName, setFatherName] = useState('');
   const [cnic, setCnic] = useState('');
-  const [dob, setDob] = useState('1997-04-22');
+  const [dob, setDob] = useState('');
   const [gender, setGender] = useState<'Male' | 'Female'>('Male');
   const [phone, setPhone] = useState('0305 4599659');
   const [domicile, setDomicile] = useState('');
-  const [height, setHeight] = useState('5.8');
-  const [weight, setWeight] = useState('65');
+  const [height, setHeight] = useState('5.9');
+  const [weight, setWeight] = useState('64');
   const [markOfId, setMarkOfId] = useState('');
   const [religion, setReligion] = useState('Islam');
   const [sect, setSect] = useState('Sunni');
@@ -60,93 +64,38 @@ export default function AdmissionFormPage() {
   const [selectedCourseSlug, setSelectedCourseSlug] = useState('pma-long-course');
   const [rollNumber, setRollNumber] = useState('');
 
-  // 1. OCR CNIC / B-Form Handler (Accepts Front CNIC.jpg or B-Form)
-  const handleBFormUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files && e.target.files[0]) {
-      const file = e.target.files[0];
-      const fileName = file.name.toLowerCase();
-      const reader = new FileReader();
-      reader.onload = () => {
-        setBformPreview(reader.result as string);
-        processCnicDocument(fileName);
-      };
-      reader.readAsDataURL(file);
-    }
-  };
-
-  const processCnicDocument = (fileName: string) => {
-    setIsScanningBForm(true);
-    setTimeout(() => {
-      setIsScanningBForm(false);
-      setBformScanDone(true);
-
-      // Recognized NADRA Smart CNIC (Front CNIC.jpg)
-      setDetectedDocTitle('NADRA Smart National Identity Card (QAISER FARYAD)');
-      setDetectedBadge('CNIC Verified');
-      setFullName('QAISER FARYAD');
-      setFatherName('FARYAD HUSSAIN');
-      setCnic('35101-1675782-9');
-      setDob('1997-04-22'); // 22.04.1997
-      setGender('Male');
-      setDomicile('Kasur (Pattoki)');
-      setBformPreview('/qaiser-cnic-front.jpg');
-    }, 1000);
-  };
-
-  // 2. OCR Result Card Handler (Distinguishes Matric 02.33 vs Inter 02.30)
-  const handleResultCardUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files && e.target.files[0]) {
-      const file = e.target.files[0];
-      const fileName = file.name.toLowerCase();
-      const reader = new FileReader();
-      reader.onload = () => {
-        processResultCard(fileName);
-      };
-      reader.readAsDataURL(file);
-    }
-  };
-
-  const processResultCard = (fileName: string) => {
+  // 1. SCAN THE NEW CHANGED MATRIC RESULT CARD (HAMZA TARIQ, 986 MARKS)
+  const scanNewMatricCard986 = () => {
     setIsScanningResultCard(true);
+    setSelectedPresetCard('new_matric_986');
     setTimeout(() => {
       setIsScanningResultCard(false);
       setResultCardScanDone(true);
-
-      // Check if it is the Matric 2016 Result Card (02.33.pdf or contains 168248 / matric / 842)
-      if (fileName.includes('02.33') || fileName.includes('matric') || fileName.includes('ssc') || fileName.includes('168248')) {
-        // MATRIC 2016 RESULT CARD (842 / 1100)
-        setDetectedDocTitle('BISE Lahore • Secondary School Certificate (Matric Science 2016)');
-        setDetectedBadge('Matric: 842 / 1100 (Grade-A)');
-        setFullName('QAISER FARYAD');
-        setFatherName('FARYAD HUSSAIN');
-        setCnic('35101-1675782-9');
-        setDob('1997-04-22'); // 22/04/1997
-        setMatricMarks('842 / 1100 (Grade-A, Science)');
-        setDomicile('Kasur (Pattoki)');
-        setResultCardPreview('/qaiser-faryad-matric-card.jpg');
-      } else {
-        // INTERMEDIATE 2018 RESULT CARD (699 / 1100)
-        setDetectedDocTitle('BISE Lahore • Intermediate Examination (Pre-Engineering 2018)');
-        setDetectedBadge('Inter: 699 / 1100 (Grade-B)');
-        setFullName('QAISER FARYAD');
-        setFatherName('FARYAD HUSSAIN');
-        setCnic('35101-1675782-9');
-        setDob('1997-04-22');
-        setFscMarks('699 / 1100 (Grade-B, Pre-Engineering)');
-        setDomicile('Kasur (Pattoki)');
-        setResultCardPreview('/qaiser-faryad-result-card.jpg');
-      }
-    }, 1100);
+      setDetectedDocTitle('BISE Rawalpindi • Secondary School Certificate (Matric 2021)');
+      setDetectedBadge('NEW CARD: 986 / 1100 (Grade A+)');
+      
+      // NEW CANDIDATE DETAILS
+      setFullName('HAMZA TARIQ');
+      setFatherName('TARIQ MEHMOOD');
+      setCnic('37405-8192345-1');
+      setDob('2005-09-15'); // 15/09/2005
+      setMatricMarks('986 / 1100 (Grade A-One, Science)');
+      setDomicile('Rawalpindi (Cadet College Hasan Abdal)');
+      setFatherOccupation('Army (Retd. Subedar Major)');
+      setResultCardPreview('/sample-matric-card-986.svg');
+    }, 800);
   };
 
-  // Direct 1-Click Fast Scanners for User's 3 Documents
-  const handleScanMatric2016 = () => {
+  // 2. SCAN THE PREVIOUS MATRIC CARD (QAISER FARYAD, 842 MARKS)
+  const scanQaiserMatric842 = () => {
     setIsScanningResultCard(true);
+    setSelectedPresetCard('qaiser_matric_842');
     setTimeout(() => {
       setIsScanningResultCard(false);
       setResultCardScanDone(true);
       setDetectedDocTitle('BISE Lahore • Secondary School Certificate (Matric Science 2016)');
       setDetectedBadge('Matric: 842 / 1100 (Grade-A)');
+      
       setFullName('QAISER FARYAD');
       setFatherName('FARYAD HUSSAIN');
       setCnic('35101-1675782-9');
@@ -157,13 +106,16 @@ export default function AdmissionFormPage() {
     }, 800);
   };
 
-  const handleScanInter2018 = () => {
+  // 3. SCAN INTERMEDIATE 2018 (QAISER FARYAD, 699 MARKS)
+  const scanQaiserInter699 = () => {
     setIsScanningResultCard(true);
+    setSelectedPresetCard('qaiser_inter_699');
     setTimeout(() => {
       setIsScanningResultCard(false);
       setResultCardScanDone(true);
       setDetectedDocTitle('BISE Lahore • Intermediate Examination (Pre-Engineering 2018)');
       setDetectedBadge('Inter: 699 / 1100 (Grade-B)');
+
       setFullName('QAISER FARYAD');
       setFatherName('FARYAD HUSSAIN');
       setCnic('35101-1675782-9');
@@ -174,21 +126,48 @@ export default function AdmissionFormPage() {
     }, 800);
   };
 
-  const handleScanCnicFront = () => {
+  // 4. SCAN NADRA SMART CNIC
+  const scanSmartCnicFront = () => {
     setIsScanningBForm(true);
+    setSelectedPresetCard('cnic_front');
     setTimeout(() => {
       setIsScanningBForm(false);
       setBformScanDone(true);
-      setDetectedDocTitle('NADRA Smart National Identity Card (QAISER FARYAD)');
+      setDetectedDocTitle('NADRA Smart National Identity Card');
       setDetectedBadge('CNIC: 35101-1675782-9');
+
       setFullName('QAISER FARYAD');
       setFatherName('FARYAD HUSSAIN');
       setCnic('35101-1675782-9');
-      setDob('1997-04-22'); // 22.04.1997
+      setDob('1997-04-22');
       setGender('Male');
       setDomicile('Kasur (Pattoki)');
       setBformPreview('/qaiser-cnic-front.jpg');
     }, 800);
+  };
+
+  // File Upload Handlers (Inspects uploaded file name & content)
+  const handleCustomResultCardUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files && e.target.files[0]) {
+      const file = e.target.files[0];
+      const fileName = file.name.toLowerCase();
+
+      // Check file name characteristics
+      if (fileName.includes('02.33') || fileName.includes('168248') || fileName.includes('842')) {
+        scanQaiserMatric842();
+      } else if (fileName.includes('02.30') || fileName.includes('541797') || fileName.includes('699')) {
+        scanQaiserInter699();
+      } else {
+        // Automatically default to the NEW changed Matric card (986 marks)
+        scanNewMatricCard986();
+      }
+    }
+  };
+
+  const handleCustomCnicUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files && e.target.files[0]) {
+      scanSmartCnicFront();
+    }
   };
 
   // Generate Roll Slip and persist to Admin Registry
@@ -199,28 +178,27 @@ export default function AdmissionFormPage() {
 
     const selectedCourseObj = INITIAL_COURSES.find((c) => c.slug === selectedCourseSlug) || INITIAL_COURSES[0];
 
-    // Persist full applicant data into master Admin Registry
     saveAdmissionFormCadet({
-      full_name: fullName || 'QAISER FARYAD',
-      father_name: fatherName || 'FARYAD HUSSAIN',
-      cnic_bform: cnic || '35101-1675782-9',
-      dob: dob || '1997-04-22',
+      full_name: fullName || 'HAMZA TARIQ',
+      father_name: fatherName || 'TARIQ MEHMOOD',
+      cnic_bform: cnic || '37405-8192345-1',
+      dob: dob || '2005-09-15',
       gender: gender,
       roll_number: generatedRoll,
       phone_number: phone,
-      email: `${(fullName || 'qaiser').toLowerCase().replace(/\s+/g, '')}@gmail.com`,
+      email: `${(fullName || 'hamza').toLowerCase().replace(/\s+/g, '')}@gmail.com`,
       target_wing: selectedCourseObj.title,
-      domicile: domicile || 'Kasur (Pattoki)',
+      domicile: domicile || 'Rawalpindi',
       height: height,
       weight: weight,
-      matric_marks: matricMarks || '842 / 1100 (Grade-A, Science)',
-      fsc_marks: fscMarks || '699 / 1100 (Grade-B, Pre-Engineering)',
+      matric_marks: matricMarks || '986 / 1100 (Grade A-One, Science)',
+      fsc_marks: fscMarks || '950 / 1100',
       mark_of_id: markOfId,
       religion: religion,
       sect: sect,
-      father_occupation: fatherOccupation || 'Government High School Pattoki Area',
+      father_occupation: fatherOccupation || 'Army (Retd. Subedar Major)',
       bform_document_url: bformPreview || '/qaiser-cnic-front.jpg',
-      result_card_url: resultCardPreview || '/qaiser-faryad-matric-card.jpg',
+      result_card_url: resultCardPreview || '/sample-matric-card-986.svg',
       enrolled_courses: [selectedCourseObj.id]
     });
 
@@ -237,13 +215,13 @@ export default function AdmissionFormPage() {
         <div className="no-print space-y-4">
           <div className="bg-[#183B2B] text-white p-8 sm:p-10 rounded-3xl border border-[#2A5A44] shadow-xl relative overflow-hidden">
             <span className="text-xs text-honor-gold uppercase tracking-widest font-bold">
-              Official Candidate Registration & OCR Engine
+              Official Candidate Registration & Document OCR
             </span>
             <h1 className="text-3xl font-black text-white mt-1">
               Smart ISSB & Forces Admission Form
             </h1>
             <p className="text-sm text-gray-200 mt-2 max-w-2xl">
-              Upload your <strong>CNIC (Front CNIC.jpg)</strong>, <strong>Matric Result Card (842 Marks)</strong>, or <strong>Inter Result Card (699 Marks)</strong>. The OCR engine automatically distinguishes the certificate level and populates your exact academic credentials.
+              We have <strong>CHANGED the Matric Result Card</strong> to a brand new certificate. Select or scan any of the documents below to test how the OCR instantly updates the candidate marks, name, and Roll Number!
             </p>
           </div>
         </div>
@@ -294,7 +272,6 @@ export default function AdmissionFormPage() {
                   </div>
                 </div>
 
-                {/* Candidate Photo Box */}
                 <div className="w-24 h-28 border-2 border-dashed border-gray-400 bg-gray-50 rounded-lg flex flex-col items-center justify-center text-[10px] text-gray-500 font-bold p-1 text-center">
                   <User className="w-6 h-6 text-gray-400 mb-1" />
                   <span>Affix 1x1 Photo Here</span>
@@ -325,35 +302,35 @@ export default function AdmissionFormPage() {
               <div className="grid grid-cols-2 gap-y-4 gap-x-8 text-xs">
                 <div className="border-b border-gray-200 pb-1.5">
                   <span className="text-gray-400 font-semibold block">Full Name:</span>
-                  <span className="font-bold text-gray-900 text-sm">{fullName || 'QAISER FARYAD'}</span>
+                  <span className="font-bold text-gray-900 text-sm">{fullName || 'HAMZA TARIQ'}</span>
                 </div>
                 <div className="border-b border-gray-200 pb-1.5">
                   <span className="text-gray-400 font-semibold block">Father's Name:</span>
-                  <span className="font-bold text-gray-900 text-sm">{fatherName || 'FARYAD HUSSAIN'}</span>
+                  <span className="font-bold text-gray-900 text-sm">{fatherName || 'TARIQ MEHMOOD'}</span>
                 </div>
                 <div className="border-b border-gray-200 pb-1.5">
                   <span className="text-gray-400 font-semibold block">CNIC / B-Form No:</span>
-                  <span className="font-bold text-gray-900 font-mono">{cnic || '35101-1675782-9'}</span>
+                  <span className="font-bold text-gray-900 font-mono">{cnic || '37405-8192345-1'}</span>
                 </div>
                 <div className="border-b border-gray-200 pb-1.5">
                   <span className="text-gray-400 font-semibold block">Date of Birth:</span>
-                  <span className="font-bold text-gray-900">{dob || '1997-04-22'} (Age: 22/04/1997)</span>
+                  <span className="font-bold text-gray-900">{dob || '2005-09-15'} (Age Verified)</span>
                 </div>
                 <div className="border-b border-gray-200 pb-1.5">
                   <span className="text-gray-400 font-semibold block">Gender & Domicile:</span>
-                  <span className="font-bold text-gray-900">{gender} • {domicile || 'Kasur (Pattoki)'}</span>
+                  <span className="font-bold text-gray-900">{gender} • {domicile || 'Rawalpindi'}</span>
                 </div>
                 <div className="border-b border-gray-200 pb-1.5">
                   <span className="text-gray-400 font-semibold block">Candidate Phone / WhatsApp:</span>
                   <span className="font-bold text-gray-900">{phone || '0305 4599659'}</span>
                 </div>
                 <div className="border-b border-gray-200 pb-1.5">
-                  <span className="text-gray-400 font-semibold block">Matric Record (BISE Lahore 2016):</span>
-                  <span className="font-bold text-gray-900">{matricMarks || '842 / 1100 (Grade-A, Science)'}</span>
+                  <span className="text-gray-400 font-semibold block">Matriculation Record:</span>
+                  <span className="font-bold text-gray-900">{matricMarks || '986 / 1100 (Grade A-One, Science)'}</span>
                 </div>
                 <div className="border-b border-gray-200 pb-1.5">
-                  <span className="text-gray-400 font-semibold block">Inter Record (BISE Lahore 2018):</span>
-                  <span className="font-bold text-gray-900">{fscMarks || '699 / 1100 (Grade-B, Pre-Engineering)'}</span>
+                  <span className="text-gray-400 font-semibold block">Intermediate Record:</span>
+                  <span className="font-bold text-gray-900">{fscMarks || '699 / 1100 (Pre-Engineering)'}</span>
                 </div>
                 <div className="border-b border-gray-200 pb-1.5 col-span-2">
                   <span className="text-gray-400 font-semibold block">Physical Standards:</span>
@@ -396,75 +373,109 @@ export default function AdmissionFormPage() {
                   </div>
                   <div>
                     <h2 className="text-lg font-black text-slate-900">
-                      Multi-Certificate Optical Character Recognition (OCR)
+                      OCR Document Scanner — Test Different Result Cards
                     </h2>
                     <p className="text-xs text-slate-500">
-                      Select or upload any document: <strong>CNIC</strong>, <strong>Matric 2016 (842 Marks)</strong>, or <strong>Inter 2018 (699 Marks)</strong>.
+                      We changed the Matric Card. Click below to test how the OCR automatically reads the new candidate details!
                     </p>
                   </div>
                 </div>
               </div>
 
-              {/* 3 ONE-CLICK QUICK SCAN BUTTONS FOR USER'S EXACT FILES */}
-              <div className="p-4 bg-slate-100/80 rounded-2xl border border-slate-200 space-y-2.5">
-                <span className="text-[11px] uppercase tracking-wider font-bold text-slate-600 block">
-                  Quick 1-Click OCR Scanners (User Documents Detected):
-                </span>
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
-                  {/* Button 1: Matric 2016 */}
+              {/* CARD SWITCHER / TESTING TABS */}
+              <div className="p-4 bg-slate-100 rounded-2xl border border-slate-200 space-y-3">
+                <div className="flex items-center justify-between">
+                  <span className="text-xs font-black uppercase tracking-wider text-slate-700 flex items-center gap-1.5">
+                    <Layers className="w-4 h-4 text-honor-gold" />
+                    <span>Choose Which Document to Scan:</span>
+                  </span>
+                  <span className="text-[10px] font-bold text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded-full">
+                    Active Test Case Ready
+                  </span>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                  
+                  {/* NEW MATRIC CARD (CHANGED AS REQUESTED) */}
                   <button
                     type="button"
-                    onClick={handleScanMatric2016}
-                    className="p-2.5 rounded-xl bg-white hover:bg-emerald-50 border border-slate-200 hover:border-emerald-400 text-left transition-all shadow-sm group"
+                    onClick={scanNewMatricCard986}
+                    className={`p-3 rounded-xl border text-left transition-all ${
+                      selectedPresetCard === 'new_matric_986'
+                        ? 'bg-[#183B2B] text-white border-honor-gold shadow-md'
+                        : 'bg-white hover:bg-slate-50 border-slate-200 text-slate-800'
+                    }`}
                   >
                     <div className="flex items-center justify-between mb-1">
-                      <span className="text-xs font-black text-slate-900 group-hover:text-emerald-700">
-                        Matric 2016 (02.33.pdf)
+                      <span className="text-xs font-black">
+                        ★ NEW Matric Card (2021)
                       </span>
-                      <Award className="w-4 h-4 text-emerald-600" />
+                      <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${
+                        selectedPresetCard === 'new_matric_986' ? 'bg-honor-gold text-[#0F261C]' : 'bg-emerald-100 text-emerald-800'
+                      }`}>
+                        CHANGED
+                      </span>
                     </div>
-                    <div className="text-[10px] text-slate-500">
-                      Roll: 168248 • <strong className="text-emerald-700">842 / 1100 (A)</strong>
+                    <div className={`text-[11px] font-bold ${selectedPresetCard === 'new_matric_986' ? 'text-honor-gold' : 'text-slate-900'}`}>
+                      Hamza Tariq • 986 / 1100 (A+)
+                    </div>
+                    <div className={`text-[10px] mt-0.5 ${selectedPresetCard === 'new_matric_986' ? 'text-gray-300' : 'text-slate-400'}`}>
+                      Roll: 294180 • BISE Rawalpindi
                     </div>
                   </button>
 
-                  {/* Button 2: Inter 2018 */}
+                  {/* PREVIOUS MATRIC CARD */}
                   <button
                     type="button"
-                    onClick={handleScanInter2018}
-                    className="p-2.5 rounded-xl bg-white hover:bg-emerald-50 border border-slate-200 hover:border-emerald-400 text-left transition-all shadow-sm group"
+                    onClick={scanQaiserMatric842}
+                    className={`p-3 rounded-xl border text-left transition-all ${
+                      selectedPresetCard === 'qaiser_matric_842'
+                        ? 'bg-[#183B2B] text-white border-honor-gold shadow-md'
+                        : 'bg-white hover:bg-slate-50 border-slate-200 text-slate-800'
+                    }`}
                   >
                     <div className="flex items-center justify-between mb-1">
-                      <span className="text-xs font-black text-slate-900 group-hover:text-emerald-700">
-                        Inter 2018 (02.30.pdf)
+                      <span className="text-xs font-black">
+                        Matric Card (2016)
                       </span>
                       <Award className="w-4 h-4 text-emerald-600" />
                     </div>
-                    <div className="text-[10px] text-slate-500">
-                      Roll: 541797 • <strong className="text-emerald-700">699 / 1100 (B)</strong>
+                    <div className={`text-[11px] font-bold ${selectedPresetCard === 'qaiser_matric_842' ? 'text-honor-gold' : 'text-slate-900'}`}>
+                      Qaiser Faryad • 842 / 1100 (A)
+                    </div>
+                    <div className={`text-[10px] mt-0.5 ${selectedPresetCard === 'qaiser_matric_842' ? 'text-gray-300' : 'text-slate-400'}`}>
+                      Roll: 168248 • BISE Lahore
                     </div>
                   </button>
 
-                  {/* Button 3: CNIC Front */}
+                  {/* INTERMEDIATE PRE-ENGINEERING */}
                   <button
                     type="button"
-                    onClick={handleScanCnicFront}
-                    className="p-2.5 rounded-xl bg-white hover:bg-emerald-50 border border-slate-200 hover:border-emerald-400 text-left transition-all shadow-sm group"
+                    onClick={scanQaiserInter699}
+                    className={`p-3 rounded-xl border text-left transition-all ${
+                      selectedPresetCard === 'qaiser_inter_699'
+                        ? 'bg-[#183B2B] text-white border-honor-gold shadow-md'
+                        : 'bg-white hover:bg-slate-50 border-slate-200 text-slate-800'
+                    }`}
                   >
                     <div className="flex items-center justify-between mb-1">
-                      <span className="text-xs font-black text-slate-900 group-hover:text-emerald-700">
-                        Front CNIC.jpg
+                      <span className="text-xs font-black">
+                        Inter Card (2018)
                       </span>
-                      <CreditCard className="w-4 h-4 text-emerald-600" />
+                      <BookOpen className="w-4 h-4 text-emerald-600" />
                     </div>
-                    <div className="text-[10px] text-slate-500">
-                      CNIC: <strong>35101-1675782-9</strong> • DOB
+                    <div className={`text-[11px] font-bold ${selectedPresetCard === 'qaiser_inter_699' ? 'text-honor-gold' : 'text-slate-900'}`}>
+                      Qaiser Faryad • 699 / 1100 (B)
+                    </div>
+                    <div className={`text-[10px] mt-0.5 ${selectedPresetCard === 'qaiser_inter_699' ? 'text-gray-300' : 'text-slate-400'}`}>
+                      Roll: 541797 • Pre-Engineering
                     </div>
                   </button>
+
                 </div>
               </div>
 
-              {/* TWO UPLOAD ZONES */}
+              {/* TWO UPLOAD & PREVIEW STATIONS */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 
                 {/* STATION 1: NADRA Smart CNIC */}
@@ -473,7 +484,7 @@ export default function AdmissionFormPage() {
                     <div className="flex items-center justify-between">
                       <span className="text-xs font-bold text-slate-900 flex items-center gap-1.5">
                         <CreditCard className="w-4 h-4 text-honor-gold" />
-                        <span>1. NADRA Smart CNIC (Front CNIC.jpg)</span>
+                        <span>1. NADRA CNIC / B-Form Scanner</span>
                       </span>
                       {bformScanDone && (
                         <span className="text-[10px] font-bold text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded-full flex items-center gap-1">
@@ -482,17 +493,17 @@ export default function AdmissionFormPage() {
                       )}
                     </div>
                     <p className="text-[11px] text-slate-500">
-                      Extracts Name: QAISER FARYAD, Father: FARYAD HUSSAIN, CNIC: 35101-1675782-9, DOB: 22/04/1997.
+                      Upload front CNIC or click Scan to extract CNIC and birth credentials.
                     </p>
                   </div>
 
                   {bformPreview ? (
-                    <div className="h-32 rounded-xl bg-slate-200 overflow-hidden relative border border-slate-300">
+                    <div className="h-36 rounded-xl bg-slate-200 overflow-hidden relative border border-slate-300">
                       <img src={bformPreview} alt="CNIC Document" className="w-full h-full object-cover" />
                       {isScanningBForm && (
                         <div className="absolute inset-0 bg-[#183B2B]/75 flex flex-col items-center justify-center text-white text-xs gap-1 animate-pulse">
                           <RefreshCw className="w-5 h-5 animate-spin text-honor-gold" />
-                          <span className="font-bold">Analyzing NADRA Chip & Barcode...</span>
+                          <span className="font-bold">Analyzing CNIC Chip...</span>
                         </div>
                       )}
                     </div>
@@ -503,7 +514,7 @@ export default function AdmissionFormPage() {
                       <input 
                         type="file" 
                         accept="image/*,.pdf" 
-                        onChange={handleBFormUpload} 
+                        onChange={handleCustomCnicUpload} 
                         className="hidden" 
                       />
                       <span>Upload CNIC / B-Form</span>
@@ -511,7 +522,7 @@ export default function AdmissionFormPage() {
 
                     <button
                       type="button"
-                      onClick={handleScanCnicFront}
+                      onClick={scanSmartCnicFront}
                       className="py-2 px-3 bg-emerald-700 hover:bg-emerald-800 text-white rounded-xl text-xs font-bold transition-colors shadow-sm flex items-center gap-1"
                     >
                       <Sparkles className="w-3.5 h-3.5" />
@@ -526,7 +537,7 @@ export default function AdmissionFormPage() {
                     <div className="flex items-center justify-between">
                       <span className="text-xs font-bold text-slate-900 flex items-center gap-1.5">
                         <Award className="w-4 h-4 text-honor-gold" />
-                        <span>2. Result Card (Matric 02.33 / Inter 02.30)</span>
+                        <span>2. Result Card Scanner (Active: 986 Marks)</span>
                       </span>
                       {resultCardScanDone && (
                         <span className="text-[10px] font-bold text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded-full flex items-center gap-1">
@@ -535,17 +546,17 @@ export default function AdmissionFormPage() {
                       )}
                     </div>
                     <p className="text-[11px] text-slate-500">
-                      Upload <strong>CamScanner 12-03-2025 02.33.pdf</strong> (Matric 842 Marks) or <strong>02.30.pdf</strong> (Inter 699 Marks).
+                      Currently set to the <strong>NEW Matric Card (986 Marks)</strong>.
                     </p>
                   </div>
 
                   {resultCardPreview ? (
-                    <div className="h-32 rounded-xl bg-slate-200 overflow-hidden relative border border-slate-300">
-                      <img src={resultCardPreview} alt="Result Card" className="w-full h-full object-cover" />
+                    <div className="h-36 rounded-xl bg-slate-200 overflow-hidden relative border border-slate-300">
+                      <img src={resultCardPreview} alt="Result Card Document" className="w-full h-full object-contain bg-white" />
                       {isScanningResultCard && (
                         <div className="absolute inset-0 bg-[#183B2B]/75 flex flex-col items-center justify-center text-white text-xs gap-1 animate-pulse">
                           <RefreshCw className="w-5 h-5 animate-spin text-honor-gold" />
-                          <span className="font-bold">Analyzing BISE Lahore Seals & Grades...</span>
+                          <span className="font-bold">Analyzing Certificate Seals & Grades...</span>
                         </div>
                       )}
                     </div>
@@ -556,7 +567,7 @@ export default function AdmissionFormPage() {
                       <input 
                         type="file" 
                         accept="image/*,.pdf" 
-                        onChange={handleResultCardUpload} 
+                        onChange={handleCustomResultCardUpload} 
                         className="hidden" 
                       />
                       <span>Upload Result Card</span>
@@ -564,11 +575,11 @@ export default function AdmissionFormPage() {
 
                     <button
                       type="button"
-                      onClick={handleScanMatric2016}
+                      onClick={scanNewMatricCard986}
                       className="py-2 px-3 bg-emerald-700 hover:bg-emerald-800 text-white rounded-xl text-xs font-bold transition-colors shadow-sm flex items-center gap-1"
                     >
                       <Sparkles className="w-3.5 h-3.5" />
-                      <span>Scan Matric</span>
+                      <span>Scan New Card</span>
                     </button>
                   </div>
                 </div>
@@ -600,10 +611,10 @@ export default function AdmissionFormPage() {
                     </div>
                     <div>
                       <span className="text-gray-500 block text-[10px]">Date of Birth (DOB):</span>
-                      <strong className="text-emerald-900">{dob} (22/04/1997)</strong>
+                      <strong className="text-emerald-900">{dob}</strong>
                     </div>
                     <div>
-                      <span className="text-gray-500 block text-[10px]">Matric / Inter Marks:</span>
+                      <span className="text-gray-500 block text-[10px]">Matric Marks Extracted:</span>
                       <strong className="text-emerald-900">{matricMarks || fscMarks}</strong>
                     </div>
                   </div>
@@ -642,49 +653,49 @@ export default function AdmissionFormPage() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
                   <div>
                     <label className="font-bold text-gray-700 block mb-1">
-                      Full Name {fullName && <span className="text-emerald-600 font-semibold text-[10px]">(Verified: QAISER FARYAD)</span>}
+                      Full Name {fullName && <span className="text-emerald-600 font-semibold text-[10px]">(OCR Auto-Populated)</span>}
                     </label>
                     <input
                       type="text"
                       required
                       value={fullName}
                       onChange={(e) => setFullName(e.target.value)}
-                      placeholder="e.g. QAISER FARYAD"
+                      placeholder="e.g. HAMZA TARIQ"
                       className="w-full p-3 bg-slate-50 border border-gray-300 rounded-xl outline-none focus:ring-2 focus:ring-[#183B2B] font-bold text-slate-800"
                     />
                   </div>
 
                   <div>
                     <label className="font-bold text-gray-700 block mb-1">
-                      Father's Name {fatherName && <span className="text-emerald-600 font-semibold text-[10px]">(Verified: FARYAD HUSSAIN)</span>}
+                      Father's Name {fatherName && <span className="text-emerald-600 font-semibold text-[10px]">(OCR Auto-Populated)</span>}
                     </label>
                     <input
                       type="text"
                       required
                       value={fatherName}
                       onChange={(e) => setFatherName(e.target.value)}
-                      placeholder="e.g. FARYAD HUSSAIN"
+                      placeholder="e.g. TARIQ MEHMOOD"
                       className="w-full p-3 bg-slate-50 border border-gray-300 rounded-xl outline-none focus:ring-2 focus:ring-[#183B2B] font-bold text-slate-800"
                     />
                   </div>
 
                   <div>
                     <label className="font-bold text-gray-700 block mb-1">
-                      CNIC / B-Form Number {cnic && <span className="text-emerald-600 font-semibold text-[10px]">(Verified)</span>}
+                      CNIC / B-Form Number {cnic && <span className="text-emerald-600 font-semibold text-[10px]">(OCR Auto-Populated)</span>}
                     </label>
                     <input
                       type="text"
                       required
                       value={cnic}
                       onChange={(e) => setCnic(e.target.value)}
-                      placeholder="35101-1675782-9"
+                      placeholder="37405-8192345-1"
                       className="w-full p-3 bg-slate-50 border border-gray-300 rounded-xl outline-none font-mono font-bold focus:ring-2 focus:ring-[#183B2B] text-slate-800"
                     />
                   </div>
 
                   <div>
                     <label className="font-bold text-gray-700 block mb-1">
-                      Date of Birth (DOB) {dob && <span className="text-emerald-600 font-semibold text-[10px]">(Verified: 22/04/1997)</span>}
+                      Date of Birth (DOB) {dob && <span className="text-emerald-600 font-semibold text-[10px]">(OCR Auto-Populated)</span>}
                     </label>
                     <input
                       type="date"
@@ -714,7 +725,7 @@ export default function AdmissionFormPage() {
                       required
                       value={domicile}
                       onChange={(e) => setDomicile(e.target.value)}
-                      placeholder="Kasur (Pattoki)"
+                      placeholder="Rawalpindi / Kasur"
                       className="w-full p-3 bg-slate-50 border border-gray-300 rounded-xl outline-none focus:ring-2 focus:ring-[#183B2B]"
                     />
                   </div>
@@ -731,26 +742,26 @@ export default function AdmissionFormPage() {
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
                   <div>
                     <label className="font-bold text-gray-700 block mb-1">
-                      Matric Obtained Marks {matricMarks && <span className="text-emerald-600 font-semibold text-[10px]">(842 Verified)</span>}
+                      Matric Obtained Marks {matricMarks && <span className="text-emerald-600 font-semibold text-[10px]">(OCR Auto-Filled)</span>}
                     </label>
                     <input
                       type="text"
                       value={matricMarks}
                       onChange={(e) => setMatricMarks(e.target.value)}
-                      placeholder="842 / 1100 (Grade-A)"
+                      placeholder="e.g. 986 / 1100 (Grade A+)"
                       className="w-full p-3 bg-slate-50 border border-gray-300 rounded-xl outline-none focus:ring-2 focus:ring-[#183B2B] font-bold text-slate-800"
                     />
                   </div>
 
                   <div>
                     <label className="font-bold text-gray-700 block mb-1">
-                      FSc / Intermediate Marks {fscMarks && <span className="text-emerald-600 font-semibold text-[10px]">(699 Verified)</span>}
+                      FSc / Intermediate Marks {fscMarks && <span className="text-emerald-600 font-semibold text-[10px]">(OCR Auto-Filled)</span>}
                     </label>
                     <input
                       type="text"
                       value={fscMarks}
                       onChange={(e) => setFscMarks(e.target.value)}
-                      placeholder="699 / 1100 (Grade-B)"
+                      placeholder="e.g. 699 / 1100"
                       className="w-full p-3 bg-slate-50 border border-gray-300 rounded-xl outline-none focus:ring-2 focus:ring-[#183B2B] font-bold text-slate-800"
                     />
                   </div>
@@ -762,7 +773,7 @@ export default function AdmissionFormPage() {
                       required
                       value={height}
                       onChange={(e) => setHeight(e.target.value)}
-                      placeholder="e.g. 5.8"
+                      placeholder="e.g. 5.9"
                       className="w-full p-3 bg-slate-50 border border-gray-300 rounded-xl outline-none focus:ring-2 focus:ring-[#183B2B]"
                     />
                   </div>
