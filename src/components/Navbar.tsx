@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { 
@@ -13,91 +13,478 @@ import {
   Menu, 
   X, 
   Lock,
-  PhoneCall
+  PhoneCall,
+  ChevronDown,
+  ChevronRight,
+  GraduationCap,
+  Crosshair,
+  Compass,
+  Trophy,
+  Sparkles,
+  ExternalLink
 } from 'lucide-react';
 import { ACADEMY_CONFIG } from '@/lib/constants';
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<'courses' | 'tests' | null>(null);
+  const [mobileCoursesOpen, setMobileCoursesOpen] = useState(false);
+  const [mobileTestsOpen, setMobileTestsOpen] = useState(false);
   const pathname = usePathname();
+  const navContainerRef = useRef<HTMLDivElement>(null);
+  const dropdownTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
-  const navLinks = [
-    { href: '/', label: 'Home' },
-    { href: '/courses', label: 'All Courses (41)' },
-    { href: '/tests', label: 'Computer Mock Tests' },
-    { href: '/tests/wat', label: '10s WAT Engine' },
-    { href: '/portal/leaderboard', label: 'Leaderboard' },
-    { href: '/admission-form', label: 'Admission & Roll Slip' },
-    { href: '/admin/courses', label: 'Admin Portal' },
-  ];
+  // Close dropdown on route change
+  useEffect(() => {
+    setActiveDropdown(null);
+    setMobileMenuOpen(false);
+  }, [pathname]);
+
+  // Click outside listener
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (navContainerRef.current && !navContainerRef.current.contains(event.target as Node)) {
+        setActiveDropdown(null);
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  const handleMouseEnter = (menu: 'courses' | 'tests') => {
+    if (dropdownTimeoutRef.current) {
+      clearTimeout(dropdownTimeoutRef.current);
+    }
+    setActiveDropdown(menu);
+  };
+
+  const handleMouseLeave = () => {
+    dropdownTimeoutRef.current = setTimeout(() => {
+      setActiveDropdown(null);
+    }, 200);
+  };
 
   return (
-    <header className="sticky top-0 z-50 bg-[#183B2B] text-white shadow-lg border-b border-[#2A5A44]">
+    <header className="sticky top-0 z-50 bg-[#183B2B] text-white shadow-xl border-b border-[#2A5A44]/80">
       {/* Top Notification Bar */}
-      <div className="bg-[#0F261C] text-xs py-1.5 px-4 text-center border-b border-[#183B2B]/50 flex justify-between items-center max-w-7xl mx-auto">
-        <div className="flex items-center gap-2">
-          <span className="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-          <span className="text-gray-300 hidden sm:inline">Admissions Open 2026-2027: PMA, PAF, PN, ISSB Batches</span>
-          <span className="text-gray-300 sm:hidden">Admissions Open 2026-2027</span>
-        </div>
-        <div className="flex items-center gap-4 text-gray-300">
-          <a 
-            href={`tel:${ACADEMY_CONFIG.phoneRaw}`}
-            className="hover:text-honor-gold flex items-center gap-1 transition-colors"
-          >
-            <PhoneCall className="w-3 h-3 text-honor-gold" />
-            <span>{ACADEMY_CONFIG.phone}</span>
-          </a>
-          <span className="hidden md:inline text-gray-500">|</span>
-          <span className="hidden md:inline text-honor-gold font-medium">Head: {ACADEMY_CONFIG.leadInstructor}</span>
+      <div className="bg-[#0F261C] text-xs py-1.5 px-4 border-b border-[#183B2B]/60">
+        <div className="max-w-7xl mx-auto flex justify-between items-center">
+          <div className="flex items-center gap-2">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+            </span>
+            <span className="text-gray-300 hidden sm:inline font-medium">
+              Admissions Open 2026–2027: PMA, PAF, PN & ISSB Batches
+            </span>
+            <span className="text-gray-300 sm:hidden font-medium">
+              Admissions Open 2026–2027
+            </span>
+          </div>
+
+          <div className="flex items-center gap-4 text-gray-300">
+            <a 
+              href={`tel:${ACADEMY_CONFIG.phoneRaw}`}
+              className="hover:text-honor-gold flex items-center gap-1.5 transition-colors font-medium"
+            >
+              <PhoneCall className="w-3.5 h-3.5 text-honor-gold" />
+              <span>{ACADEMY_CONFIG.phone}</span>
+            </a>
+            <span className="hidden md:inline text-gray-600">|</span>
+            <span className="hidden md:inline text-honor-gold font-semibold tracking-wide">
+              Head: {ACADEMY_CONFIG.leadInstructor}
+            </span>
+          </div>
         </div>
       </div>
 
       {/* Main Navbar */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" ref={navContainerRef}>
         <div className="flex items-center justify-between h-20">
+          
           {/* Logo / Brand */}
-          <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#2A5A44] to-[#0F261C] border border-honor-gold/60 flex items-center justify-center shadow-md group-hover:border-honor-gold transition-all">
-              <Shield className="w-7 h-7 text-honor-gold" />
+          <Link href="/" className="flex items-center gap-3 group flex-shrink-0">
+            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#2A5A44] to-[#0F261C] border border-honor-gold/70 flex items-center justify-center shadow-lg group-hover:border-honor-gold transition-all duration-300">
+              <Shield className="w-7 h-7 text-honor-gold transform group-hover:scale-105 transition-transform" />
             </div>
             <div>
-              <div className="text-lg sm:text-xl font-bold tracking-tight text-white leading-tight">
+              <div className="text-base sm:text-lg lg:text-xl font-black tracking-tight text-white leading-tight">
                 THE BEST FORCES <span className="text-honor-gold">ACADEMY</span>
               </div>
-              <div className="text-[11px] text-gray-300 uppercase tracking-widest font-medium">
-                Premier Defense LMS • bestforcesacademy.net
+              <div className="text-[10px] sm:text-[11px] text-gray-300 uppercase tracking-widest font-semibold flex items-center gap-1.5">
+                <span>PREMIER DEFENSE LMS</span>
+                <span className="text-honor-gold">•</span>
+                <span className="text-gray-400">BESTFORCESACADEMY.NET</span>
               </div>
             </div>
           </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-1">
-            {navLinks.map((link) => {
-              const isActive = pathname === link.href;
-              return (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                    isActive 
-                      ? 'bg-[#2A5A44] text-honor-gold border border-honor-gold/30' 
-                      : 'text-gray-200 hover:text-white hover:bg-[#2A5A44]/60'
-                  }`}
+          {/* Desktop Navigation Links */}
+          <nav className="hidden xl:flex items-center gap-1.5">
+            {/* Home */}
+            <Link
+              href="/"
+              className={`px-3.5 py-2 rounded-lg text-sm font-semibold transition-all ${
+                pathname === '/' 
+                  ? 'bg-[#2A5A44] text-honor-gold border border-honor-gold/40' 
+                  : 'text-gray-200 hover:text-white hover:bg-[#2A5A44]/60'
+              }`}
+            >
+              Home
+            </Link>
+
+            {/* Mega Menu: Courses & Wings */}
+            <div 
+              className="relative"
+              onMouseEnter={() => handleMouseEnter('courses')}
+              onMouseLeave={handleMouseLeave}
+            >
+              <button
+                onClick={() => setActiveDropdown(activeDropdown === 'courses' ? null : 'courses')}
+                className={`px-3.5 py-2 rounded-lg text-sm font-semibold flex items-center gap-1.5 transition-all ${
+                  activeDropdown === 'courses' || pathname.startsWith('/courses')
+                    ? 'bg-[#2A5A44] text-honor-gold border border-honor-gold/40' 
+                    : 'text-gray-200 hover:text-white hover:bg-[#2A5A44]/60'
+                }`}
+                aria-expanded={activeDropdown === 'courses'}
+              >
+                <BookOpen className="w-4 h-4 text-honor-gold" />
+                <span>Courses & Wings</span>
+                <span className="text-[10px] font-bold px-1.5 py-0.5 rounded-full bg-honor-gold/20 text-honor-gold border border-honor-gold/30">
+                  41
+                </span>
+                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === 'courses' ? 'rotate-180 text-honor-gold' : 'text-gray-400'}`} />
+              </button>
+
+              {/* Mega Menu Dropdown Container */}
+              {activeDropdown === 'courses' && (
+                <div 
+                  className="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-[880px] bg-[#0F261C] border border-[#2A5A44] rounded-2xl shadow-2xl overflow-hidden p-6 text-left transition-all duration-200 z-50 animate-in fade-in slide-in-from-top-2"
                 >
-                  {link.label}
-                </Link>
-              );
-            })}
+                  {/* Category Grid */}
+                  <div className="grid grid-cols-4 gap-5 pb-6 border-b border-[#2A5A44]">
+                    
+                    {/* Column 1: Army */}
+                    <div className="space-y-3">
+                      <div className="flex items-center gap-2 pb-1.5 border-b border-[#2A5A44]/60">
+                        <div className="p-1.5 rounded-md bg-[#183B2B] text-emerald-400">
+                          <Shield className="w-4 h-4" />
+                        </div>
+                        <div>
+                          <h4 className="text-sm font-bold text-white">Pakistan Army</h4>
+                          <span className="text-[10px] text-gray-400">PMA & Recruits</span>
+                        </div>
+                      </div>
+                      <ul className="space-y-1.5 text-xs">
+                        <li>
+                          <Link href="/courses?cat=army" className="text-gray-300 hover:text-honor-gold hover:pl-1 transition-all block">
+                            PMA Long Course (154-156)
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href="/courses?cat=army" className="text-gray-300 hover:text-honor-gold hover:pl-1 transition-all block">
+                            Technical Cadet (TCC)
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href="/courses?cat=army" className="text-gray-300 hover:text-honor-gold hover:pl-1 transition-all block">
+                            Soldier Recruitment
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href="/courses?cat=army" className="text-gray-300 hover:text-honor-gold hover:pl-1 transition-all block">
+                            Lady Cadet Course (LCC)
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href="/courses?cat=army" className="text-gray-300 hover:text-honor-gold hover:pl-1 transition-all block">
+                            Army Medical College (AMC)
+                          </Link>
+                        </li>
+                      </ul>
+                      <Link 
+                        href="/courses?cat=army" 
+                        className="text-[11px] font-bold text-honor-gold hover:underline flex items-center gap-1 pt-1"
+                      >
+                        Explore Army Programs <ChevronRight className="w-3 h-3" />
+                      </Link>
+                    </div>
+
+                    {/* Column 2: PAF */}
+                    <div className="space-y-3">
+                      <div className="flex items-center gap-2 pb-1.5 border-b border-[#2A5A44]/60">
+                        <div className="p-1.5 rounded-md bg-[#183B2B] text-sky-400">
+                          <Compass className="w-4 h-4" />
+                        </div>
+                        <div>
+                          <h4 className="text-sm font-bold text-white">Air Force (PAF)</h4>
+                          <span className="text-[10px] text-gray-400">Officers & Airmen</span>
+                        </div>
+                      </div>
+                      <ul className="space-y-1.5 text-xs">
+                        <li>
+                          <Link href="/courses?cat=paf" className="text-gray-300 hover:text-honor-gold hover:pl-1 transition-all block">
+                            GD Pilot (GDP)
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href="/courses?cat=paf" className="text-gray-300 hover:text-honor-gold hover:pl-1 transition-all block">
+                            Aeronautical Engineering
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href="/courses?cat=paf" className="text-gray-300 hover:text-honor-gold hover:pl-1 transition-all block">
+                            Air Defence / Logistics
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href="/courses?cat=paf" className="text-gray-300 hover:text-honor-gold hover:pl-1 transition-all block">
+                            Aero Trades & Airmen
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href="/courses?cat=paf" className="text-gray-300 hover:text-honor-gold hover:pl-1 transition-all block">
+                            Admin & Special Duties
+                          </Link>
+                        </li>
+                      </ul>
+                      <Link 
+                        href="/courses?cat=paf" 
+                        className="text-[11px] font-bold text-honor-gold hover:underline flex items-center gap-1 pt-1"
+                      >
+                        Explore PAF Programs <ChevronRight className="w-3 h-3" />
+                      </Link>
+                    </div>
+
+                    {/* Column 3: Navy */}
+                    <div className="space-y-3">
+                      <div className="flex items-center gap-2 pb-1.5 border-b border-[#2A5A44]/60">
+                        <div className="p-1.5 rounded-md bg-[#183B2B] text-blue-400">
+                          <Crosshair className="w-4 h-4" />
+                        </div>
+                        <div>
+                          <h4 className="text-sm font-bold text-white">Pakistan Navy</h4>
+                          <span className="text-[10px] text-gray-400">Cadets & Sailors</span>
+                        </div>
+                      </div>
+                      <ul className="space-y-1.5 text-xs">
+                        <li>
+                          <Link href="/courses?cat=navy" className="text-gray-300 hover:text-honor-gold hover:pl-1 transition-all block">
+                            PN Cadet Commission
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href="/courses?cat=navy" className="text-gray-300 hover:text-honor-gold hover:pl-1 transition-all block">
+                            Operations Branch
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href="/courses?cat=navy" className="text-gray-300 hover:text-honor-gold hover:pl-1 transition-all block">
+                            Marine Engineering
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href="/courses?cat=navy" className="text-gray-300 hover:text-honor-gold hover:pl-1 transition-all block">
+                            Sailor Recruitment
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href="/courses?cat=navy" className="text-gray-300 hover:text-honor-gold hover:pl-1 transition-all block">
+                            Direct Short Service
+                          </Link>
+                        </li>
+                      </ul>
+                      <Link 
+                        href="/courses?cat=navy" 
+                        className="text-[11px] font-bold text-honor-gold hover:underline flex items-center gap-1 pt-1"
+                      >
+                        Explore Navy Programs <ChevronRight className="w-3 h-3" />
+                      </Link>
+                    </div>
+
+                    {/* Column 4: ISSB Master */}
+                    <div className="space-y-3">
+                      <div className="flex items-center gap-2 pb-1.5 border-b border-[#2A5A44]/60">
+                        <div className="p-1.5 rounded-md bg-[#183B2B] text-honor-gold">
+                          <Award className="w-4 h-4" />
+                        </div>
+                        <div>
+                          <h4 className="text-sm font-bold text-white">ISSB & Tests</h4>
+                          <span className="text-[10px] text-gray-400">Master Preparation</span>
+                        </div>
+                      </div>
+                      <ul className="space-y-1.5 text-xs">
+                        <li>
+                          <Link href="/courses?cat=issb" className="text-gray-300 hover:text-honor-gold hover:pl-1 transition-all block font-medium">
+                            ISSB 4-Day Master Pack
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href="/tests/wat" className="text-gray-300 hover:text-honor-gold hover:pl-1 transition-all block">
+                            10s WAT Video Engine
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href="/courses?cat=initial_prep" className="text-gray-300 hover:text-honor-gold hover:pl-1 transition-all block">
+                            Verbal & Non-Verbal Intel
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href="/courses?cat=initial_prep" className="text-gray-300 hover:text-honor-gold hover:pl-1 transition-all block">
+                            Academic Test Mastery
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href="/courses?cat=cadet_college" className="text-gray-300 hover:text-honor-gold hover:pl-1 transition-all block">
+                            Cadet Colleges & Entry
+                          </Link>
+                        </li>
+                      </ul>
+                      <Link 
+                        href="/courses?cat=issb" 
+                        className="text-[11px] font-bold text-honor-gold hover:underline flex items-center gap-1 pt-1"
+                      >
+                        Explore ISSB Programs <ChevronRight className="w-3 h-3" />
+                      </Link>
+                    </div>
+
+                  </div>
+
+                  {/* Mega Menu Footer Banner */}
+                  <div className="pt-4 flex items-center justify-between text-xs">
+                    <div className="flex items-center gap-2 text-gray-400">
+                      <Sparkles className="w-4 h-4 text-honor-gold" />
+                      <span>All 41 courses include syllabus guidelines, video lectures & computerized exam testing.</span>
+                    </div>
+                    <Link
+                      href="/courses"
+                      className="px-4 py-2 rounded-lg bg-[#2A5A44] hover:bg-[#346E53] text-honor-gold font-bold flex items-center gap-1.5 transition-all"
+                    >
+                      <span>View All 41 Academy Courses</span>
+                      <ChevronRight className="w-4 h-4" />
+                    </Link>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* Dropdown: Testing Engine */}
+            <div 
+              className="relative"
+              onMouseEnter={() => handleMouseEnter('tests')}
+              onMouseLeave={handleMouseLeave}
+            >
+              <button
+                onClick={() => setActiveDropdown(activeDropdown === 'tests' ? null : 'tests')}
+                className={`px-3.5 py-2 rounded-lg text-sm font-semibold flex items-center gap-1.5 transition-all ${
+                  activeDropdown === 'tests' || pathname.startsWith('/tests') || pathname.startsWith('/portal/leaderboard')
+                    ? 'bg-[#2A5A44] text-honor-gold border border-honor-gold/40' 
+                    : 'text-gray-200 hover:text-white hover:bg-[#2A5A44]/60'
+                }`}
+                aria-expanded={activeDropdown === 'tests'}
+              >
+                <Clock className="w-4 h-4 text-honor-gold" />
+                <span>Testing Lab</span>
+                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === 'tests' ? 'rotate-180 text-honor-gold' : 'text-gray-400'}`} />
+              </button>
+
+              {/* Testing Lab Dropdown Menu */}
+              {activeDropdown === 'tests' && (
+                <div 
+                  className="absolute left-0 top-full mt-2 w-80 bg-[#0F261C] border border-[#2A5A44] rounded-2xl shadow-2xl overflow-hidden p-3 text-left transition-all duration-200 z-50 animate-in fade-in slide-in-from-top-2 space-y-1"
+                >
+                  <Link
+                    href="/tests"
+                    className="flex items-start gap-3 p-3 rounded-xl hover:bg-[#183B2B] transition-colors group"
+                  >
+                    <div className="p-2 rounded-lg bg-[#2A5A44] text-emerald-400 group-hover:bg-emerald-500 group-hover:text-white transition-colors">
+                      <GraduationCap className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <div className="text-sm font-bold text-white group-hover:text-honor-gold transition-colors flex items-center gap-1.5">
+                        <span>Computer Mock Tests</span>
+                      </div>
+                      <p className="text-[11px] text-gray-400 mt-0.5">
+                        Simulated GHQ/NHQ/Air HQ computerized exam terminal with live countdown.
+                      </p>
+                    </div>
+                  </Link>
+
+                  <Link
+                    href="/tests/wat"
+                    className="flex items-start gap-3 p-3 rounded-xl hover:bg-[#183B2B] transition-colors group"
+                  >
+                    <div className="p-2 rounded-lg bg-[#2A5A44] text-amber-400 group-hover:bg-amber-500 group-hover:text-white transition-colors">
+                      <Clock className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <div className="text-sm font-bold text-white group-hover:text-honor-gold transition-colors flex items-center gap-1.5">
+                        <span>10s WAT Simulator</span>
+                        <span className="text-[9px] bg-red-600/80 text-white font-black px-1.5 py-0.5 rounded uppercase">
+                          ISSB
+                        </span>
+                      </div>
+                      <p className="text-[11px] text-gray-400 mt-0.5">
+                        Word Association Test automatic 10-second projection slide engine.
+                      </p>
+                    </div>
+                  </Link>
+
+                  <Link
+                    href="/portal/leaderboard"
+                    className="flex items-start gap-3 p-3 rounded-xl hover:bg-[#183B2B] transition-colors group"
+                  >
+                    <div className="p-2 rounded-lg bg-[#2A5A44] text-honor-gold group-hover:bg-honor-gold group-hover:text-white transition-colors">
+                      <Trophy className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <div className="text-sm font-bold text-white group-hover:text-honor-gold transition-colors flex items-center gap-1.5">
+                        <span>Hall of Fame / Leaderboard</span>
+                      </div>
+                      <p className="text-[11px] text-gray-400 mt-0.5">
+                        National cadet rankings by test accuracy, speed & aggregate scores.
+                      </p>
+                    </div>
+                  </Link>
+                </div>
+              )}
+            </div>
+
+            {/* Admission & Roll Slip */}
+            <Link
+              href="/admission-form"
+              className={`px-3.5 py-2 rounded-lg text-sm font-semibold flex items-center gap-1.5 transition-all ${
+                pathname === '/admission-form' 
+                  ? 'bg-[#2A5A44] text-honor-gold border border-honor-gold/40' 
+                  : 'text-gray-200 hover:text-white hover:bg-[#2A5A44]/60'
+              }`}
+            >
+              <FileText className="w-4 h-4 text-honor-gold" />
+              <span>Admission & Roll Slip</span>
+            </Link>
+
+            {/* Admin Suite */}
+            <Link
+              href="/admin/courses"
+              className={`px-3 py-2 rounded-lg text-xs font-semibold flex items-center gap-1.5 transition-all ${
+                pathname.startsWith('/admin') 
+                  ? 'bg-[#2A5A44] text-honor-gold border border-honor-gold/40' 
+                  : 'text-gray-300 hover:text-white hover:bg-[#2A5A44]/40'
+              }`}
+              title="Admin Portal"
+            >
+              <Lock className="w-3.5 h-3.5 text-gray-400" />
+              <span>Admin</span>
+            </Link>
           </nav>
 
-          {/* WhatsApp Direct Action Button */}
+          {/* Right Action: WhatsApp CTA Button */}
           <div className="hidden sm:flex items-center gap-3">
             <a
               href={`https://wa.me/${ACADEMY_CONFIG.phoneRaw}?text=${encodeURIComponent('Assalam-o-Alaikum Sir Faryad Tabassum, I want admission guidance for The Best Forces Academy courses.')}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#25D366] hover:bg-[#20ba5a] text-white px-4 py-2.5 rounded-lg text-sm font-bold flex items-center gap-2 shadow-md transition-all hover:scale-105"
+              className="bg-[#25D366] hover:bg-[#20ba5a] text-white px-4 py-2.5 rounded-xl text-sm font-bold flex items-center gap-2 shadow-lg transition-all hover:scale-105 active:scale-95"
             >
               <MessageCircle className="w-4 h-4 fill-white" />
               <span>WhatsApp Sir Faryad</span>
@@ -105,37 +492,171 @@ export default function Navbar() {
           </div>
 
           {/* Mobile menu button */}
-          <div className="flex lg:hidden">
+          <div className="flex xl:hidden">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="text-gray-300 hover:text-white p-2 rounded-lg bg-[#2A5A44]"
+              className="text-gray-300 hover:text-white p-2.5 rounded-xl bg-[#2A5A44] border border-[#2A5A44] focus:outline-none"
               aria-label="Toggle navigation menu"
             >
-              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {mobileMenuOpen ? <X className="w-6 h-6 text-honor-gold" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
         </div>
       </div>
 
-      {/* Mobile Menu Dropdown */}
+      {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-[#0F261C] border-b border-[#2A5A44] px-4 pt-2 pb-6 space-y-2">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              onClick={() => setMobileMenuOpen(false)}
-              className="block px-3 py-2.5 rounded-md text-base font-medium text-gray-200 hover:text-white hover:bg-[#2A5A44]"
+        <div className="xl:hidden bg-[#0F261C] border-b border-[#2A5A44] px-4 pt-3 pb-8 space-y-3 max-h-[85vh] overflow-y-auto">
+          
+          {/* Home Link */}
+          <Link
+            href="/"
+            onClick={() => setMobileMenuOpen(false)}
+            className="block px-3 py-2.5 rounded-lg text-sm font-bold text-gray-200 hover:text-white hover:bg-[#2A5A44]"
+          >
+            Home
+          </Link>
+
+          {/* Mobile Courses Accordion */}
+          <div className="border border-[#2A5A44] rounded-xl overflow-hidden bg-[#183B2B]/40">
+            <button
+              onClick={() => setMobileCoursesOpen(!mobileCoursesOpen)}
+              className="w-full px-3 py-3 flex items-center justify-between text-sm font-bold text-white text-left"
             >
-              {link.label}
-            </Link>
-          ))}
-          <div className="pt-3">
+              <div className="flex items-center gap-2">
+                <BookOpen className="w-4 h-4 text-honor-gold" />
+                <span>Courses & Defense Wings</span>
+                <span className="text-[10px] px-1.5 py-0.5 rounded bg-honor-gold/20 text-honor-gold font-bold">
+                  41 Courses
+                </span>
+              </div>
+              <ChevronDown className={`w-4 h-4 text-gray-400 transition-transform ${mobileCoursesOpen ? 'rotate-180 text-honor-gold' : ''}`} />
+            </button>
+
+            {mobileCoursesOpen && (
+              <div className="px-3 pb-3 pt-1 space-y-2 border-t border-[#2A5A44] text-xs">
+                <Link
+                  href="/courses?cat=army"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="block p-2 rounded-lg bg-[#0F261C] text-gray-300 hover:text-honor-gold"
+                >
+                  <div className="font-bold text-white">Pakistan Army</div>
+                  <div className="text-[10px] text-gray-400">PMA Long Course, Soldier, TCC, LCC, AMC</div>
+                </Link>
+
+                <Link
+                  href="/courses?cat=paf"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="block p-2 rounded-lg bg-[#0F261C] text-gray-300 hover:text-honor-gold"
+                >
+                  <div className="font-bold text-white">Pakistan Air Force (PAF)</div>
+                  <div className="text-[10px] text-gray-400">GD Pilot, Aeronautical Engg, Air Defence, Airmen</div>
+                </Link>
+
+                <Link
+                  href="/courses?cat=navy"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="block p-2 rounded-lg bg-[#0F261C] text-gray-300 hover:text-honor-gold"
+                >
+                  <div className="font-bold text-white">Pakistan Navy</div>
+                  <div className="text-[10px] text-gray-400">PN Cadet, Operations, Marines, Sailor</div>
+                </Link>
+
+                <Link
+                  href="/courses?cat=issb"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="block p-2 rounded-lg bg-[#0F261C] text-gray-300 hover:text-honor-gold"
+                >
+                  <div className="font-bold text-white">ISSB Complete Master Pack</div>
+                  <div className="text-[10px] text-gray-400">Screening, WAT, TAT, OPI, Group Tasks, Interviews</div>
+                </Link>
+
+                <Link
+                  href="/courses"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="block text-center py-2 text-xs font-bold text-honor-gold bg-[#2A5A44] rounded-lg mt-2"
+                >
+                  View All 41 Academy Courses →
+                </Link>
+              </div>
+            )}
+          </div>
+
+          {/* Mobile Testing Lab Accordion */}
+          <div className="border border-[#2A5A44] rounded-xl overflow-hidden bg-[#183B2B]/40">
+            <button
+              onClick={() => setMobileTestsOpen(!mobileTestsOpen)}
+              className="w-full px-3 py-3 flex items-center justify-between text-sm font-bold text-white text-left"
+            >
+              <div className="flex items-center gap-2">
+                <Clock className="w-4 h-4 text-honor-gold" />
+                <span>Testing Lab & Simulators</span>
+              </div>
+              <ChevronDown className={`w-4 h-4 text-gray-400 transition-transform ${mobileTestsOpen ? 'rotate-180 text-honor-gold' : ''}`} />
+            </button>
+
+            {mobileTestsOpen && (
+              <div className="px-3 pb-3 pt-1 space-y-2 border-t border-[#2A5A44] text-xs">
+                <Link
+                  href="/tests"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="block p-2 rounded-lg bg-[#0F261C] text-gray-300 hover:text-honor-gold"
+                >
+                  <div className="font-bold text-white">Computer Mock Tests</div>
+                  <div className="text-[10px] text-gray-400">GHQ/NHQ/Air HQ computerized exam terminal</div>
+                </Link>
+
+                <Link
+                  href="/tests/wat"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="block p-2 rounded-lg bg-[#0F261C] text-gray-300 hover:text-honor-gold"
+                >
+                  <div className="font-bold text-white flex items-center gap-1.5">
+                    <span>10s WAT Simulator</span>
+                    <span className="text-[9px] bg-red-600 px-1 rounded text-white">ISSB</span>
+                  </div>
+                  <div className="text-[10px] text-gray-400">Word Association Test with countdown</div>
+                </Link>
+
+                <Link
+                  href="/portal/leaderboard"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="block p-2 rounded-lg bg-[#0F261C] text-gray-300 hover:text-honor-gold"
+                >
+                  <div className="font-bold text-white">Hall of Fame / Leaderboard</div>
+                  <div className="text-[10px] text-gray-400">Cadet test rankings and badges</div>
+                </Link>
+              </div>
+            )}
+          </div>
+
+          {/* Admission & Roll Slip */}
+          <Link
+            href="/admission-form"
+            onClick={() => setMobileMenuOpen(false)}
+            className="flex items-center gap-2 px-3 py-2.5 rounded-lg text-sm font-bold text-gray-200 hover:text-white hover:bg-[#2A5A44]"
+          >
+            <FileText className="w-4 h-4 text-honor-gold" />
+            <span>Admission Form & Roll Slip</span>
+          </Link>
+
+          {/* Admin Portal */}
+          <Link
+            href="/admin/courses"
+            onClick={() => setMobileMenuOpen(false)}
+            className="flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-semibold text-gray-400 hover:text-white"
+          >
+            <Lock className="w-3.5 h-3.5" />
+            <span>Admin Portal</span>
+          </Link>
+
+          {/* Mobile WhatsApp Button */}
+          <div className="pt-2">
             <a
               href={`https://wa.me/${ACADEMY_CONFIG.phoneRaw}?text=${encodeURIComponent('Assalam-o-Alaikum Sir Faryad Tabassum, I need admission guidance for The Best Forces Academy.')}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full bg-[#25D366] text-white py-3 rounded-lg text-center font-bold flex items-center justify-center gap-2"
+              className="w-full bg-[#25D366] hover:bg-[#20ba5a] text-white py-3 rounded-xl text-center font-bold flex items-center justify-center gap-2 shadow-lg"
             >
               <MessageCircle className="w-5 h-5 fill-white" />
               <span>WhatsApp Sir Faryad Tabassum</span>
