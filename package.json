@@ -30,6 +30,7 @@
     "postcss": "^8.4.47",
     "autoprefixer": "^10.4.20",
     "@cloudflare/next-on-pages": "^1.13.5",
+    "vercel": "65.1.0",
     "wrangler": "^3.80.0"
   }
 }
