@@ -1,0 +1,13 @@
+name = "the-best-forces-academy-lms"
+compatibility_date = "2024-09-23"
+compatibility_flags = ["nodejs_compat"]
+pages_build_output_dir = ".vercel/output/static"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "the-best-forces-academy-db"
+database_id = "local-d1-binding"
+
+[[r2_buckets]]
+binding = "MEDIA_BUCKET"
+bucket_name = "forces-academy-media"
