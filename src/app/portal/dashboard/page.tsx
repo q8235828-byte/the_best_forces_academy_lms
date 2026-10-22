@@ -45,8 +45,11 @@ export default function CadetDashboardPage() {
     router.push('/login');
   };
 
-  // Enrolled courses
-  const enrolledCourseList = INITIAL_COURSES.slice(0, 3);
+  // Dynamically resolve courses granted to this cadet
+  const enrolledCourseList = INITIAL_COURSES.filter((course) => 
+    cadet?.enrolled_courses?.includes(course.id)
+  );
+  const displayedCourses = enrolledCourseList.length > 0 ? enrolledCourseList : INITIAL_COURSES.slice(0, 2);
 
   return (
     <div className="min-h-screen bg-slate-50 py-10">
@@ -193,7 +196,7 @@ export default function CadetDashboardPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {enrolledCourseList.map((course, idx) => (
+            {displayedCourses.map((course, idx) => (
               <div 
                 key={course.id}
                 className="bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-lg transition-all overflow-hidden flex flex-col"

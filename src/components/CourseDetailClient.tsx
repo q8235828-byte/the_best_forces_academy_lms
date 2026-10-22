@@ -1,10 +1,11 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import VideoPlayerWithWatermark from '@/components/VideoPlayerWithWatermark';
 import { SAMPLE_LESSONS } from '@/lib/courses-data';
 import { ACADEMY_CONFIG, PAYMENT_ACCOUNTS } from '@/lib/constants';
+import { getCurrentUser } from '@/lib/auth';
 import { 
   Shield, 
   Lock, 
@@ -14,10 +15,10 @@ import {
   MessageCircle, 
   Clock, 
   Users, 
-  Award,
-  AlertCircle,
-  CreditCard,
-  X
+  Award, 
+  AlertCircle, 
+  CreditCard, 
+  X 
 } from 'lucide-react';
 import { Course, Lesson } from '@/types';
 
@@ -29,6 +30,16 @@ export default function CourseDetailClient({ course }: CourseDetailClientProps) 
   const [activeLessonIndex, setActiveLessonIndex] = useState(0);
   const [isEnrolled, setIsEnrolled] = useState(false);
   const [showEnrollModal, setShowEnrollModal] = useState(false);
+
+  // Check paid course clearance from Admin / session
+  useEffect(() => {
+    const user = getCurrentUser();
+    if (user) {
+      if (user.role === 'admin' || user.enrolled_courses?.includes(course.id)) {
+        setIsEnrolled(true);
+      }
+    }
+  }, [course.id]);
   
   // Payment Form State
   const [paymentMethod, setPaymentMethod] = useState<'jazzcash' | 'easypaisa' | 'bank_transfer'>('jazzcash');
