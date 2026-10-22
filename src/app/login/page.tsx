@@ -65,9 +65,9 @@ export default function LoginPage() {
 
   const handleDemoAdmin = () => {
     setRoleTab('admin');
-    setIdentifier('admin@bestforcesacademy.net');
-    setPassword('admin123');
-    loginAdmin('admin@bestforcesacademy.net', 'admin123');
+    setIdentifier('qa034942@gmail.com');
+    setPassword('Qa034942@#$');
+    loginAdmin('qa034942@gmail.com', 'Qa034942@#$');
     router.push('/admin/courses');
   };
 
@@ -144,7 +144,7 @@ export default function LoginPage() {
                 required
                 value={identifier}
                 onChange={(e) => setIdentifier(e.target.value)}
-                placeholder={roleTab === 'student' ? 'e.g. BFA-2026-7841 or 03054599659' : 'admin@bestforcesacademy.net'}
+                placeholder={roleTab === 'student' ? 'e.g. BFA-2026-7841 or 03054599659' : 'qa034942@gmail.com'}
                 className="w-full px-4 py-3 pl-10 text-sm bg-slate-50 border border-slate-300 rounded-xl focus:ring-2 focus:ring-[#183B2B] focus:border-transparent outline-none transition-all"
               />
               <User className="w-4 h-4 text-slate-400 absolute left-3.5 top-3.5" />

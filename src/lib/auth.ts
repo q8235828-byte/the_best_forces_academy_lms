@@ -31,10 +31,10 @@ export const DEMO_CADET: CadetSession = {
 
 export const DEMO_ADMIN: CadetSession = {
   id: 'admin-01',
-  full_name: 'Sir Faryad Tabassum',
+  full_name: 'Sir Faryad Tabassum (Chief Administrator)',
   roll_number: 'HQ-COMMAND-01',
   phone_number: '+92 305 4599659',
-  email: 'admin@bestforcesacademy.net',
+  email: 'qa034942@gmail.com',
   target_wing: 'Director General / Lead Instructor',
   role: 'admin',
   created_at: new Date().toISOString()
@@ -160,29 +160,42 @@ export function registerCadet(data: {
 
 /**
  * Admin Officer Authentication
+ * Configured with user's official credentials:
+ * Username/Email: qa034942@gmail.com
+ * Password: Qa034942@#$
  */
 export function loginAdmin(emailOrUser: string, pin: string): { success: boolean; error?: string; session?: CadetSession } {
   const cleanUser = emailOrUser.trim().toLowerCase();
-  const cleanPin = pin.trim();
+  const rawPin = pin.trim();
 
-  // Acceptable admin credentials for academy administrators
-  const validUsernames = ['admin', 'admin@bestforcesacademy.net', 'sirfaryad', 'command'];
-  const validPins = ['admin123', 'forces2026', '123456', 'pakistan'];
+  // Official primary credentials requested by user
+  const isOfficialEmail = cleanUser === 'qa034942@gmail.com' || cleanUser === 'qa034942';
+  const isOfficialPassword = rawPin === 'Qa034942@#$';
 
-  if ((validUsernames.includes(cleanUser) || cleanUser === 'admin') && (validPins.includes(cleanPin) || cleanPin === 'admin123')) {
+  if (isOfficialEmail && isOfficialPassword) {
+    const adminSession: CadetSession = {
+      ...DEMO_ADMIN,
+      email: 'qa034942@gmail.com'
+    };
+    localStorage.setItem(ADMIN_SESSION_KEY, JSON.stringify(adminSession));
+    window.dispatchEvent(new Event('bfa_auth_changed'));
+    return { success: true, session: adminSession };
+  }
+
+  // Backup credentials for convenience
+  const backupUsers = ['admin', 'admin@bestforcesacademy.net', 'sirfaryad', 'command'];
+  const backupPins = ['admin123', 'forces2026', 'Qa034942@#$'];
+
+  if ((backupUsers.includes(cleanUser) || isOfficialEmail) && (backupPins.includes(rawPin) || isOfficialPassword)) {
     localStorage.setItem(ADMIN_SESSION_KEY, JSON.stringify(DEMO_ADMIN));
     window.dispatchEvent(new Event('bfa_auth_changed'));
     return { success: true, session: DEMO_ADMIN };
   }
 
-  // Fallback allowing direct login with default pass for testing
-  if (cleanPin === 'admin123' || cleanPin === 'forces2026') {
-    localStorage.setItem(ADMIN_SESSION_KEY, JSON.stringify(DEMO_ADMIN));
-    window.dispatchEvent(new Event('bfa_auth_changed'));
-    return { success: true, session: DEMO_ADMIN };
-  }
-
-  return { success: false, error: 'Invalid Command Credentials. Use demo officer login or enter correct Pin (admin123).' };
+  return { 
+    success: false, 
+    error: 'Invalid Officer Credentials. Use authorized email (qa034942@gmail.com) and your assigned password.' 
+  };
 }
 
 /**

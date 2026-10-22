@@ -15,13 +15,13 @@ import {
   Sparkles,
   ChevronLeft
 } from 'lucide-react';
-import { loginAdmin, DEMO_ADMIN } from '@/lib/auth';
+import { loginAdmin } from '@/lib/auth';
 
 export const runtime = 'edge';
 
 export default function AdminLoginPage() {
   const router = useRouter();
-  const [username, setUsername] = useState('');
+  const [username, setUsername] = useState('qa034942@gmail.com');
   const [pin, setPin] = useState('');
   const [showPin, setShowPin] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -44,9 +44,9 @@ export default function AdminLoginPage() {
   };
 
   const handleQuickOfficerLogin = () => {
-    setUsername('admin@bestforcesacademy.net');
-    setPin('admin123');
-    loginAdmin('admin@bestforcesacademy.net', 'admin123');
+    setUsername('qa034942@gmail.com');
+    setPin('Qa034942@#$');
+    loginAdmin('qa034942@gmail.com', 'Qa034942@#$');
     router.push('/admin/courses');
   };
 
@@ -103,7 +103,7 @@ export default function AdminLoginPage() {
                 required
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
-                placeholder="admin@bestforcesacademy.net"
+                placeholder="qa034942@gmail.com"
                 className="w-full px-4 py-3 pl-10 text-sm bg-[#0F261C] border border-[#2A5A44] text-white rounded-xl focus:ring-2 focus:ring-honor-gold focus:border-transparent outline-none transition-all placeholder:text-gray-500"
               />
               <UserCheck className="w-4 h-4 text-gray-400 absolute left-3.5 top-3.5" />
@@ -120,7 +120,7 @@ export default function AdminLoginPage() {
                 required
                 value={pin}
                 onChange={(e) => setPin(e.target.value)}
-                placeholder="Enter admin security pin"
+                placeholder="Enter password"
                 className="w-full px-4 py-3 pl-10 pr-10 text-sm bg-[#0F261C] border border-[#2A5A44] text-white rounded-xl focus:ring-2 focus:ring-honor-gold focus:border-transparent outline-none transition-all placeholder:text-gray-500"
               />
               <KeyRound className="w-4 h-4 text-gray-400 absolute left-3.5 top-3.5" />
@@ -158,7 +158,7 @@ export default function AdminLoginPage() {
             className="w-full py-2.5 px-3 text-xs font-bold rounded-xl bg-[#2A5A44] text-honor-gold border border-honor-gold/30 hover:bg-[#346E53] flex items-center justify-center gap-2 transition-colors"
           >
             <Sparkles className="w-3.5 h-3.5 text-honor-gold" />
-            <span>1-Click Officer Demo Access (Sir Faryad)</span>
+            <span>1-Click Officer Auto-Sign In</span>
           </button>
         </div>
 
