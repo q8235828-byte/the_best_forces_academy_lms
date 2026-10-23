@@ -144,7 +144,7 @@ export default function AdminStudentsPage() {
               Cadet Directory & Course Access Manager
             </h1>
             <p className="text-xs sm:text-sm text-gray-300 max-w-2xl">
-              View all registered candidates, examine OCR B-Form and Result Card uploads, and grant paid access to any of the 41 defense courses.
+              View all registered candidates, examine attached candidate documents, and grant paid access to any of the 41 defense courses.
             </p>
           </div>
 
@@ -231,7 +231,7 @@ export default function AdminStudentsPage() {
                             <span>{cadet.full_name}</span>
                             {cadet.source === 'admission_form' && (
                               <span className="text-[9px] font-black uppercase px-1.5 py-0.5 rounded bg-emerald-100 text-emerald-800 border border-emerald-200">
-                                OCR Form
+                                Admission Form
                               </span>
                             )}
                           </div>
@@ -294,7 +294,7 @@ export default function AdminStudentsPage() {
                           <button
                             onClick={() => setActiveDossierCadet(cadet)}
                             className="px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold inline-flex items-center gap-1 transition-colors"
-                            title="View Full Cadet Dossier & OCR Documents"
+                            title="View Full Cadet Dossier & Attached Documents"
                           >
                             <Eye className="w-3.5 h-3.5" />
                             <span>Dossier / Docs</span>
@@ -437,7 +437,7 @@ export default function AdminStudentsPage() {
         </div>
       )}
 
-      {/* 2. Modal: Full Cadet Dossier & OCR Documents */}
+      {/* 2. Modal: Full Cadet Dossier & Attached Documents */}
       {activeDossierCadet && (
         <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
           <div className="bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] flex flex-col shadow-2xl border border-gray-200 overflow-hidden animate-in zoom-in-95">
@@ -529,10 +529,10 @@ export default function AdminStudentsPage() {
                 </div>
               </div>
 
-              {/* Scanned OCR Document Previews */}
+              {/* Uploaded Document Previews */}
               <div className="space-y-3">
                 <h4 className="font-bold text-gray-900 uppercase text-[11px] tracking-wider border-b pb-1 text-emerald-800">
-                  3. Uploaded B-Form & Result Card Documents (OCR Scanned)
+                  3. Uploaded B-Form & Result Card Documents
                 </h4>
                 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -544,13 +544,13 @@ export default function AdminStudentsPage() {
                         <span>NADRA B-Form / CNIC</span>
                       </span>
                       <span className="text-[10px] text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded font-bold">
-                        OCR Verified
+                        Attached
                       </span>
                     </div>
                     <div className="h-40 bg-slate-200 rounded-xl overflow-hidden relative">
                       <img
                         src={activeDossierCadet.bform_document_url || 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=600&q=80'}
-                        alt="Scanned B-Form Document"
+                        alt="Attached B-Form Document"
                         className="w-full h-full object-cover"
                       />
                     </div>
@@ -564,7 +564,7 @@ export default function AdminStudentsPage() {
                         <span>Matric / FSc Result Card</span>
                       </span>
                       <span className="text-[10px] text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded font-bold">
-                        OCR Verified
+                        Attached
                       </span>
                     </div>
                     <div className="h-40 bg-slate-200 rounded-xl overflow-hidden relative">

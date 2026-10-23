@@ -9,18 +9,16 @@ import {
   Printer, 
   FileText, 
   User, 
-  Sparkles, 
   Award,
   AlertCircle,
-  Eye,
-  Check,
-  RefreshCw,
   Clock,
   ChevronRight,
-  ExternalLink,
-  BookOpen,
   CreditCard,
-  Layers
+  Phone,
+  Calendar,
+  MapPin,
+  Camera,
+  Check
 } from 'lucide-react';
 import { ACADEMY_CONFIG } from '@/lib/constants';
 import { INITIAL_COURSES } from '@/lib/courses-data';
@@ -28,21 +26,13 @@ import { saveAdmissionFormCadet } from '@/lib/auth';
 
 export const runtime = 'edge';
 
-type SelectedTestCard = 'new_matric_986' | 'qaiser_matric_842' | 'qaiser_inter_699' | 'cnic_front';
-
 export default function AdmissionFormPage() {
-  const [selectedPresetCard, setSelectedPresetCard] = useState<SelectedTestCard>('new_matric_986');
-  const [isScanningBForm, setIsScanningBForm] = useState(false);
-  const [isScanningResultCard, setIsScanningResultCard] = useState(false);
-  const [bformScanDone, setBformScanDone] = useState(false);
-  const [resultCardScanDone, setResultCardScanDone] = useState(false);
   const [showSlip, setShowSlip] = useState(false);
-  const [detectedDocTitle, setDetectedDocTitle] = useState<string | null>(null);
-  const [detectedBadge, setDetectedBadge] = useState<string | null>(null);
 
-  // Scanned Document Previews
+  // Document Upload Previews
+  const [photoPreview, setPhotoPreview] = useState<string | null>(null);
   const [bformPreview, setBformPreview] = useState<string | null>(null);
-  const [resultCardPreview, setResultCardPreview] = useState<string | null>('/sample-matric-card-986.svg');
+  const [resultCardPreview, setResultCardPreview] = useState<string | null>(null);
 
   // Form Fields
   const [fullName, setFullName] = useState('');
@@ -53,8 +43,8 @@ export default function AdmissionFormPage() {
   const [phone, setPhone] = useState('0305 4599659');
   const [domicile, setDomicile] = useState('');
   const [height, setHeight] = useState('5.9');
-  const [weight, setWeight] = useState('64');
-  const [markOfId, setMarkOfId] = useState('');
+  const [weight, setWeight] = useState('65');
+  const [markOfId, setMarkOfId] = useState('Mole on right cheek');
   const [religion, setReligion] = useState('Islam');
   const [sect, setSect] = useState('Sunni');
   const [fatherOccupation, setFatherOccupation] = useState('');
@@ -64,109 +54,39 @@ export default function AdmissionFormPage() {
   const [selectedCourseSlug, setSelectedCourseSlug] = useState('pma-long-course');
   const [rollNumber, setRollNumber] = useState('');
 
-  // 1. SCAN THE NEW CHANGED MATRIC RESULT CARD (HAMZA TARIQ, 986 MARKS)
-  const scanNewMatricCard986 = () => {
-    setIsScanningResultCard(true);
-    setSelectedPresetCard('new_matric_986');
-    setTimeout(() => {
-      setIsScanningResultCard(false);
-      setResultCardScanDone(true);
-      setDetectedDocTitle('BISE Rawalpindi • Secondary School Certificate (Matric 2021)');
-      setDetectedBadge('NEW CARD: 986 / 1100 (Grade A+)');
-      
-      // NEW CANDIDATE DETAILS
-      setFullName('HAMZA TARIQ');
-      setFatherName('TARIQ MEHMOOD');
-      setCnic('37405-8192345-1');
-      setDob('2005-09-15'); // 15/09/2005
-      setMatricMarks('986 / 1100 (Grade A-One, Science)');
-      setDomicile('Rawalpindi (Cadet College Hasan Abdal)');
-      setFatherOccupation('Army (Retd. Subedar Major)');
-      setResultCardPreview('/sample-matric-card-986.svg');
-    }, 800);
-  };
-
-  // 2. SCAN THE PREVIOUS MATRIC CARD (QAISER FARYAD, 842 MARKS)
-  const scanQaiserMatric842 = () => {
-    setIsScanningResultCard(true);
-    setSelectedPresetCard('qaiser_matric_842');
-    setTimeout(() => {
-      setIsScanningResultCard(false);
-      setResultCardScanDone(true);
-      setDetectedDocTitle('BISE Lahore • Secondary School Certificate (Matric Science 2016)');
-      setDetectedBadge('Matric: 842 / 1100 (Grade-A)');
-      
-      setFullName('QAISER FARYAD');
-      setFatherName('FARYAD HUSSAIN');
-      setCnic('35101-1675782-9');
-      setDob('1997-04-22'); // 22/04/1997
-      setMatricMarks('842 / 1100 (Grade-A, Science)');
-      setDomicile('Kasur (Pattoki)');
-      setResultCardPreview('/qaiser-faryad-matric-card.jpg');
-    }, 800);
-  };
-
-  // 3. SCAN INTERMEDIATE 2018 (QAISER FARYAD, 699 MARKS)
-  const scanQaiserInter699 = () => {
-    setIsScanningResultCard(true);
-    setSelectedPresetCard('qaiser_inter_699');
-    setTimeout(() => {
-      setIsScanningResultCard(false);
-      setResultCardScanDone(true);
-      setDetectedDocTitle('BISE Lahore • Intermediate Examination (Pre-Engineering 2018)');
-      setDetectedBadge('Inter: 699 / 1100 (Grade-B)');
-
-      setFullName('QAISER FARYAD');
-      setFatherName('FARYAD HUSSAIN');
-      setCnic('35101-1675782-9');
-      setDob('1997-04-22');
-      setFscMarks('699 / 1100 (Grade-B, Pre-Engineering)');
-      setDomicile('Kasur (Pattoki)');
-      setResultCardPreview('/qaiser-faryad-result-card.jpg');
-    }, 800);
-  };
-
-  // 4. SCAN NADRA SMART CNIC
-  const scanSmartCnicFront = () => {
-    setIsScanningBForm(true);
-    setSelectedPresetCard('cnic_front');
-    setTimeout(() => {
-      setIsScanningBForm(false);
-      setBformScanDone(true);
-      setDetectedDocTitle('NADRA Smart National Identity Card');
-      setDetectedBadge('CNIC: 35101-1675782-9');
-
-      setFullName('QAISER FARYAD');
-      setFatherName('FARYAD HUSSAIN');
-      setCnic('35101-1675782-9');
-      setDob('1997-04-22');
-      setGender('Male');
-      setDomicile('Kasur (Pattoki)');
-      setBformPreview('/qaiser-cnic-front.jpg');
-    }, 800);
-  };
-
-  // File Upload Handlers (Inspects uploaded file name & content)
-  const handleCustomResultCardUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+  // Handle Photo Upload
+  const handlePhotoUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
       const file = e.target.files[0];
-      const fileName = file.name.toLowerCase();
-
-      // Check file name characteristics
-      if (fileName.includes('02.33') || fileName.includes('168248') || fileName.includes('842')) {
-        scanQaiserMatric842();
-      } else if (fileName.includes('02.30') || fileName.includes('541797') || fileName.includes('699')) {
-        scanQaiserInter699();
-      } else {
-        // Automatically default to the NEW changed Matric card (986 marks)
-        scanNewMatricCard986();
-      }
+      const reader = new FileReader();
+      reader.onload = (event) => {
+        setPhotoPreview(event.target?.result as string);
+      };
+      reader.readAsDataURL(file);
     }
   };
 
-  const handleCustomCnicUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+  // Handle CNIC / B-Form Upload
+  const handleBFormUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
-      scanSmartCnicFront();
+      const file = e.target.files[0];
+      const reader = new FileReader();
+      reader.onload = (event) => {
+        setBformPreview(event.target?.result as string);
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
+  // Handle Result Card Upload
+  const handleResultCardUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files && e.target.files[0]) {
+      const file = e.target.files[0];
+      const reader = new FileReader();
+      reader.onload = (event) => {
+        setResultCardPreview(event.target?.result as string);
+      };
+      reader.readAsDataURL(file);
     }
   };
 
@@ -179,24 +99,24 @@ export default function AdmissionFormPage() {
     const selectedCourseObj = INITIAL_COURSES.find((c) => c.slug === selectedCourseSlug) || INITIAL_COURSES[0];
 
     saveAdmissionFormCadet({
-      full_name: fullName || 'HAMZA TARIQ',
-      father_name: fatherName || 'TARIQ MEHMOOD',
-      cnic_bform: cnic || '37405-8192345-1',
-      dob: dob || '2005-09-15',
+      full_name: fullName.trim(),
+      father_name: fatherName.trim(),
+      cnic_bform: cnic.trim(),
+      dob: dob,
       gender: gender,
       roll_number: generatedRoll,
-      phone_number: phone,
-      email: `${(fullName || 'hamza').toLowerCase().replace(/\s+/g, '')}@gmail.com`,
+      phone_number: phone.trim(),
+      email: `${fullName.toLowerCase().replace(/[^a-z0-9]/g, '') || 'cadet'}@bestforcesacademy.net`,
       target_wing: selectedCourseObj.title,
-      domicile: domicile || 'Rawalpindi',
+      domicile: domicile.trim() || 'Rawalpindi',
       height: height,
       weight: weight,
-      matric_marks: matricMarks || '986 / 1100 (Grade A-One, Science)',
-      fsc_marks: fscMarks || '950 / 1100',
+      matric_marks: matricMarks.trim() || 'Passed',
+      fsc_marks: fscMarks.trim() || 'Passed',
       mark_of_id: markOfId,
       religion: religion,
       sect: sect,
-      father_occupation: fatherOccupation || 'Army (Retd. Subedar Major)',
+      father_occupation: fatherOccupation || 'Government Service',
       bform_document_url: bformPreview || '/qaiser-cnic-front.jpg',
       result_card_url: resultCardPreview || '/sample-matric-card-986.svg',
       enrolled_courses: [selectedCourseObj.id]
@@ -215,13 +135,13 @@ export default function AdmissionFormPage() {
         <div className="no-print space-y-4">
           <div className="bg-[#183B2B] text-white p-8 sm:p-10 rounded-3xl border border-[#2A5A44] shadow-xl relative overflow-hidden">
             <span className="text-xs text-honor-gold uppercase tracking-widest font-bold">
-              Official Candidate Registration & Document OCR
+              Official Candidate Registration & Admission
             </span>
             <h1 className="text-3xl font-black text-white mt-1">
-              Smart ISSB & Forces Admission Form
+              Candidate Admission Form
             </h1>
             <p className="text-sm text-gray-200 mt-2 max-w-2xl">
-              We have <strong>CHANGED the Matric Result Card</strong> to a brand new certificate. Select or scan any of the documents below to test how the OCR instantly updates the candidate marks, name, and Roll Number!
+              Fill in your academic and personal details, attach your required documents, and generate your official printable A4 Roll Number Slip instantly.
             </p>
           </div>
         </div>
@@ -232,7 +152,7 @@ export default function AdmissionFormPage() {
             <div className="no-print flex items-center justify-between bg-white p-4 rounded-2xl border border-gray-200 shadow-sm">
               <span className="text-sm font-semibold text-emerald-700 flex items-center gap-2">
                 <CheckCircle className="w-5 h-5" />
-                <span>Roll Number Slip generated & registered in Admin Dossier!</span>
+                <span>Roll Number Slip generated & registered in Academy Registry!</span>
               </span>
               <div className="flex gap-2">
                 <button
@@ -272,9 +192,16 @@ export default function AdmissionFormPage() {
                   </div>
                 </div>
 
-                <div className="w-24 h-28 border-2 border-dashed border-gray-400 bg-gray-50 rounded-lg flex flex-col items-center justify-center text-[10px] text-gray-500 font-bold p-1 text-center">
-                  <User className="w-6 h-6 text-gray-400 mb-1" />
-                  <span>Affix 1x1 Photo Here</span>
+                {/* Candidate Photo */}
+                <div className="w-24 h-28 border-2 border-dashed border-gray-400 bg-gray-50 rounded-lg flex flex-col items-center justify-center text-[10px] text-gray-500 font-bold overflow-hidden text-center">
+                  {photoPreview ? (
+                    <img src={photoPreview} alt="Candidate" className="w-full h-full object-cover" />
+                  ) : (
+                    <div className="p-2">
+                      <User className="w-6 h-6 text-gray-400 mx-auto mb-1" />
+                      <span>Affix 1x1 Photo</span>
+                    </div>
+                  )}
                 </div>
               </div>
 
@@ -302,39 +229,39 @@ export default function AdmissionFormPage() {
               <div className="grid grid-cols-2 gap-y-4 gap-x-8 text-xs">
                 <div className="border-b border-gray-200 pb-1.5">
                   <span className="text-gray-400 font-semibold block">Full Name:</span>
-                  <span className="font-bold text-gray-900 text-sm">{fullName || 'HAMZA TARIQ'}</span>
+                  <span className="font-bold text-gray-900 text-sm uppercase">{fullName || 'Candidate Name'}</span>
                 </div>
                 <div className="border-b border-gray-200 pb-1.5">
                   <span className="text-gray-400 font-semibold block">Father's Name:</span>
-                  <span className="font-bold text-gray-900 text-sm">{fatherName || 'TARIQ MEHMOOD'}</span>
+                  <span className="font-bold text-gray-900 text-sm uppercase">{fatherName || 'Father Name'}</span>
                 </div>
                 <div className="border-b border-gray-200 pb-1.5">
                   <span className="text-gray-400 font-semibold block">CNIC / B-Form No:</span>
-                  <span className="font-bold text-gray-900 font-mono">{cnic || '37405-8192345-1'}</span>
+                  <span className="font-bold text-gray-900 font-mono">{cnic || 'N/A'}</span>
                 </div>
                 <div className="border-b border-gray-200 pb-1.5">
                   <span className="text-gray-400 font-semibold block">Date of Birth:</span>
-                  <span className="font-bold text-gray-900">{dob || '2005-09-15'} (Age Verified)</span>
+                  <span className="font-bold text-gray-900">{dob || 'N/A'}</span>
                 </div>
                 <div className="border-b border-gray-200 pb-1.5">
                   <span className="text-gray-400 font-semibold block">Gender & Domicile:</span>
-                  <span className="font-bold text-gray-900">{gender} • {domicile || 'Rawalpindi'}</span>
+                  <span className="font-bold text-gray-900">{gender} • {domicile || 'Punjab'}</span>
                 </div>
                 <div className="border-b border-gray-200 pb-1.5">
                   <span className="text-gray-400 font-semibold block">Candidate Phone / WhatsApp:</span>
-                  <span className="font-bold text-gray-900">{phone || '0305 4599659'}</span>
+                  <span className="font-bold text-gray-900">{phone}</span>
                 </div>
                 <div className="border-b border-gray-200 pb-1.5">
                   <span className="text-gray-400 font-semibold block">Matriculation Record:</span>
-                  <span className="font-bold text-gray-900">{matricMarks || '986 / 1100 (Grade A-One, Science)'}</span>
+                  <span className="font-bold text-gray-900">{matricMarks || 'Passed'}</span>
                 </div>
                 <div className="border-b border-gray-200 pb-1.5">
                   <span className="text-gray-400 font-semibold block">Intermediate Record:</span>
-                  <span className="font-bold text-gray-900">{fscMarks || '699 / 1100 (Pre-Engineering)'}</span>
+                  <span className="font-bold text-gray-900">{fscMarks || 'Passed'}</span>
                 </div>
                 <div className="border-b border-gray-200 pb-1.5 col-span-2">
                   <span className="text-gray-400 font-semibold block">Physical Standards:</span>
-                  <span className="font-bold text-gray-900">Height: {height} ft • Weight: {weight} kg • Mark: {markOfId || 'Nil'}</span>
+                  <span className="font-bold text-gray-900">Height: {height} ft • Weight: {weight} kg • Mark of ID: {markOfId || 'None'}</span>
                 </div>
               </div>
 
@@ -343,8 +270,8 @@ export default function AdmissionFormPage() {
                 <div className="space-y-1 text-[10px] text-gray-500 max-w-sm">
                   <div className="font-bold text-gray-700 uppercase">Test Day Instructions:</div>
                   <p>1. Bring this original slip along with original CNIC/B-Form to the academy test center.</p>
-                  <p>2. Computer terminal login credentials will match your Roll Number.</p>
-                  <p>3. Electronic gadgets & calculators are strictly prohibited in the mock testing hall.</p>
+                  <p>2. Computer terminal login credentials will match your Roll Number ({rollNumber}).</p>
+                  <p>3. Electronic gadgets & calculators are strictly prohibited in the examination hall.</p>
                 </div>
 
                 <div className="text-center space-y-1">
@@ -360,266 +287,96 @@ export default function AdmissionFormPage() {
             </div>
           </div>
         ) : (
-          /* Admission Form & OCR Uploader */
+          /* Admission Form & Document Upload */
           <div className="no-print space-y-8">
             
-            {/* OCR SCANNING STATIONS */}
-            <div className="bg-white p-6 sm:p-8 rounded-3xl border border-gray-200 shadow-md space-y-6">
-              
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                <div className="flex items-center gap-2.5">
-                  <div className="p-2.5 rounded-xl bg-emerald-50 text-emerald-800 border border-emerald-200">
-                    <Sparkles className="w-5 h-5 text-emerald-700" />
-                  </div>
-                  <div>
-                    <h2 className="text-lg font-black text-slate-900">
-                      OCR Document Scanner — Test Different Result Cards
-                    </h2>
-                    <p className="text-xs text-slate-500">
-                      We changed the Matric Card. Click below to test how the OCR automatically reads the new candidate details!
-                    </p>
-                  </div>
-                </div>
+            {/* DOCUMENT ATTACHMENTS (STANDARD CLEAN UPLOAD) */}
+            <div className="bg-white p-6 sm:p-8 rounded-3xl border border-gray-200 shadow-sm space-y-6">
+              <div>
+                <h2 className="text-lg font-black text-slate-900 flex items-center gap-2">
+                  <FileText className="w-5 h-5 text-emerald-700" />
+                  <span>Attach Candidate Documents</span>
+                </h2>
+                <p className="text-xs text-slate-500 mt-0.5">
+                  Please attach copies of your photograph, CNIC/B-Form, and educational certificates for academy records.
+                </p>
               </div>
 
-              {/* CARD SWITCHER / TESTING TABS */}
-              <div className="p-4 bg-slate-100 rounded-2xl border border-slate-200 space-y-3">
-                <div className="flex items-center justify-between">
-                  <span className="text-xs font-black uppercase tracking-wider text-slate-700 flex items-center gap-1.5">
-                    <Layers className="w-4 h-4 text-honor-gold" />
-                    <span>Choose Which Document to Scan:</span>
-                  </span>
-                  <span className="text-[10px] font-bold text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded-full">
-                    Active Test Case Ready
-                  </span>
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                  
-                  {/* NEW MATRIC CARD (CHANGED AS REQUESTED) */}
-                  <button
-                    type="button"
-                    onClick={scanNewMatricCard986}
-                    className={`p-3 rounded-xl border text-left transition-all ${
-                      selectedPresetCard === 'new_matric_986'
-                        ? 'bg-[#183B2B] text-white border-honor-gold shadow-md'
-                        : 'bg-white hover:bg-slate-50 border-slate-200 text-slate-800'
-                    }`}
-                  >
-                    <div className="flex items-center justify-between mb-1">
-                      <span className="text-xs font-black">
-                        ★ NEW Matric Card (2021)
-                      </span>
-                      <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${
-                        selectedPresetCard === 'new_matric_986' ? 'bg-honor-gold text-[#0F261C]' : 'bg-emerald-100 text-emerald-800'
-                      }`}>
-                        CHANGED
-                      </span>
-                    </div>
-                    <div className={`text-[11px] font-bold ${selectedPresetCard === 'new_matric_986' ? 'text-honor-gold' : 'text-slate-900'}`}>
-                      Hamza Tariq • 986 / 1100 (A+)
-                    </div>
-                    <div className={`text-[10px] mt-0.5 ${selectedPresetCard === 'new_matric_986' ? 'text-gray-300' : 'text-slate-400'}`}>
-                      Roll: 294180 • BISE Rawalpindi
-                    </div>
-                  </button>
-
-                  {/* PREVIOUS MATRIC CARD */}
-                  <button
-                    type="button"
-                    onClick={scanQaiserMatric842}
-                    className={`p-3 rounded-xl border text-left transition-all ${
-                      selectedPresetCard === 'qaiser_matric_842'
-                        ? 'bg-[#183B2B] text-white border-honor-gold shadow-md'
-                        : 'bg-white hover:bg-slate-50 border-slate-200 text-slate-800'
-                    }`}
-                  >
-                    <div className="flex items-center justify-between mb-1">
-                      <span className="text-xs font-black">
-                        Matric Card (2016)
-                      </span>
-                      <Award className="w-4 h-4 text-emerald-600" />
-                    </div>
-                    <div className={`text-[11px] font-bold ${selectedPresetCard === 'qaiser_matric_842' ? 'text-honor-gold' : 'text-slate-900'}`}>
-                      Qaiser Faryad • 842 / 1100 (A)
-                    </div>
-                    <div className={`text-[10px] mt-0.5 ${selectedPresetCard === 'qaiser_matric_842' ? 'text-gray-300' : 'text-slate-400'}`}>
-                      Roll: 168248 • BISE Lahore
-                    </div>
-                  </button>
-
-                  {/* INTERMEDIATE PRE-ENGINEERING */}
-                  <button
-                    type="button"
-                    onClick={scanQaiserInter699}
-                    className={`p-3 rounded-xl border text-left transition-all ${
-                      selectedPresetCard === 'qaiser_inter_699'
-                        ? 'bg-[#183B2B] text-white border-honor-gold shadow-md'
-                        : 'bg-white hover:bg-slate-50 border-slate-200 text-slate-800'
-                    }`}
-                  >
-                    <div className="flex items-center justify-between mb-1">
-                      <span className="text-xs font-black">
-                        Inter Card (2018)
-                      </span>
-                      <BookOpen className="w-4 h-4 text-emerald-600" />
-                    </div>
-                    <div className={`text-[11px] font-bold ${selectedPresetCard === 'qaiser_inter_699' ? 'text-honor-gold' : 'text-slate-900'}`}>
-                      Qaiser Faryad • 699 / 1100 (B)
-                    </div>
-                    <div className={`text-[10px] mt-0.5 ${selectedPresetCard === 'qaiser_inter_699' ? 'text-gray-300' : 'text-slate-400'}`}>
-                      Roll: 541797 • Pre-Engineering
-                    </div>
-                  </button>
-
-                </div>
-              </div>
-
-              {/* TWO UPLOAD & PREVIEW STATIONS */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 
-                {/* STATION 1: NADRA Smart CNIC */}
-                <div className="border-2 border-dashed border-slate-300 hover:border-emerald-500 rounded-2xl p-5 bg-slate-50 transition-all flex flex-col justify-between space-y-4">
-                  <div className="space-y-2">
-                    <div className="flex items-center justify-between">
-                      <span className="text-xs font-bold text-slate-900 flex items-center gap-1.5">
-                        <CreditCard className="w-4 h-4 text-honor-gold" />
-                        <span>1. NADRA CNIC / B-Form Scanner</span>
-                      </span>
-                      {bformScanDone && (
-                        <span className="text-[10px] font-bold text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded-full flex items-center gap-1">
-                          <Check className="w-3 h-3" /> Scanned
-                        </span>
-                      )}
-                    </div>
-                    <p className="text-[11px] text-slate-500">
-                      Upload front CNIC or click Scan to extract CNIC and birth credentials.
-                    </p>
-                  </div>
-
-                  {bformPreview ? (
-                    <div className="h-36 rounded-xl bg-slate-200 overflow-hidden relative border border-slate-300">
-                      <img src={bformPreview} alt="CNIC Document" className="w-full h-full object-cover" />
-                      {isScanningBForm && (
-                        <div className="absolute inset-0 bg-[#183B2B]/75 flex flex-col items-center justify-center text-white text-xs gap-1 animate-pulse">
-                          <RefreshCw className="w-5 h-5 animate-spin text-honor-gold" />
-                          <span className="font-bold">Analyzing CNIC Chip...</span>
-                        </div>
-                      )}
-                    </div>
-                  ) : null}
-
-                  <div className="flex items-center gap-2 pt-1">
-                    <label className="flex-1 text-center py-2 px-3 bg-white hover:bg-slate-100 text-slate-700 border border-slate-300 rounded-xl text-xs font-bold cursor-pointer transition-colors shadow-sm">
-                      <input 
-                        type="file" 
-                        accept="image/*,.pdf" 
-                        onChange={handleCustomCnicUpload} 
-                        className="hidden" 
-                      />
-                      <span>Upload CNIC / B-Form</span>
-                    </label>
-
-                    <button
-                      type="button"
-                      onClick={scanSmartCnicFront}
-                      className="py-2 px-3 bg-emerald-700 hover:bg-emerald-800 text-white rounded-xl text-xs font-bold transition-colors shadow-sm flex items-center gap-1"
-                    >
-                      <Sparkles className="w-3.5 h-3.5" />
-                      <span>Scan CNIC</span>
-                    </button>
-                  </div>
-                </div>
-
-                {/* STATION 2: Result Card Scanner */}
-                <div className="border-2 border-dashed border-slate-300 hover:border-emerald-500 rounded-2xl p-5 bg-slate-50 transition-all flex flex-col justify-between space-y-4">
-                  <div className="space-y-2">
-                    <div className="flex items-center justify-between">
-                      <span className="text-xs font-bold text-slate-900 flex items-center gap-1.5">
-                        <Award className="w-4 h-4 text-honor-gold" />
-                        <span>2. Result Card Scanner (Active: 986 Marks)</span>
-                      </span>
-                      {resultCardScanDone && (
-                        <span className="text-[10px] font-bold text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded-full flex items-center gap-1">
-                          <Check className="w-3 h-3" /> Scanned
-                        </span>
-                      )}
-                    </div>
-                    <p className="text-[11px] text-slate-500">
-                      Currently set to the <strong>NEW Matric Card (986 Marks)</strong>.
-                    </p>
-                  </div>
-
-                  {resultCardPreview ? (
-                    <div className="h-36 rounded-xl bg-slate-200 overflow-hidden relative border border-slate-300">
-                      <img src={resultCardPreview} alt="Result Card Document" className="w-full h-full object-contain bg-white" />
-                      {isScanningResultCard && (
-                        <div className="absolute inset-0 bg-[#183B2B]/75 flex flex-col items-center justify-center text-white text-xs gap-1 animate-pulse">
-                          <RefreshCw className="w-5 h-5 animate-spin text-honor-gold" />
-                          <span className="font-bold">Analyzing Certificate Seals & Grades...</span>
-                        </div>
-                      )}
-                    </div>
-                  ) : null}
-
-                  <div className="flex items-center gap-2 pt-1">
-                    <label className="flex-1 text-center py-2 px-3 bg-white hover:bg-slate-100 text-slate-700 border border-slate-300 rounded-xl text-xs font-bold cursor-pointer transition-colors shadow-sm">
-                      <input 
-                        type="file" 
-                        accept="image/*,.pdf" 
-                        onChange={handleCustomResultCardUpload} 
-                        className="hidden" 
-                      />
-                      <span>Upload Result Card</span>
-                    </label>
-
-                    <button
-                      type="button"
-                      onClick={scanNewMatricCard986}
-                      className="py-2 px-3 bg-emerald-700 hover:bg-emerald-800 text-white rounded-xl text-xs font-bold transition-colors shadow-sm flex items-center gap-1"
-                    >
-                      <Sparkles className="w-3.5 h-3.5" />
-                      <span>Scan New Card</span>
-                    </button>
-                  </div>
-                </div>
-
-              </div>
-
-              {/* OCR RECOGNITION CERTIFICATE BANNER */}
-              {(bformScanDone || resultCardScanDone) && (
-                <div className="p-4 rounded-2xl bg-emerald-50 border border-emerald-300 text-emerald-950 space-y-2 animate-in fade-in">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2 font-bold text-xs text-emerald-900">
-                      <CheckCircle className="w-4 h-4 text-emerald-600 flex-shrink-0" />
-                      <span>{detectedDocTitle || 'Verified Document'}</span>
-                    </div>
-                    {detectedBadge && (
-                      <span className="text-[10px] bg-emerald-200 text-emerald-900 font-bold px-2 py-0.5 rounded">
-                        {detectedBadge}
-                      </span>
+                {/* 1. Passport Size Photo */}
+                <div className="border-2 border-dashed border-slate-300 hover:border-emerald-600 rounded-2xl p-4 bg-slate-50 text-center flex flex-col items-center justify-between space-y-3 transition-colors">
+                  <div className="w-20 h-24 rounded-xl bg-slate-200 overflow-hidden flex items-center justify-center border border-slate-300">
+                    {photoPreview ? (
+                      <img src={photoPreview} alt="Candidate Photo" className="w-full h-full object-cover" />
+                    ) : (
+                      <Camera className="w-8 h-8 text-slate-400" />
                     )}
                   </div>
-                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-[11px] pt-1">
-                    <div>
-                      <span className="text-gray-500 block text-[10px]">Candidate Name:</span>
-                      <strong className="text-emerald-900">{fullName}</strong>
-                    </div>
-                    <div>
-                      <span className="text-gray-500 block text-[10px]">Father's Name:</span>
-                      <strong className="text-emerald-900">{fatherName}</strong>
-                    </div>
-                    <div>
-                      <span className="text-gray-500 block text-[10px]">Date of Birth (DOB):</span>
-                      <strong className="text-emerald-900">{dob}</strong>
-                    </div>
-                    <div>
-                      <span className="text-gray-500 block text-[10px]">Matric Marks Extracted:</span>
-                      <strong className="text-emerald-900">{matricMarks || fscMarks}</strong>
-                    </div>
+                  <div>
+                    <span className="text-xs font-bold text-slate-800 block">Candidate Photo</span>
+                    <span className="text-[10px] text-slate-500 block">Passport size (White / Blue background)</span>
                   </div>
+                  <label className="w-full py-2 px-3 bg-white hover:bg-slate-100 text-slate-700 border border-slate-300 rounded-xl text-xs font-bold cursor-pointer transition-colors shadow-sm">
+                    <input 
+                      type="file" 
+                      accept="image/*" 
+                      onChange={handlePhotoUpload} 
+                      className="hidden" 
+                    />
+                    <span>{photoPreview ? 'Change Photo' : 'Upload Photo'}</span>
+                  </label>
                 </div>
-              )}
+
+                {/* 2. CNIC / B-Form Front */}
+                <div className="border-2 border-dashed border-slate-300 hover:border-emerald-600 rounded-2xl p-4 bg-slate-50 text-center flex flex-col items-center justify-between space-y-3 transition-colors">
+                  <div className="w-full h-24 rounded-xl bg-slate-200 overflow-hidden flex items-center justify-center border border-slate-300">
+                    {bformPreview ? (
+                      <img src={bformPreview} alt="CNIC / B-Form" className="w-full h-full object-cover" />
+                    ) : (
+                      <CreditCard className="w-8 h-8 text-slate-400" />
+                    )}
+                  </div>
+                  <div>
+                    <span className="text-xs font-bold text-slate-800 block">CNIC / B-Form</span>
+                    <span className="text-[10px] text-slate-500 block">Front side image or PDF scan</span>
+                  </div>
+                  <label className="w-full py-2 px-3 bg-white hover:bg-slate-100 text-slate-700 border border-slate-300 rounded-xl text-xs font-bold cursor-pointer transition-colors shadow-sm">
+                    <input 
+                      type="file" 
+                      accept="image/*,.pdf" 
+                      onChange={handleBFormUpload} 
+                      className="hidden" 
+                    />
+                    <span>{bformPreview ? 'Change Document' : 'Upload Document'}</span>
+                  </label>
+                </div>
+
+                {/* 3. Result Card / Certificate */}
+                <div className="border-2 border-dashed border-slate-300 hover:border-emerald-600 rounded-2xl p-4 bg-slate-50 text-center flex flex-col items-center justify-between space-y-3 transition-colors">
+                  <div className="w-full h-24 rounded-xl bg-slate-200 overflow-hidden flex items-center justify-center border border-slate-300">
+                    {resultCardPreview ? (
+                      <img src={resultCardPreview} alt="Result Card" className="w-full h-full object-contain bg-white" />
+                    ) : (
+                      <Award className="w-8 h-8 text-slate-400" />
+                    )}
+                  </div>
+                  <div>
+                    <span className="text-xs font-bold text-slate-800 block">Result Card / DMC</span>
+                    <span className="text-[10px] text-slate-500 block">Matric or Intermediate certificate</span>
+                  </div>
+                  <label className="w-full py-2 px-3 bg-white hover:bg-slate-100 text-slate-700 border border-slate-300 rounded-xl text-xs font-bold cursor-pointer transition-colors shadow-sm">
+                    <input 
+                      type="file" 
+                      accept="image/*,.pdf" 
+                      onChange={handleResultCardUpload} 
+                      className="hidden" 
+                    />
+                    <span>{resultCardPreview ? 'Change Result Card' : 'Upload Result Card'}</span>
+                  </label>
+                </div>
+
+              </div>
             </div>
 
             {/* Candidate Admission Form */}
@@ -628,7 +385,7 @@ export default function AdmissionFormPage() {
               {/* Course Selection */}
               <div className="space-y-3 pb-6 border-b border-gray-100">
                 <label className="block text-xs font-bold text-gray-700 uppercase tracking-wider">
-                  Target Course / Commission *
+                  Select Target Defense Course / Wing *
                 </label>
                 <select
                   value={selectedCourseSlug}
@@ -652,51 +409,43 @@ export default function AdmissionFormPage() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
                   <div>
-                    <label className="font-bold text-gray-700 block mb-1">
-                      Full Name {fullName && <span className="text-emerald-600 font-semibold text-[10px]">(OCR Auto-Populated)</span>}
-                    </label>
+                    <label className="font-bold text-gray-700 block mb-1">Full Name *</label>
                     <input
                       type="text"
                       required
                       value={fullName}
                       onChange={(e) => setFullName(e.target.value)}
-                      placeholder="e.g. HAMZA TARIQ"
+                      placeholder="e.g. Muhammad Ali"
                       className="w-full p-3 bg-slate-50 border border-gray-300 rounded-xl outline-none focus:ring-2 focus:ring-[#183B2B] font-bold text-slate-800"
                     />
                   </div>
 
                   <div>
-                    <label className="font-bold text-gray-700 block mb-1">
-                      Father's Name {fatherName && <span className="text-emerald-600 font-semibold text-[10px]">(OCR Auto-Populated)</span>}
-                    </label>
+                    <label className="font-bold text-gray-700 block mb-1">Father's Name *</label>
                     <input
                       type="text"
                       required
                       value={fatherName}
                       onChange={(e) => setFatherName(e.target.value)}
-                      placeholder="e.g. TARIQ MEHMOOD"
+                      placeholder="e.g. Tariq Mehmood"
                       className="w-full p-3 bg-slate-50 border border-gray-300 rounded-xl outline-none focus:ring-2 focus:ring-[#183B2B] font-bold text-slate-800"
                     />
                   </div>
 
                   <div>
-                    <label className="font-bold text-gray-700 block mb-1">
-                      CNIC / B-Form Number {cnic && <span className="text-emerald-600 font-semibold text-[10px]">(OCR Auto-Populated)</span>}
-                    </label>
+                    <label className="font-bold text-gray-700 block mb-1">CNIC / B-Form Number *</label>
                     <input
                       type="text"
                       required
                       value={cnic}
                       onChange={(e) => setCnic(e.target.value)}
-                      placeholder="37405-8192345-1"
+                      placeholder="e.g. 35202-1234567-1"
                       className="w-full p-3 bg-slate-50 border border-gray-300 rounded-xl outline-none font-mono font-bold focus:ring-2 focus:ring-[#183B2B] text-slate-800"
                     />
                   </div>
 
                   <div>
-                    <label className="font-bold text-gray-700 block mb-1">
-                      Date of Birth (DOB) {dob && <span className="text-emerald-600 font-semibold text-[10px]">(OCR Auto-Populated)</span>}
-                    </label>
+                    <label className="font-bold text-gray-700 block mb-1">Date of Birth (DOB) *</label>
                     <input
                       type="date"
                       required
@@ -707,7 +456,35 @@ export default function AdmissionFormPage() {
                   </div>
 
                   <div>
-                    <label className="font-bold text-gray-700 block mb-1">WhatsApp Phone Number *</label>
+                    <label className="font-bold text-gray-700 block mb-1">Gender *</label>
+                    <div className="flex gap-4 p-2 bg-slate-50 border border-gray-300 rounded-xl">
+                      <label className="flex items-center gap-2 cursor-pointer font-bold text-slate-800 text-xs">
+                        <input
+                          type="radio"
+                          name="gender"
+                          value="Male"
+                          checked={gender === 'Male'}
+                          onChange={() => setGender('Male')}
+                          className="text-[#183B2B] focus:ring-[#183B2B]"
+                        />
+                        <span>Male</span>
+                      </label>
+                      <label className="flex items-center gap-2 cursor-pointer font-bold text-slate-800 text-xs">
+                        <input
+                          type="radio"
+                          name="gender"
+                          value="Female"
+                          checked={gender === 'Female'}
+                          onChange={() => setGender('Female')}
+                          className="text-[#183B2B] focus:ring-[#183B2B]"
+                        />
+                        <span>Female</span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <div>
+                    <label className="font-bold text-gray-700 block mb-1">WhatsApp / Phone Number *</label>
                     <input
                       type="tel"
                       required
@@ -719,13 +496,24 @@ export default function AdmissionFormPage() {
                   </div>
 
                   <div>
-                    <label className="font-bold text-gray-700 block mb-1">Domicile District</label>
+                    <label className="font-bold text-gray-700 block mb-1">Domicile District *</label>
                     <input
                       type="text"
                       required
                       value={domicile}
                       onChange={(e) => setDomicile(e.target.value)}
-                      placeholder="Rawalpindi / Kasur"
+                      placeholder="e.g. Lahore / Rawalpindi / Kasur"
+                      className="w-full p-3 bg-slate-50 border border-gray-300 rounded-xl outline-none focus:ring-2 focus:ring-[#183B2B]"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="font-bold text-gray-700 block mb-1">Father's Occupation</label>
+                    <input
+                      type="text"
+                      value={fatherOccupation}
+                      onChange={(e) => setFatherOccupation(e.target.value)}
+                      placeholder="e.g. Army / Business / Teacher"
                       className="w-full p-3 bg-slate-50 border border-gray-300 rounded-xl outline-none focus:ring-2 focus:ring-[#183B2B]"
                     />
                   </div>
@@ -736,16 +524,15 @@ export default function AdmissionFormPage() {
               <div className="space-y-4 pt-4 border-t border-gray-100">
                 <h3 className="text-sm font-bold text-gray-900 uppercase tracking-wider flex items-center gap-2 text-emerald-800">
                   <Award className="w-4 h-4 text-honor-gold" />
-                  <span>Academic Qualifications & Physicals</span>
+                  <span>Academic Qualifications & Physical Standards</span>
                 </h3>
 
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
                   <div>
-                    <label className="font-bold text-gray-700 block mb-1">
-                      Matric Obtained Marks {matricMarks && <span className="text-emerald-600 font-semibold text-[10px]">(OCR Auto-Filled)</span>}
-                    </label>
+                    <label className="font-bold text-gray-700 block mb-1">Matric Marks / Grade *</label>
                     <input
                       type="text"
+                      required
                       value={matricMarks}
                       onChange={(e) => setMatricMarks(e.target.value)}
                       placeholder="e.g. 986 / 1100 (Grade A+)"
@@ -754,20 +541,18 @@ export default function AdmissionFormPage() {
                   </div>
 
                   <div>
-                    <label className="font-bold text-gray-700 block mb-1">
-                      FSc / Intermediate Marks {fscMarks && <span className="text-emerald-600 font-semibold text-[10px]">(OCR Auto-Filled)</span>}
-                    </label>
+                    <label className="font-bold text-gray-700 block mb-1">FSc / Intermediate Marks</label>
                     <input
                       type="text"
                       value={fscMarks}
                       onChange={(e) => setFscMarks(e.target.value)}
-                      placeholder="e.g. 699 / 1100"
+                      placeholder="e.g. 840 / 1100"
                       className="w-full p-3 bg-slate-50 border border-gray-300 rounded-xl outline-none focus:ring-2 focus:ring-[#183B2B] font-bold text-slate-800"
                     />
                   </div>
 
                   <div>
-                    <label className="font-bold text-gray-700 block mb-1">Height (Feet/Inches)</label>
+                    <label className="font-bold text-gray-700 block mb-1">Height (Feet.Inches) *</label>
                     <input
                       type="text"
                       required
@@ -776,6 +561,40 @@ export default function AdmissionFormPage() {
                       placeholder="e.g. 5.9"
                       className="w-full p-3 bg-slate-50 border border-gray-300 rounded-xl outline-none focus:ring-2 focus:ring-[#183B2B]"
                     />
+                  </div>
+
+                  <div>
+                    <label className="font-bold text-gray-700 block mb-1">Weight (in kg)</label>
+                    <input
+                      type="text"
+                      value={weight}
+                      onChange={(e) => setWeight(e.target.value)}
+                      placeholder="e.g. 65"
+                      className="w-full p-3 bg-slate-50 border border-gray-300 rounded-xl outline-none focus:ring-2 focus:ring-[#183B2B]"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="font-bold text-gray-700 block mb-1">Mark of Identification</label>
+                    <input
+                      type="text"
+                      value={markOfId}
+                      onChange={(e) => setMarkOfId(e.target.value)}
+                      placeholder="e.g. Mole on right cheek"
+                      className="w-full p-3 bg-slate-50 border border-gray-300 rounded-xl outline-none focus:ring-2 focus:ring-[#183B2B]"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="font-bold text-gray-700 block mb-1">ISSB Attempt Status</label>
+                    <select
+                      value={issbStatus}
+                      onChange={(e) => setIssbStatus(e.target.value as 'Fresh' | 'Repeater')}
+                      className="w-full p-3 bg-slate-50 border border-gray-300 rounded-xl outline-none focus:ring-2 focus:ring-[#183B2B]"
+                    >
+                      <option value="Fresh">Fresh Candidate</option>
+                      <option value="Repeater">Repeater Candidate</option>
+                    </select>
                   </div>
                 </div>
               </div>

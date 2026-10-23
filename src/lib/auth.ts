@@ -231,7 +231,7 @@ export function setCadetCourseList(cadetId: string, courseIds: number[]): boolea
 }
 
 /**
- * Save admission form submission with full OCR details
+ * Save admission form submission with candidate details and document attachments
  */
 export function saveAdmissionFormCadet(data: Partial<CadetSession>): CadetSession {
   const cadets = getAllRegisteredCadets();
