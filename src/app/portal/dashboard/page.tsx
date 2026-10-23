@@ -62,24 +62,24 @@ export default function CadetDashboardPage() {
           </div>
 
           <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
-            <div className="flex items-start sm:items-center gap-4">
-              <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-[#0F261C] border-2 border-honor-gold flex items-center justify-center text-honor-gold shadow-lg flex-shrink-0">
-                <GraduationCap className="w-9 h-9 sm:w-11 sm:h-11" />
+            <div className="flex items-start sm:items-center gap-3 sm:gap-4 min-w-0">
+              <div className="w-14 h-14 sm:w-20 sm:h-20 rounded-2xl bg-[#0F261C] border-2 border-honor-gold flex items-center justify-center text-honor-gold shadow-lg flex-shrink-0">
+                <GraduationCap className="w-8 h-8 sm:w-11 sm:h-11" />
               </div>
-              <div className="space-y-1">
-                <div className="flex items-center gap-2">
+              <div className="space-y-1 min-w-0 flex-1">
+                <div className="flex flex-wrap items-center gap-2">
                   <span className="text-[10px] font-black uppercase tracking-widest px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
                     Active Cadet
                   </span>
                   <span className="text-xs text-honor-gold font-bold">
-                    Roll No: {cadet?.roll_number || 'BFA-2026-7841'}
+                    Roll: {cadet?.roll_number || 'BFA-2026-7841'}
                   </span>
                 </div>
-                <h1 className="text-2xl sm:text-3xl font-black text-white">
+                <h1 className="text-xl sm:text-3xl font-black text-white truncate">
                   Cadet {cadet?.full_name || 'Muhammad Hamza'}
                 </h1>
-                <p className="text-xs text-gray-300">
-                  Target Wing: <span className="text-honor-gold font-semibold">{cadet?.target_wing || 'Pakistan Army (PMA Long Course)'}</span>
+                <p className="text-xs text-gray-300 truncate">
+                  Target Wing: <span className="text-honor-gold font-semibold">{cadet?.target_wing || 'Pakistan Army'}</span>
                 </p>
               </div>
             </div>

@@ -90,24 +90,24 @@ export default function Navbar() {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-[#183B2B] text-white shadow-xl border-b border-[#2A5A44]/80">
+    <header className="sticky top-0 z-50 w-full bg-[#183B2B] text-white shadow-xl border-b border-[#2A5A44]/80">
       {/* Top Notification Bar */}
-      <div className="bg-[#0F261C] text-xs py-1.5 px-4 border-b border-[#183B2B]/60">
-        <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <div className="flex items-center gap-2">
-            <span className="relative flex h-2 w-2">
+      <div className="bg-[#0F261C] text-xs py-1.5 px-3 sm:px-4 border-b border-[#183B2B]/60 w-full">
+        <div className="max-w-7xl mx-auto flex justify-between items-center gap-2">
+          <div className="flex items-center gap-2 min-w-0">
+            <span className="relative flex h-2 w-2 flex-shrink-0">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
             </span>
             <span className="text-gray-300 hidden sm:inline font-medium">
               Admissions Open 2026–2027: PMA, PAF, PN & ISSB Batches
             </span>
-            <span className="text-gray-300 sm:hidden font-medium">
+            <span className="text-gray-300 sm:hidden font-medium text-[11px] truncate">
               Admissions Open 2026–2027
             </span>
           </div>
 
-          <div className="flex items-center gap-4 text-gray-300">
+          <div className="flex items-center gap-3 sm:gap-4 text-gray-300 flex-shrink-0">
             {/* Top Quick Auth Links (if not logged in) */}
             {!currentUser ? (
               <div className="hidden lg:flex items-center gap-3 text-[11px]">
@@ -148,7 +148,7 @@ export default function Navbar() {
 
             <a 
               href={`tel:${ACADEMY_CONFIG.phoneRaw}`}
-              className="hover:text-honor-gold flex items-center gap-1.5 transition-colors font-medium"
+              className="hover:text-honor-gold flex items-center gap-1.5 transition-colors font-medium text-[11px] sm:text-xs"
             >
               <PhoneCall className="w-3.5 h-3.5 text-honor-gold" />
               <span>{ACADEMY_CONFIG.phone}</span>
@@ -162,22 +162,22 @@ export default function Navbar() {
       </div>
 
       {/* Main Navbar */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" ref={navContainerRef}>
-        <div className="flex items-center justify-between h-20">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 w-full" ref={navContainerRef}>
+        <div className="flex items-center justify-between h-16 sm:h-20 gap-2">
           
           {/* Logo / Brand */}
-          <Link href="/" className="flex items-center gap-3 group flex-shrink-0">
-            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#2A5A44] to-[#0F261C] border border-honor-gold/70 flex items-center justify-center shadow-lg group-hover:border-honor-gold transition-all duration-300">
-              <Shield className="w-7 h-7 text-honor-gold transform group-hover:scale-105 transition-transform" />
+          <Link href="/" className="flex items-center gap-2 sm:gap-3 group min-w-0 flex-shrink">
+            <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-[#2A5A44] to-[#0F261C] border border-honor-gold/70 flex items-center justify-center shadow-lg group-hover:border-honor-gold transition-all duration-300 flex-shrink-0">
+              <Shield className="w-5 h-5 sm:w-7 sm:h-7 text-honor-gold transform group-hover:scale-105 transition-transform" />
             </div>
-            <div>
-              <div className="text-base sm:text-lg lg:text-xl font-black tracking-tight text-white leading-tight">
+            <div className="min-w-0">
+              <div className="text-xs sm:text-lg lg:text-xl font-black tracking-tight text-white leading-tight truncate">
                 THE BEST FORCES <span className="text-honor-gold">ACADEMY</span>
               </div>
-              <div className="text-[10px] sm:text-[11px] text-gray-300 uppercase tracking-widest font-semibold flex items-center gap-1.5">
+              <div className="text-[9px] sm:text-[11px] text-gray-300 uppercase tracking-wider font-semibold flex items-center gap-1 sm:gap-1.5 truncate">
                 <span>PREMIER DEFENSE LMS</span>
-                <span className="text-honor-gold">•</span>
-                <span className="text-gray-400">BESTFORCESACADEMY.NET</span>
+                <span className="text-honor-gold hidden md:inline">•</span>
+                <span className="text-gray-400 hidden md:inline">BESTFORCESACADEMY.NET</span>
               </div>
             </div>
           </Link>
@@ -594,13 +594,13 @@ export default function Navbar() {
           </div>
 
           {/* Mobile menu button */}
-          <div className="flex xl:hidden">
+          <div className="flex xl:hidden flex-shrink-0">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="text-gray-300 hover:text-white p-2.5 rounded-xl bg-[#2A5A44] border border-[#2A5A44] focus:outline-none"
+              className="text-gray-300 hover:text-white p-2 sm:p-2.5 rounded-xl bg-[#2A5A44] border border-[#2A5A44] focus:outline-none transition-colors"
               aria-label="Toggle navigation menu"
             >
-              {mobileMenuOpen ? <X className="w-6 h-6 text-honor-gold" /> : <Menu className="w-6 h-6" />}
+              {mobileMenuOpen ? <X className="w-5 h-5 sm:w-6 sm:h-6 text-honor-gold" /> : <Menu className="w-5 h-5 sm:w-6 sm:h-6" />}
             </button>
           </div>
         </div>
