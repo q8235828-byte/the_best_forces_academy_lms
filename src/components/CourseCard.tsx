@@ -1,8 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
-import { Shield, BookOpen, Clock, Users, CheckCircle, ArrowRight, Play, MessageCircle } from 'lucide-react';
+import { ArrowRight, Play } from 'lucide-react';
 import { Course } from '@/types';
-import { ACADEMY_CONFIG } from '@/lib/constants';
 
 interface CourseCardProps {
   course: Course;
@@ -38,27 +37,31 @@ export default function CourseCard({ course }: CourseCardProps) {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/30 to-transparent" />
 
-        {/* Top Badges */}
-        <div className="absolute top-3 left-3 flex gap-2">
-          <span className={`text-[11px] px-2.5 py-1 rounded-full uppercase tracking-wider ${badge.color}`}>
+        {/* Top Left: Category Badge (Clean, No Overlap) */}
+        <div className="absolute top-3 left-3 flex items-center">
+          <span className={`text-[10px] sm:text-[11px] px-2.5 py-1 rounded-full uppercase tracking-wider ${badge.color} shadow-sm`}>
             {badge.label}
-          </span>
-          <span className="bg-emerald-600/90 text-white text-[11px] font-bold px-2 py-1 rounded-full backdrop-blur-sm flex items-center gap-1">
-            <Play className="w-2.5 h-2.5 fill-white" /> Demo Free
           </span>
         </div>
 
+        {/* Top Right: Discount Badge */}
         {discountPercent > 0 && (
-          <div className="absolute top-3 right-3 bg-red-600 text-white text-xs font-extrabold px-2 py-1 rounded-md shadow-md">
+          <div className="absolute top-3 right-3 bg-red-600 text-white text-[11px] font-extrabold px-2 py-0.5 rounded-md shadow-md">
             {discountPercent}% OFF
           </div>
         )}
 
-        <div className="absolute bottom-3 left-3 right-3 text-xs text-gray-300 flex items-center justify-between">
-          <span className="bg-black/60 px-2 py-0.5 rounded text-[11px] text-gray-200 border border-white/10">
-            For: {course.target_gender}
-          </span>
-          <span className="text-gray-300 text-[11px]">
+        {/* Bottom Image Bar: Target Gender, Demo Pill & Qualification */}
+        <div className="absolute bottom-3 left-3 right-3 text-xs text-gray-300 flex items-center justify-between gap-1">
+          <div className="flex items-center gap-1.5">
+            <span className="bg-black/60 px-2 py-0.5 rounded text-[10px] text-gray-200 border border-white/10">
+              For: {course.target_gender}
+            </span>
+            <span className="bg-emerald-600 text-white text-[10px] font-bold px-1.5 py-0.5 rounded flex items-center gap-1 shadow-sm">
+              <Play className="w-2 h-2 fill-white" /> Demo Free
+            </span>
+          </div>
+          <span className="text-gray-300 text-[10px] truncate max-w-[120px] text-right">
             {course.qualification}
           </span>
         </div>
@@ -89,25 +92,14 @@ export default function CourseCard({ course }: CourseCardProps) {
             )}
           </div>
 
-          <div className="grid grid-cols-2 gap-2">
-            <Link
-              href={`/courses/${course.slug}`}
-              className="bg-[#183B2B] hover:bg-[#2A5A44] text-white text-xs font-bold py-2.5 px-3 rounded-xl text-center transition-colors flex items-center justify-center gap-1.5 shadow-sm"
-            >
-              <span>View Course</span>
-              <ArrowRight className="w-3.5 h-3.5" />
-            </Link>
-
-            <a
-              href={`https://wa.me/${ACADEMY_CONFIG.phoneRaw}?text=${encodeURIComponent(`Assalam-o-Alaikum Sir Faryad Tabassum, I want details regarding course: ${course.title} (PKR ${course.sale_price}).`)}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-[#25D366] hover:bg-[#20ba5a] text-white text-xs font-bold py-2.5 px-3 rounded-xl text-center transition-colors flex items-center justify-center gap-1.5"
-            >
-              <MessageCircle className="w-3.5 h-3.5 fill-white" />
-              <span>WhatsApp</span>
-            </a>
-          </div>
+          {/* Clean View Course Button (WhatsApp removed from card) */}
+          <Link
+            href={`/courses/${course.slug}`}
+            className="w-full bg-[#183B2B] hover:bg-[#112a1f] text-honor-gold hover:text-white text-xs font-bold py-2.5 px-4 rounded-xl text-center transition-all flex items-center justify-center gap-2 shadow-sm border border-[#2A5A44]/60 group-hover:border-honor-gold/60"
+          >
+            <span>View Course Details</span>
+            <ArrowRight className="w-3.5 h-3.5 transform group-hover:translate-x-1 transition-transform" />
+          </Link>
         </div>
       </div>
     </div>
