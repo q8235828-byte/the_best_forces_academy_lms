@@ -205,6 +205,8 @@ export default function CadetDashboardPage() {
                   <img
                     src={course.thumbnail_url || 'https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=800&q=80'}
                     alt={course.title}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                   <span className="absolute top-3 left-3 bg-[#183B2B]/90 text-honor-gold text-[10px] font-bold px-2 py-0.5 rounded-full border border-honor-gold/40">

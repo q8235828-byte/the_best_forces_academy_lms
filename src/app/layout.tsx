@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/components/Navbar';
@@ -10,9 +10,18 @@ const inter = Inter({
   subsets: ['latin'],
   variable: '--font-inter',
   display: 'swap',
+  preload: true
 });
 
+export const viewport: Viewport = {
+  themeColor: '#183B2B',
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5
+};
+
 export const metadata: Metadata = {
+  metadataBase: new URL('https://bestforcesacademy.com'),
   title: `${ACADEMY_CONFIG.name} | Pakistan Army, Navy, PAF & ISSB Preparation`,
   description: `Official LMS for ${ACADEMY_CONFIG.name} (${ACADEMY_CONFIG.domain}). Guided by ${ACADEMY_CONFIG.leadInstructor}. Initial computer tests, intelligence questions, 10s WAT, and ISSB prep.`,
   keywords: [
@@ -24,9 +33,18 @@ export const metadata: Metadata = {
     'ISSB preparation online',
     'Sir Faryad Tabassum',
     'Verbal Non Verbal Intelligence Tests',
-    'bestforcesacademy.net'
+    'bestforcesacademy.net',
+    'bestforcesacademy.com'
   ],
   authors: [{ name: ACADEMY_CONFIG.leadInstructor }],
+  openGraph: {
+    title: `${ACADEMY_CONFIG.name} | Pakistan Army, Navy, PAF & ISSB Preparation`,
+    description: `Official LMS for ${ACADEMY_CONFIG.name}. Initial computer tests, intelligence questions, 10s WAT, and ISSB prep.`,
+    url: 'https://bestforcesacademy.com',
+    siteName: ACADEMY_CONFIG.name,
+    locale: 'en_PK',
+    type: 'website'
+  }
 };
 
 export default function RootLayout({
@@ -36,6 +54,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={inter.variable}>
+      <head>
+        <link rel="preconnect" href="https://images.unsplash.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://images.unsplash.com" />
+      </head>
       <body className="min-h-screen flex flex-col font-sans antialiased bg-slate-50 text-slate-900 selection:bg-[#183B2B] selection:text-white">
         <Navbar />
         <main className="flex-1">
