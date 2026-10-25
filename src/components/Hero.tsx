@@ -65,13 +65,13 @@ export default function Hero() {
               </Link>
 
               <a
-                href={`https://wa.me/${ACADEMY_CONFIG.phoneRaw}?text=${encodeURIComponent('Assalam-o-Alaikum Sir Faryad Tabassum, I need admission guidance.')}`}
+                href={`https://wa.me/${ACADEMY_CONFIG.phoneRaw}?text=${encodeURIComponent('Assalam-o-Alaikum Mentor, I need admission guidance.')}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto bg-[#25D366] hover:bg-[#20ba5a] text-white px-6 py-3.5 rounded-xl font-bold text-sm shadow-lg flex items-center justify-center gap-2 transition-all hover:scale-105"
               >
                 <MessageCircle className="w-4 h-4 fill-white" />
-                <span>WhatsApp Sir Faryad</span>
+                <span>WhatsApp Mentor</span>
               </a>
             </div>
           </div>

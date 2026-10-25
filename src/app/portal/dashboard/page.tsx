@@ -87,13 +87,13 @@ export default function CadetDashboardPage() {
             {/* Header Action Buttons */}
             <div className="flex flex-wrap items-center gap-3">
               <a
-                href={`https://wa.me/${ACADEMY_CONFIG.phoneRaw}?text=${encodeURIComponent(`Assalam-o-Alaikum Sir Faryad Tabassum, I am Cadet ${cadet?.full_name || ''} (Roll: ${cadet?.roll_number || ''}). I need guidance on my course preparation.`)}`}
+                href={`https://wa.me/${ACADEMY_CONFIG.phoneRaw}?text=${encodeURIComponent(`Assalam-o-Alaikum Mentor, I am Cadet ${cadet?.full_name || ''} (Roll: ${cadet?.roll_number || ''}). I need guidance on my course preparation.`)}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-[#25D366] hover:bg-[#20ba5a] text-white px-4 py-2.5 rounded-xl text-xs font-bold flex items-center gap-2 shadow-md transition-all hover:scale-105"
               >
                 <MessageCircle className="w-4 h-4 fill-white" />
-                <span>Contact Sir Faryad</span>
+                <span>Contact Mentor</span>
               </a>
 
               <Link

@@ -1,7 +1,7 @@
 export const ACADEMY_CONFIG = {
   name: "THE BEST FORCES ACADEMY LMS",
   domain: "bestforcesacademy.net",
-  leadInstructor: "Sir Faryad Tabassum",
+  leadInstructor: "Mentor",
   phone: "+92 305 4599659",
   phoneRaw: "923054599659",
   whatsappUrl: "https://wa.me/923054599659",
@@ -16,12 +16,12 @@ export const PAYMENT_ACCOUNTS = {
   jazzcash: {
     title: "JazzCash Account",
     accountNumber: "0305 4599659",
-    accountTitle: "Sir Faryad Tabassum"
+    accountTitle: "Mentor"
   },
   easypaisa: {
     title: "EasyPaisa Account",
     accountNumber: "0305 4599659",
-    accountTitle: "Sir Faryad Tabassum"
+    accountTitle: "Mentor"
   },
   bank: {
     title: "Meezan Bank Limited",

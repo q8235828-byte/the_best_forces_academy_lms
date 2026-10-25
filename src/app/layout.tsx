@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     'PAF GDP CAE preparation',
     'Pakistan Navy PN Cadet',
     'ISSB preparation online',
-    'Sir Faryad Tabassum',
+    'Mentor',
     'Verbal Non Verbal Intelligence Tests',
     'bestforcesacademy.net',
     'bestforcesacademy.com'

@@ -174,7 +174,7 @@ export default function WATEngine() {
                 </button>
               </div>
               <p className="text-xs text-gray-400 text-left">
-                💡 Tip from Sir Faryad: Keep sentences short, active, and optimistic. Avoid negation words like &apos;not&apos;, &apos;never&apos;, or &apos;cannot&apos;.
+                💡 Tip from Mentor: Keep sentences short, active, and optimistic. Avoid negation words like &apos;not&apos;, &apos;never&apos;, or &apos;cannot&apos;.
               </p>
             </div>
           </div>
@@ -189,7 +189,7 @@ export default function WATEngine() {
             </div>
 
             <div className="space-y-3">
-              <h3 className="font-bold text-gray-900 text-base">Key Rules for Success by Sir Faryad Tabassum:</h3>
+              <h3 className="font-bold text-gray-900 text-base">Key Rules for Success by Mentor:</h3>
               <ul className="space-y-2 text-sm text-gray-600 list-disc pl-5">
                 <li>Make positive, constructive sentences showing leadership and determination.</li>
                 <li>Avoid textbook proverbs (e.g. &apos;Honesty is the best policy&apos;); write original thoughts.</li>
@@ -247,15 +247,15 @@ export default function WATEngine() {
             </table>
           </div>
 
-          {/* WhatsApp Direct Review with Sir Faryad */}
+          {/* WhatsApp Direct Review with Mentor */}
           <div className="bg-[#183B2B] text-white p-5 rounded-xl flex flex-col sm:flex-row items-center justify-between gap-4">
             <div>
-              <h4 className="font-bold text-sm">Want Sir Faryad Tabassum to Psychologically Assess Your Sentences?</h4>
+              <h4 className="font-bold text-sm">Want Mentor to Psychologically Assess Your Sentences?</h4>
               <p className="text-xs text-gray-300">Send your WAT sheet directly to our WhatsApp evaluation wing.</p>
             </div>
 
             <a
-              href={`https://wa.me/${ACADEMY_CONFIG.phoneRaw}?text=${encodeURIComponent(`Assalam-o-Alaikum Sir Faryad Tabassum, I just completed the 20-word ISSB WAT test on bestforcesacademy.net and would like psychological feedback on my sentences.`)}`}
+              href={`https://wa.me/${ACADEMY_CONFIG.phoneRaw}?text=${encodeURIComponent(`Assalam-o-Alaikum Mentor, I just completed the 20-word ISSB WAT test on bestforcesacademy.net and would like psychological feedback on my sentences.`)}`}
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#25D366] hover:bg-[#20ba5a] text-white font-bold text-xs px-5 py-3 rounded-lg flex items-center gap-2 shadow-md transition-all whitespace-nowrap"

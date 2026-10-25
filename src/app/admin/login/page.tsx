@@ -75,7 +75,7 @@ export default function AdminLoginPage() {
             <Lock className="w-8 h-8 text-honor-gold" />
           </div>
           <span className="text-[10px] font-bold text-honor-gold uppercase tracking-widest block">
-            Command Center • Head: Sir Faryad Tabassum
+            Command Center • Head: Mentor
           </span>
           <h1 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
             Admin Officer Portal

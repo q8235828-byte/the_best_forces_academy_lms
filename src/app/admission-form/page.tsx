@@ -277,7 +277,7 @@ export default function AdmissionFormPage() {
                 <div className="text-center space-y-1">
                   <div className="w-24 h-12 border-b-2 border-gray-800 mx-auto"></div>
                   <div className="text-[11px] font-bold text-gray-900 uppercase">
-                    Sir Faryad Tabassum
+                    Mentor
                   </div>
                   <div className="text-[9px] text-honor-gold uppercase font-bold tracking-widest">
                     Lead Instructor & Controller

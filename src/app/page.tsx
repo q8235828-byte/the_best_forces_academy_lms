@@ -225,12 +225,12 @@ export default function HomePage() {
 
           <div className="bg-[#183B2B] text-white p-6 rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-4">
             <div>
-              <h4 className="font-bold text-base">Made a payment? Send screenshot to Sir Faryad Tabassum</h4>
+              <h4 className="font-bold text-base">Made a payment? Send screenshot to Mentor</h4>
               <p className="text-xs text-gray-300">Your account and VIP WhatsApp batch link will be activated in minutes.</p>
             </div>
 
             <a
-              href={`https://wa.me/${ACADEMY_CONFIG.phoneRaw}?text=${encodeURIComponent('Assalam-o-Alaikum Sir Faryad Tabassum, I have transferred the fee for my course. Here is my transaction receipt screenshot.')}`}
+              href={`https://wa.me/${ACADEMY_CONFIG.phoneRaw}?text=${encodeURIComponent('Assalam-o-Alaikum Mentor, I have transferred the fee for my course. Here is my transaction receipt screenshot.')}`}
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#25D366] hover:bg-[#20ba5a] text-white font-bold text-xs px-6 py-3 rounded-xl flex items-center gap-2 shadow-lg transition-all hover:scale-105 whitespace-nowrap"

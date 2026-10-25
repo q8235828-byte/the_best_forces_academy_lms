@@ -583,13 +583,13 @@ export default function Navbar() {
             )}
 
             <a
-              href={`https://wa.me/${ACADEMY_CONFIG.phoneRaw}?text=${encodeURIComponent('Assalam-o-Alaikum Sir Faryad Tabassum, I want admission guidance for The Best Forces Academy courses.')}`}
+              href={`https://wa.me/${ACADEMY_CONFIG.phoneRaw}?text=${encodeURIComponent('Assalam-o-Alaikum Mentor, I want admission guidance for The Best Forces Academy courses.')}`}
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#25D366] hover:bg-[#20ba5a] text-white px-3.5 py-2.5 rounded-xl text-xs font-bold flex items-center gap-1.5 shadow-lg transition-all hover:scale-105 active:scale-95"
             >
               <MessageCircle className="w-4 h-4 fill-white" />
-              <span>WhatsApp Sir Faryad</span>
+              <span>WhatsApp Mentor</span>
             </a>
           </div>
 
@@ -803,13 +803,13 @@ export default function Navbar() {
           {/* Mobile WhatsApp Button */}
           <div className="pt-2">
             <a
-              href={`https://wa.me/${ACADEMY_CONFIG.phoneRaw}?text=${encodeURIComponent('Assalam-o-Alaikum Sir Faryad Tabassum, I need admission guidance for The Best Forces Academy.')}`}
+              href={`https://wa.me/${ACADEMY_CONFIG.phoneRaw}?text=${encodeURIComponent('Assalam-o-Alaikum Mentor, I need admission guidance for The Best Forces Academy.')}`}
               target="_blank"
               rel="noopener noreferrer"
               className="w-full bg-[#25D366] hover:bg-[#20ba5a] text-white py-3 rounded-xl text-center font-bold flex items-center justify-center gap-2 shadow-lg"
             >
               <MessageCircle className="w-5 h-5 fill-white" />
-              <span>WhatsApp Sir Faryad Tabassum</span>
+              <span>WhatsApp Mentor</span>
             </a>
           </div>
         </div>

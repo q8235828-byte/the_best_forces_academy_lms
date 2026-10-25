@@ -114,20 +114,20 @@ export default function VideoPlayerWithWatermark({
               )}
 
               <a
-                href={`https://wa.me/${ACADEMY_CONFIG.phoneRaw}?text=${encodeURIComponent(`Assalam-o-Alaikum Sir Faryad Tabassum, I want to unlock full course: ${course.title} (PKR ${course.sale_price}). Please share payment details.`)}`}
+                href={`https://wa.me/${ACADEMY_CONFIG.phoneRaw}?text=${encodeURIComponent(`Assalam-o-Alaikum Mentor, I want to unlock full course: ${course.title} (PKR ${course.sale_price}). Please share payment details.`)}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-[#25D366] hover:bg-[#20ba5a] text-white font-bold px-5 py-3 rounded-xl flex items-center gap-2 shadow-lg"
               >
                 <MessageCircle className="w-4 h-4 fill-white" />
-                <span>Verify with Sir Faryad</span>
+                <span>Verify with Mentor</span>
               </a>
             </div>
           </div>
         )}
       </div>
 
-      {/* In-Lesson Bottom Bar: Doubt Button with Sir Faryad Tabassum */}
+      {/* In-Lesson Bottom Bar: Doubt Button with Mentor */}
       <div className="bg-[#183B2B] p-4 text-white flex flex-col sm:flex-row items-center justify-between gap-3 border-t border-[#2A5A44]">
         <div className="flex items-center gap-3">
           <div className="w-9 h-9 rounded-lg bg-[#0F261C] border border-honor-gold/40 flex items-center justify-center text-honor-gold font-bold">
@@ -143,13 +143,13 @@ export default function VideoPlayerWithWatermark({
 
         {/* WhatsApp Direct Doubt Button */}
         <a
-          href={`https://wa.me/${ACADEMY_CONFIG.phoneRaw}?text=${encodeURIComponent(`Assalam-o-Alaikum Sir Faryad Tabassum, I am watching ${course.title} -> Lesson ${lesson.order_index} (${lesson.title}) and have a question regarding the topic:`)}`}
+          href={`https://wa.me/${ACADEMY_CONFIG.phoneRaw}?text=${encodeURIComponent(`Assalam-o-Alaikum Mentor, I am watching ${course.title} -> Lesson ${lesson.order_index} (${lesson.title}) and have a question regarding the topic:`)}`}
           target="_blank"
           rel="noopener noreferrer"
           className="bg-[#25D366] hover:bg-[#20ba5a] text-white text-xs font-bold px-4 py-2.5 rounded-lg flex items-center gap-2 shadow transition-all hover:scale-105 whitespace-nowrap"
         >
           <MessageCircle className="w-4 h-4 fill-white" />
-          <span>Ask Sir Faryad Tabassum on WhatsApp</span>
+          <span>Ask Mentor on WhatsApp</span>
         </a>
       </div>
     </div>

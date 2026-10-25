@@ -138,7 +138,7 @@ export default function AdminStudentsPage() {
           <div className="relative z-10 space-y-1">
             <div className="flex items-center gap-2 text-honor-gold text-xs font-bold uppercase tracking-wider">
               <Shield className="w-4 h-4" />
-              <span>HQ Command Registry • Sir Faryad Tabassum</span>
+              <span>HQ Command Registry • Mentor</span>
             </div>
             <h1 className="text-2xl sm:text-3xl font-black text-white">
               Cadet Directory & Course Access Manager
@@ -261,7 +261,7 @@ export default function AdminStudentsPage() {
                           <div className="font-medium text-gray-900">{cadet.phone_number}</div>
                           <div className="flex items-center gap-2 mt-1">
                             <a
-                              href={`https://wa.me/${cadet.phone_number.replace(/[^0-9]/g, '')}?text=${encodeURIComponent(`Assalam-o-Alaikum Cadet ${cadet.full_name}, this is Sir Faryad Tabassum from The Best Forces Academy regarding your admission (Roll: ${cadet.roll_number}).`)}`}
+                              href={`https://wa.me/${cadet.phone_number.replace(/[^0-9]/g, '')}?text=${encodeURIComponent(`Assalam-o-Alaikum Cadet ${cadet.full_name}, this is Mentor from The Best Forces Academy regarding your admission (Roll: ${cadet.roll_number}).`)}`}
                               target="_blank"
                               rel="noopener noreferrer"
                               className="text-[#25D366] hover:underline flex items-center gap-1 text-[11px] font-bold"

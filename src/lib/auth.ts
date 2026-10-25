@@ -114,7 +114,7 @@ export const DEMO_CADET: CadetSession = INITIAL_REGISTERED_CADETS[0];
 
 export const DEMO_ADMIN: CadetSession = {
   id: 'admin-01',
-  full_name: 'Sir Faryad Tabassum (Chief Administrator)',
+  full_name: 'Mentor (Chief Administrator)',
   roll_number: 'HQ-COMMAND-01',
   phone_number: '+92 305 4599659',
   email: 'qa034942@gmail.com',
@@ -385,7 +385,7 @@ export function loginAdmin(emailOrUser: string, pin: string): { success: boolean
   }
 
   // Backup credentials for convenience
-  const backupUsers = ['admin', 'admin@bestforcesacademy.net', 'sirfaryad', 'command'];
+  const backupUsers = ['admin', 'admin@bestforcesacademy.net', 'mentor', 'sirfaryad', 'command'];
   const backupPins = ['admin123', 'forces2026', 'Qa034942@#$'];
 
   if ((backupUsers.includes(cleanUser) || isOfficialEmail) && (backupPins.includes(rawPin) || isOfficialPassword)) {

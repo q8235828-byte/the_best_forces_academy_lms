@@ -158,7 +158,7 @@ export default function LoginPage() {
               </label>
               {roleTab === 'student' && (
                 <a
-                  href={`https://wa.me/${ACADEMY_CONFIG.phoneRaw}?text=${encodeURIComponent('Assalam-o-Alaikum Sir Faryad Tabassum, I forgot my Cadet LMS password.')}`}
+                  href={`https://wa.me/${ACADEMY_CONFIG.phoneRaw}?text=${encodeURIComponent('Assalam-o-Alaikum Mentor, I forgot my Cadet LMS password.')}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-[11px] font-semibold text-emerald-700 hover:underline"

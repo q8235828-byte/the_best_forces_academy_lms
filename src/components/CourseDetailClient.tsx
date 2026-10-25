@@ -186,7 +186,7 @@ export default function CourseDetailClient({ course }: CourseDetailClientProps) 
                 </div>
                 <div className="p-3.5 rounded-xl bg-gray-50 border border-gray-200 flex items-center gap-3">
                   <CheckCircle className="w-5 h-5 text-emerald-600 flex-shrink-0" />
-                  <span className="text-xs font-semibold text-gray-700">Sir Faryad Tabassum Personal Guidance</span>
+                  <span className="text-xs font-semibold text-gray-700">Mentor Personal Guidance</span>
                 </div>
                 <div className="p-3.5 rounded-xl bg-gray-50 border border-gray-200 flex items-center gap-3">
                   <CheckCircle className="w-5 h-5 text-emerald-600 flex-shrink-0" />
@@ -433,12 +433,12 @@ export default function CourseDetailClient({ course }: CourseDetailClientProps) 
                   Admission Form & Proof Submitted!
                 </h3>
                 <p className="text-sm text-gray-600 max-w-sm mx-auto">
-                  Candidate <strong>{candidateName}</strong>, your premium lectures are now unlocked. Please send your screenshot to Sir Faryad Tabassum for official VIP batch verification.
+                  Candidate <strong>{candidateName}</strong>, your premium lectures are now unlocked. Please send your screenshot to Mentor for official VIP batch verification.
                 </p>
 
                 <div className="pt-4 flex flex-col gap-3">
                   <a
-                    href={`https://wa.me/${ACADEMY_CONFIG.phoneRaw}?text=${encodeURIComponent(`Assalam-o-Alaikum Sir Faryad Tabassum, I just submitted fee proof for ${course.title}. TRX ID: ${trxId}, Name: ${candidateName}, Phone: ${candidatePhone}.`)}`}
+                    href={`https://wa.me/${ACADEMY_CONFIG.phoneRaw}?text=${encodeURIComponent(`Assalam-o-Alaikum Mentor, I just submitted fee proof for ${course.title}. TRX ID: ${trxId}, Name: ${candidateName}, Phone: ${candidatePhone}.`)}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full bg-[#25D366] hover:bg-[#20ba5a] text-white py-3 rounded-xl font-bold text-sm flex items-center justify-center gap-2 shadow"
