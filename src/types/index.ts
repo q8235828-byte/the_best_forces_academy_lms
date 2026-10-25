@@ -55,11 +55,14 @@ export interface Quiz {
   test_type: QuizType;
   duration_minutes: number;
   passing_score: number;
+  sequence_number?: number;
+  description?: string;
 }
 
 export interface QuizQuestion {
   id: number;
   quiz_id: number;
+  category?: string;
   question_text?: string;
   question_image_url?: string;
   option_a: string;

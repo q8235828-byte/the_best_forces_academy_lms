@@ -151,10 +151,17 @@ export default function QuizEngine({ quiz, questions, onAttemptComplete }: QuizE
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 p-6">
           {/* Main Question Interface (3 cols) */}
           <div className="lg:col-span-3 space-y-6">
-            <div className="flex items-center justify-between border-b border-gray-100 pb-3">
-              <span className="text-sm font-semibold text-gray-500">
-                Question <strong className="text-gray-900">{currentIndex + 1}</strong> of {questions.length}
-              </span>
+            <div className="flex items-center justify-between border-b border-gray-100 pb-3 flex-wrap gap-2">
+              <div className="flex items-center gap-2.5 flex-wrap">
+                <span className="text-sm font-semibold text-gray-500">
+                  Question <strong className="text-gray-900">{currentIndex + 1}</strong> of {questions.length}
+                </span>
+                {currentQ.category && (
+                  <span className="text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200">
+                    Type: {currentQ.category}
+                  </span>
+                )}
+              </div>
               <button
                 onClick={handleToggleFlag}
                 className={`text-xs flex items-center gap-1.5 px-3 py-1.5 rounded-lg border font-medium transition-colors ${
@@ -373,9 +380,16 @@ export default function QuizEngine({ quiz, questions, onAttemptComplete }: QuizE
                     isCorrect ? 'border-emerald-200 bg-emerald-50/30' : 'border-red-200 bg-red-50/30'
                   }`}>
                     <div className="flex items-start justify-between gap-4 mb-2">
-                      <div className="flex items-center gap-2 font-bold text-gray-900">
-                        <span>Q{idx + 1}.</span>
-                        <span>{q.question_text}</span>
+                      <div className="space-y-1">
+                        <div className="flex items-center gap-2 font-bold text-gray-900">
+                          <span>Q{idx + 1}.</span>
+                          <span>{q.question_text}</span>
+                        </div>
+                        {q.category && (
+                          <span className="inline-block text-[10px] font-bold px-2 py-0.5 rounded bg-gray-100 text-gray-700 border border-gray-200">
+                            Category: {q.category}
+                          </span>
+                        )}
                       </div>
                       {isCorrect ? (
                         <span className="text-emerald-600 font-bold text-xs flex items-center gap-1 bg-emerald-100 px-2.5 py-1 rounded-md">
