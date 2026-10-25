@@ -256,16 +256,21 @@ export default function QuizEngine({ quiz, questions, onAttemptComplete }: QuizE
 
           {/* Question Palette Sidebar (1 col) */}
           <div className="bg-gray-50 p-5 rounded-xl border border-gray-200 h-fit space-y-4">
-            <h4 className="font-bold text-gray-800 text-sm uppercase tracking-wider">
-              Question Palette
-            </h4>
+            <div className="flex items-center justify-between">
+              <h4 className="font-bold text-gray-800 text-sm uppercase tracking-wider">
+                Question Palette
+              </h4>
+              <span className="text-[11px] font-bold text-gray-500">
+                {questions.length} Questions
+              </span>
+            </div>
 
-            <div className="grid grid-cols-5 gap-2">
+            <div className="grid grid-cols-5 gap-1.5 max-h-80 overflow-y-auto pr-1">
               {questions.map((_, idx) => (
                 <button
                   key={idx}
                   onClick={() => setCurrentIndex(idx)}
-                  className={`h-9 rounded-lg text-xs flex items-center justify-center transition-all ${getStatusColor(idx)}`}
+                  className={`h-8 rounded-lg text-xs font-semibold flex items-center justify-center transition-all ${getStatusColor(idx)}`}
                 >
                   {idx + 1}
                 </button>

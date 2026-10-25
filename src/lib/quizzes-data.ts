@@ -17,12 +17,12 @@ export const SAMPLE_QUIZZES: Quiz[] = [
   {
     id: 1,
     course_id: 2,
-    title: 'Verbal Intelligence Test',
+    title: 'Verbal Intelligence Test (100 Questions Exam)',
     test_type: 'Verbal',
-    duration_minutes: 15,
+    duration_minutes: 35,
     passing_score: 60,
     sequence_number: 1,
-    description: 'Covers 10 core reasoning types: Series, Days, Age, Direction, Percentage, Dozen, Speed & Time, Arithmetic, Blood Relations, and Analogy.'
+    description: 'Full 100-Question Computer Exam: 10 random questions from each of the 10 Verbal reasoning types. Authentic 35-min military countdown timer.'
   },
   {
     id: 2,

@@ -53,7 +53,7 @@ export default function TestsPortalPage() {
               </div>
               <div className="min-w-0">
                 <p className="text-xs font-extrabold text-[#183B2B] truncate">Step 1: Verbal Intelligence</p>
-                <p className="text-[11px] text-gray-500 truncate">10 Core Reasoning Types</p>
+                <p className="text-[11px] text-gray-500 truncate">100 Qs • 10 Types</p>
               </div>
             </div>
 
@@ -86,6 +86,45 @@ export default function TestsPortalPage() {
                 <p className="text-[11px] text-amber-800 truncate">10s Word Association (WAT)</p>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* ⭐ Mentor's Mandatory Preparation Banner (500 Questions PDF Guide) ⭐ */}
+        <div className="bg-gradient-to-r from-amber-500 via-yellow-400 to-amber-500 p-6 sm:p-8 rounded-3xl text-slate-950 shadow-xl border-2 border-amber-300 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="space-y-2 max-w-2xl">
+            <div className="flex items-center gap-2">
+              <span className="bg-slate-950 text-white font-extrabold text-[11px] px-3 py-1 rounded-full uppercase tracking-wider">
+                ⭐ Mentor Recommendation
+              </span>
+              <span className="text-xs font-bold text-slate-950 uppercase">
+                Must Prepare Before Attempting Step 1
+              </span>
+            </div>
+            <h2 className="text-xl sm:text-2xl font-black text-slate-950 leading-snug">
+              500 Solved Verbal Questions Master Bank & Shortcuts PDF
+            </h2>
+            <p className="text-xs sm:text-sm text-slate-900 font-medium leading-relaxed">
+              Verbal computer exam mein tamam 10 categories se random 100 questions puche jaate hain. Mentor ne 10 categories ke 50-50 solved questions (Total 500 Questions Bank) with shortcuts tayar kiye hain. Test shuru karne se pehle is PDF ko lazmi download aur study karein!
+            </p>
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-3 shrink-0 w-full md:w-auto">
+            <Link
+              href="/tests/verbal-pdf"
+              target="_blank"
+              className="bg-slate-950 hover:bg-slate-900 text-white font-black px-6 py-3.5 rounded-xl shadow-md text-xs sm:text-sm flex items-center justify-center gap-2 transition-all hover:scale-105 whitespace-nowrap"
+            >
+              <BookOpen className="w-4 h-4 text-honor-gold" />
+              <span>Download / Read 500 Qs PDF</span>
+            </Link>
+
+            <Link
+              href="/tests/quiz/1"
+              className="bg-[#183B2B] hover:bg-[#2A5A44] text-white font-black px-6 py-3.5 rounded-xl shadow-md text-xs sm:text-sm flex items-center justify-center gap-2 transition-all hover:scale-105 whitespace-nowrap"
+            >
+              <Play className="w-4 h-4 fill-white" />
+              <span>Start 100-Question Quiz</span>
+            </Link>
           </div>
         </div>
 
@@ -187,6 +226,17 @@ export default function TestsPortalPage() {
 
                   {/* Launch Action */}
                   <div className="pt-6 border-t border-gray-100 mt-6">
+                    {isVerbal && (
+                      <Link
+                        href="/tests/verbal-pdf"
+                        target="_blank"
+                        className="w-full mb-2.5 bg-amber-50 hover:bg-amber-100 text-amber-950 border border-amber-300 py-2.5 rounded-xl font-bold text-xs flex items-center justify-center gap-2 shadow-sm transition-all"
+                      >
+                        <BookOpen className="w-3.5 h-3.5 text-amber-700" />
+                        <span>Study 500 Solved Verbal Questions PDF</span>
+                      </Link>
+                    )}
+
                     {isWAT ? (
                       <Link
                         href="/tests/wat"
