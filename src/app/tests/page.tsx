@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { SAMPLE_QUIZZES, VERBAL_REASONING_TYPES } from '@/lib/quizzes-data';
+import { SAMPLE_QUIZZES, VERBAL_REASONING_TYPES, NON_VERBAL_REASONING_TYPES } from '@/lib/quizzes-data';
 import { 
   Shield, 
   Clock, 
@@ -12,7 +12,8 @@ import {
   Check, 
   HelpCircle,
   Layers,
-  ChevronRight
+  ChevronRight,
+  Eye
 } from 'lucide-react';
 import { ACADEMY_CONFIG } from '@/lib/constants';
 
@@ -89,7 +90,7 @@ export default function TestsPortalPage() {
           </div>
         </div>
 
-        {/* ⭐ Mentor's Mandatory Preparation Banner (500 Questions PDF Guide) ⭐ */}
+        {/* ⭐ Mentor's Mandatory Preparation Banner (500 Questions PDF Guides) ⭐ */}
         <div className="bg-gradient-to-r from-amber-500 via-yellow-400 to-amber-500 p-6 sm:p-8 rounded-3xl text-slate-950 shadow-xl border-2 border-amber-300 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="space-y-2 max-w-2xl">
             <div className="flex items-center gap-2">
@@ -97,14 +98,14 @@ export default function TestsPortalPage() {
                 ⭐ Mentor Recommendation
               </span>
               <span className="text-xs font-bold text-slate-950 uppercase">
-                Must Prepare Before Attempting Step 1
+                Must Prepare Before Attempting Step 1 & 2
               </span>
             </div>
             <h2 className="text-xl sm:text-2xl font-black text-slate-950 leading-snug">
-              500 Solved Verbal Questions Master Bank & Shortcuts PDF
+              500 Solved Verbal & 500 Non-Verbal Question Banks & PDFs
             </h2>
             <p className="text-xs sm:text-sm text-slate-900 font-medium leading-relaxed">
-              Verbal computer exam mein tamam 10 categories se random 100 questions puche jaate hain. Mentor ne 10 categories ke 50-50 solved questions (Total 500 Questions Bank) with shortcuts tayar kiye hain. Test shuru karne se pehle is PDF ko lazmi download aur study karein!
+              Verbal aur Non-Verbal tests mein 10, 10 categories se 100 questions puche jaate hain. Mentor ne dono tests ke 500-500 solved questions with authentic shortcuts & diagrams tayar kiye hain. Test shuru karne se pehle in PDFs ko lazmi download aur study karein!
             </p>
           </div>
 
@@ -112,18 +113,19 @@ export default function TestsPortalPage() {
             <Link
               href="/tests/verbal-pdf"
               target="_blank"
-              className="bg-slate-950 hover:bg-slate-900 text-white font-black px-6 py-3.5 rounded-xl shadow-md text-xs sm:text-sm flex items-center justify-center gap-2 transition-all hover:scale-105 whitespace-nowrap"
+              className="bg-slate-950 hover:bg-slate-900 text-white font-black px-5 py-3.5 rounded-xl shadow-md text-xs sm:text-sm flex items-center justify-center gap-2 transition-all hover:scale-105 whitespace-nowrap"
             >
               <BookOpen className="w-4 h-4 text-honor-gold" />
-              <span>Download / Read 500 Qs PDF</span>
+              <span>500 Verbal Qs PDF</span>
             </Link>
 
             <Link
-              href="/tests/quiz/1"
-              className="bg-[#183B2B] hover:bg-[#2A5A44] text-white font-black px-6 py-3.5 rounded-xl shadow-md text-xs sm:text-sm flex items-center justify-center gap-2 transition-all hover:scale-105 whitespace-nowrap"
+              href="/tests/non-verbal-pdf"
+              target="_blank"
+              className="bg-[#183B2B] hover:bg-[#2A5A44] text-white font-black px-5 py-3.5 rounded-xl shadow-md text-xs sm:text-sm flex items-center justify-center gap-2 transition-all hover:scale-105 whitespace-nowrap"
             >
-              <Play className="w-4 h-4 fill-white" />
-              <span>Start 100-Question Quiz</span>
+              <Eye className="w-4 h-4 text-honor-gold" />
+              <span>500 Non-Verbal PDF</span>
             </Link>
           </div>
         </div>
@@ -143,6 +145,7 @@ export default function TestsPortalPage() {
             {SAMPLE_QUIZZES.map((quiz, index) => {
               const stepNumber = quiz.sequence_number || index + 1;
               const isVerbal = quiz.test_type === 'Verbal';
+              const isNonVerbal = quiz.test_type === 'Non-Verbal';
               const isWAT = quiz.test_type === 'WAT';
 
               return (
@@ -211,6 +214,29 @@ export default function TestsPortalPage() {
                       </div>
                     )}
 
+                    {/* Special 10 Non-Verbal Types Breakdown on Non-Verbal Card */}
+                    {isNonVerbal && (
+                      <div className="bg-slate-50 rounded-2xl p-4 border border-slate-200 space-y-2.5">
+                        <div className="flex items-center justify-between">
+                          <span className="text-xs font-bold text-[#183B2B] uppercase tracking-wide flex items-center gap-1.5">
+                            <Eye className="w-3.5 h-3.5 text-emerald-600" />
+                            10 Core Types of Non-Verbal Included:
+                          </span>
+                          <span className="text-[10px] font-extrabold text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded">
+                            Visual Syllabus
+                          </span>
+                        </div>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 text-[11px] text-gray-700 font-medium">
+                          {NON_VERBAL_REASONING_TYPES.map((type, tIdx) => (
+                            <div key={type} className="flex items-center gap-1.5 bg-white px-2.5 py-1 rounded-lg border border-gray-100">
+                              <span className="text-emerald-600 font-bold">{tIdx + 1}.</span>
+                              <span className="truncate">{type}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
                     {/* Stats List */}
                     <div className="grid grid-cols-2 gap-3 text-xs text-gray-600 pt-1">
                       <div className="flex items-center gap-2">
@@ -234,6 +260,17 @@ export default function TestsPortalPage() {
                       >
                         <BookOpen className="w-3.5 h-3.5 text-amber-700" />
                         <span>Study 500 Solved Verbal Questions PDF</span>
+                      </Link>
+                    )}
+
+                    {isNonVerbal && (
+                      <Link
+                        href="/tests/non-verbal-pdf"
+                        target="_blank"
+                        className="w-full mb-2.5 bg-emerald-50 hover:bg-emerald-100 text-emerald-950 border border-emerald-300 py-2.5 rounded-xl font-bold text-xs flex items-center justify-center gap-2 shadow-sm transition-all"
+                      >
+                        <Eye className="w-3.5 h-3.5 text-emerald-700" />
+                        <span>Study 500 Solved Non-Verbal Questions PDF</span>
                       </Link>
                     )}
 

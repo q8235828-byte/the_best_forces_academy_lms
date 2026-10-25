@@ -13,6 +13,19 @@ export const VERBAL_REASONING_TYPES = [
   'Analogy + logical reasoning'
 ];
 
+export const NON_VERBAL_REASONING_TYPES = [
+  'Pattern Series Completion',
+  'Analogy of Figures',
+  'Odd Figure Out (Classification)',
+  'Matrix & Pattern Completion',
+  'Spatial Rotation & Orientation',
+  'Mirror & Water Reflection',
+  'Embedded & Hidden Figures',
+  'Paper Folding & Cutting',
+  'Dot Situation Logic',
+  'Figure Formation & Grouping'
+];
+
 export const SAMPLE_QUIZZES: Quiz[] = [
   {
     id: 1,
@@ -27,12 +40,12 @@ export const SAMPLE_QUIZZES: Quiz[] = [
   {
     id: 2,
     course_id: 2,
-    title: 'Non-Verbal Intelligence Test',
+    title: 'Non-Verbal Intelligence Test (100 Questions Exam)',
     test_type: 'Non-Verbal',
-    duration_minutes: 15,
+    duration_minutes: 35,
     passing_score: 60,
     sequence_number: 2,
-    description: 'Visual pattern matrices, spatial 45°/90° rotations, shape reflections, and odd-one-out figures.'
+    description: 'Full 100-Question Visual Exam: 10 random questions from each of the 10 Non-Verbal reasoning types. Authentic 35-min military countdown timer.'
   },
   {
     id: 3,

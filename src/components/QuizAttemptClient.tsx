@@ -17,7 +17,8 @@ import {
 } from 'lucide-react';
 import { Quiz, QuizQuestion } from '@/types';
 import { getRandomVerbalQuizQuestions } from '@/lib/verbal-questions-bank';
-import { VERBAL_REASONING_TYPES } from '@/lib/quizzes-data';
+import { getRandomNonVerbalQuizQuestions } from '@/lib/non-verbal-questions-bank';
+import { VERBAL_REASONING_TYPES, NON_VERBAL_REASONING_TYPES } from '@/lib/quizzes-data';
 
 interface QuizAttemptClientProps {
   quiz: Quiz;
@@ -25,26 +26,37 @@ interface QuizAttemptClientProps {
 }
 
 export default function QuizAttemptClient({ quiz, questions }: QuizAttemptClientProps) {
-  // If Verbal test (quiz.id === 1), require user confirmation on instruction screen
-  const [hasStarted, setHasStarted] = useState(quiz.id !== 1);
+  const isVerbal = quiz.id === 1;
+  const isNonVerbal = quiz.id === 2;
+  const isSpecialStep = isVerbal || isNonVerbal;
+
+  const [hasStarted, setHasStarted] = useState(!isSpecialStep);
   const [activeQuestions, setActiveQuestions] = useState<QuizQuestion[]>(() => {
-    if (quiz.id === 1) {
+    if (isVerbal) {
       return getRandomVerbalQuizQuestions();
+    }
+    if (isNonVerbal) {
+      return getRandomNonVerbalQuizQuestions();
     }
     return questions;
   });
 
-  const handleStartVerbalTest = () => {
-    // Generate fresh 100 questions (10 per category)
-    setActiveQuestions(getRandomVerbalQuizQuestions());
+  const handleStartExam = () => {
+    if (isVerbal) {
+      setActiveQuestions(getRandomVerbalQuizQuestions());
+    } else if (isNonVerbal) {
+      setActiveQuestions(getRandomNonVerbalQuizQuestions());
+    }
     setHasStarted(true);
   };
 
-  const handleRestart = () => {
-    if (quiz.id === 1) {
-      setActiveQuestions(getRandomVerbalQuizQuestions());
-    }
-  };
+  const activeCategories = isVerbal ? VERBAL_REASONING_TYPES : NON_VERBAL_REASONING_TYPES;
+  const pdfGuideUrl = isVerbal ? '/tests/verbal-pdf' : '/tests/non-verbal-pdf';
+  const testTitle = isVerbal ? 'Verbal Intelligence Test (100 Questions)' : 'Non-Verbal Intelligence Test (100 Questions)';
+  const stepLabel = isVerbal ? 'Step 1 of 4 • Computerized Intelligence Exam' : 'Step 2 of 4 • Visual & Spatial Intelligence Exam';
+  const testSummary = isVerbal 
+    ? '100 total questions randomly selected (10 questions from each of the 10 verbal reasoning categories).'
+    : '100 visual pattern questions randomly selected (10 questions from each of the 10 non-verbal spatial categories).';
 
   return (
     <div className="py-8 bg-slate-100 min-h-screen">
@@ -66,21 +78,21 @@ export default function QuizAttemptClient({ quiz, questions }: QuizAttemptClient
           </div>
         </div>
 
-        {/* Pre-Exam Instructions & Mentor PDF Recommendation (Only for Verbal Step 1 before launch) */}
-        {!hasStarted && quiz.id === 1 ? (
+        {/* Pre-Exam Instructions & Mentor PDF Recommendation */}
+        {!hasStarted && isSpecialStep ? (
           <div className="bg-white rounded-3xl border border-gray-200 shadow-xl overflow-hidden p-6 sm:p-10 space-y-8">
             
             {/* Header */}
             <div className="border-b border-gray-100 pb-6 flex flex-col md:flex-row md:items-center justify-between gap-4">
               <div>
                 <span className="text-xs font-extrabold uppercase tracking-widest text-emerald-800 bg-emerald-100 px-3 py-1 rounded-full">
-                  Step 1 of 4 • Military Intelligence Exam
+                  {stepLabel}
                 </span>
                 <h1 className="text-2xl sm:text-3xl font-black text-gray-900 mt-2">
-                  Verbal Intelligence Test (100 Questions)
+                  {testTitle}
                 </h1>
                 <p className="text-xs sm:text-sm text-gray-600 mt-1">
-                  100 total questions randomly selected (10 questions from each of the 10 reasoning categories).
+                  {testSummary}
                 </p>
               </div>
 
@@ -118,7 +130,7 @@ export default function QuizAttemptClient({ quiz, questions }: QuizAttemptClient
 
               <div className="pt-2 flex flex-col sm:flex-row gap-3">
                 <Link
-                  href="/tests/verbal-pdf"
+                  href={pdfGuideUrl}
                   target="_blank"
                   className="bg-[#183B2B] hover:bg-[#2A5A44] text-white font-bold px-6 py-3 rounded-xl text-xs sm:text-sm flex items-center justify-center gap-2 shadow-md hover:scale-[1.01] transition-all"
                 >
@@ -127,7 +139,7 @@ export default function QuizAttemptClient({ quiz, questions }: QuizAttemptClient
                 </Link>
 
                 <button
-                  onClick={handleStartVerbalTest}
+                  onClick={handleStartExam}
                   className="bg-emerald-600 hover:bg-emerald-700 text-white font-black px-8 py-3 rounded-xl text-xs sm:text-sm flex items-center justify-center gap-2 shadow-md hover:scale-[1.01] transition-all"
                 >
                   <Play className="w-4 h-4 fill-white" />
@@ -141,7 +153,7 @@ export default function QuizAttemptClient({ quiz, questions }: QuizAttemptClient
               <div className="flex items-center justify-between">
                 <h4 className="text-xs font-black uppercase tracking-wider text-gray-700 flex items-center gap-2">
                   <Layers className="w-4 h-4 text-emerald-600" />
-                  Quiz Composition (10 Random Questions per Category = 100 Total):
+                  Exam Composition (10 Random Questions per Category = 100 Total):
                 </h4>
                 <span className="text-[11px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded">
                   100 Questions Exam
@@ -149,7 +161,7 @@ export default function QuizAttemptClient({ quiz, questions }: QuizAttemptClient
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-gray-700 font-medium">
-                {VERBAL_REASONING_TYPES.map((type, idx) => (
+                {activeCategories.map((type, idx) => (
                   <div 
                     key={type} 
                     className="flex items-center justify-between p-3 rounded-xl bg-slate-50 border border-slate-200"
@@ -176,7 +188,7 @@ export default function QuizAttemptClient({ quiz, questions }: QuizAttemptClient
               </div>
 
               <button
-                onClick={handleStartVerbalTest}
+                onClick={handleStartExam}
                 className="w-full sm:w-auto bg-[#183B2B] hover:bg-[#2A5A44] text-white font-black px-10 py-4 rounded-xl text-sm flex items-center justify-center gap-2 shadow-lg hover:scale-[1.01] transition-all"
               >
                 <Play className="w-4 h-4 fill-white" />
