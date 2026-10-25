@@ -1,4 +1,5 @@
 import { Quiz, QuizQuestion } from '@/types';
+import { MATRIC_ACADEMIC_QUESTIONS, INTER_ACADEMIC_QUESTIONS } from './academic-questions-data';
 
 export const VERBAL_REASONING_TYPES = [
   'Number + Alphabetical series (same concept)',
@@ -50,15 +51,25 @@ export const SAMPLE_QUIZZES: Quiz[] = [
   {
     id: 3,
     course_id: 3,
-    title: 'Academic Test',
+    title: 'Academic Test - Matric Level (50 Questions)',
     test_type: 'Academic',
-    duration_minutes: 20,
+    duration_minutes: 25,
     passing_score: 50,
     sequence_number: 3,
-    description: 'Forces syllabus: Physics, Mathematics, English Grammar, and Defense/Islamic General Knowledge.'
+    description: 'Syllabus for Matric Students (Soldier, Sailor, Airman): English, General Mathematics, Physics/Science, Pak Studies, and Islamic Studies.'
   },
   {
     id: 4,
+    course_id: 3,
+    title: 'Academic Test - Intermediate Level (50 Questions)',
+    test_type: 'Academic',
+    duration_minutes: 25,
+    passing_score: 50,
+    sequence_number: 3,
+    description: 'Syllabus for Inter / FSc / ICS Students (PMA Long Course, PAF GDP, Navy PN Cadet): FSc Physics, Mathematics, Advanced English, and Defense Affairs.'
+  },
+  {
+    id: 5,
     course_id: 1,
     title: 'ISSB Test (Word Association Test - WAT)',
     test_type: 'WAT',
@@ -243,60 +254,8 @@ export const SAMPLE_QUESTIONS: Record<number, QuizQuestion[]> = {
       order_index: 3
     }
   ],
-  3: [
-    {
-      id: 14,
-      quiz_id: 3,
-      category: 'English Grammar',
-      question_text: 'Choose the correct preposition: The officer insisted ______ completing the tactical exercise before dusk.',
-      option_a: 'in',
-      option_b: 'on',
-      option_c: 'at',
-      option_d: 'for',
-      correct_option: 'B',
-      explanation: 'The verb "insist" is always followed by the preposition "on" (insist on doing something).',
-      order_index: 1
-    },
-    {
-      id: 15,
-      quiz_id: 3,
-      category: 'Physics',
-      question_text: 'Physics: A projectile launched at an angle of 45 degrees achieves what characteristic in ideal conditions?',
-      option_a: 'Maximum Range',
-      option_b: 'Minimum Flight Time',
-      option_c: 'Maximum Height',
-      option_d: 'Zero Acceleration',
-      correct_option: 'A',
-      explanation: 'In projectile motion, maximum horizontal range R is achieved when the launch angle is 45 degrees (sin 2(45) = sin 90 = 1).',
-      order_index: 2
-    },
-    {
-      id: 16,
-      quiz_id: 3,
-      category: 'Defense General Knowledge',
-      question_text: 'Defense GK: What is the highest military gallantry award of Pakistan?',
-      option_a: 'Hilal-e-Jurat',
-      option_b: 'Sitara-e-Jurat',
-      option_c: 'Nishan-e-Haider',
-      option_d: 'Tamgha-e-Basalat',
-      correct_option: 'C',
-      explanation: 'Nishan-e-Haider is the supreme military award of the Islamic Republic of Pakistan, awarded for extraordinary acts of valor.',
-      order_index: 3
-    },
-    {
-      id: 17,
-      quiz_id: 3,
-      category: 'Mathematics',
-      question_text: 'Mathematics: If a military convoy travels 180 km in 2 hours and 30 minutes, what is its average speed in km/h?',
-      option_a: '65 km/h',
-      option_b: '72 km/h',
-      option_c: '75 km/h',
-      option_d: '80 km/h',
-      correct_option: 'B',
-      explanation: 'Speed = Distance / Time = 180 / 2.5 = 72 km/h.',
-      order_index: 4
-    }
-  ]
+  3: MATRIC_ACADEMIC_QUESTIONS,
+  4: INTER_ACADEMIC_QUESTIONS
 };
 
 export const WAT_WORDS = [

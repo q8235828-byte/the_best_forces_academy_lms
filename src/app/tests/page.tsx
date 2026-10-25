@@ -74,7 +74,7 @@ export default function TestsPortalPage() {
               </div>
               <div className="min-w-0">
                 <p className="text-xs font-extrabold text-[#183B2B] truncate">Step 3: Academic Test</p>
-                <p className="text-[11px] text-gray-500 truncate">Physics, Math, English, GK</p>
+                <p className="text-[11px] text-gray-500 truncate">Matric & Inter Tracks</p>
               </div>
             </div>
 
@@ -147,6 +147,8 @@ export default function TestsPortalPage() {
               const isVerbal = quiz.test_type === 'Verbal';
               const isNonVerbal = quiz.test_type === 'Non-Verbal';
               const isWAT = quiz.test_type === 'WAT';
+              const isMatric = quiz.id === 3;
+              const isInter = quiz.id === 4;
 
               return (
                 <div
@@ -154,6 +156,8 @@ export default function TestsPortalPage() {
                   className={`bg-white rounded-3xl border-2 transition-all duration-300 flex flex-col justify-between p-6 sm:p-7 shadow-sm hover:shadow-xl ${
                     isWAT 
                       ? 'border-amber-400/80 bg-gradient-to-b from-white to-amber-50/30' 
+                      : isMatric || isInter
+                      ? 'border-blue-200'
                       : 'border-gray-200'
                   }`}
                 >
@@ -164,12 +168,16 @@ export default function TestsPortalPage() {
                         <span className={`text-xs font-black px-3 py-1 rounded-full uppercase tracking-wider ${
                           isWAT 
                             ? 'bg-amber-100 text-amber-900 border border-amber-300'
+                            : isMatric
+                            ? 'bg-blue-100 text-blue-900 border border-blue-300'
+                            : isInter
+                            ? 'bg-indigo-100 text-indigo-900 border border-indigo-300'
                             : 'bg-emerald-100 text-emerald-900 border border-emerald-200'
                         }`}>
                           Step {stepNumber}
                         </span>
                         <span className="text-[11px] font-bold text-gray-500 uppercase">
-                          {quiz.test_type} Test
+                          {isMatric ? 'Matric Level' : isInter ? 'Intermediate Level' : `${quiz.test_type} Test`}
                         </span>
                       </div>
 
@@ -237,6 +245,39 @@ export default function TestsPortalPage() {
                       </div>
                     )}
 
+                    {/* Matric Academic Breakdown */}
+                    {isMatric && (
+                      <div className="bg-blue-50/60 rounded-2xl p-4 border border-blue-200 space-y-2.5">
+                        <span className="text-xs font-bold text-blue-950 uppercase tracking-wide flex items-center gap-1.5">
+                          <BookOpen className="w-3.5 h-3.5 text-blue-700" />
+                          Matric Academic Subjects (50 Qs):
+                        </span>
+                        <div className="grid grid-cols-2 gap-1.5 text-[11px] text-blue-900 font-medium">
+                          <div className="bg-white p-2 rounded-lg border border-blue-100">1. English Grammar (10 Qs)</div>
+                          <div className="bg-white p-2 rounded-lg border border-blue-100">2. General Math (10 Qs)</div>
+                          <div className="bg-white p-2 rounded-lg border border-blue-100">3. General Science & Physics (10 Qs)</div>
+                          <div className="bg-white p-2 rounded-lg border border-blue-100">4. Pakistan Studies (10 Qs)</div>
+                          <div className="bg-white p-2 rounded-lg border border-blue-100 col-span-2">5. Islamic Studies & General Knowledge (10 Qs)</div>
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Inter Academic Breakdown */}
+                    {isInter && (
+                      <div className="bg-indigo-50/60 rounded-2xl p-4 border border-indigo-200 space-y-2.5">
+                        <span className="text-xs font-bold text-indigo-950 uppercase tracking-wide flex items-center gap-1.5">
+                          <BookOpen className="w-3.5 h-3.5 text-indigo-700" />
+                          Intermediate (FSc / ICS) Subjects (50 Qs):
+                        </span>
+                        <div className="grid grid-cols-2 gap-1.5 text-[11px] text-indigo-900 font-medium">
+                          <div className="bg-white p-2 rounded-lg border border-indigo-100">1. FSc Physics (15 Qs)</div>
+                          <div className="bg-white p-2 rounded-lg border border-indigo-100">2. FSc Mathematics (15 Qs)</div>
+                          <div className="bg-white p-2 rounded-lg border border-indigo-100">3. Advanced English (10 Qs)</div>
+                          <div className="bg-white p-2 rounded-lg border border-indigo-100">4. Defense Affairs & World GK (10 Qs)</div>
+                        </div>
+                      </div>
+                    )}
+
                     {/* Stats List */}
                     <div className="grid grid-cols-2 gap-3 text-xs text-gray-600 pt-1">
                       <div className="flex items-center gap-2">
@@ -286,10 +327,22 @@ export default function TestsPortalPage() {
                     ) : (
                       <Link
                         href={`/tests/quiz/${quiz.id}`}
-                        className="w-full bg-[#183B2B] hover:bg-[#2A5A44] text-white py-3.5 rounded-xl font-bold text-xs flex items-center justify-center gap-2 shadow-md hover:scale-[1.01] transition-all"
+                        className={`w-full py-3.5 rounded-xl font-bold text-xs flex items-center justify-center gap-2 shadow-md hover:scale-[1.01] transition-all text-white ${
+                          isMatric
+                            ? 'bg-blue-800 hover:bg-blue-900'
+                            : isInter
+                            ? 'bg-indigo-800 hover:bg-indigo-900'
+                            : 'bg-[#183B2B] hover:bg-[#2A5A44]'
+                        }`}
                       >
                         <Play className="w-3.5 h-3.5 fill-white" />
-                        <span>Begin Step {stepNumber}: {quiz.test_type} Test</span>
+                        <span>
+                          {isMatric 
+                            ? 'Begin Step 3: Matric Academic Test' 
+                            : isInter 
+                            ? 'Begin Step 3: Inter Academic Test' 
+                            : `Begin Step ${stepNumber}: ${quiz.test_type} Test`}
+                        </span>
                         <ChevronRight className="w-4 h-4 ml-1" />
                       </Link>
                     )}

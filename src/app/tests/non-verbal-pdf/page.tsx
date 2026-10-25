@@ -12,13 +12,20 @@ import {
   Shield, 
   BookOpen, 
   Search,
-  Eye
+  Eye,
+  ChevronLeft,
+  ChevronRight,
+  FileText
 } from 'lucide-react';
 import { ACADEMY_CONFIG } from '@/lib/constants';
+
+const QUESTIONS_PER_PAGE = 20;
 
 export default function NonVerbalPdfGuidePage() {
   const [selectedCategory, setSelectedCategory] = useState<number | 'all'>('all');
   const [searchQuery, setSearchQuery] = useState('');
+  const [currentPage, setCurrentPage] = useState(1);
+  const [viewAllMode, setViewAllMode] = useState(false);
 
   const filteredQuestions = NON_VERBAL_500_BANK.filter((q) => {
     const matchesCat = selectedCategory === 'all' || q.category_id === selectedCategory;
@@ -27,6 +34,37 @@ export default function NonVerbalPdfGuidePage() {
       q.explanation.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesCat && matchesQuery;
   });
+
+  const totalPages = Math.max(1, Math.ceil(filteredQuestions.length / QUESTIONS_PER_PAGE));
+  const safeCurrentPage = Math.min(currentPage, totalPages);
+
+  const displayedQuestions = viewAllMode
+    ? filteredQuestions
+    : filteredQuestions.slice(
+        (safeCurrentPage - 1) * QUESTIONS_PER_PAGE,
+        safeCurrentPage * QUESTIONS_PER_PAGE
+      );
+
+  const handleCategorySelect = (catId: number | 'all') => {
+    setSelectedCategory(catId);
+    setCurrentPage(1);
+  };
+
+  const handleSearch = (text: string) => {
+    setSearchQuery(text);
+    setCurrentPage(1);
+  };
+
+  const handlePrint = (all: boolean = false) => {
+    if (all) {
+      setViewAllMode(true);
+      setTimeout(() => {
+        window.print();
+      }, 150);
+    } else {
+      window.print();
+    }
+  };
 
   return (
     <div className="min-h-screen bg-slate-100 py-6 text-slate-900 print:bg-white print:py-0 print:text-black">
@@ -50,13 +88,23 @@ export default function NonVerbalPdfGuidePage() {
             </span>
           </div>
 
-          <div className="flex items-center gap-3 w-full sm:w-auto">
+          <div className="flex items-center gap-3 w-full sm:w-auto flex-wrap">
             <button
-              onClick={() => window.print()}
-              className="flex-1 sm:flex-initial bg-[#183B2B] hover:bg-[#2A5A44] text-white px-5 py-2.5 rounded-xl font-bold text-xs flex items-center justify-center gap-2 shadow-md transition-all hover:scale-105"
+              onClick={() => handlePrint(false)}
+              className="bg-[#183B2B] hover:bg-[#2A5A44] text-white px-4 py-2.5 rounded-xl font-bold text-xs flex items-center justify-center gap-2 shadow-md transition-all"
+              title="Print current 20 questions"
             >
               <Printer className="w-4 h-4 text-honor-gold" />
-              <span>Print / Save as PDF (A4)</span>
+              <span>Print Page ({displayedQuestions.length} Qs)</span>
+            </button>
+
+            <button
+              onClick={() => handlePrint(true)}
+              className="bg-slate-900 hover:bg-slate-800 text-white px-4 py-2.5 rounded-xl font-bold text-xs flex items-center justify-center gap-2 shadow-md transition-all"
+              title="Print all 500 questions as complete document"
+            >
+              <FileText className="w-4 h-4 text-honor-gold" />
+              <span>Print All (500 Qs PDF)</span>
             </button>
 
             <Link
@@ -80,23 +128,32 @@ export default function NonVerbalPdfGuidePage() {
                 type="text"
                 placeholder="Search non-verbal questions or patterns..."
                 value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
+                onChange={(e) => handleSearch(e.target.value)}
                 className="w-full pl-9 pr-4 py-2 rounded-xl border border-gray-200 text-xs focus:outline-none focus:ring-2 focus:ring-[#183B2B]"
               />
             </div>
 
-            {/* Questions Counter */}
-            <div className="text-xs font-bold text-gray-600 flex items-center gap-2">
-              <span className="px-2.5 py-1 rounded bg-emerald-50 text-emerald-800 border border-emerald-200">
-                Showing {filteredQuestions.length} of 500 Non-Verbal Questions
+            {/* Questions Counter & Pagination Mode Toggle */}
+            <div className="flex items-center gap-2 flex-wrap">
+              <span className="text-xs font-bold text-emerald-800 bg-emerald-50 px-3 py-1 rounded-lg border border-emerald-200">
+                {viewAllMode 
+                  ? `Showing All ${filteredQuestions.length} Questions` 
+                  : `Showing ${displayedQuestions.length} of ${filteredQuestions.length} Questions (20 Per Page)`}
               </span>
+
+              <button
+                onClick={() => setViewAllMode(!viewAllMode)}
+                className="text-xs font-bold px-3 py-1 rounded-lg border border-gray-300 bg-gray-50 hover:bg-gray-100 text-gray-700 transition-colors"
+              >
+                {viewAllMode ? 'Switch to 20 / Page' : 'Show All Questions'}
+              </button>
             </div>
           </div>
 
           {/* Category Filter Badges */}
           <div className="flex gap-1.5 overflow-x-auto pb-1 pt-1 no-scrollbar text-xs">
             <button
-              onClick={() => setSelectedCategory('all')}
+              onClick={() => handleCategorySelect('all')}
               className={`px-3 py-1.5 rounded-xl font-bold whitespace-nowrap transition-all ${
                 selectedCategory === 'all'
                   ? 'bg-[#183B2B] text-white shadow-sm'
@@ -112,7 +169,7 @@ export default function NonVerbalPdfGuidePage() {
               return (
                 <button
                   key={catId}
-                  onClick={() => setSelectedCategory(catId)}
+                  onClick={() => handleCategorySelect(catId)}
                   className={`px-3 py-1.5 rounded-xl font-semibold whitespace-nowrap transition-all ${
                     isSelected
                       ? 'bg-emerald-700 text-white shadow-sm'
@@ -125,6 +182,69 @@ export default function NonVerbalPdfGuidePage() {
             })}
           </div>
         </div>
+
+        {/* Top Pagination Bar (20 per page) */}
+        {!viewAllMode && totalPages > 1 && (
+          <div className="bg-white p-3.5 rounded-2xl border border-gray-200 shadow-sm flex items-center justify-between gap-2 flex-wrap">
+            <div className="text-xs font-bold text-gray-600">
+              Page <strong className="text-gray-900">{safeCurrentPage}</strong> of <strong>{totalPages}</strong>
+              <span className="text-gray-400 ml-2">
+                (Questions {(safeCurrentPage - 1) * QUESTIONS_PER_PAGE + 1} - {Math.min(safeCurrentPage * QUESTIONS_PER_PAGE, filteredQuestions.length)})
+              </span>
+            </div>
+
+            <div className="flex items-center gap-1.5">
+              <button
+                disabled={safeCurrentPage === 1}
+                onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
+                className="px-3 py-1.5 rounded-lg border border-gray-200 text-xs font-bold text-gray-700 hover:bg-gray-50 disabled:opacity-30 disabled:cursor-not-allowed flex items-center gap-1"
+              >
+                <ChevronLeft className="w-3.5 h-3.5" />
+                <span>Prev 20</span>
+              </button>
+
+              {/* Page Number Chips */}
+              <div className="flex items-center gap-1 overflow-x-auto max-w-xs sm:max-w-md no-scrollbar">
+                {Array.from({ length: totalPages }).map((_, i) => {
+                  const pNum = i + 1;
+                  if (
+                    pNum === 1 || 
+                    pNum === totalPages || 
+                    (pNum >= safeCurrentPage - 2 && pNum <= safeCurrentPage + 2)
+                  ) {
+                    return (
+                      <button
+                        key={pNum}
+                        onClick={() => setCurrentPage(pNum)}
+                        className={`w-7 h-7 rounded-lg text-xs font-bold flex items-center justify-center transition-all ${
+                          safeCurrentPage === pNum
+                            ? 'bg-[#183B2B] text-white shadow-sm'
+                            : 'bg-gray-50 text-gray-700 hover:bg-gray-100 border border-gray-200'
+                        }`}
+                      >
+                        {pNum}
+                      </button>
+                    );
+                  }
+                  if (pNum === safeCurrentPage - 3 || pNum === safeCurrentPage + 3) {
+                    return <span key={pNum} className="text-gray-400 text-xs px-1">...</span>;
+                  }
+                  return null;
+                })}
+              </div>
+
+              <button
+                disabled={safeCurrentPage === totalPages}
+                onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
+                className="px-3 py-1.5 rounded-lg border border-gray-200 text-xs font-bold text-gray-700 hover:bg-gray-50 disabled:opacity-30 disabled:cursor-not-allowed flex items-center gap-1"
+              >
+                <span>Next 20</span>
+                <ChevronRight className="w-3.5 h-3.5" />
+              </button>
+            </div>
+          </div>
+        )}
+
       </div>
 
       {/* 2. Official Printable Document Paper (A4 Standard Format) */}
@@ -150,7 +270,7 @@ export default function NonVerbalPdfGuidePage() {
               Prepared by: {ACADEMY_CONFIG.leadInstructor} (Lead Instructor)
             </span>
             <span className="text-gray-400">•</span>
-            <span>Target Score: 95%+</span>
+            <span>20 Questions Per Page Standard</span>
           </div>
         </div>
 
@@ -175,72 +295,113 @@ export default function NonVerbalPdfGuidePage() {
 
         {/* Questions Render List */}
         <div className="space-y-6">
-          {filteredQuestions.map((q, idx) => (
-            <div 
-              key={q.id}
-              className="p-5 rounded-2xl border border-gray-200 hover:border-emerald-300 bg-white transition-all space-y-3 break-inside-avoid print:border-gray-300 print:mb-4 print:p-4"
-            >
-              {/* Question Header & Badge */}
-              <div className="flex items-center justify-between gap-2 border-b border-gray-100 pb-2">
-                <div className="flex items-center gap-2">
-                  <span className="w-7 h-7 rounded-lg bg-[#183B2B] text-white font-extrabold text-xs flex items-center justify-center shrink-0">
-                    {idx + 1}
-                  </span>
-                  <span className="text-xs font-bold text-emerald-800 bg-emerald-50 px-2.5 py-0.5 rounded-md border border-emerald-200">
-                    {q.category}
+          {displayedQuestions.map((q, idx) => {
+            const displayIndex = viewAllMode 
+              ? idx + 1 
+              : (safeCurrentPage - 1) * QUESTIONS_PER_PAGE + idx + 1;
+
+            return (
+              <div 
+                key={q.id}
+                className="p-5 rounded-2xl border border-gray-200 hover:border-emerald-300 bg-white transition-all space-y-3 break-inside-avoid print:border-gray-300 print:mb-4 print:p-4"
+              >
+                {/* Question Header & Badge */}
+                <div className="flex items-center justify-between gap-2 border-b border-gray-100 pb-2">
+                  <div className="flex items-center gap-2">
+                    <span className="w-7 h-7 rounded-lg bg-[#183B2B] text-white font-extrabold text-xs flex items-center justify-center shrink-0">
+                      {displayIndex}
+                    </span>
+                    <span className="text-xs font-bold text-emerald-800 bg-emerald-50 px-2.5 py-0.5 rounded-md border border-emerald-200">
+                      {q.category}
+                    </span>
+                  </div>
+                  <span className="text-[11px] text-gray-400 font-semibold">
+                    Bank Q#{q.id}
                   </span>
                 </div>
-                <span className="text-[11px] text-gray-400 font-semibold">
-                  Bank Q#{q.id}
-                </span>
-              </div>
 
-              {/* Question Statement */}
-              <p className="text-sm sm:text-base font-bold text-gray-900 leading-relaxed">
-                {q.question_text}
-              </p>
-
-              {/* Options 2x2 Grid */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
-                {(['A', 'B', 'C', 'D'] as const).map((optKey) => {
-                  const optVal = q[`option_${optKey.toLowerCase()}` as keyof BankQuestion] as string;
-                  const isCorrect = q.correct_option === optKey;
-
-                  return (
-                    <div
-                      key={optKey}
-                      className={`p-2.5 rounded-xl border flex items-center gap-2 ${
-                        isCorrect
-                          ? 'bg-emerald-50/80 border-emerald-400 text-emerald-950 font-bold'
-                          : 'bg-slate-50/50 border-gray-200 text-gray-700'
-                      }`}
-                    >
-                      <span className={`w-5 h-5 rounded flex items-center justify-center text-[11px] font-black shrink-0 ${
-                        isCorrect ? 'bg-emerald-600 text-white' : 'bg-gray-200 text-gray-700'
-                      }`}>
-                        {optKey}
-                      </span>
-                      <span className="truncate">{optVal}</span>
-                      {isCorrect && (
-                        <CheckCircle className="w-3.5 h-3.5 text-emerald-600 ml-auto shrink-0" />
-                      )}
-                    </div>
-                  );
-                })}
-              </div>
-
-              {/* Solution / Spatial Logic Explanation */}
-              <div className="bg-amber-50/60 border border-amber-200/80 p-3 rounded-xl text-xs space-y-1">
-                <span className="font-extrabold text-amber-900 uppercase text-[10px] tracking-wide block">
-                  Correct Answer: [{q.correct_option}] • Visual Logic & Solution:
-                </span>
-                <p className="text-gray-800 leading-relaxed font-medium">
-                  {q.explanation}
+                {/* Question Statement */}
+                <p className="text-sm sm:text-base font-bold text-gray-900 leading-relaxed">
+                  {q.question_text}
                 </p>
+
+                {/* Options 2x2 Grid */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+                  {(['A', 'B', 'C', 'D'] as const).map((optKey) => {
+                    const optVal = q[`option_${optKey.toLowerCase()}` as keyof BankQuestion] as string;
+                    const isCorrect = q.correct_option === optKey;
+
+                    return (
+                      <div
+                        key={optKey}
+                        className={`p-2.5 rounded-xl border flex items-center gap-2 ${
+                          isCorrect
+                            ? 'bg-emerald-50/80 border-emerald-400 text-emerald-950 font-bold'
+                            : 'bg-slate-50/50 border-gray-200 text-gray-700'
+                        }`}
+                      >
+                        <span className={`w-5 h-5 rounded flex items-center justify-center text-[11px] font-black shrink-0 ${
+                          isCorrect ? 'bg-emerald-600 text-white' : 'bg-gray-200 text-gray-700'
+                        }`}>
+                          {optKey}
+                        </span>
+                        <span className="truncate">{optVal}</span>
+                        {isCorrect && (
+                          <CheckCircle className="w-3.5 h-3.5 text-emerald-600 ml-auto shrink-0" />
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
+
+                {/* Solution / Spatial Logic Explanation */}
+                <div className="bg-amber-50/60 border border-amber-200/80 p-3 rounded-xl text-xs space-y-1">
+                  <span className="font-extrabold text-amber-900 uppercase text-[10px] tracking-wide block">
+                    Correct Answer: [{q.correct_option}] • Visual Logic & Solution:
+                  </span>
+                  <p className="text-gray-800 leading-relaxed font-medium">
+                    {q.explanation}
+                  </p>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
+
+        {/* Bottom Pagination Bar */}
+        {!viewAllMode && totalPages > 1 && (
+          <div className="no-print mt-8 pt-6 border-t border-gray-200 flex items-center justify-between gap-4 flex-wrap">
+            <span className="text-xs text-gray-500 font-semibold">
+              Showing Page {safeCurrentPage} of {totalPages} (20 Questions per page)
+            </span>
+
+            <div className="flex items-center gap-2">
+              <button
+                disabled={safeCurrentPage === 1}
+                onClick={() => {
+                  setCurrentPage((p) => Math.max(1, p - 1));
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}
+                className="px-4 py-2 rounded-xl border border-gray-300 text-xs font-bold text-gray-700 hover:bg-gray-50 disabled:opacity-30 disabled:cursor-not-allowed flex items-center gap-1.5"
+              >
+                <ChevronLeft className="w-3.5 h-3.5" />
+                <span>Previous 20</span>
+              </button>
+
+              <button
+                disabled={safeCurrentPage === totalPages}
+                onClick={() => {
+                  setCurrentPage((p) => Math.min(totalPages, p + 1));
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}
+                className="px-4 py-2 rounded-xl bg-[#183B2B] hover:bg-[#2A5A44] text-white text-xs font-bold disabled:opacity-30 disabled:cursor-not-allowed flex items-center gap-1.5 shadow"
+              >
+                <span>Next 20</span>
+                <ChevronRight className="w-3.5 h-3.5" />
+              </button>
+            </div>
+          </div>
+        )}
 
         {/* Document Footer (Printable & Screen) */}
         <div className="mt-12 pt-6 border-t-2 border-gray-200 text-center space-y-2 text-xs text-gray-500">
@@ -260,9 +421,9 @@ export default function NonVerbalPdfGuidePage() {
       {/* Floating Action Button (Only on screen) */}
       <div className="no-print fixed bottom-6 right-6 z-40 flex flex-col gap-2">
         <button
-          onClick={() => window.print()}
+          onClick={() => handlePrint(false)}
           className="bg-[#183B2B] hover:bg-[#2A5A44] text-white p-3.5 rounded-full shadow-2xl transition-all hover:scale-110 flex items-center justify-center"
-          title="Print Document or Save as PDF"
+          title="Print Current 20 Questions"
         >
           <Printer className="w-5 h-5 text-honor-gold" />
         </button>
