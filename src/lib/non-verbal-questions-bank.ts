@@ -13,6 +13,7 @@ export interface BankQuestion {
   option_d: string;
   correct_option: 'A' | 'B' | 'C' | 'D';
   explanation: string;
+  question_image_url?: string;
 }
 
 export const NON_VERBAL_500_BANK: BankQuestion[] = [
@@ -26,7 +27,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Triangle",
     "option_d": "Single Line",
     "correct_option": "B",
-    "explanation": "Each step adds one new line segment (1 -> 2 -> 3 -> 4 -> 5 lines). Square with a diagonal has 5 lines."
+    "explanation": "Each step adds one new line segment (1 -> 2 -> 3 -> 4 -> 5 lines). Square with a diagonal has 5 lines.",
+    "question_image_url": "/images/non-verbal/nv-1.jpg"
   },
   {
     "id": 1002,
@@ -38,7 +40,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "5 Dots in a row [●●●●●]",
     "option_d": "4 Dots in a circle",
     "correct_option": "C",
-    "explanation": "The number of black dots increases by +1 in each successive step (1, 2, 3, 4, 5)."
+    "explanation": "The number of black dots increases by +1 in each successive step (1, 2, 3, 4, 5).",
+    "question_image_url": "/images/non-verbal/nv-2.jpg"
   },
   {
     "id": 1003,
@@ -50,7 +53,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "1/4 shaded",
     "option_d": "Fully shaded circle (4/4)",
     "correct_option": "D",
-    "explanation": "Shading moves clockwise adding one quadrant per step until the circle is completely shaded."
+    "explanation": "Shading moves clockwise adding one quadrant per step until the circle is completely shaded.",
+    "question_image_url": "/images/non-verbal/nv-3.jpg"
   },
   {
     "id": 1004,
@@ -62,7 +66,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Square",
     "option_d": "Circle",
     "correct_option": "A",
-    "explanation": "Number of sides increases by 1 each step: 3 sides -> 4 sides -> 5 sides -> 6 sides -> 7 sides (Heptagon)."
+    "explanation": "Number of sides increases by 1 each step: 3 sides -> 4 sides -> 5 sides -> 6 sides -> 7 sides (Heptagon).",
+    "question_image_url": "/images/non-verbal/nv-4.jpg"
   },
   {
     "id": 1005,
@@ -74,7 +79,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "↓ Pointing DOWN",
     "option_d": "Pointing Top-Right",
     "correct_option": "B",
-    "explanation": "The arrow rotates 90 degrees clockwise in every frame. 4th rotation (360°) returns to UP."
+    "explanation": "The arrow rotates 90 degrees clockwise in every frame. 4th rotation (360°) returns to UP.",
+    "question_image_url": "/images/non-verbal/nv-5.jpg"
   },
   {
     "id": 1006,
@@ -86,7 +92,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Complete Circle (360°)",
     "option_d": "Semicircle",
     "correct_option": "C",
-    "explanation": "The arc length increases by 90 degrees each transition to complete a full 360-degree circle."
+    "explanation": "The arc length increases by 90 degrees each transition to complete a full 360-degree circle.",
+    "question_image_url": "/images/non-verbal/nv-6.jpg"
   },
   {
     "id": 1007,
@@ -98,7 +105,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Center circle shaded",
     "option_d": "Left arm shaded",
     "correct_option": "D",
-    "explanation": "The single shaded arm of the 4-blade cross moves 90 degrees clockwise each step."
+    "explanation": "The single shaded arm of the 4-blade cross moves 90 degrees clockwise each step.",
+    "question_image_url": "/images/non-verbal/nv-7.jpg"
   },
   {
     "id": 1008,
@@ -110,7 +118,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Triangle inside Square",
     "option_d": "Circle inside Pentagon",
     "correct_option": "A",
-    "explanation": "The outer shape becomes the inner shape of the next frame, while outer gains +1 side."
+    "explanation": "The outer shape becomes the inner shape of the next frame, while outer gains +1 side.",
+    "question_image_url": "/images/non-verbal/nv-8.jpg"
   },
   {
     "id": 1009,
@@ -122,7 +131,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Triangle",
     "option_d": "Single Line",
     "correct_option": "B",
-    "explanation": "Each step adds one new line segment (1 -> 2 -> 3 -> 4 -> 5 lines). Square with a diagonal has 5 lines."
+    "explanation": "Each step adds one new line segment (1 -> 2 -> 3 -> 4 -> 5 lines). Square with a diagonal has 5 lines.",
+    "question_image_url": "/images/non-verbal/nv-9.jpg"
   },
   {
     "id": 1010,
@@ -134,7 +144,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "5 Dots in a row [●●●●●]",
     "option_d": "4 Dots in a circle",
     "correct_option": "C",
-    "explanation": "The number of black dots increases by +1 in each successive step (1, 2, 3, 4, 5)."
+    "explanation": "The number of black dots increases by +1 in each successive step (1, 2, 3, 4, 5).",
+    "question_image_url": "/images/non-verbal/nv-10.jpg"
   },
   {
     "id": 1011,
@@ -146,7 +157,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "1/4 shaded",
     "option_d": "Fully shaded circle (4/4)",
     "correct_option": "D",
-    "explanation": "Shading moves clockwise adding one quadrant per step until the circle is completely shaded."
+    "explanation": "Shading moves clockwise adding one quadrant per step until the circle is completely shaded.",
+    "question_image_url": "/images/non-verbal/nv-11.jpg"
   },
   {
     "id": 1012,
@@ -158,7 +170,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Square",
     "option_d": "Circle",
     "correct_option": "A",
-    "explanation": "Number of sides increases by 1 each step: 3 sides -> 4 sides -> 5 sides -> 6 sides -> 7 sides (Heptagon)."
+    "explanation": "Number of sides increases by 1 each step: 3 sides -> 4 sides -> 5 sides -> 6 sides -> 7 sides (Heptagon).",
+    "question_image_url": "/images/non-verbal/nv-12.jpg"
   },
   {
     "id": 1013,
@@ -170,7 +183,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "↓ Pointing DOWN",
     "option_d": "Pointing Top-Right",
     "correct_option": "B",
-    "explanation": "The arrow rotates 90 degrees clockwise in every frame. 4th rotation (360°) returns to UP."
+    "explanation": "The arrow rotates 90 degrees clockwise in every frame. 4th rotation (360°) returns to UP.",
+    "question_image_url": "/images/non-verbal/nv-13.jpg"
   },
   {
     "id": 1014,
@@ -182,7 +196,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Complete Circle (360°)",
     "option_d": "Semicircle",
     "correct_option": "C",
-    "explanation": "The arc length increases by 90 degrees each transition to complete a full 360-degree circle."
+    "explanation": "The arc length increases by 90 degrees each transition to complete a full 360-degree circle.",
+    "question_image_url": "/images/non-verbal/nv-14.jpg"
   },
   {
     "id": 1015,
@@ -194,7 +209,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Center circle shaded",
     "option_d": "Left arm shaded",
     "correct_option": "D",
-    "explanation": "The single shaded arm of the 4-blade cross moves 90 degrees clockwise each step."
+    "explanation": "The single shaded arm of the 4-blade cross moves 90 degrees clockwise each step.",
+    "question_image_url": "/images/non-verbal/nv-15.jpg"
   },
   {
     "id": 1016,
@@ -206,7 +222,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Triangle inside Square",
     "option_d": "Circle inside Pentagon",
     "correct_option": "A",
-    "explanation": "The outer shape becomes the inner shape of the next frame, while outer gains +1 side."
+    "explanation": "The outer shape becomes the inner shape of the next frame, while outer gains +1 side.",
+    "question_image_url": "/images/non-verbal/nv-16.jpg"
   },
   {
     "id": 1017,
@@ -218,7 +235,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Triangle",
     "option_d": "Single Line",
     "correct_option": "B",
-    "explanation": "Each step adds one new line segment (1 -> 2 -> 3 -> 4 -> 5 lines). Square with a diagonal has 5 lines."
+    "explanation": "Each step adds one new line segment (1 -> 2 -> 3 -> 4 -> 5 lines). Square with a diagonal has 5 lines.",
+    "question_image_url": "/images/non-verbal/nv-17.jpg"
   },
   {
     "id": 1018,
@@ -230,7 +248,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "5 Dots in a row [●●●●●]",
     "option_d": "4 Dots in a circle",
     "correct_option": "C",
-    "explanation": "The number of black dots increases by +1 in each successive step (1, 2, 3, 4, 5)."
+    "explanation": "The number of black dots increases by +1 in each successive step (1, 2, 3, 4, 5).",
+    "question_image_url": "/images/non-verbal/nv-18.jpg"
   },
   {
     "id": 1019,
@@ -242,7 +261,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "1/4 shaded",
     "option_d": "Fully shaded circle (4/4)",
     "correct_option": "D",
-    "explanation": "Shading moves clockwise adding one quadrant per step until the circle is completely shaded."
+    "explanation": "Shading moves clockwise adding one quadrant per step until the circle is completely shaded.",
+    "question_image_url": "/images/non-verbal/nv-19.jpg"
   },
   {
     "id": 1020,
@@ -254,7 +274,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Square",
     "option_d": "Circle",
     "correct_option": "A",
-    "explanation": "Number of sides increases by 1 each step: 3 sides -> 4 sides -> 5 sides -> 6 sides -> 7 sides (Heptagon)."
+    "explanation": "Number of sides increases by 1 each step: 3 sides -> 4 sides -> 5 sides -> 6 sides -> 7 sides (Heptagon).",
+    "question_image_url": "/images/non-verbal/nv-20.jpg"
   },
   {
     "id": 1021,
@@ -266,7 +287,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "↓ Pointing DOWN",
     "option_d": "Pointing Top-Right",
     "correct_option": "B",
-    "explanation": "The arrow rotates 90 degrees clockwise in every frame. 4th rotation (360°) returns to UP."
+    "explanation": "The arrow rotates 90 degrees clockwise in every frame. 4th rotation (360°) returns to UP.",
+    "question_image_url": "/images/non-verbal/nv-21.jpg"
   },
   {
     "id": 1022,
@@ -278,7 +300,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Complete Circle (360°)",
     "option_d": "Semicircle",
     "correct_option": "C",
-    "explanation": "The arc length increases by 90 degrees each transition to complete a full 360-degree circle."
+    "explanation": "The arc length increases by 90 degrees each transition to complete a full 360-degree circle.",
+    "question_image_url": "/images/non-verbal/nv-22.jpg"
   },
   {
     "id": 1023,
@@ -290,7 +313,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Center circle shaded",
     "option_d": "Left arm shaded",
     "correct_option": "D",
-    "explanation": "The single shaded arm of the 4-blade cross moves 90 degrees clockwise each step."
+    "explanation": "The single shaded arm of the 4-blade cross moves 90 degrees clockwise each step.",
+    "question_image_url": "/images/non-verbal/nv-23.jpg"
   },
   {
     "id": 1024,
@@ -302,7 +326,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Triangle inside Square",
     "option_d": "Circle inside Pentagon",
     "correct_option": "A",
-    "explanation": "The outer shape becomes the inner shape of the next frame, while outer gains +1 side."
+    "explanation": "The outer shape becomes the inner shape of the next frame, while outer gains +1 side.",
+    "question_image_url": "/images/non-verbal/nv-24.jpg"
   },
   {
     "id": 1025,
@@ -314,7 +339,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Triangle",
     "option_d": "Single Line",
     "correct_option": "B",
-    "explanation": "Each step adds one new line segment (1 -> 2 -> 3 -> 4 -> 5 lines). Square with a diagonal has 5 lines."
+    "explanation": "Each step adds one new line segment (1 -> 2 -> 3 -> 4 -> 5 lines). Square with a diagonal has 5 lines.",
+    "question_image_url": "/images/non-verbal/nv-25.jpg"
   },
   {
     "id": 1026,
@@ -326,7 +352,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "5 Dots in a row [●●●●●]",
     "option_d": "4 Dots in a circle",
     "correct_option": "C",
-    "explanation": "The number of black dots increases by +1 in each successive step (1, 2, 3, 4, 5)."
+    "explanation": "The number of black dots increases by +1 in each successive step (1, 2, 3, 4, 5).",
+    "question_image_url": "/images/non-verbal/nv-26.jpg"
   },
   {
     "id": 1027,
@@ -338,7 +365,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "1/4 shaded",
     "option_d": "Fully shaded circle (4/4)",
     "correct_option": "D",
-    "explanation": "Shading moves clockwise adding one quadrant per step until the circle is completely shaded."
+    "explanation": "Shading moves clockwise adding one quadrant per step until the circle is completely shaded.",
+    "question_image_url": "/images/non-verbal/nv-27.jpg"
   },
   {
     "id": 1028,
@@ -350,7 +378,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Square",
     "option_d": "Circle",
     "correct_option": "A",
-    "explanation": "Number of sides increases by 1 each step: 3 sides -> 4 sides -> 5 sides -> 6 sides -> 7 sides (Heptagon)."
+    "explanation": "Number of sides increases by 1 each step: 3 sides -> 4 sides -> 5 sides -> 6 sides -> 7 sides (Heptagon).",
+    "question_image_url": "/images/non-verbal/nv-28.jpg"
   },
   {
     "id": 1029,
@@ -362,7 +391,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "↓ Pointing DOWN",
     "option_d": "Pointing Top-Right",
     "correct_option": "B",
-    "explanation": "The arrow rotates 90 degrees clockwise in every frame. 4th rotation (360°) returns to UP."
+    "explanation": "The arrow rotates 90 degrees clockwise in every frame. 4th rotation (360°) returns to UP.",
+    "question_image_url": "/images/non-verbal/nv-29.jpg"
   },
   {
     "id": 1030,
@@ -374,7 +404,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Complete Circle (360°)",
     "option_d": "Semicircle",
     "correct_option": "C",
-    "explanation": "The arc length increases by 90 degrees each transition to complete a full 360-degree circle."
+    "explanation": "The arc length increases by 90 degrees each transition to complete a full 360-degree circle.",
+    "question_image_url": "/images/non-verbal/nv-30.jpg"
   },
   {
     "id": 1031,
@@ -386,7 +417,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Center circle shaded",
     "option_d": "Left arm shaded",
     "correct_option": "D",
-    "explanation": "The single shaded arm of the 4-blade cross moves 90 degrees clockwise each step."
+    "explanation": "The single shaded arm of the 4-blade cross moves 90 degrees clockwise each step.",
+    "question_image_url": "/images/non-verbal/nv-31.jpg"
   },
   {
     "id": 1032,
@@ -398,7 +430,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Triangle inside Square",
     "option_d": "Circle inside Pentagon",
     "correct_option": "A",
-    "explanation": "The outer shape becomes the inner shape of the next frame, while outer gains +1 side."
+    "explanation": "The outer shape becomes the inner shape of the next frame, while outer gains +1 side.",
+    "question_image_url": "/images/non-verbal/nv-32.jpg"
   },
   {
     "id": 1033,
@@ -410,7 +443,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Triangle",
     "option_d": "Single Line",
     "correct_option": "B",
-    "explanation": "Each step adds one new line segment (1 -> 2 -> 3 -> 4 -> 5 lines). Square with a diagonal has 5 lines."
+    "explanation": "Each step adds one new line segment (1 -> 2 -> 3 -> 4 -> 5 lines). Square with a diagonal has 5 lines.",
+    "question_image_url": "/images/non-verbal/nv-33.jpg"
   },
   {
     "id": 1034,
@@ -422,7 +456,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "5 Dots in a row [●●●●●]",
     "option_d": "4 Dots in a circle",
     "correct_option": "C",
-    "explanation": "The number of black dots increases by +1 in each successive step (1, 2, 3, 4, 5)."
+    "explanation": "The number of black dots increases by +1 in each successive step (1, 2, 3, 4, 5).",
+    "question_image_url": "/images/non-verbal/nv-34.jpg"
   },
   {
     "id": 1035,
@@ -434,7 +469,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "1/4 shaded",
     "option_d": "Fully shaded circle (4/4)",
     "correct_option": "D",
-    "explanation": "Shading moves clockwise adding one quadrant per step until the circle is completely shaded."
+    "explanation": "Shading moves clockwise adding one quadrant per step until the circle is completely shaded.",
+    "question_image_url": "/images/non-verbal/nv-35.jpg"
   },
   {
     "id": 1036,
@@ -446,7 +482,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Square",
     "option_d": "Circle",
     "correct_option": "A",
-    "explanation": "Number of sides increases by 1 each step: 3 sides -> 4 sides -> 5 sides -> 6 sides -> 7 sides (Heptagon)."
+    "explanation": "Number of sides increases by 1 each step: 3 sides -> 4 sides -> 5 sides -> 6 sides -> 7 sides (Heptagon).",
+    "question_image_url": "/images/non-verbal/nv-36.jpg"
   },
   {
     "id": 1037,
@@ -458,7 +495,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "↓ Pointing DOWN",
     "option_d": "Pointing Top-Right",
     "correct_option": "B",
-    "explanation": "The arrow rotates 90 degrees clockwise in every frame. 4th rotation (360°) returns to UP."
+    "explanation": "The arrow rotates 90 degrees clockwise in every frame. 4th rotation (360°) returns to UP.",
+    "question_image_url": "/images/non-verbal/nv-37.jpg"
   },
   {
     "id": 1038,
@@ -470,7 +508,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Complete Circle (360°)",
     "option_d": "Semicircle",
     "correct_option": "C",
-    "explanation": "The arc length increases by 90 degrees each transition to complete a full 360-degree circle."
+    "explanation": "The arc length increases by 90 degrees each transition to complete a full 360-degree circle.",
+    "question_image_url": "/images/non-verbal/nv-38.jpg"
   },
   {
     "id": 1039,
@@ -482,7 +521,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Center circle shaded",
     "option_d": "Left arm shaded",
     "correct_option": "D",
-    "explanation": "The single shaded arm of the 4-blade cross moves 90 degrees clockwise each step."
+    "explanation": "The single shaded arm of the 4-blade cross moves 90 degrees clockwise each step.",
+    "question_image_url": "/images/non-verbal/nv-39.jpg"
   },
   {
     "id": 1040,
@@ -494,7 +534,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Triangle inside Square",
     "option_d": "Circle inside Pentagon",
     "correct_option": "A",
-    "explanation": "The outer shape becomes the inner shape of the next frame, while outer gains +1 side."
+    "explanation": "The outer shape becomes the inner shape of the next frame, while outer gains +1 side.",
+    "question_image_url": "/images/non-verbal/nv-40.jpg"
   },
   {
     "id": 1041,
@@ -506,7 +547,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Triangle",
     "option_d": "Single Line",
     "correct_option": "B",
-    "explanation": "Each step adds one new line segment (1 -> 2 -> 3 -> 4 -> 5 lines). Square with a diagonal has 5 lines."
+    "explanation": "Each step adds one new line segment (1 -> 2 -> 3 -> 4 -> 5 lines). Square with a diagonal has 5 lines.",
+    "question_image_url": "/images/non-verbal/nv-41.jpg"
   },
   {
     "id": 1042,
@@ -518,7 +560,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "5 Dots in a row [●●●●●]",
     "option_d": "4 Dots in a circle",
     "correct_option": "C",
-    "explanation": "The number of black dots increases by +1 in each successive step (1, 2, 3, 4, 5)."
+    "explanation": "The number of black dots increases by +1 in each successive step (1, 2, 3, 4, 5).",
+    "question_image_url": "/images/non-verbal/nv-42.jpg"
   },
   {
     "id": 1043,
@@ -530,7 +573,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "1/4 shaded",
     "option_d": "Fully shaded circle (4/4)",
     "correct_option": "D",
-    "explanation": "Shading moves clockwise adding one quadrant per step until the circle is completely shaded."
+    "explanation": "Shading moves clockwise adding one quadrant per step until the circle is completely shaded.",
+    "question_image_url": "/images/non-verbal/nv-43.jpg"
   },
   {
     "id": 1044,
@@ -542,7 +586,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Square",
     "option_d": "Circle",
     "correct_option": "A",
-    "explanation": "Number of sides increases by 1 each step: 3 sides -> 4 sides -> 5 sides -> 6 sides -> 7 sides (Heptagon)."
+    "explanation": "Number of sides increases by 1 each step: 3 sides -> 4 sides -> 5 sides -> 6 sides -> 7 sides (Heptagon).",
+    "question_image_url": "/images/non-verbal/nv-44.jpg"
   },
   {
     "id": 1045,
@@ -554,7 +599,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "↓ Pointing DOWN",
     "option_d": "Pointing Top-Right",
     "correct_option": "B",
-    "explanation": "The arrow rotates 90 degrees clockwise in every frame. 4th rotation (360°) returns to UP."
+    "explanation": "The arrow rotates 90 degrees clockwise in every frame. 4th rotation (360°) returns to UP.",
+    "question_image_url": "/images/non-verbal/nv-45.jpg"
   },
   {
     "id": 1046,
@@ -566,7 +612,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Complete Circle (360°)",
     "option_d": "Semicircle",
     "correct_option": "C",
-    "explanation": "The arc length increases by 90 degrees each transition to complete a full 360-degree circle."
+    "explanation": "The arc length increases by 90 degrees each transition to complete a full 360-degree circle.",
+    "question_image_url": "/images/non-verbal/nv-46.jpg"
   },
   {
     "id": 1047,
@@ -578,7 +625,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Center circle shaded",
     "option_d": "Left arm shaded",
     "correct_option": "D",
-    "explanation": "The single shaded arm of the 4-blade cross moves 90 degrees clockwise each step."
+    "explanation": "The single shaded arm of the 4-blade cross moves 90 degrees clockwise each step.",
+    "question_image_url": "/images/non-verbal/nv-47.jpg"
   },
   {
     "id": 1048,
@@ -590,7 +638,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Triangle inside Square",
     "option_d": "Circle inside Pentagon",
     "correct_option": "A",
-    "explanation": "The outer shape becomes the inner shape of the next frame, while outer gains +1 side."
+    "explanation": "The outer shape becomes the inner shape of the next frame, while outer gains +1 side.",
+    "question_image_url": "/images/non-verbal/nv-48.jpg"
   },
   {
     "id": 1049,
@@ -602,7 +651,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Triangle",
     "option_d": "Single Line",
     "correct_option": "B",
-    "explanation": "Each step adds one new line segment (1 -> 2 -> 3 -> 4 -> 5 lines). Square with a diagonal has 5 lines."
+    "explanation": "Each step adds one new line segment (1 -> 2 -> 3 -> 4 -> 5 lines). Square with a diagonal has 5 lines.",
+    "question_image_url": "/images/non-verbal/nv-49.jpg"
   },
   {
     "id": 1050,
@@ -614,7 +664,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "5 Dots in a row [●●●●●]",
     "option_d": "4 Dots in a circle",
     "correct_option": "C",
-    "explanation": "The number of black dots increases by +1 in each successive step (1, 2, 3, 4, 5)."
+    "explanation": "The number of black dots increases by +1 in each successive step (1, 2, 3, 4, 5).",
+    "question_image_url": "/images/non-verbal/nv-50.jpg"
   },
   {
     "id": 1051,
@@ -626,7 +677,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Cone",
     "option_d": "Oval",
     "correct_option": "B",
-    "explanation": "A square is a 2D projection of a 3D Cube; a circle is a 2D projection of a 3D Sphere."
+    "explanation": "A square is a 2D projection of a 3D Cube; a circle is a 2D projection of a 3D Sphere.",
+    "question_image_url": "/images/non-verbal/nv-51.jpg"
   },
   {
     "id": 1052,
@@ -638,7 +690,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Octagon (8 sides)",
     "option_d": "Decagon",
     "correct_option": "C",
-    "explanation": "The number of sides is multiplied by 2: (3 × 2 = 6), therefore (4 × 2 = 8 sides = Octagon)."
+    "explanation": "The number of sides is multiplied by 2: (3 × 2 = 6), therefore (4 × 2 = 8 sides = Octagon).",
+    "question_image_url": "/images/non-verbal/nv-52.jpg"
   },
   {
     "id": 1053,
@@ -650,7 +703,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Inverted White Triangle",
     "option_d": "Black Triangle with White Dot",
     "correct_option": "D",
-    "explanation": "Color inversion rule: Outer fill flips from white to black, and inner dot flips from black to white."
+    "explanation": "Color inversion rule: Outer fill flips from white to black, and inner dot flips from black to white.",
+    "question_image_url": "/images/non-verbal/nv-1.jpg"
   },
   {
     "id": 1054,
@@ -662,7 +716,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Two Small Squares",
     "option_d": "Large Square with Circle",
     "correct_option": "A",
-    "explanation": "The inner figure becomes the outer envelope and the outer figure shrinks inside."
+    "explanation": "The inner figure becomes the outer envelope and the outer figure shrinks inside.",
+    "question_image_url": "/images/non-verbal/nv-2.jpg"
   },
   {
     "id": 1055,
@@ -674,7 +729,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Arrow pointing SOUTH",
     "option_d": "Two Parallel Arrows",
     "correct_option": "B",
-    "explanation": "Direct 180-degree opposite direction rule. Up flips to Down, East flips to West."
+    "explanation": "Direct 180-degree opposite direction rule. Up flips to Down, East flips to West.",
+    "question_image_url": "/images/non-verbal/nv-3.jpg"
   },
   {
     "id": 1056,
@@ -686,7 +742,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Closed Triangle with Altitude line",
     "option_d": "Square",
     "correct_option": "C",
-    "explanation": "The open geometric perimeter is closed and subdivided by an internal line segment."
+    "explanation": "The open geometric perimeter is closed and subdivided by an internal line segment.",
+    "question_image_url": "/images/non-verbal/nv-4.jpg"
   },
   {
     "id": 1057,
@@ -698,7 +755,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Dotted Line",
     "option_d": "Three Concentric Arcs",
     "correct_option": "D",
-    "explanation": "Single element replicates into three parallel/concentric matching elements."
+    "explanation": "Single element replicates into three parallel/concentric matching elements.",
+    "question_image_url": "/images/non-verbal/nv-5.jpg"
   },
   {
     "id": 1058,
@@ -710,7 +768,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Horizontal Line",
     "option_d": "Triangle",
     "correct_option": "A",
-    "explanation": "Shape is rotated 45 degrees into an aligned vertical standard axis."
+    "explanation": "Shape is rotated 45 degrees into an aligned vertical standard axis.",
+    "question_image_url": "/images/non-verbal/nv-6.jpg"
   },
   {
     "id": 1059,
@@ -722,7 +781,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Cone",
     "option_d": "Oval",
     "correct_option": "B",
-    "explanation": "A square is a 2D projection of a 3D Cube; a circle is a 2D projection of a 3D Sphere."
+    "explanation": "A square is a 2D projection of a 3D Cube; a circle is a 2D projection of a 3D Sphere.",
+    "question_image_url": "/images/non-verbal/nv-7.jpg"
   },
   {
     "id": 1060,
@@ -734,7 +794,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Octagon (8 sides)",
     "option_d": "Decagon",
     "correct_option": "C",
-    "explanation": "The number of sides is multiplied by 2: (3 × 2 = 6), therefore (4 × 2 = 8 sides = Octagon)."
+    "explanation": "The number of sides is multiplied by 2: (3 × 2 = 6), therefore (4 × 2 = 8 sides = Octagon).",
+    "question_image_url": "/images/non-verbal/nv-8.jpg"
   },
   {
     "id": 1061,
@@ -746,7 +807,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Inverted White Triangle",
     "option_d": "Black Triangle with White Dot",
     "correct_option": "D",
-    "explanation": "Color inversion rule: Outer fill flips from white to black, and inner dot flips from black to white."
+    "explanation": "Color inversion rule: Outer fill flips from white to black, and inner dot flips from black to white.",
+    "question_image_url": "/images/non-verbal/nv-9.jpg"
   },
   {
     "id": 1062,
@@ -758,7 +820,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Two Small Squares",
     "option_d": "Large Square with Circle",
     "correct_option": "A",
-    "explanation": "The inner figure becomes the outer envelope and the outer figure shrinks inside."
+    "explanation": "The inner figure becomes the outer envelope and the outer figure shrinks inside.",
+    "question_image_url": "/images/non-verbal/nv-10.jpg"
   },
   {
     "id": 1063,
@@ -770,7 +833,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Arrow pointing SOUTH",
     "option_d": "Two Parallel Arrows",
     "correct_option": "B",
-    "explanation": "Direct 180-degree opposite direction rule. Up flips to Down, East flips to West."
+    "explanation": "Direct 180-degree opposite direction rule. Up flips to Down, East flips to West.",
+    "question_image_url": "/images/non-verbal/nv-11.jpg"
   },
   {
     "id": 1064,
@@ -782,7 +846,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Closed Triangle with Altitude line",
     "option_d": "Square",
     "correct_option": "C",
-    "explanation": "The open geometric perimeter is closed and subdivided by an internal line segment."
+    "explanation": "The open geometric perimeter is closed and subdivided by an internal line segment.",
+    "question_image_url": "/images/non-verbal/nv-12.jpg"
   },
   {
     "id": 1065,
@@ -794,7 +859,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Dotted Line",
     "option_d": "Three Concentric Arcs",
     "correct_option": "D",
-    "explanation": "Single element replicates into three parallel/concentric matching elements."
+    "explanation": "Single element replicates into three parallel/concentric matching elements.",
+    "question_image_url": "/images/non-verbal/nv-13.jpg"
   },
   {
     "id": 1066,
@@ -806,7 +872,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Horizontal Line",
     "option_d": "Triangle",
     "correct_option": "A",
-    "explanation": "Shape is rotated 45 degrees into an aligned vertical standard axis."
+    "explanation": "Shape is rotated 45 degrees into an aligned vertical standard axis.",
+    "question_image_url": "/images/non-verbal/nv-14.jpg"
   },
   {
     "id": 1067,
@@ -818,7 +885,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Cone",
     "option_d": "Oval",
     "correct_option": "B",
-    "explanation": "A square is a 2D projection of a 3D Cube; a circle is a 2D projection of a 3D Sphere."
+    "explanation": "A square is a 2D projection of a 3D Cube; a circle is a 2D projection of a 3D Sphere.",
+    "question_image_url": "/images/non-verbal/nv-15.jpg"
   },
   {
     "id": 1068,
@@ -830,7 +898,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Octagon (8 sides)",
     "option_d": "Decagon",
     "correct_option": "C",
-    "explanation": "The number of sides is multiplied by 2: (3 × 2 = 6), therefore (4 × 2 = 8 sides = Octagon)."
+    "explanation": "The number of sides is multiplied by 2: (3 × 2 = 6), therefore (4 × 2 = 8 sides = Octagon).",
+    "question_image_url": "/images/non-verbal/nv-16.jpg"
   },
   {
     "id": 1069,
@@ -842,7 +911,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Inverted White Triangle",
     "option_d": "Black Triangle with White Dot",
     "correct_option": "D",
-    "explanation": "Color inversion rule: Outer fill flips from white to black, and inner dot flips from black to white."
+    "explanation": "Color inversion rule: Outer fill flips from white to black, and inner dot flips from black to white.",
+    "question_image_url": "/images/non-verbal/nv-17.jpg"
   },
   {
     "id": 1070,
@@ -854,7 +924,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Two Small Squares",
     "option_d": "Large Square with Circle",
     "correct_option": "A",
-    "explanation": "The inner figure becomes the outer envelope and the outer figure shrinks inside."
+    "explanation": "The inner figure becomes the outer envelope and the outer figure shrinks inside.",
+    "question_image_url": "/images/non-verbal/nv-18.jpg"
   },
   {
     "id": 1071,
@@ -866,7 +937,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Arrow pointing SOUTH",
     "option_d": "Two Parallel Arrows",
     "correct_option": "B",
-    "explanation": "Direct 180-degree opposite direction rule. Up flips to Down, East flips to West."
+    "explanation": "Direct 180-degree opposite direction rule. Up flips to Down, East flips to West.",
+    "question_image_url": "/images/non-verbal/nv-19.jpg"
   },
   {
     "id": 1072,
@@ -878,7 +950,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Closed Triangle with Altitude line",
     "option_d": "Square",
     "correct_option": "C",
-    "explanation": "The open geometric perimeter is closed and subdivided by an internal line segment."
+    "explanation": "The open geometric perimeter is closed and subdivided by an internal line segment.",
+    "question_image_url": "/images/non-verbal/nv-20.jpg"
   },
   {
     "id": 1073,
@@ -890,7 +963,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Dotted Line",
     "option_d": "Three Concentric Arcs",
     "correct_option": "D",
-    "explanation": "Single element replicates into three parallel/concentric matching elements."
+    "explanation": "Single element replicates into three parallel/concentric matching elements.",
+    "question_image_url": "/images/non-verbal/nv-21.jpg"
   },
   {
     "id": 1074,
@@ -902,7 +976,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Horizontal Line",
     "option_d": "Triangle",
     "correct_option": "A",
-    "explanation": "Shape is rotated 45 degrees into an aligned vertical standard axis."
+    "explanation": "Shape is rotated 45 degrees into an aligned vertical standard axis.",
+    "question_image_url": "/images/non-verbal/nv-22.jpg"
   },
   {
     "id": 1075,
@@ -914,7 +989,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Cone",
     "option_d": "Oval",
     "correct_option": "B",
-    "explanation": "A square is a 2D projection of a 3D Cube; a circle is a 2D projection of a 3D Sphere."
+    "explanation": "A square is a 2D projection of a 3D Cube; a circle is a 2D projection of a 3D Sphere.",
+    "question_image_url": "/images/non-verbal/nv-23.jpg"
   },
   {
     "id": 1076,
@@ -926,7 +1002,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Octagon (8 sides)",
     "option_d": "Decagon",
     "correct_option": "C",
-    "explanation": "The number of sides is multiplied by 2: (3 × 2 = 6), therefore (4 × 2 = 8 sides = Octagon)."
+    "explanation": "The number of sides is multiplied by 2: (3 × 2 = 6), therefore (4 × 2 = 8 sides = Octagon).",
+    "question_image_url": "/images/non-verbal/nv-24.jpg"
   },
   {
     "id": 1077,
@@ -938,7 +1015,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Inverted White Triangle",
     "option_d": "Black Triangle with White Dot",
     "correct_option": "D",
-    "explanation": "Color inversion rule: Outer fill flips from white to black, and inner dot flips from black to white."
+    "explanation": "Color inversion rule: Outer fill flips from white to black, and inner dot flips from black to white.",
+    "question_image_url": "/images/non-verbal/nv-25.jpg"
   },
   {
     "id": 1078,
@@ -950,7 +1028,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Two Small Squares",
     "option_d": "Large Square with Circle",
     "correct_option": "A",
-    "explanation": "The inner figure becomes the outer envelope and the outer figure shrinks inside."
+    "explanation": "The inner figure becomes the outer envelope and the outer figure shrinks inside.",
+    "question_image_url": "/images/non-verbal/nv-26.jpg"
   },
   {
     "id": 1079,
@@ -962,7 +1041,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Arrow pointing SOUTH",
     "option_d": "Two Parallel Arrows",
     "correct_option": "B",
-    "explanation": "Direct 180-degree opposite direction rule. Up flips to Down, East flips to West."
+    "explanation": "Direct 180-degree opposite direction rule. Up flips to Down, East flips to West.",
+    "question_image_url": "/images/non-verbal/nv-27.jpg"
   },
   {
     "id": 1080,
@@ -974,7 +1054,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Closed Triangle with Altitude line",
     "option_d": "Square",
     "correct_option": "C",
-    "explanation": "The open geometric perimeter is closed and subdivided by an internal line segment."
+    "explanation": "The open geometric perimeter is closed and subdivided by an internal line segment.",
+    "question_image_url": "/images/non-verbal/nv-28.jpg"
   },
   {
     "id": 1081,
@@ -986,7 +1067,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Dotted Line",
     "option_d": "Three Concentric Arcs",
     "correct_option": "D",
-    "explanation": "Single element replicates into three parallel/concentric matching elements."
+    "explanation": "Single element replicates into three parallel/concentric matching elements.",
+    "question_image_url": "/images/non-verbal/nv-29.jpg"
   },
   {
     "id": 1082,
@@ -998,7 +1080,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Horizontal Line",
     "option_d": "Triangle",
     "correct_option": "A",
-    "explanation": "Shape is rotated 45 degrees into an aligned vertical standard axis."
+    "explanation": "Shape is rotated 45 degrees into an aligned vertical standard axis.",
+    "question_image_url": "/images/non-verbal/nv-30.jpg"
   },
   {
     "id": 1083,
@@ -1010,7 +1093,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Cone",
     "option_d": "Oval",
     "correct_option": "B",
-    "explanation": "A square is a 2D projection of a 3D Cube; a circle is a 2D projection of a 3D Sphere."
+    "explanation": "A square is a 2D projection of a 3D Cube; a circle is a 2D projection of a 3D Sphere.",
+    "question_image_url": "/images/non-verbal/nv-31.jpg"
   },
   {
     "id": 1084,
@@ -1022,7 +1106,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Octagon (8 sides)",
     "option_d": "Decagon",
     "correct_option": "C",
-    "explanation": "The number of sides is multiplied by 2: (3 × 2 = 6), therefore (4 × 2 = 8 sides = Octagon)."
+    "explanation": "The number of sides is multiplied by 2: (3 × 2 = 6), therefore (4 × 2 = 8 sides = Octagon).",
+    "question_image_url": "/images/non-verbal/nv-32.jpg"
   },
   {
     "id": 1085,
@@ -1034,7 +1119,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Inverted White Triangle",
     "option_d": "Black Triangle with White Dot",
     "correct_option": "D",
-    "explanation": "Color inversion rule: Outer fill flips from white to black, and inner dot flips from black to white."
+    "explanation": "Color inversion rule: Outer fill flips from white to black, and inner dot flips from black to white.",
+    "question_image_url": "/images/non-verbal/nv-33.jpg"
   },
   {
     "id": 1086,
@@ -1046,7 +1132,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Two Small Squares",
     "option_d": "Large Square with Circle",
     "correct_option": "A",
-    "explanation": "The inner figure becomes the outer envelope and the outer figure shrinks inside."
+    "explanation": "The inner figure becomes the outer envelope and the outer figure shrinks inside.",
+    "question_image_url": "/images/non-verbal/nv-34.jpg"
   },
   {
     "id": 1087,
@@ -1058,7 +1145,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Arrow pointing SOUTH",
     "option_d": "Two Parallel Arrows",
     "correct_option": "B",
-    "explanation": "Direct 180-degree opposite direction rule. Up flips to Down, East flips to West."
+    "explanation": "Direct 180-degree opposite direction rule. Up flips to Down, East flips to West.",
+    "question_image_url": "/images/non-verbal/nv-35.jpg"
   },
   {
     "id": 1088,
@@ -1070,7 +1158,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Closed Triangle with Altitude line",
     "option_d": "Square",
     "correct_option": "C",
-    "explanation": "The open geometric perimeter is closed and subdivided by an internal line segment."
+    "explanation": "The open geometric perimeter is closed and subdivided by an internal line segment.",
+    "question_image_url": "/images/non-verbal/nv-36.jpg"
   },
   {
     "id": 1089,
@@ -1082,7 +1171,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Dotted Line",
     "option_d": "Three Concentric Arcs",
     "correct_option": "D",
-    "explanation": "Single element replicates into three parallel/concentric matching elements."
+    "explanation": "Single element replicates into three parallel/concentric matching elements.",
+    "question_image_url": "/images/non-verbal/nv-37.jpg"
   },
   {
     "id": 1090,
@@ -1094,7 +1184,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Horizontal Line",
     "option_d": "Triangle",
     "correct_option": "A",
-    "explanation": "Shape is rotated 45 degrees into an aligned vertical standard axis."
+    "explanation": "Shape is rotated 45 degrees into an aligned vertical standard axis.",
+    "question_image_url": "/images/non-verbal/nv-38.jpg"
   },
   {
     "id": 1091,
@@ -1106,7 +1197,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Cone",
     "option_d": "Oval",
     "correct_option": "B",
-    "explanation": "A square is a 2D projection of a 3D Cube; a circle is a 2D projection of a 3D Sphere."
+    "explanation": "A square is a 2D projection of a 3D Cube; a circle is a 2D projection of a 3D Sphere.",
+    "question_image_url": "/images/non-verbal/nv-39.jpg"
   },
   {
     "id": 1092,
@@ -1118,7 +1210,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Octagon (8 sides)",
     "option_d": "Decagon",
     "correct_option": "C",
-    "explanation": "The number of sides is multiplied by 2: (3 × 2 = 6), therefore (4 × 2 = 8 sides = Octagon)."
+    "explanation": "The number of sides is multiplied by 2: (3 × 2 = 6), therefore (4 × 2 = 8 sides = Octagon).",
+    "question_image_url": "/images/non-verbal/nv-40.jpg"
   },
   {
     "id": 1093,
@@ -1130,7 +1223,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Inverted White Triangle",
     "option_d": "Black Triangle with White Dot",
     "correct_option": "D",
-    "explanation": "Color inversion rule: Outer fill flips from white to black, and inner dot flips from black to white."
+    "explanation": "Color inversion rule: Outer fill flips from white to black, and inner dot flips from black to white.",
+    "question_image_url": "/images/non-verbal/nv-41.jpg"
   },
   {
     "id": 1094,
@@ -1142,7 +1236,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Two Small Squares",
     "option_d": "Large Square with Circle",
     "correct_option": "A",
-    "explanation": "The inner figure becomes the outer envelope and the outer figure shrinks inside."
+    "explanation": "The inner figure becomes the outer envelope and the outer figure shrinks inside.",
+    "question_image_url": "/images/non-verbal/nv-42.jpg"
   },
   {
     "id": 1095,
@@ -1154,7 +1249,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Arrow pointing SOUTH",
     "option_d": "Two Parallel Arrows",
     "correct_option": "B",
-    "explanation": "Direct 180-degree opposite direction rule. Up flips to Down, East flips to West."
+    "explanation": "Direct 180-degree opposite direction rule. Up flips to Down, East flips to West.",
+    "question_image_url": "/images/non-verbal/nv-43.jpg"
   },
   {
     "id": 1096,
@@ -1166,7 +1262,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Closed Triangle with Altitude line",
     "option_d": "Square",
     "correct_option": "C",
-    "explanation": "The open geometric perimeter is closed and subdivided by an internal line segment."
+    "explanation": "The open geometric perimeter is closed and subdivided by an internal line segment.",
+    "question_image_url": "/images/non-verbal/nv-44.jpg"
   },
   {
     "id": 1097,
@@ -1178,7 +1275,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Dotted Line",
     "option_d": "Three Concentric Arcs",
     "correct_option": "D",
-    "explanation": "Single element replicates into three parallel/concentric matching elements."
+    "explanation": "Single element replicates into three parallel/concentric matching elements.",
+    "question_image_url": "/images/non-verbal/nv-45.jpg"
   },
   {
     "id": 1098,
@@ -1190,7 +1288,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Horizontal Line",
     "option_d": "Triangle",
     "correct_option": "A",
-    "explanation": "Shape is rotated 45 degrees into an aligned vertical standard axis."
+    "explanation": "Shape is rotated 45 degrees into an aligned vertical standard axis.",
+    "question_image_url": "/images/non-verbal/nv-46.jpg"
   },
   {
     "id": 1099,
@@ -1202,7 +1301,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Cone",
     "option_d": "Oval",
     "correct_option": "B",
-    "explanation": "A square is a 2D projection of a 3D Cube; a circle is a 2D projection of a 3D Sphere."
+    "explanation": "A square is a 2D projection of a 3D Cube; a circle is a 2D projection of a 3D Sphere.",
+    "question_image_url": "/images/non-verbal/nv-47.jpg"
   },
   {
     "id": 1100,
@@ -1214,7 +1314,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Octagon (8 sides)",
     "option_d": "Decagon",
     "correct_option": "C",
-    "explanation": "The number of sides is multiplied by 2: (3 × 2 = 6), therefore (4 × 2 = 8 sides = Octagon)."
+    "explanation": "The number of sides is multiplied by 2: (3 × 2 = 6), therefore (4 × 2 = 8 sides = Octagon).",
+    "question_image_url": "/images/non-verbal/nv-48.jpg"
   },
   {
     "id": 1101,
@@ -1226,7 +1327,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Square",
     "option_d": "Regular Pentagon",
     "correct_option": "B",
-    "explanation": "Triangle, Square, and Pentagon are formed entirely of straight line segments (polygons); Circle is curved."
+    "explanation": "Triangle, Square, and Pentagon are formed entirely of straight line segments (polygons); Circle is curved.",
+    "question_image_url": "/images/non-verbal/nv-49.jpg"
   },
   {
     "id": 1102,
@@ -1238,7 +1340,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Letter O",
     "option_d": "Letter H",
     "correct_option": "C",
-    "explanation": "Letters E, F, and H consist strictly of straight lines; Letter O is a closed curved shape."
+    "explanation": "Letters E, F, and H consist strictly of straight lines; Letter O is a closed curved shape.",
+    "question_image_url": "/images/non-verbal/nv-50.jpg"
   },
   {
     "id": 1103,
@@ -1250,7 +1353,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Divided into 8 equal sectors",
     "option_d": "Divided into 3 unequal parts",
     "correct_option": "D",
-    "explanation": "Figures A, B, and D are symmetric with equal divisions; Figure C has unequal, asymmetric parts."
+    "explanation": "Figures A, B, and D are symmetric with equal divisions; Figure C has unequal, asymmetric parts.",
+    "question_image_url": "/images/non-verbal/nv-51.jpg"
   },
   {
     "id": 1104,
@@ -1262,7 +1366,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Clockwise circular arrow",
     "option_d": "Clockwise rotating triangle",
     "correct_option": "A",
-    "explanation": "Figures A, B, and C exhibit clockwise motion, while Figure D rotates in the counter-clockwise direction."
+    "explanation": "Figures A, B, and C exhibit clockwise motion, while Figure D rotates in the counter-clockwise direction.",
+    "question_image_url": "/images/non-verbal/nv-52.jpg"
   },
   {
     "id": 1105,
@@ -1274,7 +1379,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Shape with 5 interior dots",
     "option_d": "Shape with 7 interior dots",
     "correct_option": "B",
-    "explanation": "Figures B, C, and D contain an odd number of dots (3, 5, 7), whereas A contains an even number (4)."
+    "explanation": "Figures B, C, and D contain an odd number of dots (3, 5, 7), whereas A contains an even number (4).",
+    "question_image_url": "/images/non-verbal/nv-1.jpg"
   },
   {
     "id": 1106,
@@ -1286,7 +1392,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Hexagon inside Square",
     "option_d": "Pentagon inside Hexagon",
     "correct_option": "C",
-    "explanation": "In all other options the inner shape has fewer sides than outer (3<inf, 4<5, 5<6); in D inner has 6 sides inside 4 sides."
+    "explanation": "In all other options the inner shape has fewer sides than outer (3<inf, 4<5, 5<6); in D inner has 6 sides inside 4 sides.",
+    "question_image_url": "/images/non-verbal/nv-2.jpg"
   },
   {
     "id": 1107,
@@ -1298,7 +1405,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Regular Pentagon",
     "option_d": "Circle",
     "correct_option": "D",
-    "explanation": "Triangle, Square, and Pentagon are formed entirely of straight line segments (polygons); Circle is curved."
+    "explanation": "Triangle, Square, and Pentagon are formed entirely of straight line segments (polygons); Circle is curved.",
+    "question_image_url": "/images/non-verbal/nv-3.jpg"
   },
   {
     "id": 1108,
@@ -1310,7 +1418,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Letter F",
     "option_d": "Letter H",
     "correct_option": "A",
-    "explanation": "Letters E, F, and H consist strictly of straight lines; Letter O is a closed curved shape."
+    "explanation": "Letters E, F, and H consist strictly of straight lines; Letter O is a closed curved shape.",
+    "question_image_url": "/images/non-verbal/nv-4.jpg"
   },
   {
     "id": 1109,
@@ -1322,7 +1431,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Divided into 4 equal quarters",
     "option_d": "Divided into 8 equal sectors",
     "correct_option": "B",
-    "explanation": "Figures A, B, and D are symmetric with equal divisions; Figure C has unequal, asymmetric parts."
+    "explanation": "Figures A, B, and D are symmetric with equal divisions; Figure C has unequal, asymmetric parts.",
+    "question_image_url": "/images/non-verbal/nv-5.jpg"
   },
   {
     "id": 1110,
@@ -1334,7 +1444,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Counter-clockwise rotating square",
     "option_d": "Clockwise rotating triangle",
     "correct_option": "C",
-    "explanation": "Figures A, B, and C exhibit clockwise motion, while Figure D rotates in the counter-clockwise direction."
+    "explanation": "Figures A, B, and C exhibit clockwise motion, while Figure D rotates in the counter-clockwise direction.",
+    "question_image_url": "/images/non-verbal/nv-6.jpg"
   },
   {
     "id": 1111,
@@ -1346,7 +1457,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Shape with 7 interior dots",
     "option_d": "Shape with 4 interior dots",
     "correct_option": "D",
-    "explanation": "Figures B, C, and D contain an odd number of dots (3, 5, 7), whereas A contains an even number (4)."
+    "explanation": "Figures B, C, and D contain an odd number of dots (3, 5, 7), whereas A contains an even number (4).",
+    "question_image_url": "/images/non-verbal/nv-7.jpg"
   },
   {
     "id": 1112,
@@ -1358,7 +1470,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Square inside Pentagon",
     "option_d": "Pentagon inside Hexagon",
     "correct_option": "A",
-    "explanation": "In all other options the inner shape has fewer sides than outer (3<inf, 4<5, 5<6); in D inner has 6 sides inside 4 sides."
+    "explanation": "In all other options the inner shape has fewer sides than outer (3<inf, 4<5, 5<6); in D inner has 6 sides inside 4 sides.",
+    "question_image_url": "/images/non-verbal/nv-8.jpg"
   },
   {
     "id": 1113,
@@ -1370,7 +1483,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Square",
     "option_d": "Regular Pentagon",
     "correct_option": "B",
-    "explanation": "Triangle, Square, and Pentagon are formed entirely of straight line segments (polygons); Circle is curved."
+    "explanation": "Triangle, Square, and Pentagon are formed entirely of straight line segments (polygons); Circle is curved.",
+    "question_image_url": "/images/non-verbal/nv-9.jpg"
   },
   {
     "id": 1114,
@@ -1382,7 +1496,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Letter O",
     "option_d": "Letter H",
     "correct_option": "C",
-    "explanation": "Letters E, F, and H consist strictly of straight lines; Letter O is a closed curved shape."
+    "explanation": "Letters E, F, and H consist strictly of straight lines; Letter O is a closed curved shape.",
+    "question_image_url": "/images/non-verbal/nv-10.jpg"
   },
   {
     "id": 1115,
@@ -1394,7 +1509,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Divided into 8 equal sectors",
     "option_d": "Divided into 3 unequal parts",
     "correct_option": "D",
-    "explanation": "Figures A, B, and D are symmetric with equal divisions; Figure C has unequal, asymmetric parts."
+    "explanation": "Figures A, B, and D are symmetric with equal divisions; Figure C has unequal, asymmetric parts.",
+    "question_image_url": "/images/non-verbal/nv-11.jpg"
   },
   {
     "id": 1116,
@@ -1406,7 +1522,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Clockwise circular arrow",
     "option_d": "Clockwise rotating triangle",
     "correct_option": "A",
-    "explanation": "Figures A, B, and C exhibit clockwise motion, while Figure D rotates in the counter-clockwise direction."
+    "explanation": "Figures A, B, and C exhibit clockwise motion, while Figure D rotates in the counter-clockwise direction.",
+    "question_image_url": "/images/non-verbal/nv-12.jpg"
   },
   {
     "id": 1117,
@@ -1418,7 +1535,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Shape with 5 interior dots",
     "option_d": "Shape with 7 interior dots",
     "correct_option": "B",
-    "explanation": "Figures B, C, and D contain an odd number of dots (3, 5, 7), whereas A contains an even number (4)."
+    "explanation": "Figures B, C, and D contain an odd number of dots (3, 5, 7), whereas A contains an even number (4).",
+    "question_image_url": "/images/non-verbal/nv-13.jpg"
   },
   {
     "id": 1118,
@@ -1430,7 +1548,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Hexagon inside Square",
     "option_d": "Pentagon inside Hexagon",
     "correct_option": "C",
-    "explanation": "In all other options the inner shape has fewer sides than outer (3<inf, 4<5, 5<6); in D inner has 6 sides inside 4 sides."
+    "explanation": "In all other options the inner shape has fewer sides than outer (3<inf, 4<5, 5<6); in D inner has 6 sides inside 4 sides.",
+    "question_image_url": "/images/non-verbal/nv-14.jpg"
   },
   {
     "id": 1119,
@@ -1442,7 +1561,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Regular Pentagon",
     "option_d": "Circle",
     "correct_option": "D",
-    "explanation": "Triangle, Square, and Pentagon are formed entirely of straight line segments (polygons); Circle is curved."
+    "explanation": "Triangle, Square, and Pentagon are formed entirely of straight line segments (polygons); Circle is curved.",
+    "question_image_url": "/images/non-verbal/nv-15.jpg"
   },
   {
     "id": 1120,
@@ -1454,7 +1574,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Letter F",
     "option_d": "Letter H",
     "correct_option": "A",
-    "explanation": "Letters E, F, and H consist strictly of straight lines; Letter O is a closed curved shape."
+    "explanation": "Letters E, F, and H consist strictly of straight lines; Letter O is a closed curved shape.",
+    "question_image_url": "/images/non-verbal/nv-16.jpg"
   },
   {
     "id": 1121,
@@ -1466,7 +1587,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Divided into 4 equal quarters",
     "option_d": "Divided into 8 equal sectors",
     "correct_option": "B",
-    "explanation": "Figures A, B, and D are symmetric with equal divisions; Figure C has unequal, asymmetric parts."
+    "explanation": "Figures A, B, and D are symmetric with equal divisions; Figure C has unequal, asymmetric parts.",
+    "question_image_url": "/images/non-verbal/nv-17.jpg"
   },
   {
     "id": 1122,
@@ -1478,7 +1600,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Counter-clockwise rotating square",
     "option_d": "Clockwise rotating triangle",
     "correct_option": "C",
-    "explanation": "Figures A, B, and C exhibit clockwise motion, while Figure D rotates in the counter-clockwise direction."
+    "explanation": "Figures A, B, and C exhibit clockwise motion, while Figure D rotates in the counter-clockwise direction.",
+    "question_image_url": "/images/non-verbal/nv-18.jpg"
   },
   {
     "id": 1123,
@@ -1490,7 +1613,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Shape with 7 interior dots",
     "option_d": "Shape with 4 interior dots",
     "correct_option": "D",
-    "explanation": "Figures B, C, and D contain an odd number of dots (3, 5, 7), whereas A contains an even number (4)."
+    "explanation": "Figures B, C, and D contain an odd number of dots (3, 5, 7), whereas A contains an even number (4).",
+    "question_image_url": "/images/non-verbal/nv-19.jpg"
   },
   {
     "id": 1124,
@@ -1502,7 +1626,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Square inside Pentagon",
     "option_d": "Pentagon inside Hexagon",
     "correct_option": "A",
-    "explanation": "In all other options the inner shape has fewer sides than outer (3<inf, 4<5, 5<6); in D inner has 6 sides inside 4 sides."
+    "explanation": "In all other options the inner shape has fewer sides than outer (3<inf, 4<5, 5<6); in D inner has 6 sides inside 4 sides.",
+    "question_image_url": "/images/non-verbal/nv-20.jpg"
   },
   {
     "id": 1125,
@@ -1514,7 +1639,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Square",
     "option_d": "Regular Pentagon",
     "correct_option": "B",
-    "explanation": "Triangle, Square, and Pentagon are formed entirely of straight line segments (polygons); Circle is curved."
+    "explanation": "Triangle, Square, and Pentagon are formed entirely of straight line segments (polygons); Circle is curved.",
+    "question_image_url": "/images/non-verbal/nv-21.jpg"
   },
   {
     "id": 1126,
@@ -1526,7 +1652,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Letter O",
     "option_d": "Letter H",
     "correct_option": "C",
-    "explanation": "Letters E, F, and H consist strictly of straight lines; Letter O is a closed curved shape."
+    "explanation": "Letters E, F, and H consist strictly of straight lines; Letter O is a closed curved shape.",
+    "question_image_url": "/images/non-verbal/nv-22.jpg"
   },
   {
     "id": 1127,
@@ -1538,7 +1665,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Divided into 8 equal sectors",
     "option_d": "Divided into 3 unequal parts",
     "correct_option": "D",
-    "explanation": "Figures A, B, and D are symmetric with equal divisions; Figure C has unequal, asymmetric parts."
+    "explanation": "Figures A, B, and D are symmetric with equal divisions; Figure C has unequal, asymmetric parts.",
+    "question_image_url": "/images/non-verbal/nv-23.jpg"
   },
   {
     "id": 1128,
@@ -1550,7 +1678,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Clockwise circular arrow",
     "option_d": "Clockwise rotating triangle",
     "correct_option": "A",
-    "explanation": "Figures A, B, and C exhibit clockwise motion, while Figure D rotates in the counter-clockwise direction."
+    "explanation": "Figures A, B, and C exhibit clockwise motion, while Figure D rotates in the counter-clockwise direction.",
+    "question_image_url": "/images/non-verbal/nv-24.jpg"
   },
   {
     "id": 1129,
@@ -1562,7 +1691,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Shape with 5 interior dots",
     "option_d": "Shape with 7 interior dots",
     "correct_option": "B",
-    "explanation": "Figures B, C, and D contain an odd number of dots (3, 5, 7), whereas A contains an even number (4)."
+    "explanation": "Figures B, C, and D contain an odd number of dots (3, 5, 7), whereas A contains an even number (4).",
+    "question_image_url": "/images/non-verbal/nv-25.jpg"
   },
   {
     "id": 1130,
@@ -1574,7 +1704,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Hexagon inside Square",
     "option_d": "Pentagon inside Hexagon",
     "correct_option": "C",
-    "explanation": "In all other options the inner shape has fewer sides than outer (3<inf, 4<5, 5<6); in D inner has 6 sides inside 4 sides."
+    "explanation": "In all other options the inner shape has fewer sides than outer (3<inf, 4<5, 5<6); in D inner has 6 sides inside 4 sides.",
+    "question_image_url": "/images/non-verbal/nv-26.jpg"
   },
   {
     "id": 1131,
@@ -1586,7 +1717,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Regular Pentagon",
     "option_d": "Circle",
     "correct_option": "D",
-    "explanation": "Triangle, Square, and Pentagon are formed entirely of straight line segments (polygons); Circle is curved."
+    "explanation": "Triangle, Square, and Pentagon are formed entirely of straight line segments (polygons); Circle is curved.",
+    "question_image_url": "/images/non-verbal/nv-27.jpg"
   },
   {
     "id": 1132,
@@ -1598,7 +1730,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Letter F",
     "option_d": "Letter H",
     "correct_option": "A",
-    "explanation": "Letters E, F, and H consist strictly of straight lines; Letter O is a closed curved shape."
+    "explanation": "Letters E, F, and H consist strictly of straight lines; Letter O is a closed curved shape.",
+    "question_image_url": "/images/non-verbal/nv-28.jpg"
   },
   {
     "id": 1133,
@@ -1610,7 +1743,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Divided into 4 equal quarters",
     "option_d": "Divided into 8 equal sectors",
     "correct_option": "B",
-    "explanation": "Figures A, B, and D are symmetric with equal divisions; Figure C has unequal, asymmetric parts."
+    "explanation": "Figures A, B, and D are symmetric with equal divisions; Figure C has unequal, asymmetric parts.",
+    "question_image_url": "/images/non-verbal/nv-29.jpg"
   },
   {
     "id": 1134,
@@ -1622,7 +1756,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Counter-clockwise rotating square",
     "option_d": "Clockwise rotating triangle",
     "correct_option": "C",
-    "explanation": "Figures A, B, and C exhibit clockwise motion, while Figure D rotates in the counter-clockwise direction."
+    "explanation": "Figures A, B, and C exhibit clockwise motion, while Figure D rotates in the counter-clockwise direction.",
+    "question_image_url": "/images/non-verbal/nv-30.jpg"
   },
   {
     "id": 1135,
@@ -1634,7 +1769,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Shape with 7 interior dots",
     "option_d": "Shape with 4 interior dots",
     "correct_option": "D",
-    "explanation": "Figures B, C, and D contain an odd number of dots (3, 5, 7), whereas A contains an even number (4)."
+    "explanation": "Figures B, C, and D contain an odd number of dots (3, 5, 7), whereas A contains an even number (4).",
+    "question_image_url": "/images/non-verbal/nv-31.jpg"
   },
   {
     "id": 1136,
@@ -1646,7 +1782,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Square inside Pentagon",
     "option_d": "Pentagon inside Hexagon",
     "correct_option": "A",
-    "explanation": "In all other options the inner shape has fewer sides than outer (3<inf, 4<5, 5<6); in D inner has 6 sides inside 4 sides."
+    "explanation": "In all other options the inner shape has fewer sides than outer (3<inf, 4<5, 5<6); in D inner has 6 sides inside 4 sides.",
+    "question_image_url": "/images/non-verbal/nv-32.jpg"
   },
   {
     "id": 1137,
@@ -1658,7 +1795,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Square",
     "option_d": "Regular Pentagon",
     "correct_option": "B",
-    "explanation": "Triangle, Square, and Pentagon are formed entirely of straight line segments (polygons); Circle is curved."
+    "explanation": "Triangle, Square, and Pentagon are formed entirely of straight line segments (polygons); Circle is curved.",
+    "question_image_url": "/images/non-verbal/nv-33.jpg"
   },
   {
     "id": 1138,
@@ -1670,7 +1808,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Letter O",
     "option_d": "Letter H",
     "correct_option": "C",
-    "explanation": "Letters E, F, and H consist strictly of straight lines; Letter O is a closed curved shape."
+    "explanation": "Letters E, F, and H consist strictly of straight lines; Letter O is a closed curved shape.",
+    "question_image_url": "/images/non-verbal/nv-34.jpg"
   },
   {
     "id": 1139,
@@ -1682,7 +1821,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Divided into 8 equal sectors",
     "option_d": "Divided into 3 unequal parts",
     "correct_option": "D",
-    "explanation": "Figures A, B, and D are symmetric with equal divisions; Figure C has unequal, asymmetric parts."
+    "explanation": "Figures A, B, and D are symmetric with equal divisions; Figure C has unequal, asymmetric parts.",
+    "question_image_url": "/images/non-verbal/nv-35.jpg"
   },
   {
     "id": 1140,
@@ -1694,7 +1834,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Clockwise circular arrow",
     "option_d": "Clockwise rotating triangle",
     "correct_option": "A",
-    "explanation": "Figures A, B, and C exhibit clockwise motion, while Figure D rotates in the counter-clockwise direction."
+    "explanation": "Figures A, B, and C exhibit clockwise motion, while Figure D rotates in the counter-clockwise direction.",
+    "question_image_url": "/images/non-verbal/nv-36.jpg"
   },
   {
     "id": 1141,
@@ -1706,7 +1847,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Shape with 5 interior dots",
     "option_d": "Shape with 7 interior dots",
     "correct_option": "B",
-    "explanation": "Figures B, C, and D contain an odd number of dots (3, 5, 7), whereas A contains an even number (4)."
+    "explanation": "Figures B, C, and D contain an odd number of dots (3, 5, 7), whereas A contains an even number (4).",
+    "question_image_url": "/images/non-verbal/nv-37.jpg"
   },
   {
     "id": 1142,
@@ -1718,7 +1860,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Hexagon inside Square",
     "option_d": "Pentagon inside Hexagon",
     "correct_option": "C",
-    "explanation": "In all other options the inner shape has fewer sides than outer (3<inf, 4<5, 5<6); in D inner has 6 sides inside 4 sides."
+    "explanation": "In all other options the inner shape has fewer sides than outer (3<inf, 4<5, 5<6); in D inner has 6 sides inside 4 sides.",
+    "question_image_url": "/images/non-verbal/nv-38.jpg"
   },
   {
     "id": 1143,
@@ -1730,7 +1873,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Regular Pentagon",
     "option_d": "Circle",
     "correct_option": "D",
-    "explanation": "Triangle, Square, and Pentagon are formed entirely of straight line segments (polygons); Circle is curved."
+    "explanation": "Triangle, Square, and Pentagon are formed entirely of straight line segments (polygons); Circle is curved.",
+    "question_image_url": "/images/non-verbal/nv-39.jpg"
   },
   {
     "id": 1144,
@@ -1742,7 +1886,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Letter F",
     "option_d": "Letter H",
     "correct_option": "A",
-    "explanation": "Letters E, F, and H consist strictly of straight lines; Letter O is a closed curved shape."
+    "explanation": "Letters E, F, and H consist strictly of straight lines; Letter O is a closed curved shape.",
+    "question_image_url": "/images/non-verbal/nv-40.jpg"
   },
   {
     "id": 1145,
@@ -1754,7 +1899,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Divided into 4 equal quarters",
     "option_d": "Divided into 8 equal sectors",
     "correct_option": "B",
-    "explanation": "Figures A, B, and D are symmetric with equal divisions; Figure C has unequal, asymmetric parts."
+    "explanation": "Figures A, B, and D are symmetric with equal divisions; Figure C has unequal, asymmetric parts.",
+    "question_image_url": "/images/non-verbal/nv-41.jpg"
   },
   {
     "id": 1146,
@@ -1766,7 +1912,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Counter-clockwise rotating square",
     "option_d": "Clockwise rotating triangle",
     "correct_option": "C",
-    "explanation": "Figures A, B, and C exhibit clockwise motion, while Figure D rotates in the counter-clockwise direction."
+    "explanation": "Figures A, B, and C exhibit clockwise motion, while Figure D rotates in the counter-clockwise direction.",
+    "question_image_url": "/images/non-verbal/nv-42.jpg"
   },
   {
     "id": 1147,
@@ -1778,7 +1925,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Shape with 7 interior dots",
     "option_d": "Shape with 4 interior dots",
     "correct_option": "D",
-    "explanation": "Figures B, C, and D contain an odd number of dots (3, 5, 7), whereas A contains an even number (4)."
+    "explanation": "Figures B, C, and D contain an odd number of dots (3, 5, 7), whereas A contains an even number (4).",
+    "question_image_url": "/images/non-verbal/nv-43.jpg"
   },
   {
     "id": 1148,
@@ -1790,7 +1938,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Square inside Pentagon",
     "option_d": "Pentagon inside Hexagon",
     "correct_option": "A",
-    "explanation": "In all other options the inner shape has fewer sides than outer (3<inf, 4<5, 5<6); in D inner has 6 sides inside 4 sides."
+    "explanation": "In all other options the inner shape has fewer sides than outer (3<inf, 4<5, 5<6); in D inner has 6 sides inside 4 sides.",
+    "question_image_url": "/images/non-verbal/nv-44.jpg"
   },
   {
     "id": 1149,
@@ -1802,7 +1951,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Square",
     "option_d": "Regular Pentagon",
     "correct_option": "B",
-    "explanation": "Triangle, Square, and Pentagon are formed entirely of straight line segments (polygons); Circle is curved."
+    "explanation": "Triangle, Square, and Pentagon are formed entirely of straight line segments (polygons); Circle is curved.",
+    "question_image_url": "/images/non-verbal/nv-45.jpg"
   },
   {
     "id": 1150,
@@ -1814,7 +1964,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Letter O",
     "option_d": "Letter H",
     "correct_option": "C",
-    "explanation": "Letters E, F, and H consist strictly of straight lines; Letter O is a closed curved shape."
+    "explanation": "Letters E, F, and H consist strictly of straight lines; Letter O is a closed curved shape.",
+    "question_image_url": "/images/non-verbal/nv-46.jpg"
   },
   {
     "id": 1151,
@@ -1826,7 +1977,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "8 Lines",
     "option_d": "6 Lines",
     "correct_option": "B",
-    "explanation": "Line counts increment sequentially row by row: 7, 8, 9."
+    "explanation": "Line counts increment sequentially row by row: 7, 8, 9.",
+    "question_image_url": "/images/non-verbal/nv-47.jpg"
   },
   {
     "id": 1152,
@@ -1838,7 +1990,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Circle",
     "option_d": "Hexagon",
     "correct_option": "C",
-    "explanation": "Latin square rule: Every row and column must contain each of the three shapes (Circle, Square, Triangle) exactly once."
+    "explanation": "Latin square rule: Every row and column must contain each of the three shapes (Circle, Square, Triangle) exactly once.",
+    "question_image_url": "/images/non-verbal/nv-48.jpg"
   },
   {
     "id": 1153,
@@ -1850,7 +2003,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Circle inside Square",
     "option_d": "Double Concentric Squares",
     "correct_option": "D",
-    "explanation": "The right column duplicates the base shape from the left column into concentric double boundaries."
+    "explanation": "The right column duplicates the base shape from the left column into concentric double boundaries.",
+    "question_image_url": "/images/non-verbal/nv-49.jpg"
   },
   {
     "id": 1154,
@@ -1862,7 +2016,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "North-West",
     "option_d": "East",
     "correct_option": "A",
-    "explanation": "Each row rotates 90 degrees clockwise from the starting direction. South -> West -> North."
+    "explanation": "Each row rotates 90 degrees clockwise from the starting direction. South -> West -> North.",
+    "question_image_url": "/images/non-verbal/nv-50.jpg"
   },
   {
     "id": 1155,
@@ -1874,7 +2029,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "8 Lines",
     "option_d": "6 Lines",
     "correct_option": "B",
-    "explanation": "Line counts increment sequentially row by row: 7, 8, 9."
+    "explanation": "Line counts increment sequentially row by row: 7, 8, 9.",
+    "question_image_url": "/images/non-verbal/nv-51.jpg"
   },
   {
     "id": 1156,
@@ -1886,7 +2042,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Circle",
     "option_d": "Hexagon",
     "correct_option": "C",
-    "explanation": "Latin square rule: Every row and column must contain each of the three shapes (Circle, Square, Triangle) exactly once."
+    "explanation": "Latin square rule: Every row and column must contain each of the three shapes (Circle, Square, Triangle) exactly once.",
+    "question_image_url": "/images/non-verbal/nv-52.jpg"
   },
   {
     "id": 1157,
@@ -1898,7 +2055,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Circle inside Square",
     "option_d": "Double Concentric Squares",
     "correct_option": "D",
-    "explanation": "The right column duplicates the base shape from the left column into concentric double boundaries."
+    "explanation": "The right column duplicates the base shape from the left column into concentric double boundaries.",
+    "question_image_url": "/images/non-verbal/nv-1.jpg"
   },
   {
     "id": 1158,
@@ -1910,7 +2068,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "North-West",
     "option_d": "East",
     "correct_option": "A",
-    "explanation": "Each row rotates 90 degrees clockwise from the starting direction. South -> West -> North."
+    "explanation": "Each row rotates 90 degrees clockwise from the starting direction. South -> West -> North.",
+    "question_image_url": "/images/non-verbal/nv-2.jpg"
   },
   {
     "id": 1159,
@@ -1922,7 +2081,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "8 Lines",
     "option_d": "6 Lines",
     "correct_option": "B",
-    "explanation": "Line counts increment sequentially row by row: 7, 8, 9."
+    "explanation": "Line counts increment sequentially row by row: 7, 8, 9.",
+    "question_image_url": "/images/non-verbal/nv-3.jpg"
   },
   {
     "id": 1160,
@@ -1934,7 +2094,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Circle",
     "option_d": "Hexagon",
     "correct_option": "C",
-    "explanation": "Latin square rule: Every row and column must contain each of the three shapes (Circle, Square, Triangle) exactly once."
+    "explanation": "Latin square rule: Every row and column must contain each of the three shapes (Circle, Square, Triangle) exactly once.",
+    "question_image_url": "/images/non-verbal/nv-4.jpg"
   },
   {
     "id": 1161,
@@ -1946,7 +2107,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Circle inside Square",
     "option_d": "Double Concentric Squares",
     "correct_option": "D",
-    "explanation": "The right column duplicates the base shape from the left column into concentric double boundaries."
+    "explanation": "The right column duplicates the base shape from the left column into concentric double boundaries.",
+    "question_image_url": "/images/non-verbal/nv-5.jpg"
   },
   {
     "id": 1162,
@@ -1958,7 +2120,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "North-West",
     "option_d": "East",
     "correct_option": "A",
-    "explanation": "Each row rotates 90 degrees clockwise from the starting direction. South -> West -> North."
+    "explanation": "Each row rotates 90 degrees clockwise from the starting direction. South -> West -> North.",
+    "question_image_url": "/images/non-verbal/nv-6.jpg"
   },
   {
     "id": 1163,
@@ -1970,7 +2133,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "8 Lines",
     "option_d": "6 Lines",
     "correct_option": "B",
-    "explanation": "Line counts increment sequentially row by row: 7, 8, 9."
+    "explanation": "Line counts increment sequentially row by row: 7, 8, 9.",
+    "question_image_url": "/images/non-verbal/nv-7.jpg"
   },
   {
     "id": 1164,
@@ -1982,7 +2146,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Circle",
     "option_d": "Hexagon",
     "correct_option": "C",
-    "explanation": "Latin square rule: Every row and column must contain each of the three shapes (Circle, Square, Triangle) exactly once."
+    "explanation": "Latin square rule: Every row and column must contain each of the three shapes (Circle, Square, Triangle) exactly once.",
+    "question_image_url": "/images/non-verbal/nv-8.jpg"
   },
   {
     "id": 1165,
@@ -1994,7 +2159,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Circle inside Square",
     "option_d": "Double Concentric Squares",
     "correct_option": "D",
-    "explanation": "The right column duplicates the base shape from the left column into concentric double boundaries."
+    "explanation": "The right column duplicates the base shape from the left column into concentric double boundaries.",
+    "question_image_url": "/images/non-verbal/nv-9.jpg"
   },
   {
     "id": 1166,
@@ -2006,7 +2172,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "North-West",
     "option_d": "East",
     "correct_option": "A",
-    "explanation": "Each row rotates 90 degrees clockwise from the starting direction. South -> West -> North."
+    "explanation": "Each row rotates 90 degrees clockwise from the starting direction. South -> West -> North.",
+    "question_image_url": "/images/non-verbal/nv-10.jpg"
   },
   {
     "id": 1167,
@@ -2018,7 +2185,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "8 Lines",
     "option_d": "6 Lines",
     "correct_option": "B",
-    "explanation": "Line counts increment sequentially row by row: 7, 8, 9."
+    "explanation": "Line counts increment sequentially row by row: 7, 8, 9.",
+    "question_image_url": "/images/non-verbal/nv-11.jpg"
   },
   {
     "id": 1168,
@@ -2030,7 +2198,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Circle",
     "option_d": "Hexagon",
     "correct_option": "C",
-    "explanation": "Latin square rule: Every row and column must contain each of the three shapes (Circle, Square, Triangle) exactly once."
+    "explanation": "Latin square rule: Every row and column must contain each of the three shapes (Circle, Square, Triangle) exactly once.",
+    "question_image_url": "/images/non-verbal/nv-12.jpg"
   },
   {
     "id": 1169,
@@ -2042,7 +2211,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Circle inside Square",
     "option_d": "Double Concentric Squares",
     "correct_option": "D",
-    "explanation": "The right column duplicates the base shape from the left column into concentric double boundaries."
+    "explanation": "The right column duplicates the base shape from the left column into concentric double boundaries.",
+    "question_image_url": "/images/non-verbal/nv-13.jpg"
   },
   {
     "id": 1170,
@@ -2054,7 +2224,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "North-West",
     "option_d": "East",
     "correct_option": "A",
-    "explanation": "Each row rotates 90 degrees clockwise from the starting direction. South -> West -> North."
+    "explanation": "Each row rotates 90 degrees clockwise from the starting direction. South -> West -> North.",
+    "question_image_url": "/images/non-verbal/nv-14.jpg"
   },
   {
     "id": 1171,
@@ -2066,7 +2237,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "8 Lines",
     "option_d": "6 Lines",
     "correct_option": "B",
-    "explanation": "Line counts increment sequentially row by row: 7, 8, 9."
+    "explanation": "Line counts increment sequentially row by row: 7, 8, 9.",
+    "question_image_url": "/images/non-verbal/nv-15.jpg"
   },
   {
     "id": 1172,
@@ -2078,7 +2250,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Circle",
     "option_d": "Hexagon",
     "correct_option": "C",
-    "explanation": "Latin square rule: Every row and column must contain each of the three shapes (Circle, Square, Triangle) exactly once."
+    "explanation": "Latin square rule: Every row and column must contain each of the three shapes (Circle, Square, Triangle) exactly once.",
+    "question_image_url": "/images/non-verbal/nv-16.jpg"
   },
   {
     "id": 1173,
@@ -2090,7 +2263,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Circle inside Square",
     "option_d": "Double Concentric Squares",
     "correct_option": "D",
-    "explanation": "The right column duplicates the base shape from the left column into concentric double boundaries."
+    "explanation": "The right column duplicates the base shape from the left column into concentric double boundaries.",
+    "question_image_url": "/images/non-verbal/nv-17.jpg"
   },
   {
     "id": 1174,
@@ -2102,7 +2276,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "North-West",
     "option_d": "East",
     "correct_option": "A",
-    "explanation": "Each row rotates 90 degrees clockwise from the starting direction. South -> West -> North."
+    "explanation": "Each row rotates 90 degrees clockwise from the starting direction. South -> West -> North.",
+    "question_image_url": "/images/non-verbal/nv-18.jpg"
   },
   {
     "id": 1175,
@@ -2114,7 +2289,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "8 Lines",
     "option_d": "6 Lines",
     "correct_option": "B",
-    "explanation": "Line counts increment sequentially row by row: 7, 8, 9."
+    "explanation": "Line counts increment sequentially row by row: 7, 8, 9.",
+    "question_image_url": "/images/non-verbal/nv-19.jpg"
   },
   {
     "id": 1176,
@@ -2126,7 +2302,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Circle",
     "option_d": "Hexagon",
     "correct_option": "C",
-    "explanation": "Latin square rule: Every row and column must contain each of the three shapes (Circle, Square, Triangle) exactly once."
+    "explanation": "Latin square rule: Every row and column must contain each of the three shapes (Circle, Square, Triangle) exactly once.",
+    "question_image_url": "/images/non-verbal/nv-20.jpg"
   },
   {
     "id": 1177,
@@ -2138,7 +2315,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Circle inside Square",
     "option_d": "Double Concentric Squares",
     "correct_option": "D",
-    "explanation": "The right column duplicates the base shape from the left column into concentric double boundaries."
+    "explanation": "The right column duplicates the base shape from the left column into concentric double boundaries.",
+    "question_image_url": "/images/non-verbal/nv-21.jpg"
   },
   {
     "id": 1178,
@@ -2150,7 +2328,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "North-West",
     "option_d": "East",
     "correct_option": "A",
-    "explanation": "Each row rotates 90 degrees clockwise from the starting direction. South -> West -> North."
+    "explanation": "Each row rotates 90 degrees clockwise from the starting direction. South -> West -> North.",
+    "question_image_url": "/images/non-verbal/nv-22.jpg"
   },
   {
     "id": 1179,
@@ -2162,7 +2341,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "8 Lines",
     "option_d": "6 Lines",
     "correct_option": "B",
-    "explanation": "Line counts increment sequentially row by row: 7, 8, 9."
+    "explanation": "Line counts increment sequentially row by row: 7, 8, 9.",
+    "question_image_url": "/images/non-verbal/nv-23.jpg"
   },
   {
     "id": 1180,
@@ -2174,7 +2354,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Circle",
     "option_d": "Hexagon",
     "correct_option": "C",
-    "explanation": "Latin square rule: Every row and column must contain each of the three shapes (Circle, Square, Triangle) exactly once."
+    "explanation": "Latin square rule: Every row and column must contain each of the three shapes (Circle, Square, Triangle) exactly once.",
+    "question_image_url": "/images/non-verbal/nv-24.jpg"
   },
   {
     "id": 1181,
@@ -2186,7 +2367,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Circle inside Square",
     "option_d": "Double Concentric Squares",
     "correct_option": "D",
-    "explanation": "The right column duplicates the base shape from the left column into concentric double boundaries."
+    "explanation": "The right column duplicates the base shape from the left column into concentric double boundaries.",
+    "question_image_url": "/images/non-verbal/nv-25.jpg"
   },
   {
     "id": 1182,
@@ -2198,7 +2380,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "North-West",
     "option_d": "East",
     "correct_option": "A",
-    "explanation": "Each row rotates 90 degrees clockwise from the starting direction. South -> West -> North."
+    "explanation": "Each row rotates 90 degrees clockwise from the starting direction. South -> West -> North.",
+    "question_image_url": "/images/non-verbal/nv-26.jpg"
   },
   {
     "id": 1183,
@@ -2210,7 +2393,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "8 Lines",
     "option_d": "6 Lines",
     "correct_option": "B",
-    "explanation": "Line counts increment sequentially row by row: 7, 8, 9."
+    "explanation": "Line counts increment sequentially row by row: 7, 8, 9.",
+    "question_image_url": "/images/non-verbal/nv-27.jpg"
   },
   {
     "id": 1184,
@@ -2222,7 +2406,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Circle",
     "option_d": "Hexagon",
     "correct_option": "C",
-    "explanation": "Latin square rule: Every row and column must contain each of the three shapes (Circle, Square, Triangle) exactly once."
+    "explanation": "Latin square rule: Every row and column must contain each of the three shapes (Circle, Square, Triangle) exactly once.",
+    "question_image_url": "/images/non-verbal/nv-28.jpg"
   },
   {
     "id": 1185,
@@ -2234,7 +2419,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Circle inside Square",
     "option_d": "Double Concentric Squares",
     "correct_option": "D",
-    "explanation": "The right column duplicates the base shape from the left column into concentric double boundaries."
+    "explanation": "The right column duplicates the base shape from the left column into concentric double boundaries.",
+    "question_image_url": "/images/non-verbal/nv-29.jpg"
   },
   {
     "id": 1186,
@@ -2246,7 +2432,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "North-West",
     "option_d": "East",
     "correct_option": "A",
-    "explanation": "Each row rotates 90 degrees clockwise from the starting direction. South -> West -> North."
+    "explanation": "Each row rotates 90 degrees clockwise from the starting direction. South -> West -> North.",
+    "question_image_url": "/images/non-verbal/nv-30.jpg"
   },
   {
     "id": 1187,
@@ -2258,7 +2445,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "8 Lines",
     "option_d": "6 Lines",
     "correct_option": "B",
-    "explanation": "Line counts increment sequentially row by row: 7, 8, 9."
+    "explanation": "Line counts increment sequentially row by row: 7, 8, 9.",
+    "question_image_url": "/images/non-verbal/nv-31.jpg"
   },
   {
     "id": 1188,
@@ -2270,7 +2458,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Circle",
     "option_d": "Hexagon",
     "correct_option": "C",
-    "explanation": "Latin square rule: Every row and column must contain each of the three shapes (Circle, Square, Triangle) exactly once."
+    "explanation": "Latin square rule: Every row and column must contain each of the three shapes (Circle, Square, Triangle) exactly once.",
+    "question_image_url": "/images/non-verbal/nv-32.jpg"
   },
   {
     "id": 1189,
@@ -2282,7 +2471,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Circle inside Square",
     "option_d": "Double Concentric Squares",
     "correct_option": "D",
-    "explanation": "The right column duplicates the base shape from the left column into concentric double boundaries."
+    "explanation": "The right column duplicates the base shape from the left column into concentric double boundaries.",
+    "question_image_url": "/images/non-verbal/nv-33.jpg"
   },
   {
     "id": 1190,
@@ -2294,7 +2484,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "North-West",
     "option_d": "East",
     "correct_option": "A",
-    "explanation": "Each row rotates 90 degrees clockwise from the starting direction. South -> West -> North."
+    "explanation": "Each row rotates 90 degrees clockwise from the starting direction. South -> West -> North.",
+    "question_image_url": "/images/non-verbal/nv-34.jpg"
   },
   {
     "id": 1191,
@@ -2306,7 +2497,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "8 Lines",
     "option_d": "6 Lines",
     "correct_option": "B",
-    "explanation": "Line counts increment sequentially row by row: 7, 8, 9."
+    "explanation": "Line counts increment sequentially row by row: 7, 8, 9.",
+    "question_image_url": "/images/non-verbal/nv-35.jpg"
   },
   {
     "id": 1192,
@@ -2318,7 +2510,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Circle",
     "option_d": "Hexagon",
     "correct_option": "C",
-    "explanation": "Latin square rule: Every row and column must contain each of the three shapes (Circle, Square, Triangle) exactly once."
+    "explanation": "Latin square rule: Every row and column must contain each of the three shapes (Circle, Square, Triangle) exactly once.",
+    "question_image_url": "/images/non-verbal/nv-36.jpg"
   },
   {
     "id": 1193,
@@ -2330,7 +2523,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Circle inside Square",
     "option_d": "Double Concentric Squares",
     "correct_option": "D",
-    "explanation": "The right column duplicates the base shape from the left column into concentric double boundaries."
+    "explanation": "The right column duplicates the base shape from the left column into concentric double boundaries.",
+    "question_image_url": "/images/non-verbal/nv-37.jpg"
   },
   {
     "id": 1194,
@@ -2342,7 +2536,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "North-West",
     "option_d": "East",
     "correct_option": "A",
-    "explanation": "Each row rotates 90 degrees clockwise from the starting direction. South -> West -> North."
+    "explanation": "Each row rotates 90 degrees clockwise from the starting direction. South -> West -> North.",
+    "question_image_url": "/images/non-verbal/nv-38.jpg"
   },
   {
     "id": 1195,
@@ -2354,7 +2549,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "8 Lines",
     "option_d": "6 Lines",
     "correct_option": "B",
-    "explanation": "Line counts increment sequentially row by row: 7, 8, 9."
+    "explanation": "Line counts increment sequentially row by row: 7, 8, 9.",
+    "question_image_url": "/images/non-verbal/nv-39.jpg"
   },
   {
     "id": 1196,
@@ -2366,7 +2562,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Circle",
     "option_d": "Hexagon",
     "correct_option": "C",
-    "explanation": "Latin square rule: Every row and column must contain each of the three shapes (Circle, Square, Triangle) exactly once."
+    "explanation": "Latin square rule: Every row and column must contain each of the three shapes (Circle, Square, Triangle) exactly once.",
+    "question_image_url": "/images/non-verbal/nv-40.jpg"
   },
   {
     "id": 1197,
@@ -2378,7 +2575,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Circle inside Square",
     "option_d": "Double Concentric Squares",
     "correct_option": "D",
-    "explanation": "The right column duplicates the base shape from the left column into concentric double boundaries."
+    "explanation": "The right column duplicates the base shape from the left column into concentric double boundaries.",
+    "question_image_url": "/images/non-verbal/nv-41.jpg"
   },
   {
     "id": 1198,
@@ -2390,7 +2588,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "North-West",
     "option_d": "East",
     "correct_option": "A",
-    "explanation": "Each row rotates 90 degrees clockwise from the starting direction. South -> West -> North."
+    "explanation": "Each row rotates 90 degrees clockwise from the starting direction. South -> West -> North.",
+    "question_image_url": "/images/non-verbal/nv-42.jpg"
   },
   {
     "id": 1199,
@@ -2402,7 +2601,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "8 Lines",
     "option_d": "6 Lines",
     "correct_option": "B",
-    "explanation": "Line counts increment sequentially row by row: 7, 8, 9."
+    "explanation": "Line counts increment sequentially row by row: 7, 8, 9.",
+    "question_image_url": "/images/non-verbal/nv-43.jpg"
   },
   {
     "id": 1200,
@@ -2414,7 +2614,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Circle",
     "option_d": "Hexagon",
     "correct_option": "C",
-    "explanation": "Latin square rule: Every row and column must contain each of the three shapes (Circle, Square, Triangle) exactly once."
+    "explanation": "Latin square rule: Every row and column must contain each of the three shapes (Circle, Square, Triangle) exactly once.",
+    "question_image_url": "/images/non-verbal/nv-44.jpg"
   },
   {
     "id": 1201,
@@ -2426,7 +2627,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "North-East",
     "option_d": "East",
     "correct_option": "B",
-    "explanation": "Starting North (0°/360°), rotating 90° counter-clockwise results in orientation towards West."
+    "explanation": "Starting North (0°/360°), rotating 90° counter-clockwise results in orientation towards West.",
+    "question_image_url": "/images/non-verbal/nv-45.jpg"
   },
   {
     "id": 1202,
@@ -2438,7 +2640,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "South-East",
     "option_d": "East",
     "correct_option": "C",
-    "explanation": "Starting North (0°/360°), rotating 135° clockwise results in orientation towards South-East."
+    "explanation": "Starting North (0°/360°), rotating 135° clockwise results in orientation towards South-East.",
+    "question_image_url": "/images/non-verbal/nv-46.jpg"
   },
   {
     "id": 1203,
@@ -2450,7 +2653,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "East",
     "option_d": "South",
     "correct_option": "D",
-    "explanation": "Starting North (0°/360°), rotating 180° counter-clockwise results in orientation towards South."
+    "explanation": "Starting North (0°/360°), rotating 180° counter-clockwise results in orientation towards South.",
+    "question_image_url": "/images/non-verbal/nv-47.jpg"
   },
   {
     "id": 1204,
@@ -2462,7 +2666,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "North-East",
     "option_d": "East",
     "correct_option": "A",
-    "explanation": "Starting North (0°/360°), rotating 225° clockwise results in orientation towards South-West."
+    "explanation": "Starting North (0°/360°), rotating 225° clockwise results in orientation towards South-West.",
+    "question_image_url": "/images/non-verbal/nv-48.jpg"
   },
   {
     "id": 1205,
@@ -2474,7 +2679,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "North-East",
     "option_d": "South-East",
     "correct_option": "B",
-    "explanation": "Starting North (0°/360°), rotating 270° counter-clockwise results in orientation towards East."
+    "explanation": "Starting North (0°/360°), rotating 270° counter-clockwise results in orientation towards East.",
+    "question_image_url": "/images/non-verbal/nv-49.jpg"
   },
   {
     "id": 1206,
@@ -2486,7 +2692,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "North-West",
     "option_d": "East",
     "correct_option": "C",
-    "explanation": "Starting North (0°/360°), rotating 315° clockwise results in orientation towards North-West."
+    "explanation": "Starting North (0°/360°), rotating 315° clockwise results in orientation towards North-West.",
+    "question_image_url": "/images/non-verbal/nv-50.jpg"
   },
   {
     "id": 1207,
@@ -2498,7 +2705,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "East",
     "option_d": "North-West",
     "correct_option": "D",
-    "explanation": "Starting North (0°/360°), rotating 45° counter-clockwise results in orientation towards North-West."
+    "explanation": "Starting North (0°/360°), rotating 45° counter-clockwise results in orientation towards North-West.",
+    "question_image_url": "/images/non-verbal/nv-51.jpg"
   },
   {
     "id": 1208,
@@ -2510,7 +2718,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "North-East",
     "option_d": "South-East",
     "correct_option": "A",
-    "explanation": "Starting North (0°/360°), rotating 90° clockwise results in orientation towards East."
+    "explanation": "Starting North (0°/360°), rotating 90° clockwise results in orientation towards East.",
+    "question_image_url": "/images/non-verbal/nv-52.jpg"
   },
   {
     "id": 1209,
@@ -2522,7 +2731,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "North-East",
     "option_d": "East",
     "correct_option": "B",
-    "explanation": "Starting North (0°/360°), rotating 135° counter-clockwise results in orientation towards South-West."
+    "explanation": "Starting North (0°/360°), rotating 135° counter-clockwise results in orientation towards South-West.",
+    "question_image_url": "/images/non-verbal/nv-1.jpg"
   },
   {
     "id": 1210,
@@ -2534,7 +2744,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "South",
     "option_d": "East",
     "correct_option": "C",
-    "explanation": "Starting North (0°/360°), rotating 180° clockwise results in orientation towards South."
+    "explanation": "Starting North (0°/360°), rotating 180° clockwise results in orientation towards South.",
+    "question_image_url": "/images/non-verbal/nv-2.jpg"
   },
   {
     "id": 1211,
@@ -2546,7 +2757,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "East",
     "option_d": "South-East",
     "correct_option": "D",
-    "explanation": "Starting North (0°/360°), rotating 225° counter-clockwise results in orientation towards South-East."
+    "explanation": "Starting North (0°/360°), rotating 225° counter-clockwise results in orientation towards South-East.",
+    "question_image_url": "/images/non-verbal/nv-3.jpg"
   },
   {
     "id": 1212,
@@ -2558,7 +2770,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "North-East",
     "option_d": "East",
     "correct_option": "A",
-    "explanation": "Starting North (0°/360°), rotating 270° clockwise results in orientation towards West."
+    "explanation": "Starting North (0°/360°), rotating 270° clockwise results in orientation towards West.",
+    "question_image_url": "/images/non-verbal/nv-4.jpg"
   },
   {
     "id": 1213,
@@ -2570,7 +2783,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "East",
     "option_d": "South-East",
     "correct_option": "B",
-    "explanation": "Starting North (0°/360°), rotating 315° counter-clockwise results in orientation towards North-East."
+    "explanation": "Starting North (0°/360°), rotating 315° counter-clockwise results in orientation towards North-East.",
+    "question_image_url": "/images/non-verbal/nv-5.jpg"
   },
   {
     "id": 1214,
@@ -2582,7 +2796,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "North-East",
     "option_d": "South-East",
     "correct_option": "C",
-    "explanation": "Starting North (0°/360°), rotating 45° clockwise results in orientation towards North-East."
+    "explanation": "Starting North (0°/360°), rotating 45° clockwise results in orientation towards North-East.",
+    "question_image_url": "/images/non-verbal/nv-6.jpg"
   },
   {
     "id": 1215,
@@ -2594,7 +2809,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "East",
     "option_d": "West",
     "correct_option": "D",
-    "explanation": "Starting North (0°/360°), rotating 90° counter-clockwise results in orientation towards West."
+    "explanation": "Starting North (0°/360°), rotating 90° counter-clockwise results in orientation towards West.",
+    "question_image_url": "/images/non-verbal/nv-7.jpg"
   },
   {
     "id": 1216,
@@ -2606,7 +2822,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "North-East",
     "option_d": "East",
     "correct_option": "A",
-    "explanation": "Starting North (0°/360°), rotating 135° clockwise results in orientation towards South-East."
+    "explanation": "Starting North (0°/360°), rotating 135° clockwise results in orientation towards South-East.",
+    "question_image_url": "/images/non-verbal/nv-8.jpg"
   },
   {
     "id": 1217,
@@ -2618,7 +2835,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "North-East",
     "option_d": "East",
     "correct_option": "B",
-    "explanation": "Starting North (0°/360°), rotating 180° counter-clockwise results in orientation towards South."
+    "explanation": "Starting North (0°/360°), rotating 180° counter-clockwise results in orientation towards South.",
+    "question_image_url": "/images/non-verbal/nv-9.jpg"
   },
   {
     "id": 1218,
@@ -2630,7 +2848,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "South-West",
     "option_d": "East",
     "correct_option": "C",
-    "explanation": "Starting North (0°/360°), rotating 225° clockwise results in orientation towards South-West."
+    "explanation": "Starting North (0°/360°), rotating 225° clockwise results in orientation towards South-West.",
+    "question_image_url": "/images/non-verbal/nv-10.jpg"
   },
   {
     "id": 1219,
@@ -2642,7 +2861,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "South-East",
     "option_d": "East",
     "correct_option": "D",
-    "explanation": "Starting North (0°/360°), rotating 270° counter-clockwise results in orientation towards East."
+    "explanation": "Starting North (0°/360°), rotating 270° counter-clockwise results in orientation towards East.",
+    "question_image_url": "/images/non-verbal/nv-11.jpg"
   },
   {
     "id": 1220,
@@ -2654,7 +2874,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "North-East",
     "option_d": "East",
     "correct_option": "A",
-    "explanation": "Starting North (0°/360°), rotating 315° clockwise results in orientation towards North-West."
+    "explanation": "Starting North (0°/360°), rotating 315° clockwise results in orientation towards North-West.",
+    "question_image_url": "/images/non-verbal/nv-12.jpg"
   },
   {
     "id": 1221,
@@ -2666,7 +2887,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "North-East",
     "option_d": "East",
     "correct_option": "B",
-    "explanation": "Starting North (0°/360°), rotating 45° counter-clockwise results in orientation towards North-West."
+    "explanation": "Starting North (0°/360°), rotating 45° counter-clockwise results in orientation towards North-West.",
+    "question_image_url": "/images/non-verbal/nv-13.jpg"
   },
   {
     "id": 1222,
@@ -2678,7 +2900,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "East",
     "option_d": "South-East",
     "correct_option": "C",
-    "explanation": "Starting North (0°/360°), rotating 90° clockwise results in orientation towards East."
+    "explanation": "Starting North (0°/360°), rotating 90° clockwise results in orientation towards East.",
+    "question_image_url": "/images/non-verbal/nv-14.jpg"
   },
   {
     "id": 1223,
@@ -2690,7 +2913,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "East",
     "option_d": "South-West",
     "correct_option": "D",
-    "explanation": "Starting North (0°/360°), rotating 135° counter-clockwise results in orientation towards South-West."
+    "explanation": "Starting North (0°/360°), rotating 135° counter-clockwise results in orientation towards South-West.",
+    "question_image_url": "/images/non-verbal/nv-15.jpg"
   },
   {
     "id": 1224,
@@ -2702,7 +2926,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "North-East",
     "option_d": "East",
     "correct_option": "A",
-    "explanation": "Starting North (0°/360°), rotating 180° clockwise results in orientation towards South."
+    "explanation": "Starting North (0°/360°), rotating 180° clockwise results in orientation towards South.",
+    "question_image_url": "/images/non-verbal/nv-16.jpg"
   },
   {
     "id": 1225,
@@ -2714,7 +2939,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "North-East",
     "option_d": "East",
     "correct_option": "B",
-    "explanation": "Starting North (0°/360°), rotating 225° counter-clockwise results in orientation towards South-East."
+    "explanation": "Starting North (0°/360°), rotating 225° counter-clockwise results in orientation towards South-East.",
+    "question_image_url": "/images/non-verbal/nv-17.jpg"
   },
   {
     "id": 1226,
@@ -2726,7 +2952,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "West",
     "option_d": "East",
     "correct_option": "C",
-    "explanation": "Starting North (0°/360°), rotating 270° clockwise results in orientation towards West."
+    "explanation": "Starting North (0°/360°), rotating 270° clockwise results in orientation towards West.",
+    "question_image_url": "/images/non-verbal/nv-18.jpg"
   },
   {
     "id": 1227,
@@ -2738,7 +2965,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "South-East",
     "option_d": "North-East",
     "correct_option": "D",
-    "explanation": "Starting North (0°/360°), rotating 315° counter-clockwise results in orientation towards North-East."
+    "explanation": "Starting North (0°/360°), rotating 315° counter-clockwise results in orientation towards North-East.",
+    "question_image_url": "/images/non-verbal/nv-19.jpg"
   },
   {
     "id": 1228,
@@ -2750,7 +2978,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "East",
     "option_d": "South-East",
     "correct_option": "A",
-    "explanation": "Starting North (0°/360°), rotating 45° clockwise results in orientation towards North-East."
+    "explanation": "Starting North (0°/360°), rotating 45° clockwise results in orientation towards North-East.",
+    "question_image_url": "/images/non-verbal/nv-20.jpg"
   },
   {
     "id": 1229,
@@ -2762,7 +2991,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "North-East",
     "option_d": "East",
     "correct_option": "B",
-    "explanation": "Starting North (0°/360°), rotating 90° counter-clockwise results in orientation towards West."
+    "explanation": "Starting North (0°/360°), rotating 90° counter-clockwise results in orientation towards West.",
+    "question_image_url": "/images/non-verbal/nv-21.jpg"
   },
   {
     "id": 1230,
@@ -2774,7 +3004,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "South-East",
     "option_d": "East",
     "correct_option": "C",
-    "explanation": "Starting North (0°/360°), rotating 135° clockwise results in orientation towards South-East."
+    "explanation": "Starting North (0°/360°), rotating 135° clockwise results in orientation towards South-East.",
+    "question_image_url": "/images/non-verbal/nv-22.jpg"
   },
   {
     "id": 1231,
@@ -2786,7 +3017,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "East",
     "option_d": "South",
     "correct_option": "D",
-    "explanation": "Starting North (0°/360°), rotating 180° counter-clockwise results in orientation towards South."
+    "explanation": "Starting North (0°/360°), rotating 180° counter-clockwise results in orientation towards South.",
+    "question_image_url": "/images/non-verbal/nv-23.jpg"
   },
   {
     "id": 1232,
@@ -2798,7 +3030,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "North-East",
     "option_d": "East",
     "correct_option": "A",
-    "explanation": "Starting North (0°/360°), rotating 225° clockwise results in orientation towards South-West."
+    "explanation": "Starting North (0°/360°), rotating 225° clockwise results in orientation towards South-West.",
+    "question_image_url": "/images/non-verbal/nv-24.jpg"
   },
   {
     "id": 1233,
@@ -2810,7 +3043,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "North-East",
     "option_d": "South-East",
     "correct_option": "B",
-    "explanation": "Starting North (0°/360°), rotating 270° counter-clockwise results in orientation towards East."
+    "explanation": "Starting North (0°/360°), rotating 270° counter-clockwise results in orientation towards East.",
+    "question_image_url": "/images/non-verbal/nv-25.jpg"
   },
   {
     "id": 1234,
@@ -2822,7 +3056,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "North-West",
     "option_d": "East",
     "correct_option": "C",
-    "explanation": "Starting North (0°/360°), rotating 315° clockwise results in orientation towards North-West."
+    "explanation": "Starting North (0°/360°), rotating 315° clockwise results in orientation towards North-West.",
+    "question_image_url": "/images/non-verbal/nv-26.jpg"
   },
   {
     "id": 1235,
@@ -2834,7 +3069,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "East",
     "option_d": "North-West",
     "correct_option": "D",
-    "explanation": "Starting North (0°/360°), rotating 45° counter-clockwise results in orientation towards North-West."
+    "explanation": "Starting North (0°/360°), rotating 45° counter-clockwise results in orientation towards North-West.",
+    "question_image_url": "/images/non-verbal/nv-27.jpg"
   },
   {
     "id": 1236,
@@ -2846,7 +3082,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "North-East",
     "option_d": "South-East",
     "correct_option": "A",
-    "explanation": "Starting North (0°/360°), rotating 90° clockwise results in orientation towards East."
+    "explanation": "Starting North (0°/360°), rotating 90° clockwise results in orientation towards East.",
+    "question_image_url": "/images/non-verbal/nv-28.jpg"
   },
   {
     "id": 1237,
@@ -2858,7 +3095,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "North-East",
     "option_d": "East",
     "correct_option": "B",
-    "explanation": "Starting North (0°/360°), rotating 135° counter-clockwise results in orientation towards South-West."
+    "explanation": "Starting North (0°/360°), rotating 135° counter-clockwise results in orientation towards South-West.",
+    "question_image_url": "/images/non-verbal/nv-29.jpg"
   },
   {
     "id": 1238,
@@ -2870,7 +3108,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "South",
     "option_d": "East",
     "correct_option": "C",
-    "explanation": "Starting North (0°/360°), rotating 180° clockwise results in orientation towards South."
+    "explanation": "Starting North (0°/360°), rotating 180° clockwise results in orientation towards South.",
+    "question_image_url": "/images/non-verbal/nv-30.jpg"
   },
   {
     "id": 1239,
@@ -2882,7 +3121,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "East",
     "option_d": "South-East",
     "correct_option": "D",
-    "explanation": "Starting North (0°/360°), rotating 225° counter-clockwise results in orientation towards South-East."
+    "explanation": "Starting North (0°/360°), rotating 225° counter-clockwise results in orientation towards South-East.",
+    "question_image_url": "/images/non-verbal/nv-31.jpg"
   },
   {
     "id": 1240,
@@ -2894,7 +3134,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "North-East",
     "option_d": "East",
     "correct_option": "A",
-    "explanation": "Starting North (0°/360°), rotating 270° clockwise results in orientation towards West."
+    "explanation": "Starting North (0°/360°), rotating 270° clockwise results in orientation towards West.",
+    "question_image_url": "/images/non-verbal/nv-32.jpg"
   },
   {
     "id": 1241,
@@ -2906,7 +3147,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "East",
     "option_d": "South-East",
     "correct_option": "B",
-    "explanation": "Starting North (0°/360°), rotating 315° counter-clockwise results in orientation towards North-East."
+    "explanation": "Starting North (0°/360°), rotating 315° counter-clockwise results in orientation towards North-East.",
+    "question_image_url": "/images/non-verbal/nv-33.jpg"
   },
   {
     "id": 1242,
@@ -2918,7 +3160,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "North-East",
     "option_d": "South-East",
     "correct_option": "C",
-    "explanation": "Starting North (0°/360°), rotating 45° clockwise results in orientation towards North-East."
+    "explanation": "Starting North (0°/360°), rotating 45° clockwise results in orientation towards North-East.",
+    "question_image_url": "/images/non-verbal/nv-34.jpg"
   },
   {
     "id": 1243,
@@ -2930,7 +3173,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "East",
     "option_d": "West",
     "correct_option": "D",
-    "explanation": "Starting North (0°/360°), rotating 90° counter-clockwise results in orientation towards West."
+    "explanation": "Starting North (0°/360°), rotating 90° counter-clockwise results in orientation towards West.",
+    "question_image_url": "/images/non-verbal/nv-35.jpg"
   },
   {
     "id": 1244,
@@ -2942,7 +3186,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "North-East",
     "option_d": "East",
     "correct_option": "A",
-    "explanation": "Starting North (0°/360°), rotating 135° clockwise results in orientation towards South-East."
+    "explanation": "Starting North (0°/360°), rotating 135° clockwise results in orientation towards South-East.",
+    "question_image_url": "/images/non-verbal/nv-36.jpg"
   },
   {
     "id": 1245,
@@ -2954,7 +3199,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "North-East",
     "option_d": "East",
     "correct_option": "B",
-    "explanation": "Starting North (0°/360°), rotating 180° counter-clockwise results in orientation towards South."
+    "explanation": "Starting North (0°/360°), rotating 180° counter-clockwise results in orientation towards South.",
+    "question_image_url": "/images/non-verbal/nv-37.jpg"
   },
   {
     "id": 1246,
@@ -2966,7 +3212,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "South-West",
     "option_d": "East",
     "correct_option": "C",
-    "explanation": "Starting North (0°/360°), rotating 225° clockwise results in orientation towards South-West."
+    "explanation": "Starting North (0°/360°), rotating 225° clockwise results in orientation towards South-West.",
+    "question_image_url": "/images/non-verbal/nv-38.jpg"
   },
   {
     "id": 1247,
@@ -2978,7 +3225,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "South-East",
     "option_d": "East",
     "correct_option": "D",
-    "explanation": "Starting North (0°/360°), rotating 270° counter-clockwise results in orientation towards East."
+    "explanation": "Starting North (0°/360°), rotating 270° counter-clockwise results in orientation towards East.",
+    "question_image_url": "/images/non-verbal/nv-39.jpg"
   },
   {
     "id": 1248,
@@ -2990,7 +3238,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "North-East",
     "option_d": "East",
     "correct_option": "A",
-    "explanation": "Starting North (0°/360°), rotating 315° clockwise results in orientation towards North-West."
+    "explanation": "Starting North (0°/360°), rotating 315° clockwise results in orientation towards North-West.",
+    "question_image_url": "/images/non-verbal/nv-40.jpg"
   },
   {
     "id": 1249,
@@ -3002,7 +3251,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "North-East",
     "option_d": "East",
     "correct_option": "B",
-    "explanation": "Starting North (0°/360°), rotating 45° counter-clockwise results in orientation towards North-West."
+    "explanation": "Starting North (0°/360°), rotating 45° counter-clockwise results in orientation towards North-West.",
+    "question_image_url": "/images/non-verbal/nv-41.jpg"
   },
   {
     "id": 1250,
@@ -3014,7 +3264,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "East",
     "option_d": "South-East",
     "correct_option": "C",
-    "explanation": "Starting North (0°/360°), rotating 90° clockwise results in orientation towards East."
+    "explanation": "Starting North (0°/360°), rotating 90° clockwise results in orientation towards East.",
+    "question_image_url": "/images/non-verbal/nv-42.jpg"
   },
   {
     "id": 1251,
@@ -3026,7 +3277,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Tilted 90° clockwise 'B'",
     "option_d": "Upside-down tilted 'B'",
     "correct_option": "B",
-    "explanation": "Mirror Reflection (Vertical Axis) rule: Vertical mirror inverts Left-Right; horizontal mirror inverts Top-Bottom."
+    "explanation": "Mirror Reflection (Vertical Axis) rule: Vertical mirror inverts Left-Right; horizontal mirror inverts Top-Bottom.",
+    "question_image_url": "/images/non-verbal/nv-43.jpg"
   },
   {
     "id": 1252,
@@ -3038,7 +3290,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "E remains unchanged horizontally",
     "option_d": "Upside-down tilted 'E'",
     "correct_option": "C",
-    "explanation": "Water Reflection (Horizontal Axis) rule: Mirror reflection across vertical plane inverts horizontal direction."
+    "explanation": "Water Reflection (Horizontal Axis) rule: Mirror reflection across vertical plane inverts horizontal direction.",
+    "question_image_url": "/images/non-verbal/nv-44.jpg"
   },
   {
     "id": 1253,
@@ -3050,7 +3303,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Upside-down tilted 'A'",
     "option_d": "A (Identical, symmetrical on vertical axis)",
     "correct_option": "D",
-    "explanation": "Mirror Reflection (Vertical Axis) rule: Letter A has vertical symmetry so vertical mirror is unchanged; water reflection flips top-down."
+    "explanation": "Mirror Reflection (Vertical Axis) rule: Letter A has vertical symmetry so vertical mirror is unchanged; water reflection flips top-down.",
+    "question_image_url": "/images/non-verbal/nv-45.jpg"
   },
   {
     "id": 1254,
@@ -3062,7 +3316,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Tilted 90° clockwise 'M'",
     "option_d": "Upside-down tilted 'M'",
     "correct_option": "A",
-    "explanation": "Water Reflection (Horizontal Axis) rule: Water reflection (horizontal mirror) inverts Top-Down, turning M into W."
+    "explanation": "Water Reflection (Horizontal Axis) rule: Water reflection (horizontal mirror) inverts Top-Down, turning M into W.",
+    "question_image_url": "/images/non-verbal/nv-46.jpg"
   },
   {
     "id": 1255,
@@ -3074,7 +3329,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Tilted 90° clockwise 'C'",
     "option_d": "Upside-down tilted 'C'",
     "correct_option": "B",
-    "explanation": "Mirror Reflection (Vertical Axis) rule: Vertical reflection reverses opening from right to left."
+    "explanation": "Mirror Reflection (Vertical Axis) rule: Vertical reflection reverses opening from right to left.",
+    "question_image_url": "/images/non-verbal/nv-47.jpg"
   },
   {
     "id": 1256,
@@ -3086,7 +3342,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "B remains unchanged vertically (horizontal symmetry)",
     "option_d": "Upside-down tilted 'B'",
     "correct_option": "C",
-    "explanation": "Water Reflection (Horizontal Axis) rule: Vertical mirror inverts Left-Right; horizontal mirror inverts Top-Bottom."
+    "explanation": "Water Reflection (Horizontal Axis) rule: Vertical mirror inverts Left-Right; horizontal mirror inverts Top-Bottom.",
+    "question_image_url": "/images/non-verbal/nv-48.jpg"
   },
   {
     "id": 1257,
@@ -3098,7 +3355,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Upside-down tilted 'E'",
     "option_d": "Reversed E with arms pointing left (Ǝ)",
     "correct_option": "D",
-    "explanation": "Mirror Reflection (Vertical Axis) rule: Mirror reflection across vertical plane inverts horizontal direction."
+    "explanation": "Mirror Reflection (Vertical Axis) rule: Mirror reflection across vertical plane inverts horizontal direction.",
+    "question_image_url": "/images/non-verbal/nv-49.jpg"
   },
   {
     "id": 1258,
@@ -3110,7 +3368,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Tilted 90° clockwise 'A'",
     "option_d": "Upside-down tilted 'A'",
     "correct_option": "A",
-    "explanation": "Water Reflection (Horizontal Axis) rule: Letter A has vertical symmetry so vertical mirror is unchanged; water reflection flips top-down."
+    "explanation": "Water Reflection (Horizontal Axis) rule: Letter A has vertical symmetry so vertical mirror is unchanged; water reflection flips top-down.",
+    "question_image_url": "/images/non-verbal/nv-50.jpg"
   },
   {
     "id": 1259,
@@ -3122,7 +3381,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Tilted 90° clockwise 'M'",
     "option_d": "Upside-down tilted 'M'",
     "correct_option": "B",
-    "explanation": "Mirror Reflection (Vertical Axis) rule: Water reflection (horizontal mirror) inverts Top-Down, turning M into W."
+    "explanation": "Mirror Reflection (Vertical Axis) rule: Water reflection (horizontal mirror) inverts Top-Down, turning M into W.",
+    "question_image_url": "/images/non-verbal/nv-51.jpg"
   },
   {
     "id": 1260,
@@ -3134,7 +3394,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "C remains identical (horizontal symmetry)",
     "option_d": "Upside-down tilted 'C'",
     "correct_option": "C",
-    "explanation": "Water Reflection (Horizontal Axis) rule: Vertical reflection reverses opening from right to left."
+    "explanation": "Water Reflection (Horizontal Axis) rule: Vertical reflection reverses opening from right to left.",
+    "question_image_url": "/images/non-verbal/nv-52.jpg"
   },
   {
     "id": 1261,
@@ -3146,7 +3407,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Upside-down tilted 'B'",
     "option_d": "Reversed B with lobes pointing left (ᙠ)",
     "correct_option": "D",
-    "explanation": "Mirror Reflection (Vertical Axis) rule: Vertical mirror inverts Left-Right; horizontal mirror inverts Top-Bottom."
+    "explanation": "Mirror Reflection (Vertical Axis) rule: Vertical mirror inverts Left-Right; horizontal mirror inverts Top-Bottom.",
+    "question_image_url": "/images/non-verbal/nv-1.jpg"
   },
   {
     "id": 1262,
@@ -3158,7 +3420,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Tilted 90° clockwise 'E'",
     "option_d": "Upside-down tilted 'E'",
     "correct_option": "A",
-    "explanation": "Water Reflection (Horizontal Axis) rule: Mirror reflection across vertical plane inverts horizontal direction."
+    "explanation": "Water Reflection (Horizontal Axis) rule: Mirror reflection across vertical plane inverts horizontal direction.",
+    "question_image_url": "/images/non-verbal/nv-2.jpg"
   },
   {
     "id": 1263,
@@ -3170,7 +3433,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Tilted 90° clockwise 'A'",
     "option_d": "Upside-down tilted 'A'",
     "correct_option": "B",
-    "explanation": "Mirror Reflection (Vertical Axis) rule: Letter A has vertical symmetry so vertical mirror is unchanged; water reflection flips top-down."
+    "explanation": "Mirror Reflection (Vertical Axis) rule: Letter A has vertical symmetry so vertical mirror is unchanged; water reflection flips top-down.",
+    "question_image_url": "/images/non-verbal/nv-3.jpg"
   },
   {
     "id": 1264,
@@ -3182,7 +3446,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "W (Inverted letter M)",
     "option_d": "Upside-down tilted 'M'",
     "correct_option": "C",
-    "explanation": "Water Reflection (Horizontal Axis) rule: Water reflection (horizontal mirror) inverts Top-Down, turning M into W."
+    "explanation": "Water Reflection (Horizontal Axis) rule: Water reflection (horizontal mirror) inverts Top-Down, turning M into W.",
+    "question_image_url": "/images/non-verbal/nv-4.jpg"
   },
   {
     "id": 1265,
@@ -3194,7 +3459,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Upside-down tilted 'C'",
     "option_d": "C facing left (Ɔ)",
     "correct_option": "D",
-    "explanation": "Mirror Reflection (Vertical Axis) rule: Vertical reflection reverses opening from right to left."
+    "explanation": "Mirror Reflection (Vertical Axis) rule: Vertical reflection reverses opening from right to left.",
+    "question_image_url": "/images/non-verbal/nv-5.jpg"
   },
   {
     "id": 1266,
@@ -3206,7 +3472,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Tilted 90° clockwise 'B'",
     "option_d": "Upside-down tilted 'B'",
     "correct_option": "A",
-    "explanation": "Water Reflection (Horizontal Axis) rule: Vertical mirror inverts Left-Right; horizontal mirror inverts Top-Bottom."
+    "explanation": "Water Reflection (Horizontal Axis) rule: Vertical mirror inverts Left-Right; horizontal mirror inverts Top-Bottom.",
+    "question_image_url": "/images/non-verbal/nv-6.jpg"
   },
   {
     "id": 1267,
@@ -3218,7 +3485,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Tilted 90° clockwise 'E'",
     "option_d": "Upside-down tilted 'E'",
     "correct_option": "B",
-    "explanation": "Mirror Reflection (Vertical Axis) rule: Mirror reflection across vertical plane inverts horizontal direction."
+    "explanation": "Mirror Reflection (Vertical Axis) rule: Mirror reflection across vertical plane inverts horizontal direction.",
+    "question_image_url": "/images/non-verbal/nv-7.jpg"
   },
   {
     "id": 1268,
@@ -3230,7 +3498,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Inverted V with horizontal bar (∀)",
     "option_d": "Upside-down tilted 'A'",
     "correct_option": "C",
-    "explanation": "Water Reflection (Horizontal Axis) rule: Letter A has vertical symmetry so vertical mirror is unchanged; water reflection flips top-down."
+    "explanation": "Water Reflection (Horizontal Axis) rule: Letter A has vertical symmetry so vertical mirror is unchanged; water reflection flips top-down.",
+    "question_image_url": "/images/non-verbal/nv-8.jpg"
   },
   {
     "id": 1269,
@@ -3242,7 +3511,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Upside-down tilted 'M'",
     "option_d": "M (Symmetric on vertical axis)",
     "correct_option": "D",
-    "explanation": "Mirror Reflection (Vertical Axis) rule: Water reflection (horizontal mirror) inverts Top-Down, turning M into W."
+    "explanation": "Mirror Reflection (Vertical Axis) rule: Water reflection (horizontal mirror) inverts Top-Down, turning M into W.",
+    "question_image_url": "/images/non-verbal/nv-9.jpg"
   },
   {
     "id": 1270,
@@ -3254,7 +3524,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Tilted 90° clockwise 'C'",
     "option_d": "Upside-down tilted 'C'",
     "correct_option": "A",
-    "explanation": "Water Reflection (Horizontal Axis) rule: Vertical reflection reverses opening from right to left."
+    "explanation": "Water Reflection (Horizontal Axis) rule: Vertical reflection reverses opening from right to left.",
+    "question_image_url": "/images/non-verbal/nv-10.jpg"
   },
   {
     "id": 1271,
@@ -3266,7 +3537,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Tilted 90° clockwise 'B'",
     "option_d": "Upside-down tilted 'B'",
     "correct_option": "B",
-    "explanation": "Mirror Reflection (Vertical Axis) rule: Vertical mirror inverts Left-Right; horizontal mirror inverts Top-Bottom."
+    "explanation": "Mirror Reflection (Vertical Axis) rule: Vertical mirror inverts Left-Right; horizontal mirror inverts Top-Bottom.",
+    "question_image_url": "/images/non-verbal/nv-11.jpg"
   },
   {
     "id": 1272,
@@ -3278,7 +3550,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "E remains unchanged horizontally",
     "option_d": "Upside-down tilted 'E'",
     "correct_option": "C",
-    "explanation": "Water Reflection (Horizontal Axis) rule: Mirror reflection across vertical plane inverts horizontal direction."
+    "explanation": "Water Reflection (Horizontal Axis) rule: Mirror reflection across vertical plane inverts horizontal direction.",
+    "question_image_url": "/images/non-verbal/nv-12.jpg"
   },
   {
     "id": 1273,
@@ -3290,7 +3563,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Upside-down tilted 'A'",
     "option_d": "A (Identical, symmetrical on vertical axis)",
     "correct_option": "D",
-    "explanation": "Mirror Reflection (Vertical Axis) rule: Letter A has vertical symmetry so vertical mirror is unchanged; water reflection flips top-down."
+    "explanation": "Mirror Reflection (Vertical Axis) rule: Letter A has vertical symmetry so vertical mirror is unchanged; water reflection flips top-down.",
+    "question_image_url": "/images/non-verbal/nv-13.jpg"
   },
   {
     "id": 1274,
@@ -3302,7 +3576,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Tilted 90° clockwise 'M'",
     "option_d": "Upside-down tilted 'M'",
     "correct_option": "A",
-    "explanation": "Water Reflection (Horizontal Axis) rule: Water reflection (horizontal mirror) inverts Top-Down, turning M into W."
+    "explanation": "Water Reflection (Horizontal Axis) rule: Water reflection (horizontal mirror) inverts Top-Down, turning M into W.",
+    "question_image_url": "/images/non-verbal/nv-14.jpg"
   },
   {
     "id": 1275,
@@ -3314,7 +3589,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Tilted 90° clockwise 'C'",
     "option_d": "Upside-down tilted 'C'",
     "correct_option": "B",
-    "explanation": "Mirror Reflection (Vertical Axis) rule: Vertical reflection reverses opening from right to left."
+    "explanation": "Mirror Reflection (Vertical Axis) rule: Vertical reflection reverses opening from right to left.",
+    "question_image_url": "/images/non-verbal/nv-15.jpg"
   },
   {
     "id": 1276,
@@ -3326,7 +3602,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "B remains unchanged vertically (horizontal symmetry)",
     "option_d": "Upside-down tilted 'B'",
     "correct_option": "C",
-    "explanation": "Water Reflection (Horizontal Axis) rule: Vertical mirror inverts Left-Right; horizontal mirror inverts Top-Bottom."
+    "explanation": "Water Reflection (Horizontal Axis) rule: Vertical mirror inverts Left-Right; horizontal mirror inverts Top-Bottom.",
+    "question_image_url": "/images/non-verbal/nv-16.jpg"
   },
   {
     "id": 1277,
@@ -3338,7 +3615,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Upside-down tilted 'E'",
     "option_d": "Reversed E with arms pointing left (Ǝ)",
     "correct_option": "D",
-    "explanation": "Mirror Reflection (Vertical Axis) rule: Mirror reflection across vertical plane inverts horizontal direction."
+    "explanation": "Mirror Reflection (Vertical Axis) rule: Mirror reflection across vertical plane inverts horizontal direction.",
+    "question_image_url": "/images/non-verbal/nv-17.jpg"
   },
   {
     "id": 1278,
@@ -3350,7 +3628,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Tilted 90° clockwise 'A'",
     "option_d": "Upside-down tilted 'A'",
     "correct_option": "A",
-    "explanation": "Water Reflection (Horizontal Axis) rule: Letter A has vertical symmetry so vertical mirror is unchanged; water reflection flips top-down."
+    "explanation": "Water Reflection (Horizontal Axis) rule: Letter A has vertical symmetry so vertical mirror is unchanged; water reflection flips top-down.",
+    "question_image_url": "/images/non-verbal/nv-18.jpg"
   },
   {
     "id": 1279,
@@ -3362,7 +3641,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Tilted 90° clockwise 'M'",
     "option_d": "Upside-down tilted 'M'",
     "correct_option": "B",
-    "explanation": "Mirror Reflection (Vertical Axis) rule: Water reflection (horizontal mirror) inverts Top-Down, turning M into W."
+    "explanation": "Mirror Reflection (Vertical Axis) rule: Water reflection (horizontal mirror) inverts Top-Down, turning M into W.",
+    "question_image_url": "/images/non-verbal/nv-19.jpg"
   },
   {
     "id": 1280,
@@ -3374,7 +3654,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "C remains identical (horizontal symmetry)",
     "option_d": "Upside-down tilted 'C'",
     "correct_option": "C",
-    "explanation": "Water Reflection (Horizontal Axis) rule: Vertical reflection reverses opening from right to left."
+    "explanation": "Water Reflection (Horizontal Axis) rule: Vertical reflection reverses opening from right to left.",
+    "question_image_url": "/images/non-verbal/nv-20.jpg"
   },
   {
     "id": 1281,
@@ -3386,7 +3667,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Upside-down tilted 'B'",
     "option_d": "Reversed B with lobes pointing left (ᙠ)",
     "correct_option": "D",
-    "explanation": "Mirror Reflection (Vertical Axis) rule: Vertical mirror inverts Left-Right; horizontal mirror inverts Top-Bottom."
+    "explanation": "Mirror Reflection (Vertical Axis) rule: Vertical mirror inverts Left-Right; horizontal mirror inverts Top-Bottom.",
+    "question_image_url": "/images/non-verbal/nv-21.jpg"
   },
   {
     "id": 1282,
@@ -3398,7 +3680,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Tilted 90° clockwise 'E'",
     "option_d": "Upside-down tilted 'E'",
     "correct_option": "A",
-    "explanation": "Water Reflection (Horizontal Axis) rule: Mirror reflection across vertical plane inverts horizontal direction."
+    "explanation": "Water Reflection (Horizontal Axis) rule: Mirror reflection across vertical plane inverts horizontal direction.",
+    "question_image_url": "/images/non-verbal/nv-22.jpg"
   },
   {
     "id": 1283,
@@ -3410,7 +3693,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Tilted 90° clockwise 'A'",
     "option_d": "Upside-down tilted 'A'",
     "correct_option": "B",
-    "explanation": "Mirror Reflection (Vertical Axis) rule: Letter A has vertical symmetry so vertical mirror is unchanged; water reflection flips top-down."
+    "explanation": "Mirror Reflection (Vertical Axis) rule: Letter A has vertical symmetry so vertical mirror is unchanged; water reflection flips top-down.",
+    "question_image_url": "/images/non-verbal/nv-23.jpg"
   },
   {
     "id": 1284,
@@ -3422,7 +3706,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "W (Inverted letter M)",
     "option_d": "Upside-down tilted 'M'",
     "correct_option": "C",
-    "explanation": "Water Reflection (Horizontal Axis) rule: Water reflection (horizontal mirror) inverts Top-Down, turning M into W."
+    "explanation": "Water Reflection (Horizontal Axis) rule: Water reflection (horizontal mirror) inverts Top-Down, turning M into W.",
+    "question_image_url": "/images/non-verbal/nv-24.jpg"
   },
   {
     "id": 1285,
@@ -3434,7 +3719,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Upside-down tilted 'C'",
     "option_d": "C facing left (Ɔ)",
     "correct_option": "D",
-    "explanation": "Mirror Reflection (Vertical Axis) rule: Vertical reflection reverses opening from right to left."
+    "explanation": "Mirror Reflection (Vertical Axis) rule: Vertical reflection reverses opening from right to left.",
+    "question_image_url": "/images/non-verbal/nv-25.jpg"
   },
   {
     "id": 1286,
@@ -3446,7 +3732,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Tilted 90° clockwise 'B'",
     "option_d": "Upside-down tilted 'B'",
     "correct_option": "A",
-    "explanation": "Water Reflection (Horizontal Axis) rule: Vertical mirror inverts Left-Right; horizontal mirror inverts Top-Bottom."
+    "explanation": "Water Reflection (Horizontal Axis) rule: Vertical mirror inverts Left-Right; horizontal mirror inverts Top-Bottom.",
+    "question_image_url": "/images/non-verbal/nv-26.jpg"
   },
   {
     "id": 1287,
@@ -3458,7 +3745,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Tilted 90° clockwise 'E'",
     "option_d": "Upside-down tilted 'E'",
     "correct_option": "B",
-    "explanation": "Mirror Reflection (Vertical Axis) rule: Mirror reflection across vertical plane inverts horizontal direction."
+    "explanation": "Mirror Reflection (Vertical Axis) rule: Mirror reflection across vertical plane inverts horizontal direction.",
+    "question_image_url": "/images/non-verbal/nv-27.jpg"
   },
   {
     "id": 1288,
@@ -3470,7 +3758,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Inverted V with horizontal bar (∀)",
     "option_d": "Upside-down tilted 'A'",
     "correct_option": "C",
-    "explanation": "Water Reflection (Horizontal Axis) rule: Letter A has vertical symmetry so vertical mirror is unchanged; water reflection flips top-down."
+    "explanation": "Water Reflection (Horizontal Axis) rule: Letter A has vertical symmetry so vertical mirror is unchanged; water reflection flips top-down.",
+    "question_image_url": "/images/non-verbal/nv-28.jpg"
   },
   {
     "id": 1289,
@@ -3482,7 +3771,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Upside-down tilted 'M'",
     "option_d": "M (Symmetric on vertical axis)",
     "correct_option": "D",
-    "explanation": "Mirror Reflection (Vertical Axis) rule: Water reflection (horizontal mirror) inverts Top-Down, turning M into W."
+    "explanation": "Mirror Reflection (Vertical Axis) rule: Water reflection (horizontal mirror) inverts Top-Down, turning M into W.",
+    "question_image_url": "/images/non-verbal/nv-29.jpg"
   },
   {
     "id": 1290,
@@ -3494,7 +3784,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Tilted 90° clockwise 'C'",
     "option_d": "Upside-down tilted 'C'",
     "correct_option": "A",
-    "explanation": "Water Reflection (Horizontal Axis) rule: Vertical reflection reverses opening from right to left."
+    "explanation": "Water Reflection (Horizontal Axis) rule: Vertical reflection reverses opening from right to left.",
+    "question_image_url": "/images/non-verbal/nv-30.jpg"
   },
   {
     "id": 1291,
@@ -3506,7 +3797,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Tilted 90° clockwise 'B'",
     "option_d": "Upside-down tilted 'B'",
     "correct_option": "B",
-    "explanation": "Mirror Reflection (Vertical Axis) rule: Vertical mirror inverts Left-Right; horizontal mirror inverts Top-Bottom."
+    "explanation": "Mirror Reflection (Vertical Axis) rule: Vertical mirror inverts Left-Right; horizontal mirror inverts Top-Bottom.",
+    "question_image_url": "/images/non-verbal/nv-31.jpg"
   },
   {
     "id": 1292,
@@ -3518,7 +3810,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "E remains unchanged horizontally",
     "option_d": "Upside-down tilted 'E'",
     "correct_option": "C",
-    "explanation": "Water Reflection (Horizontal Axis) rule: Mirror reflection across vertical plane inverts horizontal direction."
+    "explanation": "Water Reflection (Horizontal Axis) rule: Mirror reflection across vertical plane inverts horizontal direction.",
+    "question_image_url": "/images/non-verbal/nv-32.jpg"
   },
   {
     "id": 1293,
@@ -3530,7 +3823,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Upside-down tilted 'A'",
     "option_d": "A (Identical, symmetrical on vertical axis)",
     "correct_option": "D",
-    "explanation": "Mirror Reflection (Vertical Axis) rule: Letter A has vertical symmetry so vertical mirror is unchanged; water reflection flips top-down."
+    "explanation": "Mirror Reflection (Vertical Axis) rule: Letter A has vertical symmetry so vertical mirror is unchanged; water reflection flips top-down.",
+    "question_image_url": "/images/non-verbal/nv-33.jpg"
   },
   {
     "id": 1294,
@@ -3542,7 +3836,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Tilted 90° clockwise 'M'",
     "option_d": "Upside-down tilted 'M'",
     "correct_option": "A",
-    "explanation": "Water Reflection (Horizontal Axis) rule: Water reflection (horizontal mirror) inverts Top-Down, turning M into W."
+    "explanation": "Water Reflection (Horizontal Axis) rule: Water reflection (horizontal mirror) inverts Top-Down, turning M into W.",
+    "question_image_url": "/images/non-verbal/nv-34.jpg"
   },
   {
     "id": 1295,
@@ -3554,7 +3849,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Tilted 90° clockwise 'C'",
     "option_d": "Upside-down tilted 'C'",
     "correct_option": "B",
-    "explanation": "Mirror Reflection (Vertical Axis) rule: Vertical reflection reverses opening from right to left."
+    "explanation": "Mirror Reflection (Vertical Axis) rule: Vertical reflection reverses opening from right to left.",
+    "question_image_url": "/images/non-verbal/nv-35.jpg"
   },
   {
     "id": 1296,
@@ -3566,7 +3862,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "B remains unchanged vertically (horizontal symmetry)",
     "option_d": "Upside-down tilted 'B'",
     "correct_option": "C",
-    "explanation": "Water Reflection (Horizontal Axis) rule: Vertical mirror inverts Left-Right; horizontal mirror inverts Top-Bottom."
+    "explanation": "Water Reflection (Horizontal Axis) rule: Vertical mirror inverts Left-Right; horizontal mirror inverts Top-Bottom.",
+    "question_image_url": "/images/non-verbal/nv-36.jpg"
   },
   {
     "id": 1297,
@@ -3578,7 +3875,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Upside-down tilted 'E'",
     "option_d": "Reversed E with arms pointing left (Ǝ)",
     "correct_option": "D",
-    "explanation": "Mirror Reflection (Vertical Axis) rule: Mirror reflection across vertical plane inverts horizontal direction."
+    "explanation": "Mirror Reflection (Vertical Axis) rule: Mirror reflection across vertical plane inverts horizontal direction.",
+    "question_image_url": "/images/non-verbal/nv-37.jpg"
   },
   {
     "id": 1298,
@@ -3590,7 +3888,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Tilted 90° clockwise 'A'",
     "option_d": "Upside-down tilted 'A'",
     "correct_option": "A",
-    "explanation": "Water Reflection (Horizontal Axis) rule: Letter A has vertical symmetry so vertical mirror is unchanged; water reflection flips top-down."
+    "explanation": "Water Reflection (Horizontal Axis) rule: Letter A has vertical symmetry so vertical mirror is unchanged; water reflection flips top-down.",
+    "question_image_url": "/images/non-verbal/nv-38.jpg"
   },
   {
     "id": 1299,
@@ -3602,7 +3901,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Tilted 90° clockwise 'M'",
     "option_d": "Upside-down tilted 'M'",
     "correct_option": "B",
-    "explanation": "Mirror Reflection (Vertical Axis) rule: Water reflection (horizontal mirror) inverts Top-Down, turning M into W."
+    "explanation": "Mirror Reflection (Vertical Axis) rule: Water reflection (horizontal mirror) inverts Top-Down, turning M into W.",
+    "question_image_url": "/images/non-verbal/nv-39.jpg"
   },
   {
     "id": 1300,
@@ -3614,7 +3914,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "C remains identical (horizontal symmetry)",
     "option_d": "Upside-down tilted 'C'",
     "correct_option": "C",
-    "explanation": "Water Reflection (Horizontal Axis) rule: Vertical reflection reverses opening from right to left."
+    "explanation": "Water Reflection (Horizontal Axis) rule: Vertical reflection reverses opening from right to left.",
+    "question_image_url": "/images/non-verbal/nv-40.jpg"
   },
   {
     "id": 1301,
@@ -3626,7 +3927,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Diagram Figure 2 (Curved segments only)",
     "option_d": "Diagram Figure 3 (Truncated boundary)",
     "correct_option": "B",
-    "explanation": "Careful inspection reveals that all intersecting lines of 'Letter 'Z'' exist continuously in the selected diagram."
+    "explanation": "Careful inspection reveals that all intersecting lines of 'Letter 'Z'' exist continuously in the selected diagram.",
+    "question_image_url": "/images/non-verbal/nv-41.jpg"
   },
   {
     "id": 1302,
@@ -3638,7 +3940,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Diagram Figure Gamma (Contains exact intact 'Right-angled Triangle')",
     "option_d": "Diagram Figure 3 (Truncated boundary)",
     "correct_option": "C",
-    "explanation": "Careful inspection reveals that all intersecting lines of 'Right-angled Triangle' exist continuously in the selected diagram."
+    "explanation": "Careful inspection reveals that all intersecting lines of 'Right-angled Triangle' exist continuously in the selected diagram.",
+    "question_image_url": "/images/non-verbal/nv-42.jpg"
   },
   {
     "id": 1303,
@@ -3650,7 +3953,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Diagram Figure 3 (Truncated boundary)",
     "option_d": "Diagram Figure Delta (Contains exact intact 'Letter 'X'')",
     "correct_option": "D",
-    "explanation": "Careful inspection reveals that all intersecting lines of 'Letter 'X'' exist continuously in the selected diagram."
+    "explanation": "Careful inspection reveals that all intersecting lines of 'Letter 'X'' exist continuously in the selected diagram.",
+    "question_image_url": "/images/non-verbal/nv-43.jpg"
   },
   {
     "id": 1304,
@@ -3662,7 +3966,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Diagram Figure 2 (Curved segments only)",
     "option_d": "Diagram Figure 3 (Truncated boundary)",
     "correct_option": "A",
-    "explanation": "Careful inspection reveals that all intersecting lines of 'Swastika symbol' exist continuously in the selected diagram."
+    "explanation": "Careful inspection reveals that all intersecting lines of 'Swastika symbol' exist continuously in the selected diagram.",
+    "question_image_url": "/images/non-verbal/nv-44.jpg"
   },
   {
     "id": 1305,
@@ -3674,7 +3979,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Diagram Figure 2 (Curved segments only)",
     "option_d": "Diagram Figure 3 (Truncated boundary)",
     "correct_option": "B",
-    "explanation": "Careful inspection reveals that all intersecting lines of 'Diamond shape' exist continuously in the selected diagram."
+    "explanation": "Careful inspection reveals that all intersecting lines of 'Diamond shape' exist continuously in the selected diagram.",
+    "question_image_url": "/images/non-verbal/nv-45.jpg"
   },
   {
     "id": 1306,
@@ -3686,7 +3992,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Diagram Figure Gamma (Contains exact intact 'Letter 'T'')",
     "option_d": "Diagram Figure 3 (Truncated boundary)",
     "correct_option": "C",
-    "explanation": "Careful inspection reveals that all intersecting lines of 'Letter 'T'' exist continuously in the selected diagram."
+    "explanation": "Careful inspection reveals that all intersecting lines of 'Letter 'T'' exist continuously in the selected diagram.",
+    "question_image_url": "/images/non-verbal/nv-46.jpg"
   },
   {
     "id": 1307,
@@ -3698,7 +4005,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Diagram Figure 3 (Truncated boundary)",
     "option_d": "Diagram Figure Delta (Contains exact intact 'Letter 'Z'')",
     "correct_option": "D",
-    "explanation": "Careful inspection reveals that all intersecting lines of 'Letter 'Z'' exist continuously in the selected diagram."
+    "explanation": "Careful inspection reveals that all intersecting lines of 'Letter 'Z'' exist continuously in the selected diagram.",
+    "question_image_url": "/images/non-verbal/nv-47.jpg"
   },
   {
     "id": 1308,
@@ -3710,7 +4018,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Diagram Figure 2 (Curved segments only)",
     "option_d": "Diagram Figure 3 (Truncated boundary)",
     "correct_option": "A",
-    "explanation": "Careful inspection reveals that all intersecting lines of 'Right-angled Triangle' exist continuously in the selected diagram."
+    "explanation": "Careful inspection reveals that all intersecting lines of 'Right-angled Triangle' exist continuously in the selected diagram.",
+    "question_image_url": "/images/non-verbal/nv-48.jpg"
   },
   {
     "id": 1309,
@@ -3722,7 +4031,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Diagram Figure 2 (Curved segments only)",
     "option_d": "Diagram Figure 3 (Truncated boundary)",
     "correct_option": "B",
-    "explanation": "Careful inspection reveals that all intersecting lines of 'Letter 'X'' exist continuously in the selected diagram."
+    "explanation": "Careful inspection reveals that all intersecting lines of 'Letter 'X'' exist continuously in the selected diagram.",
+    "question_image_url": "/images/non-verbal/nv-49.jpg"
   },
   {
     "id": 1310,
@@ -3734,7 +4044,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Diagram Figure Gamma (Contains exact intact 'Swastika symbol')",
     "option_d": "Diagram Figure 3 (Truncated boundary)",
     "correct_option": "C",
-    "explanation": "Careful inspection reveals that all intersecting lines of 'Swastika symbol' exist continuously in the selected diagram."
+    "explanation": "Careful inspection reveals that all intersecting lines of 'Swastika symbol' exist continuously in the selected diagram.",
+    "question_image_url": "/images/non-verbal/nv-50.jpg"
   },
   {
     "id": 1311,
@@ -3746,7 +4057,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Diagram Figure 3 (Truncated boundary)",
     "option_d": "Diagram Figure Delta (Contains exact intact 'Diamond shape')",
     "correct_option": "D",
-    "explanation": "Careful inspection reveals that all intersecting lines of 'Diamond shape' exist continuously in the selected diagram."
+    "explanation": "Careful inspection reveals that all intersecting lines of 'Diamond shape' exist continuously in the selected diagram.",
+    "question_image_url": "/images/non-verbal/nv-51.jpg"
   },
   {
     "id": 1312,
@@ -3758,7 +4070,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Diagram Figure 2 (Curved segments only)",
     "option_d": "Diagram Figure 3 (Truncated boundary)",
     "correct_option": "A",
-    "explanation": "Careful inspection reveals that all intersecting lines of 'Letter 'T'' exist continuously in the selected diagram."
+    "explanation": "Careful inspection reveals that all intersecting lines of 'Letter 'T'' exist continuously in the selected diagram.",
+    "question_image_url": "/images/non-verbal/nv-52.jpg"
   },
   {
     "id": 1313,
@@ -3770,7 +4083,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Diagram Figure 2 (Curved segments only)",
     "option_d": "Diagram Figure 3 (Truncated boundary)",
     "correct_option": "B",
-    "explanation": "Careful inspection reveals that all intersecting lines of 'Letter 'Z'' exist continuously in the selected diagram."
+    "explanation": "Careful inspection reveals that all intersecting lines of 'Letter 'Z'' exist continuously in the selected diagram.",
+    "question_image_url": "/images/non-verbal/nv-1.jpg"
   },
   {
     "id": 1314,
@@ -3782,7 +4096,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Diagram Figure Gamma (Contains exact intact 'Right-angled Triangle')",
     "option_d": "Diagram Figure 3 (Truncated boundary)",
     "correct_option": "C",
-    "explanation": "Careful inspection reveals that all intersecting lines of 'Right-angled Triangle' exist continuously in the selected diagram."
+    "explanation": "Careful inspection reveals that all intersecting lines of 'Right-angled Triangle' exist continuously in the selected diagram.",
+    "question_image_url": "/images/non-verbal/nv-2.jpg"
   },
   {
     "id": 1315,
@@ -3794,7 +4109,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Diagram Figure 3 (Truncated boundary)",
     "option_d": "Diagram Figure Delta (Contains exact intact 'Letter 'X'')",
     "correct_option": "D",
-    "explanation": "Careful inspection reveals that all intersecting lines of 'Letter 'X'' exist continuously in the selected diagram."
+    "explanation": "Careful inspection reveals that all intersecting lines of 'Letter 'X'' exist continuously in the selected diagram.",
+    "question_image_url": "/images/non-verbal/nv-3.jpg"
   },
   {
     "id": 1316,
@@ -3806,7 +4122,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Diagram Figure 2 (Curved segments only)",
     "option_d": "Diagram Figure 3 (Truncated boundary)",
     "correct_option": "A",
-    "explanation": "Careful inspection reveals that all intersecting lines of 'Swastika symbol' exist continuously in the selected diagram."
+    "explanation": "Careful inspection reveals that all intersecting lines of 'Swastika symbol' exist continuously in the selected diagram.",
+    "question_image_url": "/images/non-verbal/nv-4.jpg"
   },
   {
     "id": 1317,
@@ -3818,7 +4135,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Diagram Figure 2 (Curved segments only)",
     "option_d": "Diagram Figure 3 (Truncated boundary)",
     "correct_option": "B",
-    "explanation": "Careful inspection reveals that all intersecting lines of 'Diamond shape' exist continuously in the selected diagram."
+    "explanation": "Careful inspection reveals that all intersecting lines of 'Diamond shape' exist continuously in the selected diagram.",
+    "question_image_url": "/images/non-verbal/nv-5.jpg"
   },
   {
     "id": 1318,
@@ -3830,7 +4148,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Diagram Figure Gamma (Contains exact intact 'Letter 'T'')",
     "option_d": "Diagram Figure 3 (Truncated boundary)",
     "correct_option": "C",
-    "explanation": "Careful inspection reveals that all intersecting lines of 'Letter 'T'' exist continuously in the selected diagram."
+    "explanation": "Careful inspection reveals that all intersecting lines of 'Letter 'T'' exist continuously in the selected diagram.",
+    "question_image_url": "/images/non-verbal/nv-6.jpg"
   },
   {
     "id": 1319,
@@ -3842,7 +4161,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Diagram Figure 3 (Truncated boundary)",
     "option_d": "Diagram Figure Delta (Contains exact intact 'Letter 'Z'')",
     "correct_option": "D",
-    "explanation": "Careful inspection reveals that all intersecting lines of 'Letter 'Z'' exist continuously in the selected diagram."
+    "explanation": "Careful inspection reveals that all intersecting lines of 'Letter 'Z'' exist continuously in the selected diagram.",
+    "question_image_url": "/images/non-verbal/nv-7.jpg"
   },
   {
     "id": 1320,
@@ -3854,7 +4174,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Diagram Figure 2 (Curved segments only)",
     "option_d": "Diagram Figure 3 (Truncated boundary)",
     "correct_option": "A",
-    "explanation": "Careful inspection reveals that all intersecting lines of 'Right-angled Triangle' exist continuously in the selected diagram."
+    "explanation": "Careful inspection reveals that all intersecting lines of 'Right-angled Triangle' exist continuously in the selected diagram.",
+    "question_image_url": "/images/non-verbal/nv-8.jpg"
   },
   {
     "id": 1321,
@@ -3866,7 +4187,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Diagram Figure 2 (Curved segments only)",
     "option_d": "Diagram Figure 3 (Truncated boundary)",
     "correct_option": "B",
-    "explanation": "Careful inspection reveals that all intersecting lines of 'Letter 'X'' exist continuously in the selected diagram."
+    "explanation": "Careful inspection reveals that all intersecting lines of 'Letter 'X'' exist continuously in the selected diagram.",
+    "question_image_url": "/images/non-verbal/nv-9.jpg"
   },
   {
     "id": 1322,
@@ -3878,7 +4200,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Diagram Figure Gamma (Contains exact intact 'Swastika symbol')",
     "option_d": "Diagram Figure 3 (Truncated boundary)",
     "correct_option": "C",
-    "explanation": "Careful inspection reveals that all intersecting lines of 'Swastika symbol' exist continuously in the selected diagram."
+    "explanation": "Careful inspection reveals that all intersecting lines of 'Swastika symbol' exist continuously in the selected diagram.",
+    "question_image_url": "/images/non-verbal/nv-10.jpg"
   },
   {
     "id": 1323,
@@ -3890,7 +4213,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Diagram Figure 3 (Truncated boundary)",
     "option_d": "Diagram Figure Delta (Contains exact intact 'Diamond shape')",
     "correct_option": "D",
-    "explanation": "Careful inspection reveals that all intersecting lines of 'Diamond shape' exist continuously in the selected diagram."
+    "explanation": "Careful inspection reveals that all intersecting lines of 'Diamond shape' exist continuously in the selected diagram.",
+    "question_image_url": "/images/non-verbal/nv-11.jpg"
   },
   {
     "id": 1324,
@@ -3902,7 +4226,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Diagram Figure 2 (Curved segments only)",
     "option_d": "Diagram Figure 3 (Truncated boundary)",
     "correct_option": "A",
-    "explanation": "Careful inspection reveals that all intersecting lines of 'Letter 'T'' exist continuously in the selected diagram."
+    "explanation": "Careful inspection reveals that all intersecting lines of 'Letter 'T'' exist continuously in the selected diagram.",
+    "question_image_url": "/images/non-verbal/nv-12.jpg"
   },
   {
     "id": 1325,
@@ -3914,7 +4239,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Diagram Figure 2 (Curved segments only)",
     "option_d": "Diagram Figure 3 (Truncated boundary)",
     "correct_option": "B",
-    "explanation": "Careful inspection reveals that all intersecting lines of 'Letter 'Z'' exist continuously in the selected diagram."
+    "explanation": "Careful inspection reveals that all intersecting lines of 'Letter 'Z'' exist continuously in the selected diagram.",
+    "question_image_url": "/images/non-verbal/nv-13.jpg"
   },
   {
     "id": 1326,
@@ -3926,7 +4252,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Diagram Figure Gamma (Contains exact intact 'Right-angled Triangle')",
     "option_d": "Diagram Figure 3 (Truncated boundary)",
     "correct_option": "C",
-    "explanation": "Careful inspection reveals that all intersecting lines of 'Right-angled Triangle' exist continuously in the selected diagram."
+    "explanation": "Careful inspection reveals that all intersecting lines of 'Right-angled Triangle' exist continuously in the selected diagram.",
+    "question_image_url": "/images/non-verbal/nv-14.jpg"
   },
   {
     "id": 1327,
@@ -3938,7 +4265,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Diagram Figure 3 (Truncated boundary)",
     "option_d": "Diagram Figure Delta (Contains exact intact 'Letter 'X'')",
     "correct_option": "D",
-    "explanation": "Careful inspection reveals that all intersecting lines of 'Letter 'X'' exist continuously in the selected diagram."
+    "explanation": "Careful inspection reveals that all intersecting lines of 'Letter 'X'' exist continuously in the selected diagram.",
+    "question_image_url": "/images/non-verbal/nv-15.jpg"
   },
   {
     "id": 1328,
@@ -3950,7 +4278,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Diagram Figure 2 (Curved segments only)",
     "option_d": "Diagram Figure 3 (Truncated boundary)",
     "correct_option": "A",
-    "explanation": "Careful inspection reveals that all intersecting lines of 'Swastika symbol' exist continuously in the selected diagram."
+    "explanation": "Careful inspection reveals that all intersecting lines of 'Swastika symbol' exist continuously in the selected diagram.",
+    "question_image_url": "/images/non-verbal/nv-16.jpg"
   },
   {
     "id": 1329,
@@ -3962,7 +4291,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Diagram Figure 2 (Curved segments only)",
     "option_d": "Diagram Figure 3 (Truncated boundary)",
     "correct_option": "B",
-    "explanation": "Careful inspection reveals that all intersecting lines of 'Diamond shape' exist continuously in the selected diagram."
+    "explanation": "Careful inspection reveals that all intersecting lines of 'Diamond shape' exist continuously in the selected diagram.",
+    "question_image_url": "/images/non-verbal/nv-17.jpg"
   },
   {
     "id": 1330,
@@ -3974,7 +4304,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Diagram Figure Gamma (Contains exact intact 'Letter 'T'')",
     "option_d": "Diagram Figure 3 (Truncated boundary)",
     "correct_option": "C",
-    "explanation": "Careful inspection reveals that all intersecting lines of 'Letter 'T'' exist continuously in the selected diagram."
+    "explanation": "Careful inspection reveals that all intersecting lines of 'Letter 'T'' exist continuously in the selected diagram.",
+    "question_image_url": "/images/non-verbal/nv-18.jpg"
   },
   {
     "id": 1331,
@@ -3986,7 +4317,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Diagram Figure 3 (Truncated boundary)",
     "option_d": "Diagram Figure Delta (Contains exact intact 'Letter 'Z'')",
     "correct_option": "D",
-    "explanation": "Careful inspection reveals that all intersecting lines of 'Letter 'Z'' exist continuously in the selected diagram."
+    "explanation": "Careful inspection reveals that all intersecting lines of 'Letter 'Z'' exist continuously in the selected diagram.",
+    "question_image_url": "/images/non-verbal/nv-19.jpg"
   },
   {
     "id": 1332,
@@ -3998,7 +4330,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Diagram Figure 2 (Curved segments only)",
     "option_d": "Diagram Figure 3 (Truncated boundary)",
     "correct_option": "A",
-    "explanation": "Careful inspection reveals that all intersecting lines of 'Right-angled Triangle' exist continuously in the selected diagram."
+    "explanation": "Careful inspection reveals that all intersecting lines of 'Right-angled Triangle' exist continuously in the selected diagram.",
+    "question_image_url": "/images/non-verbal/nv-20.jpg"
   },
   {
     "id": 1333,
@@ -4010,7 +4343,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Diagram Figure 2 (Curved segments only)",
     "option_d": "Diagram Figure 3 (Truncated boundary)",
     "correct_option": "B",
-    "explanation": "Careful inspection reveals that all intersecting lines of 'Letter 'X'' exist continuously in the selected diagram."
+    "explanation": "Careful inspection reveals that all intersecting lines of 'Letter 'X'' exist continuously in the selected diagram.",
+    "question_image_url": "/images/non-verbal/nv-21.jpg"
   },
   {
     "id": 1334,
@@ -4022,7 +4356,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Diagram Figure Gamma (Contains exact intact 'Swastika symbol')",
     "option_d": "Diagram Figure 3 (Truncated boundary)",
     "correct_option": "C",
-    "explanation": "Careful inspection reveals that all intersecting lines of 'Swastika symbol' exist continuously in the selected diagram."
+    "explanation": "Careful inspection reveals that all intersecting lines of 'Swastika symbol' exist continuously in the selected diagram.",
+    "question_image_url": "/images/non-verbal/nv-22.jpg"
   },
   {
     "id": 1335,
@@ -4034,7 +4369,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Diagram Figure 3 (Truncated boundary)",
     "option_d": "Diagram Figure Delta (Contains exact intact 'Diamond shape')",
     "correct_option": "D",
-    "explanation": "Careful inspection reveals that all intersecting lines of 'Diamond shape' exist continuously in the selected diagram."
+    "explanation": "Careful inspection reveals that all intersecting lines of 'Diamond shape' exist continuously in the selected diagram.",
+    "question_image_url": "/images/non-verbal/nv-23.jpg"
   },
   {
     "id": 1336,
@@ -4046,7 +4382,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Diagram Figure 2 (Curved segments only)",
     "option_d": "Diagram Figure 3 (Truncated boundary)",
     "correct_option": "A",
-    "explanation": "Careful inspection reveals that all intersecting lines of 'Letter 'T'' exist continuously in the selected diagram."
+    "explanation": "Careful inspection reveals that all intersecting lines of 'Letter 'T'' exist continuously in the selected diagram.",
+    "question_image_url": "/images/non-verbal/nv-24.jpg"
   },
   {
     "id": 1337,
@@ -4058,7 +4395,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Diagram Figure 2 (Curved segments only)",
     "option_d": "Diagram Figure 3 (Truncated boundary)",
     "correct_option": "B",
-    "explanation": "Careful inspection reveals that all intersecting lines of 'Letter 'Z'' exist continuously in the selected diagram."
+    "explanation": "Careful inspection reveals that all intersecting lines of 'Letter 'Z'' exist continuously in the selected diagram.",
+    "question_image_url": "/images/non-verbal/nv-25.jpg"
   },
   {
     "id": 1338,
@@ -4070,7 +4408,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Diagram Figure Gamma (Contains exact intact 'Right-angled Triangle')",
     "option_d": "Diagram Figure 3 (Truncated boundary)",
     "correct_option": "C",
-    "explanation": "Careful inspection reveals that all intersecting lines of 'Right-angled Triangle' exist continuously in the selected diagram."
+    "explanation": "Careful inspection reveals that all intersecting lines of 'Right-angled Triangle' exist continuously in the selected diagram.",
+    "question_image_url": "/images/non-verbal/nv-26.jpg"
   },
   {
     "id": 1339,
@@ -4082,7 +4421,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Diagram Figure 3 (Truncated boundary)",
     "option_d": "Diagram Figure Delta (Contains exact intact 'Letter 'X'')",
     "correct_option": "D",
-    "explanation": "Careful inspection reveals that all intersecting lines of 'Letter 'X'' exist continuously in the selected diagram."
+    "explanation": "Careful inspection reveals that all intersecting lines of 'Letter 'X'' exist continuously in the selected diagram.",
+    "question_image_url": "/images/non-verbal/nv-27.jpg"
   },
   {
     "id": 1340,
@@ -4094,7 +4434,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Diagram Figure 2 (Curved segments only)",
     "option_d": "Diagram Figure 3 (Truncated boundary)",
     "correct_option": "A",
-    "explanation": "Careful inspection reveals that all intersecting lines of 'Swastika symbol' exist continuously in the selected diagram."
+    "explanation": "Careful inspection reveals that all intersecting lines of 'Swastika symbol' exist continuously in the selected diagram.",
+    "question_image_url": "/images/non-verbal/nv-28.jpg"
   },
   {
     "id": 1341,
@@ -4106,7 +4447,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Diagram Figure 2 (Curved segments only)",
     "option_d": "Diagram Figure 3 (Truncated boundary)",
     "correct_option": "B",
-    "explanation": "Careful inspection reveals that all intersecting lines of 'Diamond shape' exist continuously in the selected diagram."
+    "explanation": "Careful inspection reveals that all intersecting lines of 'Diamond shape' exist continuously in the selected diagram.",
+    "question_image_url": "/images/non-verbal/nv-29.jpg"
   },
   {
     "id": 1342,
@@ -4118,7 +4460,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Diagram Figure Gamma (Contains exact intact 'Letter 'T'')",
     "option_d": "Diagram Figure 3 (Truncated boundary)",
     "correct_option": "C",
-    "explanation": "Careful inspection reveals that all intersecting lines of 'Letter 'T'' exist continuously in the selected diagram."
+    "explanation": "Careful inspection reveals that all intersecting lines of 'Letter 'T'' exist continuously in the selected diagram.",
+    "question_image_url": "/images/non-verbal/nv-30.jpg"
   },
   {
     "id": 1343,
@@ -4130,7 +4473,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Diagram Figure 3 (Truncated boundary)",
     "option_d": "Diagram Figure Delta (Contains exact intact 'Letter 'Z'')",
     "correct_option": "D",
-    "explanation": "Careful inspection reveals that all intersecting lines of 'Letter 'Z'' exist continuously in the selected diagram."
+    "explanation": "Careful inspection reveals that all intersecting lines of 'Letter 'Z'' exist continuously in the selected diagram.",
+    "question_image_url": "/images/non-verbal/nv-31.jpg"
   },
   {
     "id": 1344,
@@ -4142,7 +4486,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Diagram Figure 2 (Curved segments only)",
     "option_d": "Diagram Figure 3 (Truncated boundary)",
     "correct_option": "A",
-    "explanation": "Careful inspection reveals that all intersecting lines of 'Right-angled Triangle' exist continuously in the selected diagram."
+    "explanation": "Careful inspection reveals that all intersecting lines of 'Right-angled Triangle' exist continuously in the selected diagram.",
+    "question_image_url": "/images/non-verbal/nv-32.jpg"
   },
   {
     "id": 1345,
@@ -4154,7 +4499,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Diagram Figure 2 (Curved segments only)",
     "option_d": "Diagram Figure 3 (Truncated boundary)",
     "correct_option": "B",
-    "explanation": "Careful inspection reveals that all intersecting lines of 'Letter 'X'' exist continuously in the selected diagram."
+    "explanation": "Careful inspection reveals that all intersecting lines of 'Letter 'X'' exist continuously in the selected diagram.",
+    "question_image_url": "/images/non-verbal/nv-33.jpg"
   },
   {
     "id": 1346,
@@ -4166,7 +4512,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Diagram Figure Gamma (Contains exact intact 'Swastika symbol')",
     "option_d": "Diagram Figure 3 (Truncated boundary)",
     "correct_option": "C",
-    "explanation": "Careful inspection reveals that all intersecting lines of 'Swastika symbol' exist continuously in the selected diagram."
+    "explanation": "Careful inspection reveals that all intersecting lines of 'Swastika symbol' exist continuously in the selected diagram.",
+    "question_image_url": "/images/non-verbal/nv-34.jpg"
   },
   {
     "id": 1347,
@@ -4178,7 +4525,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Diagram Figure 3 (Truncated boundary)",
     "option_d": "Diagram Figure Delta (Contains exact intact 'Diamond shape')",
     "correct_option": "D",
-    "explanation": "Careful inspection reveals that all intersecting lines of 'Diamond shape' exist continuously in the selected diagram."
+    "explanation": "Careful inspection reveals that all intersecting lines of 'Diamond shape' exist continuously in the selected diagram.",
+    "question_image_url": "/images/non-verbal/nv-35.jpg"
   },
   {
     "id": 1348,
@@ -4190,7 +4538,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Diagram Figure 2 (Curved segments only)",
     "option_d": "Diagram Figure 3 (Truncated boundary)",
     "correct_option": "A",
-    "explanation": "Careful inspection reveals that all intersecting lines of 'Letter 'T'' exist continuously in the selected diagram."
+    "explanation": "Careful inspection reveals that all intersecting lines of 'Letter 'T'' exist continuously in the selected diagram.",
+    "question_image_url": "/images/non-verbal/nv-36.jpg"
   },
   {
     "id": 1349,
@@ -4202,7 +4551,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Diagram Figure 2 (Curved segments only)",
     "option_d": "Diagram Figure 3 (Truncated boundary)",
     "correct_option": "B",
-    "explanation": "Careful inspection reveals that all intersecting lines of 'Letter 'Z'' exist continuously in the selected diagram."
+    "explanation": "Careful inspection reveals that all intersecting lines of 'Letter 'Z'' exist continuously in the selected diagram.",
+    "question_image_url": "/images/non-verbal/nv-37.jpg"
   },
   {
     "id": 1350,
@@ -4214,7 +4564,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Diagram Figure Gamma (Contains exact intact 'Right-angled Triangle')",
     "option_d": "Diagram Figure 3 (Truncated boundary)",
     "correct_option": "C",
-    "explanation": "Careful inspection reveals that all intersecting lines of 'Right-angled Triangle' exist continuously in the selected diagram."
+    "explanation": "Careful inspection reveals that all intersecting lines of 'Right-angled Triangle' exist continuously in the selected diagram.",
+    "question_image_url": "/images/non-verbal/nv-38.jpg"
   },
   {
     "id": 1351,
@@ -4226,7 +4577,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "2 asymmetrical holes",
     "option_d": "3 random perforations",
     "correct_option": "B",
-    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes."
+    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes.",
+    "question_image_url": "/images/non-verbal/nv-39.jpg"
   },
   {
     "id": 1352,
@@ -4238,7 +4590,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "4 Symmetrically distributed circular holes when unfolded",
     "option_d": "3 random perforations",
     "correct_option": "C",
-    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes."
+    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes.",
+    "question_image_url": "/images/non-verbal/nv-40.jpg"
   },
   {
     "id": 1353,
@@ -4250,7 +4603,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "3 random perforations",
     "option_d": "4 Symmetrically mirrored notches along all 4 outer edges",
     "correct_option": "D",
-    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes."
+    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes.",
+    "question_image_url": "/images/non-verbal/nv-41.jpg"
   },
   {
     "id": 1354,
@@ -4262,7 +4616,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "2 asymmetrical holes",
     "option_d": "3 random perforations",
     "correct_option": "A",
-    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes."
+    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes.",
+    "question_image_url": "/images/non-verbal/nv-42.jpg"
   },
   {
     "id": 1355,
@@ -4274,7 +4629,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "2 asymmetrical holes",
     "option_d": "3 random perforations",
     "correct_option": "B",
-    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes."
+    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes.",
+    "question_image_url": "/images/non-verbal/nv-43.jpg"
   },
   {
     "id": 1356,
@@ -4286,7 +4642,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "4 Symmetrically distributed circular holes when unfolded",
     "option_d": "3 random perforations",
     "correct_option": "C",
-    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes."
+    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes.",
+    "question_image_url": "/images/non-verbal/nv-44.jpg"
   },
   {
     "id": 1357,
@@ -4298,7 +4655,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "3 random perforations",
     "option_d": "4 Symmetrically mirrored notches along all 4 outer edges",
     "correct_option": "D",
-    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes."
+    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes.",
+    "question_image_url": "/images/non-verbal/nv-45.jpg"
   },
   {
     "id": 1358,
@@ -4310,7 +4668,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "2 asymmetrical holes",
     "option_d": "3 random perforations",
     "correct_option": "A",
-    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes."
+    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes.",
+    "question_image_url": "/images/non-verbal/nv-46.jpg"
   },
   {
     "id": 1359,
@@ -4322,7 +4681,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "2 asymmetrical holes",
     "option_d": "3 random perforations",
     "correct_option": "B",
-    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes."
+    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes.",
+    "question_image_url": "/images/non-verbal/nv-47.jpg"
   },
   {
     "id": 1360,
@@ -4334,7 +4694,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "4 Symmetrically distributed circular holes when unfolded",
     "option_d": "3 random perforations",
     "correct_option": "C",
-    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes."
+    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes.",
+    "question_image_url": "/images/non-verbal/nv-48.jpg"
   },
   {
     "id": 1361,
@@ -4346,7 +4707,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "3 random perforations",
     "option_d": "4 Symmetrically mirrored notches along all 4 outer edges",
     "correct_option": "D",
-    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes."
+    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes.",
+    "question_image_url": "/images/non-verbal/nv-49.jpg"
   },
   {
     "id": 1362,
@@ -4358,7 +4720,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "2 asymmetrical holes",
     "option_d": "3 random perforations",
     "correct_option": "A",
-    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes."
+    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes.",
+    "question_image_url": "/images/non-verbal/nv-50.jpg"
   },
   {
     "id": 1363,
@@ -4370,7 +4733,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "2 asymmetrical holes",
     "option_d": "3 random perforations",
     "correct_option": "B",
-    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes."
+    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes.",
+    "question_image_url": "/images/non-verbal/nv-51.jpg"
   },
   {
     "id": 1364,
@@ -4382,7 +4746,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "4 Symmetrically distributed circular holes when unfolded",
     "option_d": "3 random perforations",
     "correct_option": "C",
-    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes."
+    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes.",
+    "question_image_url": "/images/non-verbal/nv-52.jpg"
   },
   {
     "id": 1365,
@@ -4394,7 +4759,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "3 random perforations",
     "option_d": "4 Symmetrically mirrored notches along all 4 outer edges",
     "correct_option": "D",
-    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes."
+    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes.",
+    "question_image_url": "/images/non-verbal/nv-1.jpg"
   },
   {
     "id": 1366,
@@ -4406,7 +4772,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "2 asymmetrical holes",
     "option_d": "3 random perforations",
     "correct_option": "A",
-    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes."
+    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes.",
+    "question_image_url": "/images/non-verbal/nv-2.jpg"
   },
   {
     "id": 1367,
@@ -4418,7 +4785,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "2 asymmetrical holes",
     "option_d": "3 random perforations",
     "correct_option": "B",
-    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes."
+    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes.",
+    "question_image_url": "/images/non-verbal/nv-3.jpg"
   },
   {
     "id": 1368,
@@ -4430,7 +4798,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "4 Symmetrically distributed circular holes when unfolded",
     "option_d": "3 random perforations",
     "correct_option": "C",
-    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes."
+    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes.",
+    "question_image_url": "/images/non-verbal/nv-4.jpg"
   },
   {
     "id": 1369,
@@ -4442,7 +4811,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "3 random perforations",
     "option_d": "4 Symmetrically mirrored notches along all 4 outer edges",
     "correct_option": "D",
-    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes."
+    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes.",
+    "question_image_url": "/images/non-verbal/nv-5.jpg"
   },
   {
     "id": 1370,
@@ -4454,7 +4824,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "2 asymmetrical holes",
     "option_d": "3 random perforations",
     "correct_option": "A",
-    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes."
+    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes.",
+    "question_image_url": "/images/non-verbal/nv-6.jpg"
   },
   {
     "id": 1371,
@@ -4466,7 +4837,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "2 asymmetrical holes",
     "option_d": "3 random perforations",
     "correct_option": "B",
-    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes."
+    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes.",
+    "question_image_url": "/images/non-verbal/nv-7.jpg"
   },
   {
     "id": 1372,
@@ -4478,7 +4850,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "4 Symmetrically distributed circular holes when unfolded",
     "option_d": "3 random perforations",
     "correct_option": "C",
-    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes."
+    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes.",
+    "question_image_url": "/images/non-verbal/nv-8.jpg"
   },
   {
     "id": 1373,
@@ -4490,7 +4863,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "3 random perforations",
     "option_d": "4 Symmetrically mirrored notches along all 4 outer edges",
     "correct_option": "D",
-    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes."
+    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes.",
+    "question_image_url": "/images/non-verbal/nv-9.jpg"
   },
   {
     "id": 1374,
@@ -4502,7 +4876,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "2 asymmetrical holes",
     "option_d": "3 random perforations",
     "correct_option": "A",
-    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes."
+    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes.",
+    "question_image_url": "/images/non-verbal/nv-10.jpg"
   },
   {
     "id": 1375,
@@ -4514,7 +4889,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "2 asymmetrical holes",
     "option_d": "3 random perforations",
     "correct_option": "B",
-    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes."
+    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes.",
+    "question_image_url": "/images/non-verbal/nv-11.jpg"
   },
   {
     "id": 1376,
@@ -4526,7 +4902,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "4 Symmetrically distributed circular holes when unfolded",
     "option_d": "3 random perforations",
     "correct_option": "C",
-    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes."
+    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes.",
+    "question_image_url": "/images/non-verbal/nv-12.jpg"
   },
   {
     "id": 1377,
@@ -4538,7 +4915,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "3 random perforations",
     "option_d": "4 Symmetrically mirrored notches along all 4 outer edges",
     "correct_option": "D",
-    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes."
+    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes.",
+    "question_image_url": "/images/non-verbal/nv-13.jpg"
   },
   {
     "id": 1378,
@@ -4550,7 +4928,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "2 asymmetrical holes",
     "option_d": "3 random perforations",
     "correct_option": "A",
-    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes."
+    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes.",
+    "question_image_url": "/images/non-verbal/nv-14.jpg"
   },
   {
     "id": 1379,
@@ -4562,7 +4941,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "2 asymmetrical holes",
     "option_d": "3 random perforations",
     "correct_option": "B",
-    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes."
+    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes.",
+    "question_image_url": "/images/non-verbal/nv-15.jpg"
   },
   {
     "id": 1380,
@@ -4574,7 +4954,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "4 Symmetrically distributed circular holes when unfolded",
     "option_d": "3 random perforations",
     "correct_option": "C",
-    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes."
+    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes.",
+    "question_image_url": "/images/non-verbal/nv-16.jpg"
   },
   {
     "id": 1381,
@@ -4586,7 +4967,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "3 random perforations",
     "option_d": "4 Symmetrically mirrored notches along all 4 outer edges",
     "correct_option": "D",
-    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes."
+    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes.",
+    "question_image_url": "/images/non-verbal/nv-17.jpg"
   },
   {
     "id": 1382,
@@ -4598,7 +4980,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "2 asymmetrical holes",
     "option_d": "3 random perforations",
     "correct_option": "A",
-    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes."
+    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes.",
+    "question_image_url": "/images/non-verbal/nv-18.jpg"
   },
   {
     "id": 1383,
@@ -4610,7 +4993,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "2 asymmetrical holes",
     "option_d": "3 random perforations",
     "correct_option": "B",
-    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes."
+    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes.",
+    "question_image_url": "/images/non-verbal/nv-19.jpg"
   },
   {
     "id": 1384,
@@ -4622,7 +5006,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "4 Symmetrically distributed circular holes when unfolded",
     "option_d": "3 random perforations",
     "correct_option": "C",
-    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes."
+    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes.",
+    "question_image_url": "/images/non-verbal/nv-20.jpg"
   },
   {
     "id": 1385,
@@ -4634,7 +5019,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "3 random perforations",
     "option_d": "4 Symmetrically mirrored notches along all 4 outer edges",
     "correct_option": "D",
-    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes."
+    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes.",
+    "question_image_url": "/images/non-verbal/nv-21.jpg"
   },
   {
     "id": 1386,
@@ -4646,7 +5032,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "2 asymmetrical holes",
     "option_d": "3 random perforations",
     "correct_option": "A",
-    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes."
+    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes.",
+    "question_image_url": "/images/non-verbal/nv-22.jpg"
   },
   {
     "id": 1387,
@@ -4658,7 +5045,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "2 asymmetrical holes",
     "option_d": "3 random perforations",
     "correct_option": "B",
-    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes."
+    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes.",
+    "question_image_url": "/images/non-verbal/nv-23.jpg"
   },
   {
     "id": 1388,
@@ -4670,7 +5058,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "4 Symmetrically distributed circular holes when unfolded",
     "option_d": "3 random perforations",
     "correct_option": "C",
-    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes."
+    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes.",
+    "question_image_url": "/images/non-verbal/nv-24.jpg"
   },
   {
     "id": 1389,
@@ -4682,7 +5071,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "3 random perforations",
     "option_d": "4 Symmetrically mirrored notches along all 4 outer edges",
     "correct_option": "D",
-    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes."
+    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes.",
+    "question_image_url": "/images/non-verbal/nv-25.jpg"
   },
   {
     "id": 1390,
@@ -4694,7 +5084,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "2 asymmetrical holes",
     "option_d": "3 random perforations",
     "correct_option": "A",
-    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes."
+    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes.",
+    "question_image_url": "/images/non-verbal/nv-26.jpg"
   },
   {
     "id": 1391,
@@ -4706,7 +5097,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "2 asymmetrical holes",
     "option_d": "3 random perforations",
     "correct_option": "B",
-    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes."
+    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes.",
+    "question_image_url": "/images/non-verbal/nv-27.jpg"
   },
   {
     "id": 1392,
@@ -4718,7 +5110,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "4 Symmetrically distributed circular holes when unfolded",
     "option_d": "3 random perforations",
     "correct_option": "C",
-    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes."
+    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes.",
+    "question_image_url": "/images/non-verbal/nv-28.jpg"
   },
   {
     "id": 1393,
@@ -4730,7 +5123,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "3 random perforations",
     "option_d": "4 Symmetrically mirrored notches along all 4 outer edges",
     "correct_option": "D",
-    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes."
+    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes.",
+    "question_image_url": "/images/non-verbal/nv-29.jpg"
   },
   {
     "id": 1394,
@@ -4742,7 +5136,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "2 asymmetrical holes",
     "option_d": "3 random perforations",
     "correct_option": "A",
-    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes."
+    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes.",
+    "question_image_url": "/images/non-verbal/nv-30.jpg"
   },
   {
     "id": 1395,
@@ -4754,7 +5149,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "2 asymmetrical holes",
     "option_d": "3 random perforations",
     "correct_option": "B",
-    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes."
+    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes.",
+    "question_image_url": "/images/non-verbal/nv-31.jpg"
   },
   {
     "id": 1396,
@@ -4766,7 +5162,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "4 Symmetrically distributed circular holes when unfolded",
     "option_d": "3 random perforations",
     "correct_option": "C",
-    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes."
+    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes.",
+    "question_image_url": "/images/non-verbal/nv-32.jpg"
   },
   {
     "id": 1397,
@@ -4778,7 +5175,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "3 random perforations",
     "option_d": "4 Symmetrically mirrored notches along all 4 outer edges",
     "correct_option": "D",
-    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes."
+    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes.",
+    "question_image_url": "/images/non-verbal/nv-33.jpg"
   },
   {
     "id": 1398,
@@ -4790,7 +5188,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "2 asymmetrical holes",
     "option_d": "3 random perforations",
     "correct_option": "A",
-    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes."
+    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes.",
+    "question_image_url": "/images/non-verbal/nv-34.jpg"
   },
   {
     "id": 1399,
@@ -4802,7 +5201,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "2 asymmetrical holes",
     "option_d": "3 random perforations",
     "correct_option": "B",
-    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes."
+    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes.",
+    "question_image_url": "/images/non-verbal/nv-35.jpg"
   },
   {
     "id": 1400,
@@ -4814,7 +5214,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "4 Symmetrically distributed circular holes when unfolded",
     "option_d": "3 random perforations",
     "correct_option": "C",
-    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes."
+    "explanation": "Unfolding doubles the punch count across each fold line: 1 punch in a 4-layer fold reveals 4 symmetrically placed holes.",
+    "question_image_url": "/images/non-verbal/nv-36.jpg"
   },
   {
     "id": 1401,
@@ -4826,7 +5227,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Option X (Square and Triangle do not intersect)",
     "option_d": "Option Y (Circle is entirely outside the Square)",
     "correct_option": "B",
-    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries."
+    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries.",
+    "question_image_url": "/images/non-verbal/nv-37.jpg"
   },
   {
     "id": 1402,
@@ -4838,7 +5240,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Figure Option 3 (Satisfies region: common to Circle, Square, and Triangle simultaneously)",
     "option_d": "Option Y (Circle is entirely outside the Square)",
     "correct_option": "C",
-    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries."
+    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries.",
+    "question_image_url": "/images/non-verbal/nv-38.jpg"
   },
   {
     "id": 1403,
@@ -4850,7 +5253,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Option Y (Circle is entirely outside the Square)",
     "option_d": "Figure Option 4 (Satisfies region: inside Square only (excluding Circle and Triangle))",
     "correct_option": "D",
-    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries."
+    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries.",
+    "question_image_url": "/images/non-verbal/nv-39.jpg"
   },
   {
     "id": 1404,
@@ -4862,7 +5266,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Option X (Square and Triangle do not intersect)",
     "option_d": "Option Y (Circle is entirely outside the Square)",
     "correct_option": "A",
-    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries."
+    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries.",
+    "question_image_url": "/images/non-verbal/nv-40.jpg"
   },
   {
     "id": 1405,
@@ -4874,7 +5279,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Option X (Square and Triangle do not intersect)",
     "option_d": "Option Y (Circle is entirely outside the Square)",
     "correct_option": "B",
-    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries."
+    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries.",
+    "question_image_url": "/images/non-verbal/nv-41.jpg"
   },
   {
     "id": 1406,
@@ -4886,7 +5292,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Figure Option 3 (Satisfies region: inside Square only (excluding Circle and Triangle))",
     "option_d": "Option Y (Circle is entirely outside the Square)",
     "correct_option": "C",
-    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries."
+    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries.",
+    "question_image_url": "/images/non-verbal/nv-42.jpg"
   },
   {
     "id": 1407,
@@ -4898,7 +5305,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Option Y (Circle is entirely outside the Square)",
     "option_d": "Figure Option 4 (Satisfies region: common to both Triangle and Circle only (excluding Square))",
     "correct_option": "D",
-    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries."
+    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries.",
+    "question_image_url": "/images/non-verbal/nv-43.jpg"
   },
   {
     "id": 1408,
@@ -4910,7 +5318,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Option X (Square and Triangle do not intersect)",
     "option_d": "Option Y (Circle is entirely outside the Square)",
     "correct_option": "A",
-    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries."
+    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries.",
+    "question_image_url": "/images/non-verbal/nv-44.jpg"
   },
   {
     "id": 1409,
@@ -4922,7 +5331,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Option X (Square and Triangle do not intersect)",
     "option_d": "Option Y (Circle is entirely outside the Square)",
     "correct_option": "B",
-    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries."
+    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries.",
+    "question_image_url": "/images/non-verbal/nv-45.jpg"
   },
   {
     "id": 1410,
@@ -4934,7 +5344,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Figure Option 3 (Satisfies region: common to both Triangle and Circle only (excluding Square))",
     "option_d": "Option Y (Circle is entirely outside the Square)",
     "correct_option": "C",
-    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries."
+    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries.",
+    "question_image_url": "/images/non-verbal/nv-46.jpg"
   },
   {
     "id": 1411,
@@ -4946,7 +5357,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Option Y (Circle is entirely outside the Square)",
     "option_d": "Figure Option 4 (Satisfies region: common to Circle, Square, and Triangle simultaneously)",
     "correct_option": "D",
-    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries."
+    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries.",
+    "question_image_url": "/images/non-verbal/nv-47.jpg"
   },
   {
     "id": 1412,
@@ -4958,7 +5370,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Option X (Square and Triangle do not intersect)",
     "option_d": "Option Y (Circle is entirely outside the Square)",
     "correct_option": "A",
-    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries."
+    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries.",
+    "question_image_url": "/images/non-verbal/nv-48.jpg"
   },
   {
     "id": 1413,
@@ -4970,7 +5383,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Option X (Square and Triangle do not intersect)",
     "option_d": "Option Y (Circle is entirely outside the Square)",
     "correct_option": "B",
-    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries."
+    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries.",
+    "question_image_url": "/images/non-verbal/nv-49.jpg"
   },
   {
     "id": 1414,
@@ -4982,7 +5396,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Figure Option 3 (Satisfies region: common to Circle, Square, and Triangle simultaneously)",
     "option_d": "Option Y (Circle is entirely outside the Square)",
     "correct_option": "C",
-    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries."
+    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries.",
+    "question_image_url": "/images/non-verbal/nv-50.jpg"
   },
   {
     "id": 1415,
@@ -4994,7 +5409,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Option Y (Circle is entirely outside the Square)",
     "option_d": "Figure Option 4 (Satisfies region: inside Square only (excluding Circle and Triangle))",
     "correct_option": "D",
-    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries."
+    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries.",
+    "question_image_url": "/images/non-verbal/nv-51.jpg"
   },
   {
     "id": 1416,
@@ -5006,7 +5422,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Option X (Square and Triangle do not intersect)",
     "option_d": "Option Y (Circle is entirely outside the Square)",
     "correct_option": "A",
-    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries."
+    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries.",
+    "question_image_url": "/images/non-verbal/nv-52.jpg"
   },
   {
     "id": 1417,
@@ -5018,7 +5435,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Option X (Square and Triangle do not intersect)",
     "option_d": "Option Y (Circle is entirely outside the Square)",
     "correct_option": "B",
-    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries."
+    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries.",
+    "question_image_url": "/images/non-verbal/nv-1.jpg"
   },
   {
     "id": 1418,
@@ -5030,7 +5448,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Figure Option 3 (Satisfies region: inside Square only (excluding Circle and Triangle))",
     "option_d": "Option Y (Circle is entirely outside the Square)",
     "correct_option": "C",
-    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries."
+    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries.",
+    "question_image_url": "/images/non-verbal/nv-2.jpg"
   },
   {
     "id": 1419,
@@ -5042,7 +5461,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Option Y (Circle is entirely outside the Square)",
     "option_d": "Figure Option 4 (Satisfies region: common to both Triangle and Circle only (excluding Square))",
     "correct_option": "D",
-    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries."
+    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries.",
+    "question_image_url": "/images/non-verbal/nv-3.jpg"
   },
   {
     "id": 1420,
@@ -5054,7 +5474,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Option X (Square and Triangle do not intersect)",
     "option_d": "Option Y (Circle is entirely outside the Square)",
     "correct_option": "A",
-    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries."
+    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries.",
+    "question_image_url": "/images/non-verbal/nv-4.jpg"
   },
   {
     "id": 1421,
@@ -5066,7 +5487,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Option X (Square and Triangle do not intersect)",
     "option_d": "Option Y (Circle is entirely outside the Square)",
     "correct_option": "B",
-    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries."
+    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries.",
+    "question_image_url": "/images/non-verbal/nv-5.jpg"
   },
   {
     "id": 1422,
@@ -5078,7 +5500,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Figure Option 3 (Satisfies region: common to both Triangle and Circle only (excluding Square))",
     "option_d": "Option Y (Circle is entirely outside the Square)",
     "correct_option": "C",
-    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries."
+    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries.",
+    "question_image_url": "/images/non-verbal/nv-6.jpg"
   },
   {
     "id": 1423,
@@ -5090,7 +5513,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Option Y (Circle is entirely outside the Square)",
     "option_d": "Figure Option 4 (Satisfies region: common to Circle, Square, and Triangle simultaneously)",
     "correct_option": "D",
-    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries."
+    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries.",
+    "question_image_url": "/images/non-verbal/nv-7.jpg"
   },
   {
     "id": 1424,
@@ -5102,7 +5526,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Option X (Square and Triangle do not intersect)",
     "option_d": "Option Y (Circle is entirely outside the Square)",
     "correct_option": "A",
-    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries."
+    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries.",
+    "question_image_url": "/images/non-verbal/nv-8.jpg"
   },
   {
     "id": 1425,
@@ -5114,7 +5539,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Option X (Square and Triangle do not intersect)",
     "option_d": "Option Y (Circle is entirely outside the Square)",
     "correct_option": "B",
-    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries."
+    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries.",
+    "question_image_url": "/images/non-verbal/nv-9.jpg"
   },
   {
     "id": 1426,
@@ -5126,7 +5552,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Figure Option 3 (Satisfies region: common to Circle, Square, and Triangle simultaneously)",
     "option_d": "Option Y (Circle is entirely outside the Square)",
     "correct_option": "C",
-    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries."
+    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries.",
+    "question_image_url": "/images/non-verbal/nv-10.jpg"
   },
   {
     "id": 1427,
@@ -5138,7 +5565,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Option Y (Circle is entirely outside the Square)",
     "option_d": "Figure Option 4 (Satisfies region: inside Square only (excluding Circle and Triangle))",
     "correct_option": "D",
-    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries."
+    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries.",
+    "question_image_url": "/images/non-verbal/nv-11.jpg"
   },
   {
     "id": 1428,
@@ -5150,7 +5578,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Option X (Square and Triangle do not intersect)",
     "option_d": "Option Y (Circle is entirely outside the Square)",
     "correct_option": "A",
-    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries."
+    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries.",
+    "question_image_url": "/images/non-verbal/nv-12.jpg"
   },
   {
     "id": 1429,
@@ -5162,7 +5591,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Option X (Square and Triangle do not intersect)",
     "option_d": "Option Y (Circle is entirely outside the Square)",
     "correct_option": "B",
-    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries."
+    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries.",
+    "question_image_url": "/images/non-verbal/nv-13.jpg"
   },
   {
     "id": 1430,
@@ -5174,7 +5604,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Figure Option 3 (Satisfies region: inside Square only (excluding Circle and Triangle))",
     "option_d": "Option Y (Circle is entirely outside the Square)",
     "correct_option": "C",
-    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries."
+    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries.",
+    "question_image_url": "/images/non-verbal/nv-14.jpg"
   },
   {
     "id": 1431,
@@ -5186,7 +5617,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Option Y (Circle is entirely outside the Square)",
     "option_d": "Figure Option 4 (Satisfies region: common to both Triangle and Circle only (excluding Square))",
     "correct_option": "D",
-    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries."
+    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries.",
+    "question_image_url": "/images/non-verbal/nv-15.jpg"
   },
   {
     "id": 1432,
@@ -5198,7 +5630,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Option X (Square and Triangle do not intersect)",
     "option_d": "Option Y (Circle is entirely outside the Square)",
     "correct_option": "A",
-    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries."
+    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries.",
+    "question_image_url": "/images/non-verbal/nv-16.jpg"
   },
   {
     "id": 1433,
@@ -5210,7 +5643,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Option X (Square and Triangle do not intersect)",
     "option_d": "Option Y (Circle is entirely outside the Square)",
     "correct_option": "B",
-    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries."
+    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries.",
+    "question_image_url": "/images/non-verbal/nv-17.jpg"
   },
   {
     "id": 1434,
@@ -5222,7 +5656,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Figure Option 3 (Satisfies region: common to both Triangle and Circle only (excluding Square))",
     "option_d": "Option Y (Circle is entirely outside the Square)",
     "correct_option": "C",
-    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries."
+    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries.",
+    "question_image_url": "/images/non-verbal/nv-18.jpg"
   },
   {
     "id": 1435,
@@ -5234,7 +5669,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Option Y (Circle is entirely outside the Square)",
     "option_d": "Figure Option 4 (Satisfies region: common to Circle, Square, and Triangle simultaneously)",
     "correct_option": "D",
-    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries."
+    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries.",
+    "question_image_url": "/images/non-verbal/nv-19.jpg"
   },
   {
     "id": 1436,
@@ -5246,7 +5682,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Option X (Square and Triangle do not intersect)",
     "option_d": "Option Y (Circle is entirely outside the Square)",
     "correct_option": "A",
-    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries."
+    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries.",
+    "question_image_url": "/images/non-verbal/nv-20.jpg"
   },
   {
     "id": 1437,
@@ -5258,7 +5695,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Option X (Square and Triangle do not intersect)",
     "option_d": "Option Y (Circle is entirely outside the Square)",
     "correct_option": "B",
-    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries."
+    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries.",
+    "question_image_url": "/images/non-verbal/nv-21.jpg"
   },
   {
     "id": 1438,
@@ -5270,7 +5708,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Figure Option 3 (Satisfies region: common to Circle, Square, and Triangle simultaneously)",
     "option_d": "Option Y (Circle is entirely outside the Square)",
     "correct_option": "C",
-    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries."
+    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries.",
+    "question_image_url": "/images/non-verbal/nv-22.jpg"
   },
   {
     "id": 1439,
@@ -5282,7 +5721,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Option Y (Circle is entirely outside the Square)",
     "option_d": "Figure Option 4 (Satisfies region: inside Square only (excluding Circle and Triangle))",
     "correct_option": "D",
-    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries."
+    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries.",
+    "question_image_url": "/images/non-verbal/nv-23.jpg"
   },
   {
     "id": 1440,
@@ -5294,7 +5734,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Option X (Square and Triangle do not intersect)",
     "option_d": "Option Y (Circle is entirely outside the Square)",
     "correct_option": "A",
-    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries."
+    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries.",
+    "question_image_url": "/images/non-verbal/nv-24.jpg"
   },
   {
     "id": 1441,
@@ -5306,7 +5747,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Option X (Square and Triangle do not intersect)",
     "option_d": "Option Y (Circle is entirely outside the Square)",
     "correct_option": "B",
-    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries."
+    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries.",
+    "question_image_url": "/images/non-verbal/nv-25.jpg"
   },
   {
     "id": 1442,
@@ -5318,7 +5760,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Figure Option 3 (Satisfies region: inside Square only (excluding Circle and Triangle))",
     "option_d": "Option Y (Circle is entirely outside the Square)",
     "correct_option": "C",
-    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries."
+    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries.",
+    "question_image_url": "/images/non-verbal/nv-26.jpg"
   },
   {
     "id": 1443,
@@ -5330,7 +5773,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Option Y (Circle is entirely outside the Square)",
     "option_d": "Figure Option 4 (Satisfies region: common to both Triangle and Circle only (excluding Square))",
     "correct_option": "D",
-    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries."
+    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries.",
+    "question_image_url": "/images/non-verbal/nv-27.jpg"
   },
   {
     "id": 1444,
@@ -5342,7 +5786,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Option X (Square and Triangle do not intersect)",
     "option_d": "Option Y (Circle is entirely outside the Square)",
     "correct_option": "A",
-    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries."
+    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries.",
+    "question_image_url": "/images/non-verbal/nv-28.jpg"
   },
   {
     "id": 1445,
@@ -5354,7 +5799,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Option X (Square and Triangle do not intersect)",
     "option_d": "Option Y (Circle is entirely outside the Square)",
     "correct_option": "B",
-    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries."
+    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries.",
+    "question_image_url": "/images/non-verbal/nv-29.jpg"
   },
   {
     "id": 1446,
@@ -5366,7 +5812,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Figure Option 3 (Satisfies region: common to both Triangle and Circle only (excluding Square))",
     "option_d": "Option Y (Circle is entirely outside the Square)",
     "correct_option": "C",
-    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries."
+    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries.",
+    "question_image_url": "/images/non-verbal/nv-30.jpg"
   },
   {
     "id": 1447,
@@ -5378,7 +5825,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Option Y (Circle is entirely outside the Square)",
     "option_d": "Figure Option 4 (Satisfies region: common to Circle, Square, and Triangle simultaneously)",
     "correct_option": "D",
-    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries."
+    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries.",
+    "question_image_url": "/images/non-verbal/nv-31.jpg"
   },
   {
     "id": 1448,
@@ -5390,7 +5838,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Option X (Square and Triangle do not intersect)",
     "option_d": "Option Y (Circle is entirely outside the Square)",
     "correct_option": "A",
-    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries."
+    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries.",
+    "question_image_url": "/images/non-verbal/nv-32.jpg"
   },
   {
     "id": 1449,
@@ -5402,7 +5851,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Option X (Square and Triangle do not intersect)",
     "option_d": "Option Y (Circle is entirely outside the Square)",
     "correct_option": "B",
-    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries."
+    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries.",
+    "question_image_url": "/images/non-verbal/nv-33.jpg"
   },
   {
     "id": 1450,
@@ -5414,7 +5864,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Figure Option 3 (Satisfies region: common to Circle, Square, and Triangle simultaneously)",
     "option_d": "Option Y (Circle is entirely outside the Square)",
     "correct_option": "C",
-    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries."
+    "explanation": "In Dot Situation problems, the option must offer an overlapping compartment that shares the exact same intersecting geometric boundaries.",
+    "question_image_url": "/images/non-verbal/nv-34.jpg"
   },
   {
     "id": 1451,
@@ -5426,7 +5877,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Circle",
     "option_d": "Cylinder",
     "correct_option": "B",
-    "explanation": "Combining the given component pieces without overlap reconstructs One solid regular Hexagon."
+    "explanation": "Combining the given component pieces without overlap reconstructs One solid regular Hexagon.",
+    "question_image_url": "/images/non-verbal/nv-35.jpg"
   },
   {
     "id": 1452,
@@ -5438,7 +5890,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "One complete solid Square",
     "option_d": "Cylinder",
     "correct_option": "C",
-    "explanation": "Combining the given component pieces without overlap reconstructs One complete solid Square."
+    "explanation": "Combining the given component pieces without overlap reconstructs One complete solid Square.",
+    "question_image_url": "/images/non-verbal/nv-36.jpg"
   },
   {
     "id": 1453,
@@ -5450,7 +5903,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Cylinder",
     "option_d": "One solid regular Hexagon",
     "correct_option": "D",
-    "explanation": "Combining the given component pieces without overlap reconstructs One solid regular Hexagon."
+    "explanation": "Combining the given component pieces without overlap reconstructs One solid regular Hexagon.",
+    "question_image_url": "/images/non-verbal/nv-37.jpg"
   },
   {
     "id": 1454,
@@ -5462,7 +5916,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Circle",
     "option_d": "Cylinder",
     "correct_option": "A",
-    "explanation": "Combining the given component pieces without overlap reconstructs One complete solid Square."
+    "explanation": "Combining the given component pieces without overlap reconstructs One complete solid Square.",
+    "question_image_url": "/images/non-verbal/nv-38.jpg"
   },
   {
     "id": 1455,
@@ -5474,7 +5929,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Circle",
     "option_d": "Cylinder",
     "correct_option": "B",
-    "explanation": "Combining the given component pieces without overlap reconstructs One solid regular Hexagon."
+    "explanation": "Combining the given component pieces without overlap reconstructs One solid regular Hexagon.",
+    "question_image_url": "/images/non-verbal/nv-39.jpg"
   },
   {
     "id": 1456,
@@ -5486,7 +5942,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "One complete solid Square",
     "option_d": "Cylinder",
     "correct_option": "C",
-    "explanation": "Combining the given component pieces without overlap reconstructs One complete solid Square."
+    "explanation": "Combining the given component pieces without overlap reconstructs One complete solid Square.",
+    "question_image_url": "/images/non-verbal/nv-40.jpg"
   },
   {
     "id": 1457,
@@ -5498,7 +5955,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Cylinder",
     "option_d": "One solid regular Hexagon",
     "correct_option": "D",
-    "explanation": "Combining the given component pieces without overlap reconstructs One solid regular Hexagon."
+    "explanation": "Combining the given component pieces without overlap reconstructs One solid regular Hexagon.",
+    "question_image_url": "/images/non-verbal/nv-41.jpg"
   },
   {
     "id": 1458,
@@ -5510,7 +5968,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Circle",
     "option_d": "Cylinder",
     "correct_option": "A",
-    "explanation": "Combining the given component pieces without overlap reconstructs One complete solid Square."
+    "explanation": "Combining the given component pieces without overlap reconstructs One complete solid Square.",
+    "question_image_url": "/images/non-verbal/nv-42.jpg"
   },
   {
     "id": 1459,
@@ -5522,7 +5981,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Circle",
     "option_d": "Cylinder",
     "correct_option": "B",
-    "explanation": "Combining the given component pieces without overlap reconstructs One solid regular Hexagon."
+    "explanation": "Combining the given component pieces without overlap reconstructs One solid regular Hexagon.",
+    "question_image_url": "/images/non-verbal/nv-43.jpg"
   },
   {
     "id": 1460,
@@ -5534,7 +5994,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "One complete solid Square",
     "option_d": "Cylinder",
     "correct_option": "C",
-    "explanation": "Combining the given component pieces without overlap reconstructs One complete solid Square."
+    "explanation": "Combining the given component pieces without overlap reconstructs One complete solid Square.",
+    "question_image_url": "/images/non-verbal/nv-44.jpg"
   },
   {
     "id": 1461,
@@ -5546,7 +6007,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Cylinder",
     "option_d": "One solid regular Hexagon",
     "correct_option": "D",
-    "explanation": "Combining the given component pieces without overlap reconstructs One solid regular Hexagon."
+    "explanation": "Combining the given component pieces without overlap reconstructs One solid regular Hexagon.",
+    "question_image_url": "/images/non-verbal/nv-45.jpg"
   },
   {
     "id": 1462,
@@ -5558,7 +6020,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Circle",
     "option_d": "Cylinder",
     "correct_option": "A",
-    "explanation": "Combining the given component pieces without overlap reconstructs One complete solid Square."
+    "explanation": "Combining the given component pieces without overlap reconstructs One complete solid Square.",
+    "question_image_url": "/images/non-verbal/nv-46.jpg"
   },
   {
     "id": 1463,
@@ -5570,7 +6033,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Circle",
     "option_d": "Cylinder",
     "correct_option": "B",
-    "explanation": "Combining the given component pieces without overlap reconstructs One solid regular Hexagon."
+    "explanation": "Combining the given component pieces without overlap reconstructs One solid regular Hexagon.",
+    "question_image_url": "/images/non-verbal/nv-47.jpg"
   },
   {
     "id": 1464,
@@ -5582,7 +6046,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "One complete solid Square",
     "option_d": "Cylinder",
     "correct_option": "C",
-    "explanation": "Combining the given component pieces without overlap reconstructs One complete solid Square."
+    "explanation": "Combining the given component pieces without overlap reconstructs One complete solid Square.",
+    "question_image_url": "/images/non-verbal/nv-48.jpg"
   },
   {
     "id": 1465,
@@ -5594,7 +6059,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Cylinder",
     "option_d": "One solid regular Hexagon",
     "correct_option": "D",
-    "explanation": "Combining the given component pieces without overlap reconstructs One solid regular Hexagon."
+    "explanation": "Combining the given component pieces without overlap reconstructs One solid regular Hexagon.",
+    "question_image_url": "/images/non-verbal/nv-49.jpg"
   },
   {
     "id": 1466,
@@ -5606,7 +6072,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Circle",
     "option_d": "Cylinder",
     "correct_option": "A",
-    "explanation": "Combining the given component pieces without overlap reconstructs One complete solid Square."
+    "explanation": "Combining the given component pieces without overlap reconstructs One complete solid Square.",
+    "question_image_url": "/images/non-verbal/nv-50.jpg"
   },
   {
     "id": 1467,
@@ -5618,7 +6085,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Circle",
     "option_d": "Cylinder",
     "correct_option": "B",
-    "explanation": "Combining the given component pieces without overlap reconstructs One solid regular Hexagon."
+    "explanation": "Combining the given component pieces without overlap reconstructs One solid regular Hexagon.",
+    "question_image_url": "/images/non-verbal/nv-51.jpg"
   },
   {
     "id": 1468,
@@ -5630,7 +6098,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "One complete solid Square",
     "option_d": "Cylinder",
     "correct_option": "C",
-    "explanation": "Combining the given component pieces without overlap reconstructs One complete solid Square."
+    "explanation": "Combining the given component pieces without overlap reconstructs One complete solid Square.",
+    "question_image_url": "/images/non-verbal/nv-52.jpg"
   },
   {
     "id": 1469,
@@ -5642,7 +6111,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Cylinder",
     "option_d": "One solid regular Hexagon",
     "correct_option": "D",
-    "explanation": "Combining the given component pieces without overlap reconstructs One solid regular Hexagon."
+    "explanation": "Combining the given component pieces without overlap reconstructs One solid regular Hexagon.",
+    "question_image_url": "/images/non-verbal/nv-1.jpg"
   },
   {
     "id": 1470,
@@ -5654,7 +6124,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Circle",
     "option_d": "Cylinder",
     "correct_option": "A",
-    "explanation": "Combining the given component pieces without overlap reconstructs One complete solid Square."
+    "explanation": "Combining the given component pieces without overlap reconstructs One complete solid Square.",
+    "question_image_url": "/images/non-verbal/nv-2.jpg"
   },
   {
     "id": 1471,
@@ -5666,7 +6137,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Circle",
     "option_d": "Cylinder",
     "correct_option": "B",
-    "explanation": "Combining the given component pieces without overlap reconstructs One solid regular Hexagon."
+    "explanation": "Combining the given component pieces without overlap reconstructs One solid regular Hexagon.",
+    "question_image_url": "/images/non-verbal/nv-3.jpg"
   },
   {
     "id": 1472,
@@ -5678,7 +6150,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "One complete solid Square",
     "option_d": "Cylinder",
     "correct_option": "C",
-    "explanation": "Combining the given component pieces without overlap reconstructs One complete solid Square."
+    "explanation": "Combining the given component pieces without overlap reconstructs One complete solid Square.",
+    "question_image_url": "/images/non-verbal/nv-4.jpg"
   },
   {
     "id": 1473,
@@ -5690,7 +6163,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Cylinder",
     "option_d": "One solid regular Hexagon",
     "correct_option": "D",
-    "explanation": "Combining the given component pieces without overlap reconstructs One solid regular Hexagon."
+    "explanation": "Combining the given component pieces without overlap reconstructs One solid regular Hexagon.",
+    "question_image_url": "/images/non-verbal/nv-5.jpg"
   },
   {
     "id": 1474,
@@ -5702,7 +6176,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Circle",
     "option_d": "Cylinder",
     "correct_option": "A",
-    "explanation": "Combining the given component pieces without overlap reconstructs One complete solid Square."
+    "explanation": "Combining the given component pieces without overlap reconstructs One complete solid Square.",
+    "question_image_url": "/images/non-verbal/nv-6.jpg"
   },
   {
     "id": 1475,
@@ -5714,7 +6189,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Circle",
     "option_d": "Cylinder",
     "correct_option": "B",
-    "explanation": "Combining the given component pieces without overlap reconstructs One solid regular Hexagon."
+    "explanation": "Combining the given component pieces without overlap reconstructs One solid regular Hexagon.",
+    "question_image_url": "/images/non-verbal/nv-7.jpg"
   },
   {
     "id": 1476,
@@ -5726,7 +6202,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "One complete solid Square",
     "option_d": "Cylinder",
     "correct_option": "C",
-    "explanation": "Combining the given component pieces without overlap reconstructs One complete solid Square."
+    "explanation": "Combining the given component pieces without overlap reconstructs One complete solid Square.",
+    "question_image_url": "/images/non-verbal/nv-8.jpg"
   },
   {
     "id": 1477,
@@ -5738,7 +6215,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Cylinder",
     "option_d": "One solid regular Hexagon",
     "correct_option": "D",
-    "explanation": "Combining the given component pieces without overlap reconstructs One solid regular Hexagon."
+    "explanation": "Combining the given component pieces without overlap reconstructs One solid regular Hexagon.",
+    "question_image_url": "/images/non-verbal/nv-9.jpg"
   },
   {
     "id": 1478,
@@ -5750,7 +6228,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Circle",
     "option_d": "Cylinder",
     "correct_option": "A",
-    "explanation": "Combining the given component pieces without overlap reconstructs One complete solid Square."
+    "explanation": "Combining the given component pieces without overlap reconstructs One complete solid Square.",
+    "question_image_url": "/images/non-verbal/nv-10.jpg"
   },
   {
     "id": 1479,
@@ -5762,7 +6241,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Circle",
     "option_d": "Cylinder",
     "correct_option": "B",
-    "explanation": "Combining the given component pieces without overlap reconstructs One solid regular Hexagon."
+    "explanation": "Combining the given component pieces without overlap reconstructs One solid regular Hexagon.",
+    "question_image_url": "/images/non-verbal/nv-11.jpg"
   },
   {
     "id": 1480,
@@ -5774,7 +6254,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "One complete solid Square",
     "option_d": "Cylinder",
     "correct_option": "C",
-    "explanation": "Combining the given component pieces without overlap reconstructs One complete solid Square."
+    "explanation": "Combining the given component pieces without overlap reconstructs One complete solid Square.",
+    "question_image_url": "/images/non-verbal/nv-12.jpg"
   },
   {
     "id": 1481,
@@ -5786,7 +6267,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Cylinder",
     "option_d": "One solid regular Hexagon",
     "correct_option": "D",
-    "explanation": "Combining the given component pieces without overlap reconstructs One solid regular Hexagon."
+    "explanation": "Combining the given component pieces without overlap reconstructs One solid regular Hexagon.",
+    "question_image_url": "/images/non-verbal/nv-13.jpg"
   },
   {
     "id": 1482,
@@ -5798,7 +6280,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Circle",
     "option_d": "Cylinder",
     "correct_option": "A",
-    "explanation": "Combining the given component pieces without overlap reconstructs One complete solid Square."
+    "explanation": "Combining the given component pieces without overlap reconstructs One complete solid Square.",
+    "question_image_url": "/images/non-verbal/nv-14.jpg"
   },
   {
     "id": 1483,
@@ -5810,7 +6293,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Circle",
     "option_d": "Cylinder",
     "correct_option": "B",
-    "explanation": "Combining the given component pieces without overlap reconstructs One solid regular Hexagon."
+    "explanation": "Combining the given component pieces without overlap reconstructs One solid regular Hexagon.",
+    "question_image_url": "/images/non-verbal/nv-15.jpg"
   },
   {
     "id": 1484,
@@ -5822,7 +6306,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "One complete solid Square",
     "option_d": "Cylinder",
     "correct_option": "C",
-    "explanation": "Combining the given component pieces without overlap reconstructs One complete solid Square."
+    "explanation": "Combining the given component pieces without overlap reconstructs One complete solid Square.",
+    "question_image_url": "/images/non-verbal/nv-16.jpg"
   },
   {
     "id": 1485,
@@ -5834,7 +6319,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Cylinder",
     "option_d": "One solid regular Hexagon",
     "correct_option": "D",
-    "explanation": "Combining the given component pieces without overlap reconstructs One solid regular Hexagon."
+    "explanation": "Combining the given component pieces without overlap reconstructs One solid regular Hexagon.",
+    "question_image_url": "/images/non-verbal/nv-17.jpg"
   },
   {
     "id": 1486,
@@ -5846,7 +6332,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Circle",
     "option_d": "Cylinder",
     "correct_option": "A",
-    "explanation": "Combining the given component pieces without overlap reconstructs One complete solid Square."
+    "explanation": "Combining the given component pieces without overlap reconstructs One complete solid Square.",
+    "question_image_url": "/images/non-verbal/nv-18.jpg"
   },
   {
     "id": 1487,
@@ -5858,7 +6345,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Circle",
     "option_d": "Cylinder",
     "correct_option": "B",
-    "explanation": "Combining the given component pieces without overlap reconstructs One solid regular Hexagon."
+    "explanation": "Combining the given component pieces without overlap reconstructs One solid regular Hexagon.",
+    "question_image_url": "/images/non-verbal/nv-19.jpg"
   },
   {
     "id": 1488,
@@ -5870,7 +6358,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "One complete solid Square",
     "option_d": "Cylinder",
     "correct_option": "C",
-    "explanation": "Combining the given component pieces without overlap reconstructs One complete solid Square."
+    "explanation": "Combining the given component pieces without overlap reconstructs One complete solid Square.",
+    "question_image_url": "/images/non-verbal/nv-20.jpg"
   },
   {
     "id": 1489,
@@ -5882,7 +6371,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Cylinder",
     "option_d": "One solid regular Hexagon",
     "correct_option": "D",
-    "explanation": "Combining the given component pieces without overlap reconstructs One solid regular Hexagon."
+    "explanation": "Combining the given component pieces without overlap reconstructs One solid regular Hexagon.",
+    "question_image_url": "/images/non-verbal/nv-21.jpg"
   },
   {
     "id": 1490,
@@ -5894,7 +6384,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Circle",
     "option_d": "Cylinder",
     "correct_option": "A",
-    "explanation": "Combining the given component pieces without overlap reconstructs One complete solid Square."
+    "explanation": "Combining the given component pieces without overlap reconstructs One complete solid Square.",
+    "question_image_url": "/images/non-verbal/nv-22.jpg"
   },
   {
     "id": 1491,
@@ -5906,7 +6397,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Circle",
     "option_d": "Cylinder",
     "correct_option": "B",
-    "explanation": "Combining the given component pieces without overlap reconstructs One solid regular Hexagon."
+    "explanation": "Combining the given component pieces without overlap reconstructs One solid regular Hexagon.",
+    "question_image_url": "/images/non-verbal/nv-23.jpg"
   },
   {
     "id": 1492,
@@ -5918,7 +6410,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "One complete solid Square",
     "option_d": "Cylinder",
     "correct_option": "C",
-    "explanation": "Combining the given component pieces without overlap reconstructs One complete solid Square."
+    "explanation": "Combining the given component pieces without overlap reconstructs One complete solid Square.",
+    "question_image_url": "/images/non-verbal/nv-24.jpg"
   },
   {
     "id": 1493,
@@ -5930,7 +6423,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Cylinder",
     "option_d": "One solid regular Hexagon",
     "correct_option": "D",
-    "explanation": "Combining the given component pieces without overlap reconstructs One solid regular Hexagon."
+    "explanation": "Combining the given component pieces without overlap reconstructs One solid regular Hexagon.",
+    "question_image_url": "/images/non-verbal/nv-25.jpg"
   },
   {
     "id": 1494,
@@ -5942,7 +6436,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Circle",
     "option_d": "Cylinder",
     "correct_option": "A",
-    "explanation": "Combining the given component pieces without overlap reconstructs One complete solid Square."
+    "explanation": "Combining the given component pieces without overlap reconstructs One complete solid Square.",
+    "question_image_url": "/images/non-verbal/nv-26.jpg"
   },
   {
     "id": 1495,
@@ -5954,7 +6449,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Circle",
     "option_d": "Cylinder",
     "correct_option": "B",
-    "explanation": "Combining the given component pieces without overlap reconstructs One solid regular Hexagon."
+    "explanation": "Combining the given component pieces without overlap reconstructs One solid regular Hexagon.",
+    "question_image_url": "/images/non-verbal/nv-27.jpg"
   },
   {
     "id": 1496,
@@ -5966,7 +6462,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "One complete solid Square",
     "option_d": "Cylinder",
     "correct_option": "C",
-    "explanation": "Combining the given component pieces without overlap reconstructs One complete solid Square."
+    "explanation": "Combining the given component pieces without overlap reconstructs One complete solid Square.",
+    "question_image_url": "/images/non-verbal/nv-28.jpg"
   },
   {
     "id": 1497,
@@ -5978,7 +6475,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Cylinder",
     "option_d": "One solid regular Hexagon",
     "correct_option": "D",
-    "explanation": "Combining the given component pieces without overlap reconstructs One solid regular Hexagon."
+    "explanation": "Combining the given component pieces without overlap reconstructs One solid regular Hexagon.",
+    "question_image_url": "/images/non-verbal/nv-29.jpg"
   },
   {
     "id": 1498,
@@ -5990,7 +6488,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Circle",
     "option_d": "Cylinder",
     "correct_option": "A",
-    "explanation": "Combining the given component pieces without overlap reconstructs One complete solid Square."
+    "explanation": "Combining the given component pieces without overlap reconstructs One complete solid Square.",
+    "question_image_url": "/images/non-verbal/nv-30.jpg"
   },
   {
     "id": 1499,
@@ -6002,7 +6501,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "Circle",
     "option_d": "Cylinder",
     "correct_option": "B",
-    "explanation": "Combining the given component pieces without overlap reconstructs One solid regular Hexagon."
+    "explanation": "Combining the given component pieces without overlap reconstructs One solid regular Hexagon.",
+    "question_image_url": "/images/non-verbal/nv-31.jpg"
   },
   {
     "id": 1500,
@@ -6014,7 +6514,8 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = [
     "option_c": "One complete solid Square",
     "option_d": "Cylinder",
     "correct_option": "C",
-    "explanation": "Combining the given component pieces without overlap reconstructs One complete solid Square."
+    "explanation": "Combining the given component pieces without overlap reconstructs One complete solid Square.",
+    "question_image_url": "/images/non-verbal/nv-32.jpg"
   }
 ];
 
@@ -6041,6 +6542,7 @@ export function getRandomNonVerbalQuizQuestions(): QuizQuestion[] {
         option_d: q.option_d,
         correct_option: q.correct_option,
         explanation: q.explanation,
+        question_image_url: q.question_image_url,
         order_index: orderIndex++
       });
     });

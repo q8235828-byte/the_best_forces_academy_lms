@@ -325,6 +325,19 @@ export default function NonVerbalPdfGuidePage() {
                   {q.question_text}
                 </p>
 
+                {/* Question Diagram / Image */}
+                {q.question_image_url && (
+                  <div className="py-2 flex justify-center bg-gray-50 rounded-xl border border-gray-100 p-2 print:border-gray-300 print:bg-white">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={q.question_image_url}
+                      alt={`Question Diagram #${q.id}`}
+                      className="max-h-60 sm:max-h-64 object-contain rounded-lg shadow-sm print:max-h-48"
+                      loading="lazy"
+                    />
+                  </div>
+                )}
+
                 {/* Options 2x2 Grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
                   {(['A', 'B', 'C', 'D'] as const).map((optKey) => {
@@ -345,7 +358,7 @@ export default function NonVerbalPdfGuidePage() {
                         }`}>
                           {optKey}
                         </span>
-                        <span className="truncate">{optVal}</span>
+                        <span className="leading-snug break-words">{optVal}</span>
                         {isCorrect && (
                           <CheckCircle className="w-3.5 h-3.5 text-emerald-600 ml-auto shrink-0" />
                         )}

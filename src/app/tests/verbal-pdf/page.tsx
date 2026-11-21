@@ -346,7 +346,7 @@ export default function VerbalPdfGuidePage() {
                         }`}>
                           {optKey}
                         </span>
-                        <span className="truncate">{optVal}</span>
+                        <span className="leading-snug break-words">{optVal}</span>
                         {isCorrect && (
                           <CheckCircle className="w-3.5 h-3.5 text-emerald-600 ml-auto shrink-0" />
                         )}

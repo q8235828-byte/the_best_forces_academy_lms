@@ -182,12 +182,12 @@ export default function QuizEngine({ quiz, questions, onAttemptComplete }: QuizE
               </h3>
 
               {currentQ.question_image_url && (
-                <div className="p-4 bg-gray-50 rounded-xl border border-gray-200 flex justify-center">
+                <div className="p-3 sm:p-5 bg-white rounded-2xl border-2 border-emerald-100 flex justify-center shadow-sm">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={currentQ.question_image_url}
                     alt="Question Diagram"
-                    className="max-h-64 object-contain rounded-lg shadow-sm"
+                    className="max-h-72 sm:max-h-80 w-auto object-contain rounded-xl shadow-sm"
                   />
                 </div>
               )}
@@ -406,6 +406,17 @@ export default function QuizEngine({ quiz, questions, onAttemptComplete }: QuizE
                         </span>
                       )}
                     </div>
+
+                    {q.question_image_url && (
+                      <div className="my-3 p-2 bg-white rounded-xl border border-gray-200 flex justify-center max-w-md mx-auto">
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img
+                          src={q.question_image_url}
+                          alt={`Question ${idx + 1} Diagram`}
+                          className="max-h-48 object-contain rounded-lg"
+                        />
+                      </div>
+                    )}
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm my-3">
                       {(['A', 'B', 'C', 'D'] as const).map((opt) => (
