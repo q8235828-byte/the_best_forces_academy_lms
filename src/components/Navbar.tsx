@@ -166,18 +166,18 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16 sm:h-20 gap-2">
           
           {/* Logo / Brand */}
-          <Link href="/" className="flex items-center gap-2 sm:gap-3 group min-w-0 flex-shrink">
+          <Link href="/" className="flex items-center gap-2.5 sm:gap-3 group flex-shrink-0">
             <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-[#2A5A44] to-[#0F261C] border border-honor-gold/70 flex items-center justify-center shadow-lg group-hover:border-honor-gold transition-all duration-300 flex-shrink-0">
               <Shield className="w-5 h-5 sm:w-7 sm:h-7 text-honor-gold transform group-hover:scale-105 transition-transform" />
             </div>
-            <div className="min-w-0">
-              <div className="text-xs sm:text-lg lg:text-xl font-black tracking-tight text-white leading-tight truncate">
+            <div className="flex flex-col justify-center">
+              <div className="text-sm sm:text-base lg:text-lg xl:text-xl font-black tracking-tight text-white leading-tight whitespace-nowrap">
                 THE BEST FORCES <span className="text-honor-gold">ACADEMY</span>
               </div>
-              <div className="text-[9px] sm:text-[11px] text-gray-300 uppercase tracking-wider font-semibold flex items-center gap-1 sm:gap-1.5 truncate">
+              <div className="text-[9px] sm:text-[10px] lg:text-[11px] text-gray-300 uppercase tracking-wider font-semibold flex items-center gap-1 sm:gap-1.5 whitespace-nowrap">
                 <span>PREMIER DEFENSE LMS</span>
-                <span className="text-honor-gold hidden md:inline">•</span>
-                <span className="text-gray-400 hidden md:inline">BESTFORCESACADEMY.NET</span>
+                <span className="text-honor-gold hidden sm:inline">•</span>
+                <span className="text-gray-400 hidden sm:inline">BESTFORCESACADEMY.NET</span>
               </div>
             </div>
           </Link>
@@ -575,10 +575,13 @@ export default function Navbar() {
             ) : (
               <Link
                 href={currentUser.role === 'admin' ? '/admin/courses' : '/portal/dashboard'}
-                className="px-3 py-2 rounded-xl text-xs font-bold text-honor-gold bg-[#0F261C] border border-honor-gold/60 hover:bg-[#183B2B] flex items-center gap-1.5 transition-all"
+                className="px-3 py-2 rounded-xl text-xs font-bold text-honor-gold bg-[#0F261C] border border-honor-gold/60 hover:bg-[#183B2B] flex items-center gap-1.5 transition-all flex-shrink-0"
+                title={currentUser.role === 'admin' ? 'Officer HQ - Mentor' : currentUser.full_name}
               >
-                <User className="w-3.5 h-3.5 text-honor-gold" />
-                <span className="max-w-[100px] truncate">{currentUser.full_name}</span>
+                <User className="w-3.5 h-3.5 text-honor-gold flex-shrink-0" />
+                <span className="whitespace-nowrap font-bold">
+                  {currentUser.role === 'admin' ? 'Mentor' : (currentUser.full_name?.split(' ')[0] || 'Cadet')}
+                </span>
               </Link>
             )}
 

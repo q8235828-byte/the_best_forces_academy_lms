@@ -114,7 +114,7 @@ export const DEMO_CADET: CadetSession = INITIAL_REGISTERED_CADETS[0];
 
 export const DEMO_ADMIN: CadetSession = {
   id: 'admin-01',
-  full_name: 'Mentor (Chief Administrator)',
+  full_name: 'Mentor',
   roll_number: 'HQ-COMMAND-01',
   phone_number: '+92 305 4599659',
   email: 'qa034942@gmail.com',
@@ -134,7 +134,13 @@ export function getCurrentUser(): CadetSession | null {
   const adminRaw = localStorage.getItem(ADMIN_SESSION_KEY);
   if (adminRaw) {
     try {
-      return JSON.parse(adminRaw);
+      const parsed = JSON.parse(adminRaw);
+      // Auto-sanitize any legacy session where name was "Sir Faryad Tabassum"
+      if (parsed.full_name?.includes('Faryad') || parsed.full_name?.includes('Tabassum') || parsed.role === 'admin') {
+        parsed.full_name = 'Mentor';
+        localStorage.setItem(ADMIN_SESSION_KEY, JSON.stringify(parsed));
+      }
+      return parsed;
     } catch (e) {
       localStorage.removeItem(ADMIN_SESSION_KEY);
     }
@@ -144,7 +150,12 @@ export function getCurrentUser(): CadetSession | null {
   const studentRaw = localStorage.getItem(CADET_SESSION_KEY);
   if (studentRaw) {
     try {
-      return JSON.parse(studentRaw);
+      const parsed = JSON.parse(studentRaw);
+      if (parsed.full_name?.includes('Sir Faryad') || parsed.full_name?.includes('Tabassum')) {
+        parsed.full_name = 'Mentor';
+        localStorage.setItem(CADET_SESSION_KEY, JSON.stringify(parsed));
+      }
+      return parsed;
     } catch (e) {
       localStorage.removeItem(CADET_SESSION_KEY);
     }
