@@ -194,35 +194,86 @@ export default function QuizEngine({ quiz, questions, onAttemptComplete }: QuizE
             </div>
 
             {/* Options List */}
-            <div className="grid grid-cols-1 gap-3 pt-2">
-              {(['A', 'B', 'C', 'D'] as const).map((optKey) => {
-                const optText = currentQ[`option_${optKey.toLowerCase()}` as keyof QuizQuestion] as string;
-                const isSelected = selectedAnswers[currentQ.id] === optKey;
+            {currentQ.option_a_image_url ? (
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 pt-2">
+                {(['A', 'B', 'C', 'D'] as const).map((optKey) => {
+                  const optImg = (currentQ as any)[`option_${optKey.toLowerCase()}_image_url`];
+                  const optText = currentQ[`option_${optKey.toLowerCase()}` as keyof QuizQuestion] as string;
+                  const isSelected = selectedAnswers[currentQ.id] === optKey;
 
-                return (
-                  <button
-                    key={optKey}
-                    onClick={() => handleSelectOption(optKey)}
-                    className={`w-full text-left p-4 rounded-xl border-2 transition-all flex items-center gap-4 ${
-                      isSelected
-                        ? 'border-emerald-600 bg-emerald-50/60 shadow-sm'
-                        : 'border-gray-200 hover:border-gray-300 hover:bg-gray-50/50'
-                    }`}
-                  >
-                    <div className={`w-8 h-8 rounded-lg flex items-center justify-center font-bold text-sm flex-shrink-0 ${
-                      isSelected
-                        ? 'bg-emerald-600 text-white'
-                        : 'bg-gray-100 text-gray-700'
-                    }`}>
-                      {optKey}
-                    </div>
-                    <span className="text-gray-800 text-base font-medium flex-1">
-                      {optText}
-                    </span>
-                  </button>
-                );
-              })}
-            </div>
+                  return (
+                    <button
+                      key={optKey}
+                      onClick={() => handleSelectOption(optKey)}
+                      className={`group relative p-3 sm:p-4 rounded-2xl border-2 transition-all flex flex-col items-center justify-between gap-3 text-center ${
+                        isSelected
+                          ? 'border-emerald-600 bg-emerald-50/70 shadow-md ring-2 ring-emerald-500/30'
+                          : 'border-gray-200 bg-white hover:border-emerald-400 hover:bg-gray-50/80 shadow-sm'
+                      }`}
+                    >
+                      <div className="w-full flex items-center justify-between">
+                        <span className={`w-7 h-7 rounded-lg flex items-center justify-center font-bold text-xs ${
+                          isSelected ? 'bg-emerald-600 text-white' : 'bg-gray-100 text-gray-700 group-hover:bg-emerald-100 group-hover:text-emerald-800'
+                        }`}>
+                          {optKey}
+                        </span>
+                        {isSelected && (
+                          <span className="text-[10px] font-bold text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded-full flex items-center gap-1">
+                            <CheckCircle className="w-3 h-3" />
+                            Selected
+                          </span>
+                        )}
+                      </div>
+
+                      {optImg && (
+                        <div className="w-full h-24 sm:h-28 flex items-center justify-center p-2 bg-gray-50/60 rounded-xl border border-gray-100 group-hover:bg-white transition-colors overflow-hidden">
+                          {/* eslint-disable-next-line @next/next/no-img-element */}
+                          <img
+                            src={optImg}
+                            alt={`Option ${optKey}`}
+                            className="max-h-full max-w-full object-contain rounded transition-transform group-hover:scale-105"
+                          />
+                        </div>
+                      )}
+
+                      <span className="text-xs font-semibold text-gray-600 group-hover:text-gray-900">
+                        {optText}
+                      </span>
+                    </button>
+                  );
+                })}
+              </div>
+            ) : (
+              <div className="grid grid-cols-1 gap-3 pt-2">
+                {(['A', 'B', 'C', 'D'] as const).map((optKey) => {
+                  const optText = currentQ[`option_${optKey.toLowerCase()}` as keyof QuizQuestion] as string;
+                  const isSelected = selectedAnswers[currentQ.id] === optKey;
+
+                  return (
+                    <button
+                      key={optKey}
+                      onClick={() => handleSelectOption(optKey)}
+                      className={`w-full text-left p-4 rounded-xl border-2 transition-all flex items-center gap-4 ${
+                        isSelected
+                          ? 'border-emerald-600 bg-emerald-50/60 shadow-sm'
+                          : 'border-gray-200 hover:border-gray-300 hover:bg-gray-50/50'
+                      }`}
+                    >
+                      <div className={`w-8 h-8 rounded-lg flex items-center justify-center font-bold text-sm flex-shrink-0 ${
+                        isSelected
+                          ? 'bg-emerald-600 text-white'
+                          : 'bg-gray-100 text-gray-700'
+                      }`}>
+                        {optKey}
+                      </div>
+                      <span className="text-gray-800 text-base font-medium flex-1">
+                        {optText}
+                      </span>
+                    </button>
+                  );
+                })}
+              </div>
+            )}
 
             {/* Navigation Buttons */}
             <div className="flex items-center justify-between pt-6 border-t border-gray-100">
@@ -418,23 +469,40 @@ export default function QuizEngine({ quiz, questions, onAttemptComplete }: QuizE
                       </div>
                     )}
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm my-3">
-                      {(['A', 'B', 'C', 'D'] as const).map((opt) => (
-                        <div
-                          key={opt}
-                          className={`p-2.5 rounded-lg border text-xs font-medium ${
-                            opt === q.correct_option
-                              ? 'bg-emerald-100 border-emerald-400 text-emerald-900 font-bold'
-                              : opt === userAns
-                              ? 'bg-red-100 border-red-400 text-red-900 font-bold'
-                              : 'bg-white border-gray-200 text-gray-700'
-                          }`}
-                        >
-                          {opt}: {q[`option_${opt.toLowerCase()}` as keyof QuizQuestion] as string}
-                          {opt === q.correct_option && ' (Correct Key)'}
-                          {opt === userAns && opt !== q.correct_option && ' (Your Choice)'}
-                        </div>
-                      ))}
+                    <div className={`gap-2.5 my-3 ${q.option_a_image_url ? 'grid grid-cols-2 sm:grid-cols-4' : 'grid grid-cols-1 sm:grid-cols-2 text-sm'}`}>
+                      {(['A', 'B', 'C', 'D'] as const).map((opt) => {
+                        const optImg = (q as any)[`option_${opt.toLowerCase()}_image_url`];
+                        const isCorrectKey = opt === q.correct_option;
+                        const isUserChoice = opt === userAns;
+
+                        return (
+                          <div
+                            key={opt}
+                            className={`p-2.5 rounded-xl border flex flex-col items-center justify-between text-xs font-medium text-center gap-2 ${
+                              isCorrectKey
+                                ? 'bg-emerald-100 border-emerald-400 text-emerald-900 font-bold'
+                                : isUserChoice
+                                ? 'bg-red-100 border-red-400 text-red-900 font-bold'
+                                : 'bg-white border-gray-200 text-gray-700'
+                            }`}
+                          >
+                            <div className="flex items-center justify-between w-full">
+                              <span className="font-bold">{opt}</span>
+                              {isCorrectKey && <span className="text-[10px] text-emerald-800 bg-emerald-200/60 px-1.5 py-0.5 rounded font-bold">Correct Key</span>}
+                              {isUserChoice && !isCorrectKey && <span className="text-[10px] text-red-800 bg-red-200/60 px-1.5 py-0.5 rounded font-bold">Your Choice</span>}
+                            </div>
+                            {optImg && (
+                              <div className="w-full h-20 flex items-center justify-center p-1 bg-white/80 rounded border border-gray-200">
+                                {/* eslint-disable-next-line @next/next/no-img-element */}
+                                <img src={optImg} alt={`Option ${opt}`} className="max-h-full max-w-full object-contain" />
+                              </div>
+                            )}
+                            <span className="text-[11px] truncate w-full">
+                              {q[`option_${opt.toLowerCase()}` as keyof QuizQuestion] as string}
+                            </span>
+                          </div>
+                        );
+                      })}
                     </div>
 
                     {q.explanation && (

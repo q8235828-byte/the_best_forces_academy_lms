@@ -69,6 +69,10 @@ export interface QuizQuestion {
   option_b: string;
   option_c: string;
   option_d: string;
+  option_a_image_url?: string;
+  option_b_image_url?: string;
+  option_c_image_url?: string;
+  option_d_image_url?: string;
   correct_option: 'A' | 'B' | 'C' | 'D';
   explanation?: string;
   order_index: number;

@@ -338,30 +338,46 @@ export default function NonVerbalPdfGuidePage() {
                   </div>
                 )}
 
-                {/* Options 2x2 Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+                {/* Options Grid (with Option Images) */}
+                <div className={`gap-2 text-xs ${q.option_a_image_url ? 'grid grid-cols-2 sm:grid-cols-4' : 'grid grid-cols-1 sm:grid-cols-2'}`}>
                   {(['A', 'B', 'C', 'D'] as const).map((optKey) => {
                     const optVal = q[`option_${optKey.toLowerCase()}` as keyof BankQuestion] as string;
+                    const optImg = (q as any)[`option_${optKey.toLowerCase()}_image_url`];
                     const isCorrect = q.correct_option === optKey;
 
                     return (
                       <div
                         key={optKey}
-                        className={`p-2.5 rounded-xl border flex items-center gap-2 ${
+                        className={`p-2.5 rounded-xl border flex flex-col items-center justify-between text-center gap-2 ${
                           isCorrect
                             ? 'bg-emerald-50/80 border-emerald-400 text-emerald-950 font-bold'
                             : 'bg-slate-50/50 border-gray-200 text-gray-700'
                         }`}
                       >
-                        <span className={`w-5 h-5 rounded flex items-center justify-center text-[11px] font-black shrink-0 ${
-                          isCorrect ? 'bg-emerald-600 text-white' : 'bg-gray-200 text-gray-700'
-                        }`}>
-                          {optKey}
-                        </span>
-                        <span className="leading-snug break-words">{optVal}</span>
-                        {isCorrect && (
-                          <CheckCircle className="w-3.5 h-3.5 text-emerald-600 ml-auto shrink-0" />
+                        <div className="flex items-center justify-between w-full">
+                          <span className={`w-5 h-5 rounded flex items-center justify-center text-[11px] font-black shrink-0 ${
+                            isCorrect ? 'bg-emerald-600 text-white' : 'bg-gray-200 text-gray-700'
+                          }`}>
+                            {optKey}
+                          </span>
+                          {isCorrect && (
+                            <CheckCircle className="w-3.5 h-3.5 text-emerald-600 ml-auto shrink-0" />
+                          )}
+                        </div>
+
+                        {optImg && (
+                          <div className="w-full h-20 flex items-center justify-center p-1 bg-white rounded-lg border border-gray-100">
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                            <img
+                              src={optImg}
+                              alt={`Option ${optKey}`}
+                              className="max-h-full max-w-full object-contain rounded"
+                              loading="lazy"
+                            />
+                          </div>
                         )}
+
+                        <span className="leading-snug break-words text-[11px]">{optVal}</span>
                       </div>
                     );
                   })}
