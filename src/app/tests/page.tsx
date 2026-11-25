@@ -102,10 +102,10 @@ export default function TestsPortalPage() {
               </span>
             </div>
             <h2 className="text-xl sm:text-2xl font-black text-slate-950 leading-snug">
-              500 Solved Verbal & 500 Non-Verbal Question Banks & PDFs
+              500 Solved Verbal & 52 Non-Verbal Diagram Master Banks
             </h2>
             <p className="text-xs sm:text-sm text-slate-900 font-medium leading-relaxed">
-              Verbal aur Non-Verbal tests mein 10, 10 categories se 100 questions puche jaate hain. Mentor ne dono tests ke 500-500 solved questions with authentic shortcuts & diagrams tayar kiye hain. Test shuru karne se pehle in PDFs ko lazmi download aur study karein!
+              Verbal Intelligence mein 10 categories se 100 questions puche jaate hain jabke Non-Verbal mein authentic armed forces pattern diagrams shamil hain. Mentor ne inke solved questions with authentic shortcuts & visual options tayar kiye hain. Test shuru karne se pehle in PDFs ko lazmi study karein!
             </p>
           </div>
 
@@ -125,7 +125,7 @@ export default function TestsPortalPage() {
               className="bg-[#183B2B] hover:bg-[#2A5A44] text-white font-black px-5 py-3.5 rounded-xl shadow-md text-xs sm:text-sm flex items-center justify-center gap-2 transition-all hover:scale-105 whitespace-nowrap"
             >
               <Eye className="w-4 h-4 text-honor-gold" />
-              <span>500 Non-Verbal PDF</span>
+              <span>52 Non-Verbal PDF</span>
             </Link>
           </div>
         </div>
@@ -311,7 +311,7 @@ export default function TestsPortalPage() {
                         className="w-full mb-2.5 bg-emerald-50 hover:bg-emerald-100 text-emerald-950 border border-emerald-300 py-2.5 rounded-xl font-bold text-xs flex items-center justify-center gap-2 shadow-sm transition-all"
                       >
                         <Eye className="w-3.5 h-3.5 text-emerald-700" />
-                        <span>Study 500 Solved Non-Verbal Questions PDF</span>
+                        <span>Study 52 Solved Non-Verbal Diagrams PDF</span>
                       </Link>
                     )}
 

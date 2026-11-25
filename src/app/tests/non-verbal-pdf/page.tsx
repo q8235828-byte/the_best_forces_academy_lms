@@ -84,7 +84,7 @@ export default function NonVerbalPdfGuidePage() {
             </Link>
 
             <span className="text-xs font-bold text-gray-500 hidden md:inline">
-              Step 2 Preparation Material • 500 Questions Non-Verbal Master Bank
+              Step 2 Preparation Material • 52 Questions Authentic Non-Verbal Bank
             </span>
           </div>
 
@@ -101,10 +101,10 @@ export default function NonVerbalPdfGuidePage() {
             <button
               onClick={() => handlePrint(true)}
               className="bg-slate-900 hover:bg-slate-800 text-white px-4 py-2.5 rounded-xl font-bold text-xs flex items-center justify-center gap-2 shadow-md transition-all"
-              title="Print all 500 questions as complete document"
+              title="Print all 52 questions as complete document"
             >
               <FileText className="w-4 h-4 text-honor-gold" />
-              <span>Print All (500 Qs PDF)</span>
+              <span>Print All (52 Qs PDF)</span>
             </button>
 
             <Link
@@ -112,7 +112,7 @@ export default function NonVerbalPdfGuidePage() {
               className="flex-1 sm:flex-initial bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-2.5 rounded-xl font-bold text-xs flex items-center justify-center gap-2 shadow-md transition-all hover:scale-105"
             >
               <Play className="w-4 h-4 fill-white" />
-              <span>Start 100-Question Exam</span>
+              <span>Start 52-Question Exam</span>
             </Link>
           </div>
         </div>
@@ -160,12 +160,14 @@ export default function NonVerbalPdfGuidePage() {
                   : 'bg-slate-50 text-gray-700 hover:bg-slate-100 border border-gray-200'
               }`}
             >
-              All 10 Categories (500 Qs)
+              All Categories (52 Qs)
             </button>
 
             {NON_VERBAL_REASONING_TYPES.map((catName, idx) => {
               const catId = idx + 1;
               const isSelected = selectedCategory === catId;
+              const catCount = NON_VERBAL_500_BANK.filter(q => q.category_id === catId).length;
+              if (catCount === 0) return null;
               return (
                 <button
                   key={catId}
@@ -176,7 +178,7 @@ export default function NonVerbalPdfGuidePage() {
                       : 'bg-slate-50 text-gray-700 hover:bg-slate-100 border border-gray-200'
                   }`}
                 >
-                  {catId}. {catName} (50)
+                  {catId}. {catName} ({catCount})
                 </button>
               );
             })}
@@ -262,7 +264,7 @@ export default function NonVerbalPdfGuidePage() {
           </h1>
 
           <p className="text-xs text-gray-600 font-medium">
-            10 Visual Categories • 50 Questions per Category • Total 500 Questions with Diagrams, Keys & Spatial Logic
+            Authentic Forces Visual Diagrams • Total 52 Questions with Diagrams, Keys & Spatial Logic
           </p>
 
           <div className="pt-2 flex items-center justify-center gap-4 text-xs font-bold text-gray-700">
@@ -270,26 +272,30 @@ export default function NonVerbalPdfGuidePage() {
               Prepared by: {ACADEMY_CONFIG.leadInstructor} (Lead Instructor)
             </span>
             <span className="text-gray-400">•</span>
-            <span>20 Questions Per Page Standard</span>
+            <span>20 Questions Per Page Standard (3 Pages)</span>
           </div>
         </div>
 
-        {/* 10 Categories Guide Index */}
+        {/* Categories Guide Index */}
         <div className="bg-slate-50 border border-slate-200 rounded-2xl p-4 sm:p-6 mb-8 print:border print:border-gray-300">
           <h2 className="text-xs font-extrabold text-[#183B2B] uppercase tracking-wider mb-3">
-            Non-Verbal Syllabus Structure & Visual Categories (50 Questions Each):
+            Non-Verbal Visual Categories & Question Breakdown:
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-gray-800">
-            {NON_VERBAL_REASONING_TYPES.map((type, idx) => (
-              <div key={type} className="flex items-center justify-between p-2 rounded-lg bg-white border border-gray-100">
-                <span className="font-semibold">
-                  <strong className="text-emerald-700">{idx + 1}.</strong> {type}
-                </span>
-                <span className="text-[11px] font-bold text-gray-500 bg-gray-50 px-2 py-0.5 rounded border border-gray-200">
-                  50 Qs
-                </span>
-              </div>
-            ))}
+            {NON_VERBAL_REASONING_TYPES.map((type, idx) => {
+              const count = NON_VERBAL_500_BANK.filter(q => q.category_id === idx + 1).length;
+              if (count === 0) return null;
+              return (
+                <div key={type} className="flex items-center justify-between p-2 rounded-lg bg-white border border-gray-100">
+                  <span className="font-semibold">
+                    <strong className="text-emerald-700">{idx + 1}.</strong> {type}
+                  </span>
+                  <span className="text-[11px] font-bold text-gray-500 bg-gray-50 px-2 py-0.5 rounded border border-gray-200">
+                    {count} Qs
+                  </span>
+                </div>
+              );
+            })}
           </div>
         </div>
 

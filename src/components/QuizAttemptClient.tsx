@@ -66,8 +66,8 @@ export default function QuizAttemptClient({ quiz, questions }: QuizAttemptClient
     categoriesList = VERBAL_REASONING_TYPES;
   } else if (isNonVerbal) {
     stepLabel = 'Step 2 of 4 • Visual & Spatial Intelligence Exam';
-    testTitle = 'Non-Verbal Intelligence Test (100 Questions)';
-    testSummary = '100 visual pattern questions randomly selected (10 questions from each of the 10 non-verbal spatial types).';
+    testTitle = 'Non-Verbal Intelligence Test (52 Questions)';
+    testSummary = '52 authentic visual pattern questions directly derived from the official forces diagram bank.';
     categoriesList = NON_VERBAL_REASONING_TYPES;
   } else if (isMatric) {
     stepLabel = 'Step 3A • Matric Level Academic Exam';

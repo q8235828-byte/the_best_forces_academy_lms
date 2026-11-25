@@ -41,12 +41,12 @@ export const SAMPLE_QUIZZES: Quiz[] = [
   {
     id: 2,
     course_id: 2,
-    title: 'Non-Verbal Intelligence Test (100 Questions Exam)',
+    title: 'Non-Verbal Intelligence Test (52 Questions Exam)',
     test_type: 'Non-Verbal',
-    duration_minutes: 35,
+    duration_minutes: 30,
     passing_score: 60,
     sequence_number: 2,
-    description: 'Full 100-Question Visual Exam: 10 random questions from each of the 10 Non-Verbal reasoning types. Authentic 35-min military countdown timer.'
+    description: 'Authentic 52-Question Visual Exam directly based on forces pattern diagrams: Pattern Series, Matrix Reasoning, Analogies, and Mirror Reflections. Authentic 30-min countdown timer.'
   },
   {
     id: 3,
