@@ -166,15 +166,15 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16 sm:h-20 gap-2">
           
           {/* Logo / Brand */}
-          <Link href="/" className="flex items-center gap-2.5 sm:gap-3 group flex-shrink-0">
+          <Link href="/" className="flex items-center gap-2.5 sm:gap-3 group flex-shrink-0 min-w-max">
             <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-[#2A5A44] to-[#0F261C] border border-honor-gold/70 flex items-center justify-center shadow-lg group-hover:border-honor-gold transition-all duration-300 flex-shrink-0">
               <Shield className="w-5 h-5 sm:w-7 sm:h-7 text-honor-gold transform group-hover:scale-105 transition-transform" />
             </div>
-            <div className="flex flex-col justify-center">
-              <div className="text-sm sm:text-base lg:text-lg xl:text-xl font-black tracking-tight text-white leading-tight whitespace-nowrap">
+            <div className="flex flex-col justify-center flex-shrink-0 min-w-max">
+              <div className="text-sm sm:text-base lg:text-lg xl:text-xl font-black tracking-tight text-white leading-tight whitespace-nowrap select-none">
                 THE BEST FORCES <span className="text-honor-gold">ACADEMY</span>
               </div>
-              <div className="text-[9px] sm:text-[10px] lg:text-[11px] text-gray-300 uppercase tracking-wider font-semibold flex items-center gap-1 sm:gap-1.5 whitespace-nowrap">
+              <div className="text-[9px] sm:text-[10px] lg:text-[11px] text-gray-300 uppercase tracking-wider font-semibold flex items-center gap-1 sm:gap-1.5 whitespace-nowrap select-none">
                 <span>PREMIER DEFENSE LMS</span>
                 <span className="text-honor-gold hidden sm:inline">•</span>
                 <span className="text-gray-400 hidden sm:inline">BESTFORCESACADEMY.NET</span>
@@ -556,7 +556,7 @@ export default function Navbar() {
           </nav>
 
           {/* Right Action: Auth CTA + WhatsApp CTA Button */}
-          <div className="hidden sm:flex items-center gap-2.5">
+          <div className="hidden sm:flex items-center gap-2.5 flex-shrink-0 min-w-max">
             {!currentUser ? (
               <div className="flex items-center gap-2">
                 <Link
