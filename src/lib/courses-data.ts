@@ -12,7 +12,7 @@ export const INITIAL_COURSES: Course[] = [
     regular_price: 8000,
     sale_price: 4500,
     whatsapp_group_link: 'https://chat.whatsapp.com/sample-issb-vip',
-    thumbnail_url: 'https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=800&q=80',
+    thumbnail_url: '/images/courses/issb-complete-prep.webp',
     syllabus_summary: 'Screening, 10-Second WAT, Picture Stories, SRT, GTO Bridge & Command Tasks, Interviews & Physical Drills.',
     is_published: 1
   },
@@ -26,7 +26,7 @@ export const INITIAL_COURSES: Course[] = [
     regular_price: 5000,
     sale_price: 2500,
     whatsapp_group_link: 'https://chat.whatsapp.com/sample-intelligence-vip',
-    thumbnail_url: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80',
+    thumbnail_url: '/images/courses/initial-intelligence-mastery.webp',
     syllabus_summary: 'Number/Letter Series, Analogies, Blood Relations, Coding, Matrices, Rotations, Paper Folding.',
     is_published: 1
   },
@@ -40,7 +40,7 @@ export const INITIAL_COURSES: Course[] = [
     regular_price: 6000,
     sale_price: 3500,
     whatsapp_group_link: 'https://chat.whatsapp.com/sample-academic-vip',
-    thumbnail_url: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80',
+    thumbnail_url: '/images/courses/initial-academic-mastery.webp',
     syllabus_summary: 'English Prepositions, General & Advanced Math, Physics Formulas, Defense GK, Pak Studies, Islamic Studies.',
     is_published: 1
   },
@@ -56,7 +56,7 @@ export const INITIAL_COURSES: Course[] = [
     regular_price: 4000,
     sale_price: 2000,
     whatsapp_group_link: 'https://chat.whatsapp.com/sample-soldier-vip',
-    thumbnail_url: 'https://images.unsplash.com/photo-1579829366248-204fe8413f31?auto=format&fit=crop&w=800&q=80',
+    thumbnail_url: '/images/courses/army-soldier.webp',
     syllabus_summary: 'Matric-level English, General Math, Islamic Studies, GK, and Physical test standards.',
     is_published: 1
   },
@@ -70,7 +70,7 @@ export const INITIAL_COURSES: Course[] = [
     regular_price: 4500,
     sale_price: 2200,
     whatsapp_group_link: 'https://chat.whatsapp.com/sample-clerk-vip',
-    thumbnail_url: 'https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=800&q=80',
+    thumbnail_url: '/images/courses/army-clerk.webp',
     syllabus_summary: 'English typing, Computer basics, Grammar, Arithmetic, and Initial tests.',
     is_published: 1
   },
@@ -84,7 +84,7 @@ export const INITIAL_COURSES: Course[] = [
     regular_price: 7000,
     sale_price: 3800,
     whatsapp_group_link: 'https://chat.whatsapp.com/sample-pma-vip',
-    thumbnail_url: 'https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=800&q=80',
+    thumbnail_url: '/images/courses/pma-long-course.webp',
     syllabus_summary: 'Full Initial computerized intelligence, Academic (English, Math, Physics, GK), ISSB guidelines.',
     is_published: 1
   },
@@ -98,7 +98,7 @@ export const INITIAL_COURSES: Course[] = [
     regular_price: 6500,
     sale_price: 3500,
     whatsapp_group_link: 'https://chat.whatsapp.com/sample-afns-vip',
-    thumbnail_url: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80',
+    thumbnail_url: '/images/courses/afns-nursing.webp',
     syllabus_summary: 'Biology, Chemistry, Physics, English, and Female-specific medical & interview guidelines.',
     is_published: 1
   },
@@ -112,7 +112,7 @@ export const INITIAL_COURSES: Course[] = [
     regular_price: 7000,
     sale_price: 4000,
     whatsapp_group_link: 'https://chat.whatsapp.com/sample-amc-vip',
-    thumbnail_url: 'https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=800&q=80',
+    thumbnail_url: '/images/courses/amc-medical-cadet.webp',
     syllabus_summary: 'High-difficulty Biology, Chemistry, Physics, English, and Medical intelligence prep.',
     is_published: 1
   },
@@ -126,7 +126,7 @@ export const INITIAL_COURSES: Course[] = [
     regular_price: 7000,
     sale_price: 4000,
     whatsapp_group_link: 'https://chat.whatsapp.com/sample-tcc-vip',
-    thumbnail_url: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80',
+    thumbnail_url: '/images/courses/tcc-technical-cadet.webp',
     syllabus_summary: 'Advanced Mathematics, Physics, English, Computer Science, and Engineering aptitude test.',
     is_published: 1
   },
@@ -140,7 +140,7 @@ export const INITIAL_COURSES: Course[] = [
     regular_price: 7500,
     sale_price: 4200,
     whatsapp_group_link: 'https://chat.whatsapp.com/sample-armyssc-vip',
-    thumbnail_url: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80',
+    thumbnail_url: '/images/courses/army-ssc.webp',
     syllabus_summary: 'Branch-specific academics, Verbal/Non-Verbal intelligence, and direct ISSB preparation.',
     is_published: 1
   },
@@ -154,7 +154,7 @@ export const INITIAL_COURSES: Course[] = [
     regular_price: 7500,
     sale_price: 4200,
     whatsapp_group_link: 'https://chat.whatsapp.com/sample-lcc-vip',
-    thumbnail_url: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80',
+    thumbnail_url: '/images/courses/army-lcc.webp',
     syllabus_summary: 'Subject specialization, General knowledge, Verbal/Non-Verbal intelligence, and ISSB preparation.',
     is_published: 1
   },
@@ -170,7 +170,7 @@ export const INITIAL_COURSES: Course[] = [
     regular_price: 4500,
     sale_price: 2200,
     whatsapp_group_link: 'https://chat.whatsapp.com/sample-navyfmt-vip',
-    thumbnail_url: 'https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=800&q=80',
+    thumbnail_url: '/images/courses/navy-fmt.webp',
     syllabus_summary: 'Matric Biology, Chemistry, English, General Knowledge, and Intelligence test.',
     is_published: 1
   },
@@ -184,7 +184,7 @@ export const INITIAL_COURSES: Course[] = [
     regular_price: 4000,
     sale_price: 2000,
     whatsapp_group_link: 'https://chat.whatsapp.com/sample-navypolice-vip',
-    thumbnail_url: 'https://images.unsplash.com/photo-1508847154043-be5407fcaa5a?auto=format&fit=crop&w=800&q=80',
+    thumbnail_url: '/images/courses/navy-police.webp',
     syllabus_summary: 'Intelligence, General Science, English, Mathematics, and physical drill prep.',
     is_published: 1
   },
@@ -198,7 +198,7 @@ export const INITIAL_COURSES: Course[] = [
     regular_price: 4000,
     sale_price: 2000,
     whatsapp_group_link: 'https://chat.whatsapp.com/sample-navysailor-vip',
-    thumbnail_url: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=800&q=80',
+    thumbnail_url: '/images/courses/navy-sailor.webp',
     syllabus_summary: 'Intelligence tests, Matric Physics, Chemistry, Math, and English test.',
     is_published: 1
   },
@@ -212,7 +212,7 @@ export const INITIAL_COURSES: Course[] = [
     regular_price: 4000,
     sale_price: 2000,
     whatsapp_group_link: 'https://chat.whatsapp.com/sample-navymarine-vip',
-    thumbnail_url: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80',
+    thumbnail_url: '/images/courses/navy-marine.webp',
     syllabus_summary: 'Intelligence tests, General Science, Basic Math, and Navy Marine physical benchmarks.',
     is_published: 1
   },
@@ -226,7 +226,7 @@ export const INITIAL_COURSES: Course[] = [
     regular_price: 4500,
     sale_price: 2200,
     whatsapp_group_link: 'https://chat.whatsapp.com/sample-navytech-vip',
-    thumbnail_url: 'https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=800&q=80',
+    thumbnail_url: '/images/courses/navy-technical.webp',
     syllabus_summary: 'Technical aptitude, Applied Physics, Mathematics, English, and Intelligence tests.',
     is_published: 1
   },
@@ -240,7 +240,7 @@ export const INITIAL_COURSES: Course[] = [
     regular_price: 7000,
     sale_price: 3800,
     whatsapp_group_link: 'https://chat.whatsapp.com/sample-pncadet-vip',
-    thumbnail_url: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=800&q=80',
+    thumbnail_url: '/images/courses/pn-cadet.webp',
     syllabus_summary: 'Computerized Initial Test (Verbal, Non-Verbal, Math, Physics, English, GK) + ISSB prep.',
     is_published: 1
   },
@@ -254,7 +254,7 @@ export const INITIAL_COURSES: Course[] = [
     regular_price: 7500,
     sale_price: 4200,
     whatsapp_group_link: 'https://chat.whatsapp.com/sample-navyssc-vip',
-    thumbnail_url: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80',
+    thumbnail_url: '/images/courses/navy-ssc.webp',
     syllabus_summary: 'Branch test (Operations, Marine Engineering, Supply, Education) + ISSB.',
     is_published: 1
   },
@@ -270,7 +270,7 @@ export const INITIAL_COURSES: Course[] = [
     regular_price: 4500,
     sale_price: 2200,
     whatsapp_group_link: 'https://chat.whatsapp.com/sample-paffma-vip',
-    thumbnail_url: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80',
+    thumbnail_url: '/images/courses/paf-fma.webp',
     syllabus_summary: 'Matric Biology, Chemistry, English, and PAF Intelligence test.',
     is_published: 1
   },
@@ -284,7 +284,7 @@ export const INITIAL_COURSES: Course[] = [
     regular_price: 4500,
     sale_price: 2200,
     whatsapp_group_link: 'https://chat.whatsapp.com/sample-aerotrade-vip',
-    thumbnail_url: 'https://images.unsplash.com/photo-1519074069444-1ba4ea16e6f6?auto=format&fit=crop&w=800&q=80',
+    thumbnail_url: '/images/courses/paf-aerotrade.webp',
     syllabus_summary: 'PAF Intelligence, Matric Physics, Mathematics, and English.',
     is_published: 1
   },
@@ -298,7 +298,7 @@ export const INITIAL_COURSES: Course[] = [
     regular_price: 4500,
     sale_price: 2200,
     whatsapp_group_link: 'https://chat.whatsapp.com/sample-aerotec-vip',
-    thumbnail_url: 'https://images.unsplash.com/photo-1517976487507-5b36485888a7?auto=format&fit=crop&w=800&q=80',
+    thumbnail_url: '/images/courses/paf-aerotec.webp',
     syllabus_summary: 'Technical aptitude, Physics, Mathematics, and PAF electronic screening.',
     is_published: 1
   },
@@ -312,7 +312,7 @@ export const INITIAL_COURSES: Course[] = [
     regular_price: 4500,
     sale_price: 2200,
     whatsapp_group_link: 'https://chat.whatsapp.com/sample-aerosupport-vip',
-    thumbnail_url: 'https://images.unsplash.com/photo-1508614589041-895b88991e3e?auto=format&fit=crop&w=800&q=80',
+    thumbnail_url: '/images/courses/paf-aerosupport.webp',
     syllabus_summary: 'Intelligence, General Science, Math, and ground operations aptitude.',
     is_published: 1
   },
@@ -326,7 +326,7 @@ export const INITIAL_COURSES: Course[] = [
     regular_price: 4000,
     sale_price: 2000,
     whatsapp_group_link: 'https://chat.whatsapp.com/sample-pfdi-vip',
-    thumbnail_url: 'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80',
+    thumbnail_url: '/images/courses/paf-pf-di.webp',
     syllabus_summary: 'Basic Intelligence, General Knowledge, and rigorous physical standard guidelines.',
     is_published: 1
   },
@@ -340,7 +340,7 @@ export const INITIAL_COURSES: Course[] = [
     regular_price: 4000,
     sale_price: 2000,
     whatsapp_group_link: 'https://chat.whatsapp.com/sample-paffire-vip',
-    thumbnail_url: 'https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=800&q=80',
+    thumbnail_url: '/images/courses/paf-firefighter.webp',
     syllabus_summary: 'Intelligence, General Science, Basic English, and Physical endurance prep.',
     is_published: 1
   },
@@ -354,7 +354,7 @@ export const INITIAL_COURSES: Course[] = [
     regular_price: 4500,
     sale_price: 2200,
     whatsapp_group_link: 'https://chat.whatsapp.com/sample-pafmed-vip',
-    thumbnail_url: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80',
+    thumbnail_url: '/images/courses/paf-medical-assistant.webp',
     syllabus_summary: 'Biology, Chemistry, English, and PAF Medical branch entrance test.',
     is_published: 1
   },
@@ -368,7 +368,7 @@ export const INITIAL_COURSES: Course[] = [
     regular_price: 7000,
     sale_price: 3800,
     whatsapp_group_link: 'https://chat.whatsapp.com/sample-pafgdp-vip',
-    thumbnail_url: 'https://images.unsplash.com/photo-1519074069444-1ba4ea16e6f6?auto=format&fit=crop&w=800&q=80',
+    thumbnail_url: '/images/courses/paf-gdp.webp',
     syllabus_summary: 'High-speed Intelligence, Advanced Physics, English, Flying Aptitude test + ISSB.',
     is_published: 1
   },
@@ -382,7 +382,7 @@ export const INITIAL_COURSES: Course[] = [
     regular_price: 7000,
     sale_price: 3800,
     whatsapp_group_link: 'https://chat.whatsapp.com/sample-pafad-vip',
-    thumbnail_url: 'https://images.unsplash.com/photo-1517976487507-5b36485888a7?auto=format&fit=crop&w=800&q=80',
+    thumbnail_url: '/images/courses/paf-ad.webp',
     syllabus_summary: 'Intelligence, Radar concepts, Physics, Advanced Math + ISSB preparation.',
     is_published: 1
   },
@@ -396,7 +396,7 @@ export const INITIAL_COURSES: Course[] = [
     regular_price: 7500,
     sale_price: 4000,
     whatsapp_group_link: 'https://chat.whatsapp.com/sample-pafcae-vip',
-    thumbnail_url: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80',
+    thumbnail_url: '/images/courses/paf-cae.webp',
     syllabus_summary: 'Rigorous Mathematics, Mechanics, Electromagnetism, English + ISSB preparation.',
     is_published: 1
   },
@@ -410,7 +410,7 @@ export const INITIAL_COURSES: Course[] = [
     regular_price: 6500,
     sale_price: 3500,
     whatsapp_group_link: 'https://chat.whatsapp.com/sample-pafasd-vip',
-    thumbnail_url: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80',
+    thumbnail_url: '/images/courses/paf-asd.webp',
     syllabus_summary: 'Intelligence, English, General Knowledge, Pakistan Affairs + ISSB preparation.',
     is_published: 1
   },
@@ -424,7 +424,7 @@ export const INITIAL_COURSES: Course[] = [
     regular_price: 6500,
     sale_price: 3500,
     whatsapp_group_link: 'https://chat.whatsapp.com/sample-paflog-vip',
-    thumbnail_url: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80',
+    thumbnail_url: '/images/courses/paf-logistics.webp',
     syllabus_summary: 'Intelligence, Math, English, Supply chain basics + ISSB preparation.',
     is_published: 1
   },
@@ -440,7 +440,7 @@ export const INITIAL_COURSES: Course[] = [
     regular_price: 6000,
     sale_price: 3000,
     whatsapp_group_link: 'https://chat.whatsapp.com/sample-militarycoll-vip',
-    thumbnail_url: 'https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=800&q=80',
+    thumbnail_url: '/images/courses/military-college-prep.webp',
     syllabus_summary: 'Prep for MCJ, MCM, MCS: English, Mathematics, Urdu, General Science, and Interview.',
     is_published: 1
   },
@@ -454,7 +454,7 @@ export const INITIAL_COURSES: Course[] = [
     regular_price: 6000,
     sale_price: 3000,
     whatsapp_group_link: 'https://chat.whatsapp.com/sample-pafcoll-vip',
-    thumbnail_url: 'https://images.unsplash.com/photo-1519074069444-1ba4ea16e6f6?auto=format&fit=crop&w=800&q=80',
+    thumbnail_url: '/images/courses/paf-college-prep.webp',
     syllabus_summary: 'Prep for PAF College Sargodha & Lower Topa: English, Math, General Science, and Interview.',
     is_published: 1
   },
@@ -468,7 +468,7 @@ export const INITIAL_COURSES: Course[] = [
     regular_price: 6000,
     sale_price: 3000,
     whatsapp_group_link: 'https://chat.whatsapp.com/sample-cadetcoll-vip',
-    thumbnail_url: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80',
+    thumbnail_url: '/images/courses/cadet-college-prep.webp',
     syllabus_summary: 'Prep for Hasan Abdal, Kohat, Petaro, Batrasi, and all provincial cadet colleges.',
     is_published: 1
   },
@@ -482,7 +482,7 @@ export const INITIAL_COURSES: Course[] = [
     regular_price: 8000,
     sale_price: 4500,
     whatsapp_group_link: 'https://chat.whatsapp.com/sample-mdcat-vip',
-    thumbnail_url: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80',
+    thumbnail_url: '/images/courses/mdcat-prep.webp',
     syllabus_summary: 'Complete PMDC syllabus: Biology, Chemistry, Physics, English, and Logical Reasoning.',
     is_published: 1
   },
@@ -496,7 +496,7 @@ export const INITIAL_COURSES: Course[] = [
     regular_price: 8000,
     sale_price: 4500,
     whatsapp_group_link: 'https://chat.whatsapp.com/sample-ecat-vip',
-    thumbnail_url: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80',
+    thumbnail_url: '/images/courses/ecat-prep.webp',
     syllabus_summary: 'UET pattern: Advanced Mathematics, Physics, Chemistry / Computer Science, and English.',
     is_published: 1
   },
@@ -510,7 +510,7 @@ export const INITIAL_COURSES: Course[] = [
     regular_price: 5000,
     sale_price: 2500,
     whatsapp_group_link: 'https://chat.whatsapp.com/sample-lat-vip',
-    thumbnail_url: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=800&q=80',
+    thumbnail_url: '/images/courses/lat-prep.webp',
     syllabus_summary: 'HEC LAT syllabus: Essay (Urdu/English), Personal Statement, MCQs (English, GK, Pak Studies).',
     is_published: 1
   },
@@ -524,7 +524,7 @@ export const INITIAL_COURSES: Course[] = [
     regular_price: 5000,
     sale_price: 2500,
     whatsapp_group_link: 'https://chat.whatsapp.com/sample-ncat-vip',
-    thumbnail_url: 'https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=800&q=80',
+    thumbnail_url: '/images/courses/n-cat-prep.webp',
     syllabus_summary: 'Pre-Medical fundamentals, Anatomy basics, Chemistry, Physics, and English comprehension.',
     is_published: 1
   },
@@ -538,7 +538,7 @@ export const INITIAL_COURSES: Course[] = [
     regular_price: 6000,
     sale_price: 3000,
     whatsapp_group_link: 'https://chat.whatsapp.com/sample-uni-vip',
-    thumbnail_url: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80',
+    thumbnail_url: '/images/courses/university-entry-test.webp',
     syllabus_summary: 'Preparation for NUST (NET), FAST (NU), GIKI, PIEAS, and COMSATS tests.',
     is_published: 1
   },
@@ -552,7 +552,7 @@ export const INITIAL_COURSES: Course[] = [
     regular_price: 4000,
     sale_price: 2000,
     whatsapp_group_link: 'https://chat.whatsapp.com/sample-english-vip',
-    thumbnail_url: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80',
+    thumbnail_url: '/images/courses/spoken-english.webp',
     syllabus_summary: 'Fluency development, Military interview speaking confidence, Pronunciation, Vocabulary.',
     is_published: 1
   },
@@ -566,7 +566,7 @@ export const INITIAL_COURSES: Course[] = [
     regular_price: 5000,
     sale_price: 2500,
     whatsapp_group_link: 'https://chat.whatsapp.com/sample-school-vip',
-    thumbnail_url: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80',
+    thumbnail_url: '/images/courses/online-schooling-1-10.webp',
     syllabus_summary: 'Complete syllabus coverage for Federal, Punjab, and Sindh board examinations.',
     is_published: 1
   },
@@ -580,7 +580,7 @@ export const INITIAL_COURSES: Course[] = [
     regular_price: 6000,
     sale_price: 3000,
     whatsapp_group_link: 'https://chat.whatsapp.com/sample-college-vip',
-    thumbnail_url: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80',
+    thumbnail_url: '/images/courses/online-coaching-11-12.webp',
     syllabus_summary: 'Specialized lectures in Physics, Mathematics, Chemistry, Biology, and Computer Science.',
     is_published: 1
   }

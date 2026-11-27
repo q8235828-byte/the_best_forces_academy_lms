@@ -164,7 +164,7 @@ function NonVerbalPdfGuideContent() {
           </div>
 
           {/* Category Filter Badges */}
-          <div className="flex gap-1.5 overflow-x-auto pb-1 pt-1 no-scrollbar text-xs">
+          <div className="flex flex-wrap gap-1.5 pt-1 text-xs">
             <button
               onClick={() => handleCategorySelect('all')}
               className={`px-3 py-1.5 rounded-xl font-bold whitespace-nowrap transition-all ${

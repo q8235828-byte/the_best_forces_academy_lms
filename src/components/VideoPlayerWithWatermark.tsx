@@ -55,7 +55,7 @@ export default function VideoPlayerWithWatermark({
               controls
               playsInline
               preload="none"
-              poster={course.thumbnail_url || 'https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=800&q=80'}
+              poster={course.thumbnail_url || '/images/courses/issb-complete-prep.webp'}
               className="w-full h-full object-contain"
               src={lesson.video_url}
               onEnded={onVideoEnded}

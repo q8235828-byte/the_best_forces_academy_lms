@@ -6,8 +6,8 @@ import VideoPlayerWithWatermark from '@/components/VideoPlayerWithWatermark';
 import { getCourseLessonsWithNonVerbal, getLessonNonVerbalCategoryId } from '@/lib/courses-data';
 import { ACADEMY_CONFIG, PAYMENT_ACCOUNTS } from '@/lib/constants';
 import { getPaymentAccounts, addPaymentTransaction, PaymentAccountsConfig } from '@/lib/admin-store';
-import { getCurrentUser } from '@/lib/auth';
-import { getCourseEligibility, getCourseTestPattern, getCourseSelectionProcedure } from '@/lib/eligibility';
+import { getCurrentUser, loginCadet, registerCadet, updateCadetRecord, CadetSession } from '@/lib/auth';
+import { getCourseEligibility, getCourseTestPattern, getCourseSelectionProcedure, evaluateEligibility } from '@/lib/eligibility';
 import { 
   Shield, 
   Lock, 
@@ -40,19 +40,74 @@ export default function CourseDetailClient({ course }: CourseDetailClientProps) 
   const [activeTab, setActiveTab] = useState<'eligibility' | 'pattern' | 'procedure' | 'syllabus'>('eligibility');
   const [isEnrolled, setIsEnrolled] = useState(false);
   const [showEnrollModal, setShowEnrollModal] = useState(false);
+  const [currentUser, setCurrentUser] = useState<CadetSession | null>(null);
+  const [enrollStage, setEnrollStage] = useState<'auth' | 'eligibility' | 'payment'>('auth');
+  const [authTab, setAuthTab] = useState<'login' | 'register'>('login');
+  const [loginIdentifier, setLoginIdentifier] = useState('');
+  const [loginPassword, setLoginPassword] = useState('');
+  const [authError, setAuthError] = useState<string | null>(null);
+
+  // Registration & Eligibility Check fields
+  const [regFatherName, setRegFatherName] = useState('');
+  const [regEmail, setRegEmail] = useState('');
+  const [regPassword, setRegPassword] = useState('');
+  const [eligGender, setEligGender] = useState('Male');
+  const [eligDob, setEligDob] = useState('');
+  const [eligHeight, setEligHeight] = useState('');
+  const [eligMatric, setEligMatric] = useState('');
+  const [eligFsc, setEligFsc] = useState('');
+
   const eligibility = getCourseEligibility(course);
   const testPattern = getCourseTestPattern(course);
   const selectionSteps = getCourseSelectionProcedure(course);
 
-  // Check paid course clearance from Admin / session
+  // Check paid course clearance & user session, and remember last viewed course for /register auto-select
   useEffect(() => {
-    const user = getCurrentUser();
-    if (user) {
-      if (user.role === 'admin' || user.enrolled_courses?.includes(course.id)) {
-        setIsEnrolled(true);
-      }
+    try {
+      sessionStorage.setItem('bfa_last_course_slug', course.slug);
+    } catch {
+      // ignore storage errors
     }
+    const syncUser = () => {
+      const user = getCurrentUser();
+      setCurrentUser(user);
+      if (user) {
+        if (user.role === 'admin' || user.enrolled_courses?.includes(course.id)) {
+          setIsEnrolled(true);
+        }
+        setCandidateName((prev) => prev || user.full_name || '');
+        setCandidatePhone((prev) => prev || user.phone_number || '');
+        if (user.gender) setEligGender(user.gender);
+        if (user.dob) setEligDob(user.dob);
+        if (user.height) setEligHeight(user.height);
+        if (user.matric_marks) setEligMatric(user.matric_marks);
+        if (user.fsc_marks) setEligFsc(user.fsc_marks);
+      }
+    };
+    syncUser();
+    window.addEventListener('bfa_auth_changed', syncUser);
+    return () => window.removeEventListener('bfa_auth_changed', syncUser);
   }, [course.id]);
+
+  const openEnrollFlow = () => {
+    const user = getCurrentUser();
+    setAuthError(null);
+    setFormSubmitted(false);
+    if (user) {
+      setCurrentUser(user);
+      setCandidateName(user.full_name || '');
+      setCandidatePhone(user.phone_number || '');
+      if (user.gender) setEligGender(user.gender);
+      if (user.dob) setEligDob(user.dob);
+      if (user.height) setEligHeight(user.height);
+      if (user.matric_marks) setEligMatric(user.matric_marks);
+      if (user.fsc_marks) setEligFsc(user.fsc_marks);
+      setEnrollStage(user.role === 'admin' ? 'payment' : 'eligibility');
+    } else {
+      setEnrollStage('auth');
+    }
+    setShowEnrollModal(true);
+  };
   
   // Payment Form State
   const [paymentMethod, setPaymentMethod] = useState<'jazzcash' | 'easypaisa' | 'bank_transfer'>('jazzcash');
@@ -122,7 +177,7 @@ export default function CourseDetailClient({ course }: CourseDetailClientProps) 
   const isVideoCompleted = completedLessons.includes(currentLesson.id);
   const isPdfStudied = studiedPdfs.includes(currentLesson.id);
   const pdfHref = currentNvCatId ? `/tests/non-verbal-pdf?cat=${currentNvCatId}` : '/tests/non-verbal-pdf';
-  const quizHref = currentNvCatId ? `/tests/2?count=20&cat=${currentNvCatId}` : '/tests/2?count=20';
+  const quizHref = currentNvCatId ? `/tests/quiz/2?count=20&cat=${currentNvCatId}` : '/tests/quiz/2?count=20';
 
   const handleEnrollmentSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -187,7 +242,7 @@ export default function CourseDetailClient({ course }: CourseDetailClientProps) 
 
               {!isEnrolled ? (
                 <button
-                  onClick={() => setShowEnrollModal(true)}
+                  onClick={openEnrollFlow}
                   className="bg-honor-gold hover:bg-honor-dark text-slate-950 font-extrabold px-6 py-3 rounded-xl shadow-md transition-all hover:scale-105 text-sm"
                 >
                   Enroll Now
@@ -213,7 +268,7 @@ export default function CourseDetailClient({ course }: CourseDetailClientProps) 
               isEnrolled={isEnrolled}
               studentName={candidateName || "Candidate"}
               studentPhone={candidatePhone || "+92 305 4599659"}
-              onOpenEnrollmentModal={() => setShowEnrollModal(true)}
+              onOpenEnrollmentModal={openEnrollFlow}
               onVideoEnded={handleVideoCompleted}
             />
 
@@ -666,7 +721,7 @@ export default function CourseDetailClient({ course }: CourseDetailClientProps) 
                     VIP WhatsApp group link unlocks automatically once your course admission is approved.
                   </p>
                   <button
-                    onClick={() => setShowEnrollModal(true)}
+                    onClick={openEnrollFlow}
                     className="w-full bg-gray-800 hover:bg-gray-700 text-gray-300 py-2.5 rounded-xl font-bold text-xs flex items-center justify-center gap-2 border border-gray-700"
                   >
                     <Lock className="w-3.5 h-3.5" />
@@ -681,10 +736,10 @@ export default function CourseDetailClient({ course }: CourseDetailClientProps) 
 
       </div>
 
-      {/* Manual Pakistani Payment Modal */}
+      {/* 3-Stage Enrollment Modal: 1. Login/Register -> 2. Eligibility Verify -> 3. Payment */}
       {showEnrollModal && (
         <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 overflow-y-auto">
-          <div className="bg-white rounded-3xl max-w-xl w-full p-6 sm:p-8 shadow-2xl border border-gray-200 relative my-8">
+          <div className="bg-white rounded-3xl max-w-xl w-full p-6 sm:p-8 shadow-2xl border border-gray-200 relative my-8 max-h-[92vh] overflow-y-auto">
             <button
               onClick={() => setShowEnrollModal(false)}
               className="absolute top-5 right-5 text-gray-400 hover:text-gray-700 p-1 rounded-lg"
@@ -692,7 +747,438 @@ export default function CourseDetailClient({ course }: CourseDetailClientProps) 
               <X className="w-6 h-6" />
             </button>
 
-            {!formSubmitted ? (
+            {/* Stage Indicator */}
+            {!formSubmitted && (
+              <div className="flex items-center gap-2 mb-5 pr-8 text-[11px] font-bold">
+                <span className={`px-2.5 py-1 rounded-full ${enrollStage === 'auth' ? 'bg-[#183B2B] text-white' : 'bg-emerald-100 text-emerald-800'}`}>
+                  1. Account
+                </span>
+                <span className="text-gray-300">→</span>
+                <span className={`px-2.5 py-1 rounded-full ${enrollStage === 'eligibility' ? 'bg-[#183B2B] text-white' : enrollStage === 'payment' ? 'bg-emerald-100 text-emerald-800' : 'bg-gray-100 text-gray-400'}`}>
+                  2. Eligibility Check
+                </span>
+                <span className="text-gray-300">→</span>
+                <span className={`px-2.5 py-1 rounded-full ${enrollStage === 'payment' ? 'bg-[#183B2B] text-white' : 'bg-gray-100 text-gray-400'}`}>
+                  3. Fee Payment
+                </span>
+              </div>
+            )}
+
+            {formSubmitted ? (
+              /* Success Confirmation */
+              <div className="text-center py-6 space-y-4">
+                <div className="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto">
+                  <CheckCircle className="w-8 h-8" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900">
+                  Admission Form & Proof Submitted!
+                </h3>
+                <p className="text-sm text-gray-600 max-w-sm mx-auto">
+                  Candidate <strong>{candidateName}</strong>, your premium lectures are now unlocked. Please send your screenshot to Mentor for official VIP batch verification.
+                </p>
+
+                <div className="pt-4 flex flex-col gap-3">
+                  <a
+                    href={`https://wa.me/${ACADEMY_CONFIG.phoneRaw}?text=${encodeURIComponent(`Assalam-o-Alaikum Mentor, I just submitted fee proof for ${course.title}. TRX ID: ${trxId}, Name: ${candidateName}, Phone: ${candidatePhone}.`)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full bg-[#25D366] hover:bg-[#20ba5a] text-white py-3 rounded-xl font-bold text-sm flex items-center justify-center gap-2 shadow-md"
+                  >
+                    <MessageCircle className="w-5 h-5 fill-white" />
+                    <span>Verify Receipt via WhatsApp</span>
+                  </a>
+                  <button
+                    onClick={() => setShowEnrollModal(false)}
+                    className="text-xs text-gray-500 hover:underline py-2"
+                  >
+                    Close and Start Watching Lectures
+                  </button>
+                </div>
+              </div>
+            ) : enrollStage === 'auth' ? (
+              /* STAGE 1: LOGIN OR REGISTER + ELIGIBILITY */
+              <div className="space-y-5">
+                <div>
+                  <span className="text-xs font-bold text-emerald-700 uppercase tracking-wider">
+                    Step 1 of 3 • Cadet Account Verification
+                  </span>
+                  <h3 className="text-xl font-black text-gray-900 mt-1">
+                    Sign In or Register Before Payment
+                  </h3>
+                  <p className="text-xs text-gray-500 mt-0.5">
+                    For <strong>{course.title}</strong>, please sign in or register so we can verify your eligibility first.
+                  </p>
+                </div>
+
+                {/* Auth Mode Switcher */}
+                <div className="grid grid-cols-2 gap-2 p-1 bg-slate-100 rounded-xl">
+                  <button
+                    type="button"
+                    onClick={() => { setAuthTab('login'); setAuthError(null); }}
+                    className={`py-2 rounded-lg text-xs font-bold transition-all ${authTab === 'login' ? 'bg-white text-[#183B2B] shadow-sm' : 'text-gray-600'}`}
+                  >
+                    Already Registered (Sign In)
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => { setAuthTab('register'); setAuthError(null); }}
+                    className={`py-2 rounded-lg text-xs font-bold transition-all ${authTab === 'register' ? 'bg-[#183B2B] text-white shadow-sm' : 'text-gray-600'}`}
+                  >
+                    New Student (Register)
+                  </button>
+                </div>
+
+                {authError && (
+                  <div className="p-3 rounded-xl bg-red-50 border border-red-200 text-xs font-semibold text-red-700 flex items-center gap-2">
+                    <AlertCircle className="w-4 h-4 shrink-0" />
+                    <span>{authError}</span>
+                  </div>
+                )}
+
+                {authTab === 'login' ? (
+                  <form
+                    onSubmit={(e) => {
+                      e.preventDefault();
+                      setAuthError(null);
+                      const res = loginCadet(loginIdentifier, loginPassword);
+                      if (res.success && res.session) {
+                        setCurrentUser(res.session);
+                        setCandidateName(res.session.full_name || '');
+                        setCandidatePhone(res.session.phone_number || '');
+                        if (res.session.gender) setEligGender(res.session.gender);
+                        if (res.session.dob) setEligDob(res.session.dob);
+                        if (res.session.height) setEligHeight(res.session.height);
+                        if (res.session.matric_marks) setEligMatric(res.session.matric_marks);
+                        if (res.session.fsc_marks) setEligFsc(res.session.fsc_marks);
+                        setEnrollStage('eligibility');
+                      } else {
+                        setAuthError(res.error || 'Invalid credentials. Try New Student Registration.');
+                      }
+                    }}
+                    className="space-y-3"
+                  >
+                    <div>
+                      <label className="block text-xs font-semibold text-gray-700 mb-1">
+                        Email, Roll Number, or Mobile Number:
+                      </label>
+                      <input
+                        type="text"
+                        required
+                        value={loginIdentifier}
+                        onChange={(e) => setLoginIdentifier(e.target.value)}
+                        placeholder="e.g. qaiser.faryad@gmail.com or +92 305 4599659"
+                        className="w-full px-3.5 py-2.5 rounded-xl border border-gray-300 text-sm outline-none focus:border-[#183B2B]"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-xs font-semibold text-gray-700 mb-1">
+                        Password / Pin:
+                      </label>
+                      <input
+                        type="password"
+                        required
+                        value={loginPassword}
+                        onChange={(e) => setLoginPassword(e.target.value)}
+                        placeholder="Enter your password"
+                        className="w-full px-3.5 py-2.5 rounded-xl border border-gray-300 text-sm outline-none focus:border-[#183B2B]"
+                      />
+                    </div>
+                    <button
+                      type="submit"
+                      className="w-full bg-[#183B2B] hover:bg-[#2A5A44] text-white py-3 rounded-xl font-bold text-sm shadow-md transition-all"
+                    >
+                      Sign In & Verify Eligibility →
+                    </button>
+                  </form>
+                ) : (
+                  <form
+                    onSubmit={(e) => {
+                      e.preventDefault();
+                      setAuthError(null);
+                      const res = registerCadet({
+                        full_name: candidateName,
+                        father_name: regFatherName,
+                        phone_number: candidatePhone,
+                        email: regEmail,
+                        target_wing: course.title,
+                        password: regPassword,
+                      });
+                      if (res.success && res.session) {
+                        updateCadetRecord(res.session.id, {
+                          gender: eligGender,
+                          dob: eligDob,
+                          height: eligHeight,
+                          matric_marks: eligMatric,
+                          fsc_marks: eligFsc,
+                        });
+                        const updatedUser = {
+                          ...res.session,
+                          gender: eligGender,
+                          dob: eligDob,
+                          height: eligHeight,
+                          matric_marks: eligMatric,
+                          fsc_marks: eligFsc,
+                        };
+                        setCurrentUser(updatedUser);
+                        setEnrollStage('eligibility');
+                      } else {
+                        setAuthError('Could not complete registration. Please check your details.');
+                      }
+                    }}
+                    className="space-y-3 text-xs"
+                  >
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                      <div>
+                        <label className="block font-semibold text-gray-700 mb-1">Full Name *</label>
+                        <input
+                          type="text"
+                          required
+                          value={candidateName}
+                          onChange={(e) => setCandidateName(e.target.value)}
+                          placeholder="Muhammad Ali"
+                          className="w-full px-3 py-2 rounded-xl border border-gray-300"
+                        />
+                      </div>
+                      <div>
+                        <label className="block font-semibold text-gray-700 mb-1">Father Name *</label>
+                        <input
+                          type="text"
+                          required
+                          value={regFatherName}
+                          onChange={(e) => setRegFatherName(e.target.value)}
+                          placeholder="Father Name"
+                          className="w-full px-3 py-2 rounded-xl border border-gray-300"
+                        />
+                      </div>
+                      <div>
+                        <label className="block font-semibold text-gray-700 mb-1">WhatsApp / Mobile *</label>
+                        <input
+                          type="tel"
+                          required
+                          value={candidatePhone}
+                          onChange={(e) => setCandidatePhone(e.target.value)}
+                          placeholder="0300 1234567"
+                          className="w-full px-3 py-2 rounded-xl border border-gray-300"
+                        />
+                      </div>
+                      <div>
+                        <label className="block font-semibold text-gray-700 mb-1">Email *</label>
+                        <input
+                          type="email"
+                          required
+                          value={regEmail}
+                          onChange={(e) => setRegEmail(e.target.value)}
+                          placeholder="student@gmail.com"
+                          className="w-full px-3 py-2 rounded-xl border border-gray-300"
+                        />
+                      </div>
+                      <div>
+                        <label className="block font-semibold text-gray-700 mb-1">Gender *</label>
+                        <select
+                          value={eligGender}
+                          onChange={(e) => setEligGender(e.target.value)}
+                          className="w-full px-3 py-2 rounded-xl border border-gray-300 bg-white"
+                        >
+                          <option value="Male">Male</option>
+                          <option value="Female">Female</option>
+                        </select>
+                      </div>
+                      <div>
+                        <label className="block font-semibold text-gray-700 mb-1">Date of Birth *</label>
+                        <input
+                          type="date"
+                          required
+                          value={eligDob}
+                          onChange={(e) => setEligDob(e.target.value)}
+                          className="w-full px-3 py-2 rounded-xl border border-gray-300"
+                        />
+                      </div>
+                      <div>
+                        <label className="block font-semibold text-gray-700 mb-1">Height (e.g. 5.6) *</label>
+                        <input
+                          type="text"
+                          required
+                          value={eligHeight}
+                          onChange={(e) => setEligHeight(e.target.value)}
+                          placeholder="5.6"
+                          className="w-full px-3 py-2 rounded-xl border border-gray-300"
+                        />
+                      </div>
+                      <div>
+                        <label className="block font-semibold text-gray-700 mb-1">Matric / FSc Marks *</label>
+                        <input
+                          type="text"
+                          required
+                          value={eligFsc || eligMatric}
+                          onChange={(e) => {
+                            setEligMatric(e.target.value);
+                            setEligFsc(e.target.value);
+                          }}
+                          placeholder="e.g. 850/1100"
+                          className="w-full px-3 py-2 rounded-xl border border-gray-300"
+                        />
+                      </div>
+                      <div className="sm:col-span-2">
+                        <label className="block font-semibold text-gray-700 mb-1">Create Password *</label>
+                        <input
+                          type="password"
+                          required
+                          value={regPassword}
+                          onChange={(e) => setRegPassword(e.target.value)}
+                          placeholder="Minimum 4 characters"
+                          className="w-full px-3 py-2 rounded-xl border border-gray-300"
+                        />
+                      </div>
+                    </div>
+                    <button
+                      type="submit"
+                      className="w-full bg-[#183B2B] hover:bg-[#2A5A44] text-white py-3 rounded-xl font-bold text-sm shadow-md transition-all"
+                    >
+                      Register & Check Eligibility →
+                    </button>
+                  </form>
+                )}
+              </div>
+            ) : enrollStage === 'eligibility' ? (
+              /* STAGE 2: ELIGIBILITY VERIFICATION BEFORE PAYMENT */
+              (() => {
+                const evalResult = evaluateEligibility(course, {
+                  dob: eligDob,
+                  gender: eligGender,
+                  height: eligHeight,
+                  matricMarks: eligMatric,
+                  fscMarks: eligFsc,
+                });
+                return (
+                  <div className="space-y-4">
+                    <div>
+                      <span className="text-xs font-bold text-emerald-700 uppercase tracking-wider">
+                        Step 2 of 3 • Official Eligibility Verification
+                      </span>
+                      <h3 className="text-xl font-black text-gray-900 mt-1">
+                        {course.title}
+                      </h3>
+                      <p className="text-xs text-gray-500">
+                        Verify your physical & academic details before fee payment.
+                      </p>
+                    </div>
+
+                    {/* Quick profile fields if incomplete or updating */}
+                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs bg-slate-50 p-3 rounded-xl border border-slate-200">
+                      <div>
+                        <label className="font-bold text-gray-600 block mb-1">Gender</label>
+                        <select
+                          value={eligGender}
+                          onChange={(e) => setEligGender(e.target.value)}
+                          className="w-full px-2 py-1.5 rounded-lg border border-gray-300 bg-white"
+                        >
+                          <option value="Male">Male</option>
+                          <option value="Female">Female</option>
+                        </select>
+                      </div>
+                      <div>
+                        <label className="font-bold text-gray-600 block mb-1">Date of Birth</label>
+                        <input
+                          type="date"
+                          value={eligDob}
+                          onChange={(e) => setEligDob(e.target.value)}
+                          className="w-full px-2 py-1.5 rounded-lg border border-gray-300 bg-white"
+                        />
+                      </div>
+                      <div>
+                        <label className="font-bold text-gray-600 block mb-1">Height (ft.in)</label>
+                        <input
+                          type="text"
+                          value={eligHeight}
+                          onChange={(e) => setEligHeight(e.target.value)}
+                          placeholder="5.6"
+                          className="w-full px-2 py-1.5 rounded-lg border border-gray-300 bg-white"
+                        />
+                      </div>
+                      <div>
+                        <label className="font-bold text-gray-600 block mb-1">Marks</label>
+                        <input
+                          type="text"
+                          value={eligFsc || eligMatric}
+                          onChange={(e) => {
+                            setEligMatric(e.target.value);
+                            setEligFsc(e.target.value);
+                          }}
+                          placeholder="850/1100"
+                          className="w-full px-2 py-1.5 rounded-lg border border-gray-300 bg-white"
+                        />
+                      </div>
+                    </div>
+
+                    {/* Checklist */}
+                    <div className="space-y-2">
+                      {evalResult.checks.map((chk, idx) => (
+                        <div
+                          key={idx}
+                          className={`p-3 rounded-xl border text-xs flex items-center justify-between gap-2 ${
+                            chk.passed ? 'bg-emerald-50 border-emerald-200 text-emerald-900' : 'bg-red-50 border-red-200 text-red-900'
+                          }`}
+                        >
+                          <div>
+                            <div className="font-bold">{chk.label}</div>
+                            <div className="text-[11px] opacity-85">{chk.detail}</div>
+                          </div>
+                          <span className="font-black text-xs">{chk.passed ? 'PASS ✓' : 'FAIL ✕'}</span>
+                        </div>
+                      ))}
+                    </div>
+
+                    <div
+                      className={`p-3.5 rounded-xl text-xs font-bold border ${
+                        evalResult.isEligible
+                          ? 'bg-emerald-100 border-emerald-300 text-emerald-900'
+                          : 'bg-amber-50 border-amber-300 text-amber-900'
+                      }`}
+                    >
+                      {evalResult.summaryMessage}
+                    </div>
+
+                    <div className="flex items-center justify-between gap-3 pt-2">
+                      <Link
+                        href="/courses"
+                        className="px-4 py-2.5 rounded-xl text-xs font-bold bg-gray-100 hover:bg-gray-200 text-gray-700"
+                      >
+                        Browse Other Courses
+                      </Link>
+                      {evalResult.isEligible ? (
+                        <button
+                          type="button"
+                          onClick={() => {
+                            if (currentUser) {
+                              updateCadetRecord(currentUser.id, {
+                                gender: eligGender,
+                                dob: eligDob,
+                                height: eligHeight,
+                                matric_marks: eligMatric,
+                                fsc_marks: eligFsc,
+                              });
+                            }
+                            setEnrollStage('payment');
+                          }}
+                          className="px-5 py-3 rounded-xl text-xs font-black bg-emerald-600 hover:bg-emerald-700 text-white shadow-md"
+                        >
+                          Eligible ✓ Proceed to Payment →
+                        </button>
+                      ) : (
+                        <button
+                          type="button"
+                          disabled
+                          className="px-5 py-3 rounded-xl text-xs font-bold bg-gray-200 text-gray-500 cursor-not-allowed"
+                        >
+                          Not Eligible for Payment
+                        </button>
+                      )}
+                    </div>
+                  </div>
+                );
+              })()
+            ) : (
+              /* STAGE 3: PAYMENT FORM */
               <form onSubmit={handleEnrollmentSubmit} className="space-y-5">
                 <div>
                   <span className="text-xs font-bold text-honor-dark uppercase tracking-wider">
@@ -803,38 +1289,6 @@ export default function CourseDetailClient({ course }: CourseDetailClientProps) 
                   </button>
                 </div>
               </form>
-            ) : (
-              /* Success Confirmation */
-              <div className="text-center py-6 space-y-4">
-                <div className="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto">
-                  <CheckCircle className="w-8 h-8" />
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900">
-                  Admission Form & Proof Submitted!
-                </h3>
-                <p className="text-sm text-gray-600 max-w-sm mx-auto">
-                  Candidate <strong>{candidateName}</strong>, your premium lectures are now unlocked. Please send your screenshot to Mentor for official VIP batch verification.
-                </p>
-
-                <div className="pt-4 flex flex-col gap-3">
-                  <a
-                    href={`https://wa.me/${ACADEMY_CONFIG.phoneRaw}?text=${encodeURIComponent(`Assalam-o-Alaikum Mentor, I just submitted fee proof for ${course.title}. TRX ID: ${trxId}, Name: ${candidateName}, Phone: ${candidatePhone}.`)}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full bg-[#25D366] hover:bg-[#20ba5a] text-white py-3 rounded-xl font-bold text-sm flex items-center justify-center gap-2 shadow"
-                  >
-                    <MessageCircle className="w-4 h-4 fill-white" />
-                    <span>Send Receipt on WhatsApp</span>
-                  </a>
-
-                  <button
-                    onClick={() => setShowEnrollModal(false)}
-                    className="w-full bg-gray-100 hover:bg-gray-200 text-gray-800 py-2.5 rounded-xl font-bold text-xs"
-                  >
-                    Continue to Lectures
-                  </button>
-                </div>
-              </div>
             )}
           </div>
         </div>

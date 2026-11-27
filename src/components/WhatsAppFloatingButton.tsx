@@ -1,10 +1,16 @@
 "use client";
 
 import React from 'react';
+import { usePathname } from 'next/navigation';
 import { MessageCircle } from 'lucide-react';
 import { ACADEMY_CONFIG } from '@/lib/constants';
 
 export default function WhatsAppFloatingButton() {
+  const pathname = usePathname();
+  if (pathname?.startsWith('/tests/quiz') || pathname?.startsWith('/tests/wat')) {
+    return null;
+  }
+
   return (
     <div className="fixed bottom-6 right-6 z-50 flex items-center gap-3 no-print">
       <div className="hidden md:flex flex-col items-end bg-[#0F261C] text-white px-3 py-1.5 rounded-lg border border-[#2A5A44] shadow-xl text-xs">

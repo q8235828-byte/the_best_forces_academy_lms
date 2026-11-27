@@ -31,7 +31,7 @@ export default function CourseCard({ course }: CourseCardProps) {
       <div className="relative aspect-video w-full bg-slate-900 overflow-hidden">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src={course.thumbnail_url || 'https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=800&q=80'}
+          src={course.thumbnail_url || '/images/courses/issb-complete-prep.webp'}
           alt={course.title}
           loading="lazy"
           decoding="async"

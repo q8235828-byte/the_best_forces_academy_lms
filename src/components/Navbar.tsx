@@ -24,14 +24,15 @@ import {
   User,
   UserCheck,
   LogOut,
-  KeyRound
+  KeyRound,
+  Play
 } from 'lucide-react';
 import { ACADEMY_CONFIG } from '@/lib/constants';
 import { getCurrentUser, logoutUser, CadetSession } from '@/lib/auth';
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<'courses' | 'tests' | 'user' | null>(null);
+  const [activeDropdown, setActiveDropdown] = useState<'courses' | 'tests' | 'user' | 'account' | null>(null);
   const [mobileCoursesOpen, setMobileCoursesOpen] = useState(false);
   const [mobileTestsOpen, setMobileTestsOpen] = useState(false);
   const [currentUser, setCurrentUser] = useState<CadetSession | null>(null);
@@ -157,32 +158,30 @@ export default function Navbar() {
       </div>
 
       {/* Main Navbar */}
-      <div className="w-full px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12" ref={navContainerRef}>
-        <div className="flex items-center justify-between h-16 sm:h-20 gap-3 w-full">
+      <div className="w-full px-3 sm:px-5 lg:px-6" ref={navContainerRef}>
+        <div className="flex items-center justify-between h-16 sm:h-18 gap-2 w-full">
           
-          {/* Logo / Brand */}
-          <Link href="/" className="flex items-center gap-2.5 sm:gap-3 group flex-shrink-0 min-w-max">
-            <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-[#2A5A44] to-[#0F261C] border border-honor-gold/70 flex items-center justify-center shadow-lg group-hover:border-honor-gold transition-all duration-300 flex-shrink-0">
-              <Shield className="w-5 h-5 sm:w-7 sm:h-7 text-honor-gold transform group-hover:scale-105 transition-transform" />
+          {/* Logo / Brand (Compact, no domain) */}
+          <Link href="/" className="flex items-center gap-2 group flex-shrink-0 min-w-max">
+            <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-gradient-to-br from-[#2A5A44] to-[#0F261C] border border-honor-gold/70 flex items-center justify-center shadow-md group-hover:border-honor-gold transition-all duration-300 flex-shrink-0">
+              <Shield className="w-4 h-4 sm:w-5 sm:h-5 text-honor-gold transform group-hover:scale-105 transition-transform" />
             </div>
             <div className="flex flex-col justify-center flex-shrink-0 min-w-max">
-              <div className="text-sm sm:text-base lg:text-lg xl:text-xl font-black tracking-tight text-white leading-tight whitespace-nowrap select-none">
+              <div className="text-xs sm:text-sm font-black tracking-tight text-white leading-tight whitespace-nowrap select-none">
                 THE BEST FORCES <span className="text-honor-gold">ACADEMY</span>
               </div>
-              <div className="text-[9px] sm:text-[10px] lg:text-[11px] text-gray-300 uppercase tracking-wider font-semibold flex items-center gap-1 sm:gap-1.5 whitespace-nowrap select-none">
-                <span>PREMIER DEFENSE LMS</span>
-                <span className="text-honor-gold hidden sm:inline">•</span>
-                <span className="text-gray-400 hidden sm:inline">BESTFORCESACADEMY.NET</span>
+              <div className="text-[9px] text-gray-300 uppercase tracking-wider font-semibold whitespace-nowrap select-none">
+                PREMIER DEFENSE LMS
               </div>
             </div>
           </Link>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden xl:flex items-center gap-1.5">
+          <nav className="hidden xl:flex items-center gap-0.5 whitespace-nowrap">
             {/* Home */}
             <Link
               href="/"
-              className={`px-3 py-2 rounded-lg text-sm font-semibold transition-all ${
+              className={`px-2.5 py-2 rounded-lg text-[13px] font-semibold transition-all ${
                 pathname === '/' 
                   ? 'bg-[#2A5A44] text-honor-gold border border-honor-gold/40' 
                   : 'text-gray-200 hover:text-white hover:bg-[#2A5A44]/60'
@@ -199,19 +198,19 @@ export default function Navbar() {
             >
               <button
                 onClick={() => setActiveDropdown(activeDropdown === 'courses' ? null : 'courses')}
-                className={`px-3 py-2 rounded-lg text-sm font-semibold flex items-center gap-1.5 transition-all ${
+                className={`px-2.5 py-2 rounded-lg text-[13px] font-semibold flex items-center gap-1 transition-all ${
                   activeDropdown === 'courses' || pathname.startsWith('/courses')
                     ? 'bg-[#2A5A44] text-honor-gold border border-honor-gold/40' 
                     : 'text-gray-200 hover:text-white hover:bg-[#2A5A44]/60'
                 }`}
                 aria-expanded={activeDropdown === 'courses'}
               >
-                <BookOpen className="w-4 h-4 text-honor-gold" />
+                <BookOpen className="w-3.5 h-3.5 text-honor-gold" />
                 <span>Courses & Wings</span>
                 <span className="text-[10px] font-bold px-1.5 py-0.5 rounded-full bg-honor-gold/20 text-honor-gold border border-honor-gold/30">
                   41
                 </span>
-                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === 'courses' ? 'rotate-180 text-honor-gold' : 'text-gray-400'}`} />
+                <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${activeDropdown === 'courses' ? 'rotate-180 text-honor-gold' : 'text-gray-400'}`} />
               </button>
 
               {/* Mega Menu Dropdown Container */}
@@ -511,83 +510,170 @@ export default function Navbar() {
             {/* Admission & Roll Slip */}
             <Link
               href="/admission-form"
-              className={`px-3 py-2 rounded-lg text-sm font-semibold flex items-center gap-1.5 transition-all whitespace-nowrap ${
+              className={`px-2.5 py-2 rounded-lg text-[13px] font-semibold flex items-center gap-1 transition-all whitespace-nowrap ${
                 pathname === '/admission-form' 
                   ? 'bg-[#2A5A44] text-honor-gold border border-honor-gold/40' 
                   : 'text-gray-200 hover:text-white hover:bg-[#2A5A44]/60'
               }`}
             >
-              <FileText className="w-4 h-4 text-honor-gold" />
+              <FileText className="w-3.5 h-3.5 text-honor-gold" />
               <span>Admission & Roll Slip</span>
             </Link>
 
             {/* Success Stories */}
             <Link
               href="/success-stories"
-              className={`px-3 py-2 rounded-lg text-sm font-semibold flex items-center gap-1.5 transition-all whitespace-nowrap ${
+              className={`px-2.5 py-2 rounded-lg text-[13px] font-semibold flex items-center gap-1 transition-all whitespace-nowrap ${
                 pathname === '/success-stories' 
                   ? 'bg-[#2A5A44] text-honor-gold border border-honor-gold/40' 
                   : 'text-gray-200 hover:text-white hover:bg-[#2A5A44]/60'
               }`}
             >
-              <Award className="w-4 h-4 text-honor-gold" />
+              <Award className="w-3.5 h-3.5 text-honor-gold" />
               <span>Success Stories</span>
             </Link>
-
-            {/* Cadet Portal Direct Link (if logged in) */}
-            {currentUser && (
-              <Link
-                href={currentUser.role === 'admin' ? '/admin' : '/portal/dashboard'}
-                className={`px-3 py-2 rounded-lg text-sm font-semibold flex items-center gap-1.5 transition-all ${
-                  pathname.startsWith('/portal/dashboard') || pathname.startsWith('/admin')
-                    ? 'bg-[#2A5A44] text-honor-gold border border-honor-gold/40' 
-                    : 'text-emerald-300 hover:text-white hover:bg-[#2A5A44]/60'
-                }`}
-              >
-                <UserCheck className="w-4 h-4 text-emerald-400" />
-                <span>{currentUser.role === 'admin' ? 'Officer Portal' : 'My Dashboard'}</span>
-              </Link>
-            )}
           </nav>
 
-          {/* Right Action: Auth CTA + WhatsApp CTA Button */}
-          <div className="hidden sm:flex items-center gap-2.5 flex-shrink-0 min-w-max">
-            {!currentUser ? (
-              <div className="flex items-center gap-2">
-                <Link
-                  href="/login"
-                  className="px-3 py-2 rounded-xl text-xs font-bold text-gray-200 hover:text-white hover:bg-[#2A5A44] transition-colors border border-transparent hover:border-[#2A5A44]"
-                >
-                  Cadet Sign In
-                </Link>
-                <Link
-                  href="/register"
-                  className="px-3.5 py-2 rounded-xl text-xs font-bold text-honor-gold bg-[#0F261C] border border-honor-gold/60 hover:border-honor-gold hover:bg-[#183B2B] transition-all shadow-sm"
-                >
-                  Register
-                </Link>
-              </div>
-            ) : (
-              <Link
-                href={currentUser.role === 'admin' ? '/admin' : '/portal/dashboard'}
-                className="px-3 py-2 rounded-xl text-xs font-bold text-honor-gold bg-[#0F261C] border border-honor-gold/60 hover:bg-[#183B2B] flex items-center gap-1.5 transition-all flex-shrink-0"
-                title={currentUser.role === 'admin' ? 'Officer HQ - Mentor' : currentUser.full_name}
+          {/* Right Action: Account/Portal Dropdown + WhatsApp CTA Button */}
+          <div className="hidden sm:flex items-center gap-2 flex-shrink-0 min-w-max">
+            <div
+              className="relative"
+              onMouseEnter={() => handleMouseEnter('account')}
+              onMouseLeave={handleMouseLeave}
+            >
+              <button
+                type="button"
+                onClick={() => setActiveDropdown(activeDropdown === 'account' ? null : 'account')}
+                className="px-3 py-2 rounded-xl text-xs font-bold text-honor-gold bg-[#0F261C] border border-honor-gold/60 hover:border-honor-gold hover:bg-[#183B2B] flex items-center gap-1.5 transition-all shadow-sm whitespace-nowrap"
+                aria-expanded={activeDropdown === 'account'}
               >
                 <User className="w-3.5 h-3.5 text-honor-gold flex-shrink-0" />
-                <span className="whitespace-nowrap font-bold">
-                  {currentUser.role === 'admin' ? 'Mentor' : (currentUser.full_name?.split(' ')[0] || 'Cadet')}
+                <span>
+                  {currentUser
+                    ? currentUser.role === 'admin'
+                      ? 'Mentor'
+                      : currentUser.full_name?.split(' ')[0] || 'Cadet'
+                    : 'Login / Register'}
                 </span>
-              </Link>
-            )}
+                <ChevronDown
+                  className={`w-3.5 h-3.5 transition-transform duration-200 ${
+                    activeDropdown === 'account' ? 'rotate-180' : ''
+                  }`}
+                />
+              </button>
+
+              {activeDropdown === 'account' && (
+                <div className="absolute right-0 top-full mt-2 w-72 bg-[#0F261C] border border-[#2A5A44] rounded-2xl shadow-2xl overflow-hidden p-3 text-left z-50 space-y-2">
+                  {!currentUser ? (
+                    <div className="space-y-1.5 pb-2 border-b border-[#2A5A44]">
+                      <Link
+                        href="/login"
+                        onClick={() => setActiveDropdown(null)}
+                        className="flex items-center justify-between px-3 py-2.5 rounded-xl bg-[#183B2B] hover:bg-[#2A5A44] text-white text-xs font-bold transition-all"
+                      >
+                        <span className="flex items-center gap-2">
+                          <User className="w-4 h-4 text-honor-gold" />
+                          <span>Cadet Sign In</span>
+                        </span>
+                        <ChevronRight className="w-3.5 h-3.5 text-gray-400" />
+                      </Link>
+                      <Link
+                        href="/register"
+                        onClick={() => setActiveDropdown(null)}
+                        className="flex items-center justify-between px-3 py-2.5 rounded-xl bg-honor-gold hover:bg-amber-400 text-slate-950 text-xs font-black transition-all"
+                      >
+                        <span className="flex items-center gap-2">
+                          <Sparkles className="w-4 h-4" />
+                          <span>New Cadet Registration</span>
+                        </span>
+                        <ChevronRight className="w-3.5 h-3.5" />
+                      </Link>
+                    </div>
+                  ) : (
+                    <div className="space-y-1.5 pb-2 border-b border-[#2A5A44]">
+                      <Link
+                        href={currentUser.role === 'admin' ? '/admin' : '/portal/dashboard'}
+                        onClick={() => setActiveDropdown(null)}
+                        className="flex items-center justify-between px-3 py-2.5 rounded-xl bg-[#183B2B] hover:bg-[#2A5A44] text-honor-gold text-xs font-bold transition-all"
+                      >
+                        <span className="flex items-center gap-2">
+                          <UserCheck className="w-4 h-4" />
+                          <span>{currentUser.role === 'admin' ? 'Officer Command Center' : 'My Cadet Dashboard'}</span>
+                        </span>
+                        <ChevronRight className="w-3.5 h-3.5" />
+                      </Link>
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setActiveDropdown(null);
+                          handleSignOut();
+                        }}
+                        className="w-full flex items-center gap-2 px-3 py-2 rounded-xl text-red-300 hover:bg-red-500/20 text-xs font-bold transition-all"
+                      >
+                        <LogOut className="w-3.5 h-3.5" />
+                        <span>Sign Out</span>
+                      </button>
+                    </div>
+                  )}
+
+                  {/* Quick Student Tools inside Dropdown */}
+                  <div className="space-y-1 pt-1">
+                    <div className="px-2 text-[10px] font-bold uppercase tracking-wider text-gray-400">
+                      Quick Student Tools
+                    </div>
+                    <Link
+                      href="/admission-form"
+                      onClick={() => setActiveDropdown(null)}
+                      className="flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs text-gray-200 hover:text-white hover:bg-[#183B2B] transition-all"
+                    >
+                      <FileText className="w-3.5 h-3.5 text-honor-gold" />
+                      <span>Online Admission & Roll Slip</span>
+                    </Link>
+                    <Link
+                      href="/tests"
+                      onClick={() => setActiveDropdown(null)}
+                      className="flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs text-gray-200 hover:text-white hover:bg-[#183B2B] transition-all"
+                    >
+                      <Clock className="w-3.5 h-3.5 text-emerald-400" />
+                      <span>Initial & ISSB Mock Tests</span>
+                    </Link>
+                    <Link
+                      href="/tests/non-verbal-pdf"
+                      onClick={() => setActiveDropdown(null)}
+                      className="flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs text-gray-200 hover:text-white hover:bg-[#183B2B] transition-all"
+                    >
+                      <BookOpen className="w-3.5 h-3.5 text-sky-400" />
+                      <span>Non-Verbal Solved PDF Guide</span>
+                    </Link>
+                    <Link
+                      href="/tests/wat"
+                      onClick={() => setActiveDropdown(null)}
+                      className="flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs text-gray-200 hover:text-white hover:bg-[#183B2B] transition-all"
+                    >
+                      <Play className="w-3.5 h-3.5 text-amber-400" />
+                      <span>10s WAT Video Simulator</span>
+                    </Link>
+                    <Link
+                      href="/success-stories"
+                      onClick={() => setActiveDropdown(null)}
+                      className="flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs text-gray-200 hover:text-white hover:bg-[#183B2B] transition-all"
+                    >
+                      <Award className="w-3.5 h-3.5 text-honor-gold" />
+                      <span>Academy Success Stories</span>
+                    </Link>
+                  </div>
+                </div>
+              )}
+            </div>
 
             <a
               href={`https://wa.me/${ACADEMY_CONFIG.phoneRaw}?text=${encodeURIComponent('Assalam-o-Alaikum Mentor, I want admission guidance for The Best Forces Academy courses.')}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#25D366] hover:bg-[#20ba5a] text-white px-3.5 py-2.5 rounded-xl text-xs font-bold flex items-center gap-1.5 shadow-lg transition-all hover:scale-105 active:scale-95"
+              className="bg-[#25D366] hover:bg-[#20ba5a] text-white px-2.5 py-2 rounded-xl text-xs font-bold flex items-center gap-1.5 shadow-lg transition-all hover:scale-105 active:scale-95 whitespace-nowrap"
             >
-              <MessageCircle className="w-4 h-4 fill-white" />
-              <span>WhatsApp Mentor</span>
+              <MessageCircle className="w-3.5 h-3.5 fill-white" />
+              <span>WhatsApp</span>
             </a>
           </div>
 

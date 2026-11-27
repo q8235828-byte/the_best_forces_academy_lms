@@ -123,22 +123,24 @@ function QuizAttemptClientInner({ quiz, questions }: QuizAttemptClientProps) {
   const pdfGuideUrl = isVerbal ? '/tests/verbal-pdf' : isNonVerbal ? '/tests/non-verbal-pdf' : null;
 
   return (
-    <div className="py-8 bg-slate-100 min-h-screen">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+    <div className="py-4 sm:py-8 bg-slate-100 min-h-screen">
+      <div className="max-w-6xl mx-auto px-3 sm:px-6 lg:px-8 space-y-4 sm:space-y-6">
         
         {/* Navigation Back */}
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between gap-2">
           <Link
             href="/tests"
-            className="inline-flex items-center gap-2 text-xs font-bold text-gray-600 hover:text-[#183B2B] bg-white px-3 py-2 rounded-lg border border-gray-200 transition-colors shadow-sm"
+            className="inline-flex items-center gap-1.5 text-[11px] sm:text-xs font-bold text-gray-700 hover:text-[#183B2B] bg-white px-2.5 sm:px-3 py-1.5 sm:py-2 rounded-lg border border-gray-200 transition-colors shadow-sm whitespace-nowrap shrink-0"
           >
             <ArrowLeft className="w-3.5 h-3.5" />
-            <span>Return to Testing Hub</span>
+            <span className="sm:hidden">Testing Hub</span>
+            <span className="hidden sm:inline">Return to Testing Hub</span>
           </Link>
 
-          <div className="flex items-center gap-2 text-xs font-bold text-gray-600">
-            <Shield className="w-4 h-4 text-honor-gold" />
-            <span>GHQ • NHQ • Air HQ Computer Terminal</span>
+          <div className="flex items-center gap-1.5 text-[11px] sm:text-xs font-bold text-gray-600 whitespace-nowrap truncate">
+            <Shield className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-honor-gold shrink-0" />
+            <span className="sm:hidden">GHQ • Air HQ Terminal</span>
+            <span className="hidden sm:inline">GHQ • NHQ • Air HQ Computer Terminal</span>
           </div>
         </div>
 

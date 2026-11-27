@@ -72,27 +72,27 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-100 py-12 px-4 sm:px-6 lg:px-8 flex items-center justify-center">
-      <div className="max-w-md w-full space-y-8 bg-white p-8 sm:p-10 rounded-3xl shadow-2xl border border-slate-200 relative overflow-hidden">
+    <div className="min-h-screen bg-slate-100 py-5 sm:py-10 pb-20 sm:pb-10 px-4 sm:px-6 lg:px-8 flex items-center justify-center">
+      <div className="max-w-md w-full space-y-4 sm:space-y-6 bg-white p-5 sm:p-8 rounded-3xl shadow-2xl border border-slate-200 relative overflow-hidden">
         
         {/* Top Decorative Header Accent */}
-        <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-emerald-600 via-honor-gold to-emerald-800" />
+        <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-emerald-600 via-honor-gold to-emerald-800" />
 
         {/* Brand Logo & Title */}
-        <div className="text-center space-y-2">
-          <div className="mx-auto w-16 h-16 rounded-2xl bg-gradient-to-br from-[#183B2B] to-[#0F261C] border border-honor-gold flex items-center justify-center shadow-lg">
-            <Shield className="w-9 h-9 text-honor-gold" />
+        <div className="text-center space-y-1">
+          <div className="mx-auto w-11 h-11 sm:w-14 sm:h-14 rounded-xl bg-gradient-to-br from-[#183B2B] to-[#0F261C] border border-honor-gold flex items-center justify-center shadow-md">
+            <Shield className="w-6 h-6 sm:w-7 sm:h-7 text-honor-gold" />
           </div>
-          <span className="text-[11px] font-bold text-honor-gold uppercase tracking-widest block">
+          <span className="text-[10px] font-bold text-honor-gold uppercase tracking-widest block pt-1">
             THE BEST FORCES ACADEMY LMS
           </span>
-          <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
+          <h2 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight">
             {roleTab === 'student' ? 'Cadet Portal Sign In' : 'Officer Command Login'}
           </h2>
-          <p className="text-xs text-slate-500">
+          <p className="text-[11px] sm:text-xs text-slate-500">
             {roleTab === 'student'
-              ? 'Access your enrolled courses, WAT simulator & computerized test reports'
-              : 'Authorized defense academy administrators and instructors only'}
+              ? 'Access courses, WAT simulator & test reports'
+              : 'Authorized academy administrators only'}
           </p>
         </div>
 
@@ -133,9 +133,9 @@ export default function LoginPage() {
         )}
 
         {/* Login Form */}
-        <form onSubmit={handleLogin} className="space-y-4">
+        <form onSubmit={handleLogin} className="space-y-3">
           <div>
-            <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">
+            <label className="block text-[11px] font-bold text-slate-700 uppercase tracking-wider mb-1">
               {roleTab === 'student' ? 'Roll No / WhatsApp / Email' : 'Admin Username / Email'}
             </label>
             <div className="relative">
@@ -144,26 +144,26 @@ export default function LoginPage() {
                 required
                 value={identifier}
                 onChange={(e) => setIdentifier(e.target.value)}
-                placeholder={roleTab === 'student' ? 'e.g. BFA-2026-7841 or 03054599659' : 'qa034942@gmail.com'}
-                className="w-full px-4 py-3 pl-10 text-sm bg-slate-50 border border-slate-300 rounded-xl focus:ring-2 focus:ring-[#183B2B] focus:border-transparent outline-none transition-all"
+                placeholder={roleTab === 'student' ? 'e.g. BFA-2026-7841 or email' : 'qa034942@gmail.com'}
+                className="w-full px-4 py-2.5 pl-10 text-sm bg-slate-50 border border-slate-300 rounded-xl focus:ring-2 focus:ring-[#183B2B] focus:border-transparent outline-none transition-all"
               />
-              <User className="w-4 h-4 text-slate-400 absolute left-3.5 top-3.5" />
+              <User className="w-4 h-4 text-slate-400 absolute left-3.5 top-3" />
             </div>
           </div>
 
           <div>
-            <div className="flex items-center justify-between mb-1">
-              <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider">
-                Password / Security Pin
+            <div className="flex items-center justify-between gap-2 mb-1">
+              <label className="block text-[11px] font-bold text-slate-700 uppercase tracking-wider whitespace-nowrap">
+                Password / Pin
               </label>
               {roleTab === 'student' && (
                 <a
                   href={`https://wa.me/${ACADEMY_CONFIG.phoneRaw}?text=${encodeURIComponent('Assalam-o-Alaikum Mentor, I forgot my Cadet LMS password.')}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[11px] font-semibold text-emerald-700 hover:underline"
+                  className="text-[11px] font-semibold text-emerald-700 hover:underline whitespace-nowrap"
                 >
-                  Forgot? Ask on WhatsApp
+                  Forgot Password?
                 </a>
               )}
             </div>
@@ -174,13 +174,13 @@ export default function LoginPage() {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="Enter your password"
-                className="w-full px-4 py-3 pl-10 pr-10 text-sm bg-slate-50 border border-slate-300 rounded-xl focus:ring-2 focus:ring-[#183B2B] focus:border-transparent outline-none transition-all"
+                className="w-full px-4 py-2.5 pl-10 pr-10 text-sm bg-slate-50 border border-slate-300 rounded-xl focus:ring-2 focus:ring-[#183B2B] focus:border-transparent outline-none transition-all"
               />
-              <KeyRound className="w-4 h-4 text-slate-400 absolute left-3.5 top-3.5" />
+              <KeyRound className="w-4 h-4 text-slate-400 absolute left-3.5 top-3" />
               <button
                 type="button"
                 onClick={() => setShowPassword(!showPassword)}
-                className="absolute right-3.5 top-3.5 text-slate-400 hover:text-slate-600 focus:outline-none"
+                className="absolute right-3.5 top-3 text-slate-400 hover:text-slate-600 focus:outline-none"
               >
                 {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
               </button>
@@ -208,22 +208,22 @@ export default function LoginPage() {
           <div className="text-center text-[11px] text-slate-500 font-semibold uppercase tracking-wider mb-2.5">
             Quick 1-Click Test Access
           </div>
-          <div className="grid grid-cols-2 gap-2">
+          <div className="grid grid-cols-2 gap-2 pb-1">
             <button
               type="button"
               onClick={handleDemoStudent}
-              className="px-3 py-2 text-xs font-semibold rounded-lg bg-emerald-50 text-emerald-800 border border-emerald-200 hover:bg-emerald-100 flex items-center justify-center gap-1.5 transition-colors"
+              className="px-2.5 py-2.5 text-[11px] sm:text-xs font-semibold rounded-lg bg-emerald-50 text-emerald-800 border border-emerald-200 hover:bg-emerald-100 flex items-center justify-center gap-1.5 transition-colors whitespace-nowrap"
             >
-              <Sparkles className="w-3.5 h-3.5 text-emerald-600" />
-              <span>Demo Cadet Login</span>
+              <Sparkles className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+              <span>Demo Cadet</span>
             </button>
             <button
               type="button"
               onClick={handleDemoAdmin}
-              className="px-3 py-2 text-xs font-semibold rounded-lg bg-amber-50 text-amber-900 border border-amber-200 hover:bg-amber-100 flex items-center justify-center gap-1.5 transition-colors"
+              className="px-2.5 py-2.5 text-[11px] sm:text-xs font-semibold rounded-lg bg-amber-50 text-amber-900 border border-amber-200 hover:bg-amber-100 flex items-center justify-center gap-1.5 transition-colors whitespace-nowrap"
             >
-              <Lock className="w-3.5 h-3.5 text-amber-700" />
-              <span>Demo Officer Login</span>
+              <Lock className="w-3.5 h-3.5 text-amber-700 shrink-0" />
+              <span>Demo Officer</span>
             </button>
           </div>
         </div>

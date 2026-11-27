@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect, Suspense } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import { 
   Shield, 
   User, 
@@ -15,41 +15,59 @@ import {
   GraduationCap, 
   Compass,
   FileText,
-  Sparkles
+  Sparkles,
+  ChevronDown,
+  Check
 } from 'lucide-react';
 import { registerCadet } from '@/lib/auth';
 import { ACADEMY_CONFIG } from '@/lib/constants';
+import { INITIAL_COURSES } from '@/lib/courses-data';
 
 export const runtime = 'edge';
 
-export default function RegisterPage() {
+function RegisterPageContent() {
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const targetWings = INITIAL_COURSES.map((c) => c.title);
+
   const [formData, setFormData] = useState({
     full_name: '',
     father_name: '',
     phone_number: '',
     email: '',
-    target_wing: 'Pakistan Army (PMA Long Course)',
+    target_wing: targetWings[0] || 'Pakistan Army - PMA Long Course (Commission)',
     password: '',
     confirm_password: ''
   });
 
+  useEffect(() => {
+    const courseSlug =
+      searchParams.get('course') ||
+      (typeof window !== 'undefined' ? sessionStorage.getItem('bfa_last_course_slug') : null);
+    if (courseSlug) {
+      const matched = INITIAL_COURSES.find((c) => c.slug === courseSlug || String(c.id) === courseSlug);
+      if (matched) {
+        setFormData((prev) => ({ ...prev, target_wing: matched.title }));
+      }
+    }
+  }, [searchParams]);
+
+  const [wingDropdownOpen, setWingDropdownOpen] = useState(false);
+  const wingDropdownRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (wingDropdownRef.current && !wingDropdownRef.current.contains(e.target as Node)) {
+        setWingDropdownOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
   const [error, setError] = useState<string | null>(null);
   const [successCadet, setSuccessCadet] = useState<any | null>(null);
   const [isLoading, setIsLoading] = useState(false);
-
-  const targetWings = [
-    'Pakistan Army (PMA Long Course 154-156)',
-    'Pakistan Army (Technical Cadet Course - TCC)',
-    'Pakistan Army (Soldier Recruitment)',
-    'Pakistan Air Force (GD Pilot / GDP)',
-    'Pakistan Air Force (Aeronautical Engineering)',
-    'Pakistan Air Force (Aero Trades / Airmen)',
-    'Pakistan Navy (PN Cadet Regular Commission)',
-    'Pakistan Navy (Sailor / Marine)',
-    'ISSB Complete 4-Day Master Batch',
-    'Cadet & Military Colleges (Class 7/8/11)'
-  ];
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -84,7 +102,7 @@ export default function RegisterPage() {
 
   return (
     <div className="min-h-screen bg-slate-100 py-12 px-4 sm:px-6 lg:px-8 flex items-center justify-center">
-      <div className="max-w-xl w-full bg-white p-8 sm:p-10 rounded-3xl shadow-2xl border border-slate-200 relative overflow-hidden">
+      <div className="max-w-xl w-full bg-white p-8 sm:p-10 rounded-3xl shadow-2xl border border-slate-200 relative">
         
         {/* Top Header Line */}
         <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-emerald-600 via-honor-gold to-emerald-800" />
@@ -260,23 +278,49 @@ export default function RegisterPage() {
                 </div>
               </div>
 
-              {/* Target Defense Wing */}
-              <div>
+              {/* Target Defense Wing (Custom Downward Dropdown) */}
+              <div ref={wingDropdownRef} className="relative">
                 <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">
                   Target Armed Forces Wing / Course *
                 </label>
-                <div className="relative">
-                  <select
-                    value={formData.target_wing}
-                    onChange={(e) => setFormData({ ...formData, target_wing: e.target.value })}
-                    className="w-full px-3.5 py-2.5 pl-9 text-sm bg-slate-50 border border-slate-300 rounded-xl focus:ring-2 focus:ring-[#183B2B] focus:border-transparent outline-none"
-                  >
-                    {targetWings.map((wing) => (
-                      <option key={wing} value={wing}>{wing}</option>
-                    ))}
-                  </select>
-                  <Compass className="w-4 h-4 text-slate-400 absolute left-3 top-3" />
-                </div>
+                <button
+                  type="button"
+                  onClick={() => setWingDropdownOpen((prev) => !prev)}
+                  className="w-full px-3 py-2.5 text-left text-sm bg-slate-50 border border-slate-300 rounded-xl focus:ring-2 focus:ring-[#183B2B] focus:border-transparent outline-none flex items-center justify-between gap-2 transition-all hover:bg-white"
+                  aria-expanded={wingDropdownOpen}
+                >
+                  <span className="flex items-center gap-2 min-w-0">
+                    <Compass className="w-4 h-4 text-slate-500 shrink-0" />
+                    <span className="truncate font-medium text-slate-800">{formData.target_wing}</span>
+                  </span>
+                  <ChevronDown className={`w-4 h-4 text-slate-500 shrink-0 transition-transform duration-200 ${wingDropdownOpen ? 'rotate-180 text-[#183B2B]' : ''}`} />
+                </button>
+
+                {wingDropdownOpen && (
+                  <div className="absolute left-0 right-0 top-full mt-1.5 z-50 bg-white border border-slate-200 rounded-2xl shadow-2xl max-h-60 overflow-y-auto p-1.5 space-y-0.5">
+                    {targetWings.map((wing) => {
+                      const isSelected = formData.target_wing === wing;
+                      return (
+                        <button
+                          key={wing}
+                          type="button"
+                          onClick={() => {
+                            setFormData({ ...formData, target_wing: wing });
+                            setWingDropdownOpen(false);
+                          }}
+                          className={`w-full text-left px-3 py-2.5 rounded-xl text-xs sm:text-sm flex items-center justify-between gap-2 transition-all ${
+                            isSelected
+                              ? 'bg-[#183B2B] text-white font-bold'
+                              : 'text-slate-700 hover:bg-slate-100 font-medium'
+                          }`}
+                        >
+                          <span className="truncate">{wing}</span>
+                          {isSelected && <Check className="w-4 h-4 text-honor-gold shrink-0" />}
+                        </button>
+                      );
+                    })}
+                  </div>
+                )}
               </div>
 
               {/* Password Fields */}
@@ -350,5 +394,13 @@ export default function RegisterPage() {
 
       </div>
     </div>
+  );
+}
+
+export default function RegisterPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-slate-100 flex items-center justify-center text-gray-500 font-bold">Loading Registration Form...</div>}>
+      <RegisterPageContent />
+    </Suspense>
   );
 }
