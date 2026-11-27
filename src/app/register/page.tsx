@@ -101,11 +101,11 @@ function RegisterPageContent() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-100 py-12 px-4 sm:px-6 lg:px-8 flex items-center justify-center">
-      <div className="max-w-xl w-full bg-white p-8 sm:p-10 rounded-3xl shadow-2xl border border-slate-200 relative">
+    <div className="min-h-screen bg-slate-100 py-4 sm:py-8 px-4 sm:px-6 lg:px-8 flex items-start sm:items-center justify-center">
+      <div className="max-w-xl w-full bg-white p-5 sm:p-8 rounded-3xl shadow-2xl border border-slate-200 relative">
         
         {/* Top Header Line */}
-        <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-emerald-600 via-honor-gold to-emerald-800" />
+        <div className="absolute top-0 left-0 right-0 h-1.5 rounded-t-3xl bg-gradient-to-r from-emerald-600 via-honor-gold to-emerald-800" />
 
         {/* Success Modal / State */}
         {successCadet ? (
