@@ -84,7 +84,7 @@ export default function NonVerbalPdfGuidePage() {
             </Link>
 
             <span className="text-xs font-bold text-gray-500 hidden md:inline">
-              Step 2 Preparation Material • 52 Questions Authentic Non-Verbal Bank
+              Step 2 Preparation Material • {NON_VERBAL_500_BANK.length} Questions Authentic Non-Verbal Bank
             </span>
           </div>
 
@@ -101,10 +101,10 @@ export default function NonVerbalPdfGuidePage() {
             <button
               onClick={() => handlePrint(true)}
               className="bg-slate-900 hover:bg-slate-800 text-white px-4 py-2.5 rounded-xl font-bold text-xs flex items-center justify-center gap-2 shadow-md transition-all"
-              title="Print all 52 questions as complete document"
+              title={`Print all ${NON_VERBAL_500_BANK.length} questions as complete document`}
             >
               <FileText className="w-4 h-4 text-honor-gold" />
-              <span>Print All (52 Qs PDF)</span>
+              <span>Print All ({NON_VERBAL_500_BANK.length} Qs PDF)</span>
             </button>
 
             <Link
@@ -112,7 +112,7 @@ export default function NonVerbalPdfGuidePage() {
               className="flex-1 sm:flex-initial bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-2.5 rounded-xl font-bold text-xs flex items-center justify-center gap-2 shadow-md transition-all hover:scale-105"
             >
               <Play className="w-4 h-4 fill-white" />
-              <span>Start 52-Question Exam</span>
+              <span>Start Exam ({NON_VERBAL_500_BANK.length} Qs)</span>
             </Link>
           </div>
         </div>
@@ -264,7 +264,7 @@ export default function NonVerbalPdfGuidePage() {
           </h1>
 
           <p className="text-xs text-gray-600 font-medium">
-            Authentic Forces Visual Diagrams • Total 52 Questions with Diagrams, Keys & Spatial Logic
+            Authentic Forces Visual Diagrams • Total {NON_VERBAL_500_BANK.length} Questions with Diagrams, Keys & Spatial Logic
           </p>
 
           <div className="pt-2 flex items-center justify-center gap-4 text-xs font-bold text-gray-700">
@@ -272,7 +272,7 @@ export default function NonVerbalPdfGuidePage() {
               Prepared by: {ACADEMY_CONFIG.leadInstructor} (Lead Instructor)
             </span>
             <span className="text-gray-400">•</span>
-            <span>20 Questions Per Page Standard (3 Pages)</span>
+            <span>20 Questions Per Page Standard ({Math.ceil(NON_VERBAL_500_BANK.length / QUESTIONS_PER_PAGE)} Pages)</span>
           </div>
         </div>
 
@@ -298,6 +298,25 @@ export default function NonVerbalPdfGuidePage() {
             })}
           </div>
         </div>
+
+        {/* Mirror Reflection Reference Charts (Visible in All / Category 6) */}
+        {(selectedCategory === 'all' || selectedCategory === 6) && (safeCurrentPage === 1 || viewAllMode) && (
+          <div className="bg-emerald-50/60 border border-emerald-200 rounded-2xl p-4 sm:p-6 mb-8 print:border print:border-gray-300">
+            <h2 className="text-xs font-extrabold text-[#183B2B] uppercase tracking-wider mb-3">
+              Mirror Images Reference Guide (Words, Numbers, Capital & Small Letters):
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
+              <div className="bg-white p-2 rounded-xl border border-emerald-100 flex justify-center">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/images/non-verbal/mirror-words-ref.jpg" alt="Mirror Images of Certain Words and Numbers" className="max-h-72 w-auto object-contain rounded" />
+              </div>
+              <div className="bg-white p-2 rounded-xl border border-emerald-100 flex justify-center">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/images/non-verbal/mirror-letters-ref.jpg" alt="Mirror Images of Capital, Small Letters and Numbers" className="max-h-72 w-auto object-contain rounded" />
+              </div>
+            </div>
+          </div>
+        )}
 
         {/* Questions Render List */}
         <div className="space-y-6">
