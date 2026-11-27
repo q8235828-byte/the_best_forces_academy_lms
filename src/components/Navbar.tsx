@@ -92,8 +92,8 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 w-full bg-[#183B2B] text-white shadow-xl border-b border-[#2A5A44]/80">
       {/* Top Notification Bar */}
-      <div className="bg-[#0F261C] text-xs py-1.5 px-3 sm:px-4 border-b border-[#183B2B]/60 w-full">
-        <div className="max-w-7xl mx-auto flex justify-between items-center gap-2">
+      <div className="bg-[#0F261C] text-xs py-1.5 border-b border-[#183B2B]/60 w-full">
+        <div className="w-full px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 flex justify-between items-center gap-2">
           <div className="flex items-center gap-2 min-w-0">
             <span className="relative flex h-2 w-2 flex-shrink-0">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
@@ -162,8 +162,8 @@ export default function Navbar() {
       </div>
 
       {/* Main Navbar */}
-      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 w-full" ref={navContainerRef}>
-        <div className="flex items-center justify-between h-16 sm:h-20 gap-2">
+      <div className="w-full px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12" ref={navContainerRef}>
+        <div className="flex items-center justify-between h-16 sm:h-20 gap-3 w-full">
           
           {/* Logo / Brand */}
           <Link href="/" className="flex items-center gap-2.5 sm:gap-3 group flex-shrink-0 min-w-max">
