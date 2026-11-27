@@ -71,7 +71,7 @@ export default function Navbar() {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-  const handleMouseEnter = (menu: 'courses' | 'tests' | 'user') => {
+  const handleMouseEnter = (menu: 'courses' | 'tests' | 'user' | 'account') => {
     if (dropdownTimeoutRef.current) {
       clearTimeout(dropdownTimeoutRef.current);
     }
