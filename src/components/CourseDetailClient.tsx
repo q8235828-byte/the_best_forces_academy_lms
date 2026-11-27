@@ -6,8 +6,8 @@ import VideoPlayerWithWatermark from '@/components/VideoPlayerWithWatermark';
 import { getCourseLessonsWithNonVerbal, getLessonNonVerbalCategoryId } from '@/lib/courses-data';
 import { ACADEMY_CONFIG, PAYMENT_ACCOUNTS } from '@/lib/constants';
 import { getPaymentAccounts, addPaymentTransaction, PaymentAccountsConfig } from '@/lib/admin-store';
-import { getCurrentUser, loginCadet, registerCadet, updateCadetRecord, CadetSession } from '@/lib/auth';
-import { getCourseEligibility, getCourseTestPattern, getCourseSelectionProcedure, evaluateEligibility } from '@/lib/eligibility';
+import { getCurrentUser, loginStudent, registerCadet, updateCadetRecord, CadetSession } from '@/lib/auth';
+import { getCourseEligibility, getCourseTestPattern, getCourseSelectionProcedure, checkCandidateEligibility } from '@/lib/eligibility';
 import { 
   Shield, 
   Lock, 
@@ -840,7 +840,7 @@ export default function CourseDetailClient({ course }: CourseDetailClientProps) 
                     onSubmit={(e) => {
                       e.preventDefault();
                       setAuthError(null);
-                      const res = loginCadet(loginIdentifier, loginPassword);
+                      const res = loginStudent(loginIdentifier, loginPassword);
                       if (res.success && res.session) {
                         setCurrentUser(res.session);
                         setCandidateName(res.session.full_name || '');
@@ -1042,7 +1042,7 @@ export default function CourseDetailClient({ course }: CourseDetailClientProps) 
             ) : enrollStage === 'eligibility' ? (
               /* STAGE 2: ELIGIBILITY VERIFICATION BEFORE PAYMENT */
               (() => {
-                const evalResult = evaluateEligibility(course, {
+                const evalResult = checkCandidateEligibility(course, {
                   dob: eligDob,
                   gender: eligGender,
                   height: eligHeight,
