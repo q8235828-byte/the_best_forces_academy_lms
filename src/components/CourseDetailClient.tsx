@@ -6,6 +6,7 @@ import VideoPlayerWithWatermark from '@/components/VideoPlayerWithWatermark';
 import { SAMPLE_LESSONS } from '@/lib/courses-data';
 import { ACADEMY_CONFIG, PAYMENT_ACCOUNTS } from '@/lib/constants';
 import { getCurrentUser } from '@/lib/auth';
+import { getCourseEligibility } from '@/lib/eligibility';
 import { 
   Shield, 
   Lock, 
@@ -18,7 +19,12 @@ import {
   Award, 
   AlertCircle, 
   CreditCard, 
-  X 
+  X,
+  ClipboardCheck,
+  Ruler,
+  GraduationCap,
+  Calendar,
+  ArrowRight
 } from 'lucide-react';
 import { Course, Lesson } from '@/types';
 
@@ -28,8 +34,10 @@ interface CourseDetailClientProps {
 
 export default function CourseDetailClient({ course }: CourseDetailClientProps) {
   const [activeLessonIndex, setActiveLessonIndex] = useState(0);
+  const [activeTab, setActiveTab] = useState<'syllabus' | 'eligibility'>('syllabus');
   const [isEnrolled, setIsEnrolled] = useState(false);
   const [showEnrollModal, setShowEnrollModal] = useState(false);
+  const eligibility = getCourseEligibility(course);
 
   // Check paid course clearance from Admin / session
   useEffect(() => {
@@ -163,36 +171,140 @@ export default function CourseDetailClient({ course }: CourseDetailClientProps) 
               onOpenEnrollmentModal={() => setShowEnrollModal(true)}
             />
 
-            {/* Course Overview & Syllabus Highlights */}
-            <div className="bg-white p-6 sm:p-8 rounded-2xl border border-gray-200 shadow-sm space-y-6">
-              <div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">
-                  Course Syllabus & Training Roadmap
-                </h3>
-                <p className="text-sm text-gray-600 leading-relaxed">
-                  {course.syllabus_summary || 'Detailed coverage including verbal intelligence series, non-verbal matrices, academic subjects, and personality assessment.'}
-                </p>
+            {/* Course Overview & Syllabus / Eligibility Tabs */}
+            <div className="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
+              {/* Tab Bar */}
+              <div className="flex border-b border-gray-200 bg-slate-50/70 px-4 sm:px-6 pt-3 gap-2">
+                <button
+                  type="button"
+                  onClick={() => setActiveTab('syllabus')}
+                  className={`px-4 py-3 text-xs sm:text-sm font-bold rounded-t-xl border-b-2 transition-all flex items-center gap-2 ${
+                    activeTab === 'syllabus'
+                      ? 'border-[#183B2B] text-[#183B2B] bg-white shadow-sm'
+                      : 'border-transparent text-gray-500 hover:text-gray-800'
+                  }`}
+                >
+                  <FileText className="w-4 h-4" />
+                  <span>Syllabus & Training Roadmap</span>
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setActiveTab('eligibility')}
+                  className={`px-4 py-3 text-xs sm:text-sm font-bold rounded-t-xl border-b-2 transition-all flex items-center gap-2 ${
+                    activeTab === 'eligibility'
+                      ? 'border-[#183B2B] text-[#183B2B] bg-white shadow-sm'
+                      : 'border-transparent text-gray-500 hover:text-gray-800'
+                  }`}
+                >
+                  <ClipboardCheck className="w-4 h-4 text-emerald-600" />
+                  <span>Eligibility Criteria</span>
+                </button>
               </div>
 
-              {/* What You Receive */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
-                <div className="p-3.5 rounded-xl bg-gray-50 border border-gray-200 flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-emerald-600 flex-shrink-0" />
-                  <span className="text-xs font-semibold text-gray-700">Official Computerized Testing Practice</span>
+              {activeTab === 'syllabus' ? (
+                <div className="p-6 sm:p-8 space-y-6">
+                  <div>
+                    <h3 className="text-lg font-bold text-gray-900 mb-2">
+                      Course Syllabus & Training Roadmap
+                    </h3>
+                    <p className="text-sm text-gray-600 leading-relaxed">
+                      {course.syllabus_summary || 'Detailed coverage including verbal intelligence series, non-verbal matrices, academic subjects, and personality assessment.'}
+                    </p>
+                  </div>
+
+                  {/* What You Receive */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+                    <div className="p-3.5 rounded-xl bg-gray-50 border border-gray-200 flex items-center gap-3">
+                      <CheckCircle className="w-5 h-5 text-emerald-600 flex-shrink-0" />
+                      <span className="text-xs font-semibold text-gray-700">Official Computerized Testing Practice</span>
+                    </div>
+                    <div className="p-3.5 rounded-xl bg-gray-50 border border-gray-200 flex items-center gap-3">
+                      <CheckCircle className="w-5 h-5 text-emerald-600 flex-shrink-0" />
+                      <span className="text-xs font-semibold text-gray-700">Open High-Yield PDF Lecture Notes</span>
+                    </div>
+                    <div className="p-3.5 rounded-xl bg-gray-50 border border-gray-200 flex items-center gap-3">
+                      <CheckCircle className="w-5 h-5 text-emerald-600 flex-shrink-0" />
+                      <span className="text-xs font-semibold text-gray-700">Mentor Personal Guidance</span>
+                    </div>
+                    <div className="p-3.5 rounded-xl bg-gray-50 border border-gray-200 flex items-center gap-3">
+                      <CheckCircle className="w-5 h-5 text-emerald-600 flex-shrink-0" />
+                      <span className="text-xs font-semibold text-gray-700">VIP WhatsApp Discussion Batch Access</span>
+                    </div>
+                  </div>
                 </div>
-                <div className="p-3.5 rounded-xl bg-gray-50 border border-gray-200 flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-emerald-600 flex-shrink-0" />
-                  <span className="text-xs font-semibold text-gray-700">Open High-Yield PDF Lecture Notes</span>
+              ) : (
+                <div className="p-6 sm:p-8 space-y-6">
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                    <div>
+                      <h3 className="text-lg font-bold text-gray-900">
+                        Official Selection Eligibility Criteria
+                      </h3>
+                      <p className="text-xs text-gray-500 mt-0.5">
+                        Minimum standards required to apply for {course.title}
+                      </p>
+                    </div>
+                    <Link
+                      href={`/admission-form?course=${course.slug}`}
+                      className="inline-flex items-center justify-center gap-2 bg-[#183B2B] hover:bg-[#2A5A44] text-white text-xs font-bold px-4 py-2.5 rounded-xl shadow-sm transition-all"
+                    >
+                      <span>Apply & Check My Eligibility</span>
+                      <ArrowRight className="w-3.5 h-3.5 text-honor-gold" />
+                    </Link>
+                  </div>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div className="p-4 rounded-xl bg-emerald-50/50 border border-emerald-200 flex items-start gap-3">
+                      <Calendar className="w-5 h-5 text-emerald-700 flex-shrink-0 mt-0.5" />
+                      <div>
+                        <div className="text-[11px] font-bold text-emerald-800 uppercase">Age Limit</div>
+                        <div className="text-sm font-bold text-gray-900">{eligibility.ageLabel}</div>
+                      </div>
+                    </div>
+
+                    <div className="p-4 rounded-xl bg-blue-50/50 border border-blue-200 flex items-start gap-3">
+                      <GraduationCap className="w-5 h-5 text-blue-700 flex-shrink-0 mt-0.5" />
+                      <div>
+                        <div className="text-[11px] font-bold text-blue-800 uppercase">Education</div>
+                        <div className="text-sm font-bold text-gray-900">{eligibility.educationLabel}</div>
+                      </div>
+                    </div>
+
+                    <div className="p-4 rounded-xl bg-amber-50/50 border border-amber-200 flex items-start gap-3">
+                      <Ruler className="w-5 h-5 text-amber-700 flex-shrink-0 mt-0.5" />
+                      <div>
+                        <div className="text-[11px] font-bold text-amber-800 uppercase">Height Standard</div>
+                        <div className="text-sm font-bold text-gray-900">{eligibility.heightLabel}</div>
+                      </div>
+                    </div>
+
+                    <div className="p-4 rounded-xl bg-purple-50/50 border border-purple-200 flex items-start gap-3">
+                      <Users className="w-5 h-5 text-purple-700 flex-shrink-0 mt-0.5" />
+                      <div>
+                        <div className="text-[11px] font-bold text-purple-800 uppercase">Gender & Status</div>
+                        <div className="text-sm font-bold text-gray-900">
+                          {eligibility.genderLabel} • {eligibility.maritalStatus}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {eligibility.notes.length > 0 && (
+                    <div className="bg-slate-50 border border-slate-200 rounded-xl p-4 space-y-2">
+                      <div className="text-xs font-bold text-gray-700 uppercase tracking-wide">
+                        Important Physical & Selection Notes:
+                      </div>
+                      <ul className="space-y-1.5">
+                        {eligibility.notes.map((note, idx) => (
+                          <li key={idx} className="text-xs text-gray-600 flex items-start gap-2">
+                            <CheckCircle className="w-3.5 h-3.5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                            <span>{note}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
                 </div>
-                <div className="p-3.5 rounded-xl bg-gray-50 border border-gray-200 flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-emerald-600 flex-shrink-0" />
-                  <span className="text-xs font-semibold text-gray-700">Mentor Personal Guidance</span>
-                </div>
-                <div className="p-3.5 rounded-xl bg-gray-50 border border-gray-200 flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-emerald-600 flex-shrink-0" />
-                  <span className="text-xs font-semibold text-gray-700">VIP WhatsApp Discussion Batch Access</span>
-                </div>
-              </div>
+              )}
             </div>
           </div>
 

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { 
   Shield, 
@@ -18,11 +18,14 @@ import {
   Calendar,
   MapPin,
   Camera,
-  Check
+  Check,
+  XCircle,
+  ClipboardCheck
 } from 'lucide-react';
 import { ACADEMY_CONFIG } from '@/lib/constants';
 import { INITIAL_COURSES } from '@/lib/courses-data';
 import { saveAdmissionFormCadet } from '@/lib/auth';
+import { checkCandidateEligibility, getCourseEligibility } from '@/lib/eligibility';
 
 export const runtime = 'edge';
 
@@ -53,6 +56,38 @@ export default function AdmissionFormPage() {
   const [issbStatus, setIssbStatus] = useState<'Fresh' | 'Repeater'>('Fresh');
   const [selectedCourseSlug, setSelectedCourseSlug] = useState('pma-long-course');
   const [rollNumber, setRollNumber] = useState('');
+
+  // Auto-select course from ?course=<slug> query param
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search);
+      const courseParam = params.get('course');
+      if (courseParam && INITIAL_COURSES.some((c) => c.slug === courseParam)) {
+        setSelectedCourseSlug(courseParam);
+      }
+    }
+  }, []);
+
+  const currentTargetCourse =
+    INITIAL_COURSES.find((c) => c.slug === selectedCourseSlug) || INITIAL_COURSES[0];
+
+  const courseCriteria = getCourseEligibility(currentTargetCourse);
+  const eligibilityEval = checkCandidateEligibility(currentTargetCourse, {
+    dob,
+    gender,
+    height,
+    matricMarks,
+    fscMarks,
+  });
+
+  const eligibleAlternatives =
+    eligibilityEval.status === 'not_eligible'
+      ? INITIAL_COURSES.filter(
+          (c) =>
+            c.slug !== currentTargetCourse.slug &&
+            checkCandidateEligibility(c, { dob, gender, height, matricMarks, fscMarks }).isEligible
+        ).slice(0, 3)
+      : [];
 
   // Handle Photo Upload
   const handlePhotoUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -93,6 +128,16 @@ export default function AdmissionFormPage() {
   // Generate Roll Slip and persist to Admin Registry
   const handleGenerateSlip = (e: React.FormEvent) => {
     e.preventDefault();
+    if (eligibilityEval.status === 'not_eligible') {
+      const failedReasons = eligibilityEval.checks
+        .filter((c) => !c.passed)
+        .map((c) => `• ${c.label}: ${c.detail}`)
+        .join('\n');
+      const proceed = window.confirm(
+        `ELIGIBILITY WARNING for ${currentTargetCourse.title}:\n\n${failedReasons}\n\nYou do NOT meet the official criteria for this course. Do you still want to generate the slip anyway?`
+      );
+      if (!proceed) return;
+    }
     const generatedRoll = `TBFA-${Math.floor(100000 + Math.random() * 900000)}`;
     setRollNumber(generatedRoll);
 
@@ -398,6 +443,13 @@ export default function AdmissionFormPage() {
                     </option>
                   ))}
                 </select>
+                <div className="flex flex-wrap items-center gap-2 text-[11px] text-gray-600 pt-1">
+                  <span className="font-bold text-[#183B2B]">Required Criteria:</span>
+                  <span className="bg-slate-100 px-2 py-0.5 rounded font-semibold">Age: {courseCriteria.ageLabel}</span>
+                  <span className="bg-slate-100 px-2 py-0.5 rounded font-semibold">Gender: {courseCriteria.genderLabel}</span>
+                  <span className="bg-slate-100 px-2 py-0.5 rounded font-semibold">Height: {courseCriteria.heightLabel}</span>
+                  <span className="bg-slate-100 px-2 py-0.5 rounded font-semibold">{courseCriteria.educationLabel}</span>
+                </div>
               </div>
 
               {/* Personal Details */}
@@ -597,6 +649,90 @@ export default function AdmissionFormPage() {
                     </select>
                   </div>
                 </div>
+              </div>
+
+              {/* Live Automatic Eligibility Detection Panel */}
+              <div
+                className={`p-5 rounded-2xl border-2 space-y-3 transition-all ${
+                  eligibilityEval.status === 'eligible'
+                    ? 'bg-emerald-50 border-emerald-300'
+                    : eligibilityEval.status === 'not_eligible'
+                    ? 'bg-red-50 border-red-300'
+                    : 'bg-amber-50/70 border-amber-200'
+                }`}
+              >
+                <div className="flex items-start gap-3">
+                  {eligibilityEval.status === 'eligible' ? (
+                    <CheckCircle className="w-6 h-6 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  ) : eligibilityEval.status === 'not_eligible' ? (
+                    <XCircle className="w-6 h-6 text-red-600 flex-shrink-0 mt-0.5" />
+                  ) : (
+                    <ClipboardCheck className="w-6 h-6 text-amber-600 flex-shrink-0 mt-0.5" />
+                  )}
+                  <div className="flex-1">
+                    <div
+                      className={`text-sm font-black uppercase tracking-wide ${
+                        eligibilityEval.status === 'eligible'
+                          ? 'text-emerald-900'
+                          : eligibilityEval.status === 'not_eligible'
+                          ? 'text-red-900'
+                          : 'text-amber-900'
+                      }`}
+                    >
+                      {eligibilityEval.status === 'eligible'
+                        ? 'Eligible — Ready to Apply'
+                        : eligibilityEval.status === 'not_eligible'
+                        ? 'Not Eligible for Selected Course'
+                        : 'Live Eligibility Checker'}
+                    </div>
+                    <p className="text-xs text-gray-700 mt-0.5 font-medium">
+                      {eligibilityEval.summaryMessage}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1">
+                  {eligibilityEval.checks.map((chk, idx) => (
+                    <div
+                      key={idx}
+                      className={`p-2.5 rounded-xl border text-xs flex items-start gap-2 bg-white ${
+                        chk.passed ? 'border-emerald-200' : 'border-red-200'
+                      }`}
+                    >
+                      {chk.passed ? (
+                        <Check className="w-4 h-4 text-emerald-600 flex-shrink-0 mt-0.5" />
+                      ) : (
+                        <AlertCircle className="w-4 h-4 text-red-500 flex-shrink-0 mt-0.5" />
+                      )}
+                      <div>
+                        <div className="font-bold text-gray-800">{chk.label}</div>
+                        <div className={chk.passed ? 'text-emerald-700' : 'text-red-700 font-medium'}>
+                          {chk.detail}
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                {eligibleAlternatives.length > 0 && (
+                  <div className="pt-2 border-t border-red-200/70">
+                    <div className="text-[11px] font-bold text-gray-800 mb-1.5">
+                      Recommended Courses You ARE Eligible For:
+                    </div>
+                    <div className="flex flex-wrap gap-2">
+                      {eligibleAlternatives.map((alt) => (
+                        <button
+                          key={alt.id}
+                          type="button"
+                          onClick={() => setSelectedCourseSlug(alt.slug)}
+                          className="text-xs font-bold px-3 py-1.5 rounded-lg bg-white border border-emerald-300 text-emerald-800 hover:bg-emerald-50 transition-colors shadow-sm"
+                        >
+                          Switch to {alt.title}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
 
               {/* Submit CTA */}
