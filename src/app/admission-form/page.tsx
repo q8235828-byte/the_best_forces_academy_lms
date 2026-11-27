@@ -162,7 +162,7 @@ export default function AdmissionFormPage() {
       religion: religion,
       sect: sect,
       father_occupation: fatherOccupation || 'Government Service',
-      bform_document_url: bformPreview || '/qaiser-cnic-front.jpg',
+      bform_document_url: bformPreview || '/qaiser-cnic-front.webp',
       result_card_url: resultCardPreview || '/sample-matric-card-986.svg',
       enrolled_courses: [selectedCourseObj.id]
     });

@@ -17,7 +17,7 @@ interface StoryItem {
 const SUCCESS_STORIES: StoryItem[] = [
   {
     id: 1,
-    image: '/images/success-stories/story-1.jpg',
+    image: '/images/success-stories/story-1.webp',
     title: 'AFNS Medical Test Cleared — Entry 2026/27',
     subtitle: 'Armed Forces Nursing Services • Approved Online Test & Medical Clearance',
     category: 'defense',
@@ -25,7 +25,7 @@ const SUCCESS_STORIES: StoryItem[] = [
   },
   {
     id: 2,
-    image: '/images/success-stories/story-2.jpg',
+    image: '/images/success-stories/story-2.webp',
     title: 'Cadet Umme Sara Zafar — AFNS Selected',
     subtitle: 'ASRC Lahore • Initial & Medical Screening Qualified',
     category: 'defense',
@@ -33,7 +33,7 @@ const SUCCESS_STORIES: StoryItem[] = [
   },
   {
     id: 3,
-    image: '/images/success-stories/story-3.jpg',
+    image: '/images/success-stories/story-3.webp',
     title: 'Verified Armed Forces Selection Achievement',
     subtitle: 'Computerized Intelligence & Academic Examination Cleared',
     category: 'defense',
@@ -41,7 +41,7 @@ const SUCCESS_STORIES: StoryItem[] = [
   },
   {
     id: 4,
-    image: '/images/success-stories/story-4.jpg',
+    image: '/images/success-stories/story-4.webp',
     title: 'AFNS 2026 Initial Test Qualified — ASRC Multan',
     subtitle: 'Haroonabad Batch • Cleared 1st Attempt with Mentor Guidance',
     category: 'defense',
@@ -49,7 +49,7 @@ const SUCCESS_STORIES: StoryItem[] = [
   },
   {
     id: 5,
-    image: '/images/success-stories/story-5.jpg',
+    image: '/images/success-stories/story-5.webp',
     title: 'Defense Forces Initial Test Success',
     subtitle: 'Verbal, Non-Verbal & Academic Test Cleared',
     category: 'defense',
@@ -57,7 +57,7 @@ const SUCCESS_STORIES: StoryItem[] = [
   },
   {
     id: 6,
-    image: '/images/success-stories/story-6.jpg',
+    image: '/images/success-stories/story-6.webp',
     title: 'Cadet Selection Slip & Merit Achievement',
     subtitle: 'Official Forces Selection Center Verification',
     category: 'defense',
@@ -65,7 +65,7 @@ const SUCCESS_STORIES: StoryItem[] = [
   },
   {
     id: 7,
-    image: '/images/success-stories/story-7.jpg',
+    image: '/images/success-stories/story-7.webp',
     title: 'Armed Forces Induction Milestone',
     subtitle: 'Prepared under The Best Forces Academy LMS',
     category: 'defense',
@@ -73,7 +73,7 @@ const SUCCESS_STORIES: StoryItem[] = [
   },
   {
     id: 8,
-    image: '/images/success-stories/story-8.jpg',
+    image: '/images/success-stories/story-8.webp',
     title: 'Cadet Aqsa Zafar — AFNS 2026 Initial Pass',
     subtitle: 'ASRC Faisalabad • Outstanding Result & Merit Selection',
     category: 'defense',
@@ -81,7 +81,7 @@ const SUCCESS_STORIES: StoryItem[] = [
   },
   {
     id: 9,
-    image: '/images/success-stories/story-9.jpg',
+    image: '/images/success-stories/story-9.webp',
     title: 'Defense Entry Merit Achievement',
     subtitle: 'Initial Computerized & Physical Screening Cleared',
     category: 'defense',
@@ -89,7 +89,7 @@ const SUCCESS_STORIES: StoryItem[] = [
   },
   {
     id: 10,
-    image: '/images/success-stories/story-10.jpg',
+    image: '/images/success-stories/story-10.webp',
     title: 'Cadet Aneesa Rasheed — AFNS 2026 Initial Pass',
     subtitle: 'ASRC Faisalabad • Approved & Qualified for Next Stage',
     category: 'defense',
@@ -97,7 +97,7 @@ const SUCCESS_STORIES: StoryItem[] = [
   },
   {
     id: 11,
-    image: '/images/success-stories/story-11.jpg',
+    image: '/images/success-stories/story-11.webp',
     title: 'BISE Lahore 9th & 10th Board Toppers 2026',
     subtitle: '95% Passing Ratio • 1155/1200 Marks • Pattoki Campus Pride',
     category: 'academic',

@@ -32,11 +32,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "B",
     "explanation": "Each step adds one new line segment (1 -> 2 -> 3 -> 4 -> 5 lines). Square with diagonal has 5 lines.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-1.jpg?v=20261127b",
-    "option_a_image_url": "/images/non-verbal/options/nv-1-opt-a.jpg?v=20261127b",
-    "option_b_image_url": "/images/non-verbal/options/nv-1-opt-b.jpg?v=20261127b",
-    "option_c_image_url": "/images/non-verbal/options/nv-1-opt-c.jpg?v=20261127b",
-    "option_d_image_url": "/images/non-verbal/options/nv-1-opt-d.jpg?v=20261127b"
+    "question_image_url": "/images/non-verbal/questions/nv-q-1.webp?v=20261127b",
+    "option_a_image_url": "/images/non-verbal/options/nv-1-opt-a.webp?v=20261127b",
+    "option_b_image_url": "/images/non-verbal/options/nv-1-opt-b.webp?v=20261127b",
+    "option_c_image_url": "/images/non-verbal/options/nv-1-opt-c.webp?v=20261127b",
+    "option_d_image_url": "/images/non-verbal/options/nv-1-opt-d.webp?v=20261127b"
   },
   {
     "id": 1002,
@@ -49,11 +49,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "A",
     "explanation": "Inner symbols alternate and expand while outer shapes rotate 90 degrees sequentially.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-2.jpg?v=20261127b",
-    "option_a_image_url": "/images/non-verbal/options/nv-2-opt-a.jpg?v=20261127b",
-    "option_b_image_url": "/images/non-verbal/options/nv-2-opt-b.jpg?v=20261127b",
-    "option_c_image_url": "/images/non-verbal/options/nv-2-opt-c.jpg?v=20261127b",
-    "option_d_image_url": "/images/non-verbal/options/nv-2-opt-d.jpg?v=20261127b"
+    "question_image_url": "/images/non-verbal/questions/nv-q-2.webp?v=20261127b",
+    "option_a_image_url": "/images/non-verbal/options/nv-2-opt-a.webp?v=20261127b",
+    "option_b_image_url": "/images/non-verbal/options/nv-2-opt-b.webp?v=20261127b",
+    "option_c_image_url": "/images/non-verbal/options/nv-2-opt-c.webp?v=20261127b",
+    "option_d_image_url": "/images/non-verbal/options/nv-2-opt-d.webp?v=20261127b"
   },
   {
     "id": 1003,
@@ -66,11 +66,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "C",
     "explanation": "The black triangle rotates clockwise by 90 degrees in each step around the circle center.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-3.jpg?v=20261127b",
-    "option_a_image_url": "/images/non-verbal/options/nv-3-opt-a.jpg?v=20261127b",
-    "option_b_image_url": "/images/non-verbal/options/nv-3-opt-b.jpg?v=20261127b",
-    "option_c_image_url": "/images/non-verbal/options/nv-3-opt-c.jpg?v=20261127b",
-    "option_d_image_url": "/images/non-verbal/options/nv-3-opt-d.jpg?v=20261127b"
+    "question_image_url": "/images/non-verbal/questions/nv-q-3.webp?v=20261127b",
+    "option_a_image_url": "/images/non-verbal/options/nv-3-opt-a.webp?v=20261127b",
+    "option_b_image_url": "/images/non-verbal/options/nv-3-opt-b.webp?v=20261127b",
+    "option_c_image_url": "/images/non-verbal/options/nv-3-opt-c.webp?v=20261127b",
+    "option_d_image_url": "/images/non-verbal/options/nv-3-opt-d.webp?v=20261127b"
   },
   {
     "id": 1004,
@@ -83,11 +83,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "B",
     "explanation": "The shaded quarter rotates clockwise by 90 degrees while the plus sign moves counter-clockwise.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-4.jpg?v=20261127b",
-    "option_a_image_url": "/images/non-verbal/options/nv-4-opt-a.jpg?v=20261127b",
-    "option_b_image_url": "/images/non-verbal/options/nv-4-opt-b.jpg?v=20261127b",
-    "option_c_image_url": "/images/non-verbal/options/nv-4-opt-c.jpg?v=20261127b",
-    "option_d_image_url": "/images/non-verbal/options/nv-4-opt-d.jpg?v=20261127b"
+    "question_image_url": "/images/non-verbal/questions/nv-q-4.webp?v=20261127b",
+    "option_a_image_url": "/images/non-verbal/options/nv-4-opt-a.webp?v=20261127b",
+    "option_b_image_url": "/images/non-verbal/options/nv-4-opt-b.webp?v=20261127b",
+    "option_c_image_url": "/images/non-verbal/options/nv-4-opt-c.webp?v=20261127b",
+    "option_d_image_url": "/images/non-verbal/options/nv-4-opt-d.webp?v=20261127b"
   },
   {
     "id": 1005,
@@ -100,11 +100,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "D",
     "explanation": "The line segment rotates clockwise around the corners of the bounding square.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-5.jpg?v=20261127b",
-    "option_a_image_url": "/images/non-verbal/options/nv-5-opt-a.jpg?v=20261127b",
-    "option_b_image_url": "/images/non-verbal/options/nv-5-opt-b.jpg?v=20261127b",
-    "option_c_image_url": "/images/non-verbal/options/nv-5-opt-c.jpg?v=20261127b",
-    "option_d_image_url": "/images/non-verbal/options/nv-5-opt-d.jpg?v=20261127b"
+    "question_image_url": "/images/non-verbal/questions/nv-q-5.webp?v=20261127b",
+    "option_a_image_url": "/images/non-verbal/options/nv-5-opt-a.webp?v=20261127b",
+    "option_b_image_url": "/images/non-verbal/options/nv-5-opt-b.webp?v=20261127b",
+    "option_c_image_url": "/images/non-verbal/options/nv-5-opt-c.webp?v=20261127b",
+    "option_d_image_url": "/images/non-verbal/options/nv-5-opt-d.webp?v=20261127b"
   },
   {
     "id": 1006,
@@ -117,11 +117,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "C",
     "explanation": "The inner circle traverses counter-clockwise along the circumference of the outer circle.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-6.jpg?v=20261127b",
-    "option_a_image_url": "/images/non-verbal/options/nv-6-opt-a.jpg?v=20261127b",
-    "option_b_image_url": "/images/non-verbal/options/nv-6-opt-b.jpg?v=20261127b",
-    "option_c_image_url": "/images/non-verbal/options/nv-6-opt-c.jpg?v=20261127b",
-    "option_d_image_url": "/images/non-verbal/options/nv-6-opt-d.jpg?v=20261127b"
+    "question_image_url": "/images/non-verbal/questions/nv-q-6.webp?v=20261127b",
+    "option_a_image_url": "/images/non-verbal/options/nv-6-opt-a.webp?v=20261127b",
+    "option_b_image_url": "/images/non-verbal/options/nv-6-opt-b.webp?v=20261127b",
+    "option_c_image_url": "/images/non-verbal/options/nv-6-opt-c.webp?v=20261127b",
+    "option_d_image_url": "/images/non-verbal/options/nv-6-opt-d.webp?v=20261127b"
   },
   {
     "id": 1007,
@@ -134,11 +134,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "B",
     "explanation": "The diagonal divider alternates directions while the plus marker shifts between quadrants.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-7.jpg?v=20261127b",
-    "option_a_image_url": "/images/non-verbal/options/nv-7-opt-a.jpg?v=20261127b",
-    "option_b_image_url": "/images/non-verbal/options/nv-7-opt-b.jpg?v=20261127b",
-    "option_c_image_url": "/images/non-verbal/options/nv-7-opt-c.jpg?v=20261127b",
-    "option_d_image_url": "/images/non-verbal/options/nv-7-opt-d.jpg?v=20261127b"
+    "question_image_url": "/images/non-verbal/questions/nv-q-7.webp?v=20261127b",
+    "option_a_image_url": "/images/non-verbal/options/nv-7-opt-a.webp?v=20261127b",
+    "option_b_image_url": "/images/non-verbal/options/nv-7-opt-b.webp?v=20261127b",
+    "option_c_image_url": "/images/non-verbal/options/nv-7-opt-c.webp?v=20261127b",
+    "option_d_image_url": "/images/non-verbal/options/nv-7-opt-d.webp?v=20261127b"
   },
   {
     "id": 1008,
@@ -151,11 +151,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "C",
     "explanation": "The arrow heads rotate and reverse direction in an alternating arithmetic sequence.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-8.jpg?v=20261127b",
-    "option_a_image_url": "/images/non-verbal/options/nv-8-opt-a.jpg?v=20261127b",
-    "option_b_image_url": "/images/non-verbal/options/nv-8-opt-b.jpg?v=20261127b",
-    "option_c_image_url": "/images/non-verbal/options/nv-8-opt-c.jpg?v=20261127b",
-    "option_d_image_url": "/images/non-verbal/options/nv-8-opt-d.jpg?v=20261127b"
+    "question_image_url": "/images/non-verbal/questions/nv-q-8.webp?v=20261127b",
+    "option_a_image_url": "/images/non-verbal/options/nv-8-opt-a.webp?v=20261127b",
+    "option_b_image_url": "/images/non-verbal/options/nv-8-opt-b.webp?v=20261127b",
+    "option_c_image_url": "/images/non-verbal/options/nv-8-opt-c.webp?v=20261127b",
+    "option_d_image_url": "/images/non-verbal/options/nv-8-opt-d.webp?v=20261127b"
   },
   {
     "id": 1009,
@@ -168,11 +168,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "A",
     "explanation": "The arm rotates 45 degrees clockwise at each consecutive step.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-9.jpg?v=20261127b",
-    "option_a_image_url": "/images/non-verbal/options/nv-9-opt-a.jpg?v=20261127b",
-    "option_b_image_url": "/images/non-verbal/options/nv-9-opt-b.jpg?v=20261127b",
-    "option_c_image_url": "/images/non-verbal/options/nv-9-opt-c.jpg?v=20261127b",
-    "option_d_image_url": "/images/non-verbal/options/nv-9-opt-d.jpg?v=20261127b"
+    "question_image_url": "/images/non-verbal/questions/nv-q-9.webp?v=20261127b",
+    "option_a_image_url": "/images/non-verbal/options/nv-9-opt-a.webp?v=20261127b",
+    "option_b_image_url": "/images/non-verbal/options/nv-9-opt-b.webp?v=20261127b",
+    "option_c_image_url": "/images/non-verbal/options/nv-9-opt-c.webp?v=20261127b",
+    "option_d_image_url": "/images/non-verbal/options/nv-9-opt-d.webp?v=20261127b"
   },
   {
     "id": 1010,
@@ -185,11 +185,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "C",
     "explanation": "Outer and inner shapes alternate between triangle, square, and circle in cyclic order.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-10.jpg?v=20261127b",
-    "option_a_image_url": "/images/non-verbal/options/nv-10-opt-a.jpg?v=20261127b",
-    "option_b_image_url": "/images/non-verbal/options/nv-10-opt-b.jpg?v=20261127b",
-    "option_c_image_url": "/images/non-verbal/options/nv-10-opt-c.jpg?v=20261127b",
-    "option_d_image_url": "/images/non-verbal/options/nv-10-opt-d.jpg?v=20261127b"
+    "question_image_url": "/images/non-verbal/questions/nv-q-10.webp?v=20261127b",
+    "option_a_image_url": "/images/non-verbal/options/nv-10-opt-a.webp?v=20261127b",
+    "option_b_image_url": "/images/non-verbal/options/nv-10-opt-b.webp?v=20261127b",
+    "option_c_image_url": "/images/non-verbal/options/nv-10-opt-c.webp?v=20261127b",
+    "option_d_image_url": "/images/non-verbal/options/nv-10-opt-d.webp?v=20261127b"
   },
   {
     "id": 1011,
@@ -202,11 +202,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "D",
     "explanation": "The arrow rotates 45 degrees clockwise while translating across the frame.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-11.jpg?v=20261127b",
-    "option_a_image_url": "/images/non-verbal/options/nv-11-opt-a.jpg?v=20261127b",
-    "option_b_image_url": "/images/non-verbal/options/nv-11-opt-b.jpg?v=20261127b",
-    "option_c_image_url": "/images/non-verbal/options/nv-11-opt-c.jpg?v=20261127b",
-    "option_d_image_url": "/images/non-verbal/options/nv-11-opt-d.jpg?v=20261127b"
+    "question_image_url": "/images/non-verbal/questions/nv-q-11.webp?v=20261127b",
+    "option_a_image_url": "/images/non-verbal/options/nv-11-opt-a.webp?v=20261127b",
+    "option_b_image_url": "/images/non-verbal/options/nv-11-opt-b.webp?v=20261127b",
+    "option_c_image_url": "/images/non-verbal/options/nv-11-opt-c.webp?v=20261127b",
+    "option_d_image_url": "/images/non-verbal/options/nv-11-opt-d.webp?v=20261127b"
   },
   {
     "id": 1012,
@@ -219,11 +219,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "C",
     "explanation": "The embedded nested geometric figure alternates between square, triangle, and circle.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-12.jpg?v=20261127b",
-    "option_a_image_url": "/images/non-verbal/options/nv-12-opt-a.jpg?v=20261127b",
-    "option_b_image_url": "/images/non-verbal/options/nv-12-opt-b.jpg?v=20261127b",
-    "option_c_image_url": "/images/non-verbal/options/nv-12-opt-c.jpg?v=20261127b",
-    "option_d_image_url": "/images/non-verbal/options/nv-12-opt-d.jpg?v=20261127b"
+    "question_image_url": "/images/non-verbal/questions/nv-q-12.webp?v=20261127b",
+    "option_a_image_url": "/images/non-verbal/options/nv-12-opt-a.webp?v=20261127b",
+    "option_b_image_url": "/images/non-verbal/options/nv-12-opt-b.webp?v=20261127b",
+    "option_c_image_url": "/images/non-verbal/options/nv-12-opt-c.webp?v=20261127b",
+    "option_d_image_url": "/images/non-verbal/options/nv-12-opt-d.webp?v=20261127b"
   },
   {
     "id": 1013,
@@ -236,11 +236,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "B",
     "explanation": "The split geometric shape toggles division line and shape alternation.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-13.jpg?v=20261127b",
-    "option_a_image_url": "/images/non-verbal/options/nv-13-opt-a.jpg?v=20261127b",
-    "option_b_image_url": "/images/non-verbal/options/nv-13-opt-b.jpg?v=20261127b",
-    "option_c_image_url": "/images/non-verbal/options/nv-13-opt-c.jpg?v=20261127b",
-    "option_d_image_url": "/images/non-verbal/options/nv-13-opt-d.jpg?v=20261127b"
+    "question_image_url": "/images/non-verbal/questions/nv-q-13.webp?v=20261127b",
+    "option_a_image_url": "/images/non-verbal/options/nv-13-opt-a.webp?v=20261127b",
+    "option_b_image_url": "/images/non-verbal/options/nv-13-opt-b.webp?v=20261127b",
+    "option_c_image_url": "/images/non-verbal/options/nv-13-opt-c.webp?v=20261127b",
+    "option_d_image_url": "/images/non-verbal/options/nv-13-opt-d.webp?v=20261127b"
   },
   {
     "id": 1014,
@@ -253,11 +253,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "D",
     "explanation": "Solid fill and outline alternate in synchronized sequence across alternating shapes.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-14.jpg?v=20261127b",
-    "option_a_image_url": "/images/non-verbal/options/nv-14-opt-a.jpg?v=20261127b",
-    "option_b_image_url": "/images/non-verbal/options/nv-14-opt-b.jpg?v=20261127b",
-    "option_c_image_url": "/images/non-verbal/options/nv-14-opt-c.jpg?v=20261127b",
-    "option_d_image_url": "/images/non-verbal/options/nv-14-opt-d.jpg?v=20261127b"
+    "question_image_url": "/images/non-verbal/questions/nv-q-14.webp?v=20261127b",
+    "option_a_image_url": "/images/non-verbal/options/nv-14-opt-a.webp?v=20261127b",
+    "option_b_image_url": "/images/non-verbal/options/nv-14-opt-b.webp?v=20261127b",
+    "option_c_image_url": "/images/non-verbal/options/nv-14-opt-c.webp?v=20261127b",
+    "option_d_image_url": "/images/non-verbal/options/nv-14-opt-d.webp?v=20261127b"
   },
   {
     "id": 1015,
@@ -270,11 +270,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "B",
     "explanation": "The crossbars rotate 45 degrees while the circular loop shifts along the axis.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-15.jpg?v=20261127b",
-    "option_a_image_url": "/images/non-verbal/options/nv-15-opt-a.jpg?v=20261127b",
-    "option_b_image_url": "/images/non-verbal/options/nv-15-opt-b.jpg?v=20261127b",
-    "option_c_image_url": "/images/non-verbal/options/nv-15-opt-c.jpg?v=20261127b",
-    "option_d_image_url": "/images/non-verbal/options/nv-15-opt-d.jpg?v=20261127b"
+    "question_image_url": "/images/non-verbal/questions/nv-q-15.webp?v=20261127b",
+    "option_a_image_url": "/images/non-verbal/options/nv-15-opt-a.webp?v=20261127b",
+    "option_b_image_url": "/images/non-verbal/options/nv-15-opt-b.webp?v=20261127b",
+    "option_c_image_url": "/images/non-verbal/options/nv-15-opt-c.webp?v=20261127b",
+    "option_d_image_url": "/images/non-verbal/options/nv-15-opt-d.webp?v=20261127b"
   },
   {
     "id": 1016,
@@ -287,11 +287,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "C",
     "explanation": "Opposite sectors follow the relationship: sector * 2 = opposite sector (3*2=6, 5*2=10, 7*2=14, so 4*2=8), completing the cyclic progression.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-16.jpg?v=20261127b",
-    "option_a_image_url": "/images/non-verbal/options/nv-16-opt-a.jpg?v=20261127b",
-    "option_b_image_url": "/images/non-verbal/options/nv-16-opt-b.jpg?v=20261127b",
-    "option_c_image_url": "/images/non-verbal/options/nv-16-opt-c.jpg?v=20261127b",
-    "option_d_image_url": "/images/non-verbal/options/nv-16-opt-d.jpg?v=20261127b"
+    "question_image_url": "/images/non-verbal/questions/nv-q-16.webp?v=20261127b",
+    "option_a_image_url": "/images/non-verbal/options/nv-16-opt-a.webp?v=20261127b",
+    "option_b_image_url": "/images/non-verbal/options/nv-16-opt-b.webp?v=20261127b",
+    "option_c_image_url": "/images/non-verbal/options/nv-16-opt-c.webp?v=20261127b",
+    "option_d_image_url": "/images/non-verbal/options/nv-16-opt-d.webp?v=20261127b"
   },
   {
     "id": 1017,
@@ -304,11 +304,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "B",
     "explanation": "The letter E with the dot on the left reflects across the vertical mirror axis to an inverted E with the dot on the right.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-17.jpg?v=20261127b",
-    "option_a_image_url": "/images/non-verbal/options/nv-17-opt-a.jpg?v=20261127b",
-    "option_b_image_url": "/images/non-verbal/options/nv-17-opt-b.jpg?v=20261127b",
-    "option_c_image_url": "/images/non-verbal/options/nv-17-opt-c.jpg?v=20261127b",
-    "option_d_image_url": "/images/non-verbal/options/nv-17-opt-d.jpg?v=20261127b"
+    "question_image_url": "/images/non-verbal/questions/nv-q-17.webp?v=20261127b",
+    "option_a_image_url": "/images/non-verbal/options/nv-17-opt-a.webp?v=20261127b",
+    "option_b_image_url": "/images/non-verbal/options/nv-17-opt-b.webp?v=20261127b",
+    "option_c_image_url": "/images/non-verbal/options/nv-17-opt-c.webp?v=20261127b",
+    "option_d_image_url": "/images/non-verbal/options/nv-17-opt-d.webp?v=20261127b"
   },
   {
     "id": 1018,
@@ -321,11 +321,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "D",
     "explanation": "Row-wise analysis shows pattern variation: each column maintains constant stripe count while ray projections follow 4 -> 5 -> 6 rays.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-18.jpg?v=20261127b",
-    "option_a_image_url": "/images/non-verbal/options/nv-18-opt-a.jpg?v=20261127b",
-    "option_b_image_url": "/images/non-verbal/options/nv-18-opt-b.jpg?v=20261127b",
-    "option_c_image_url": "/images/non-verbal/options/nv-18-opt-c.jpg?v=20261127b",
-    "option_d_image_url": "/images/non-verbal/options/nv-18-opt-d.jpg?v=20261127b"
+    "question_image_url": "/images/non-verbal/questions/nv-q-18.webp?v=20261127b",
+    "option_a_image_url": "/images/non-verbal/options/nv-18-opt-a.webp?v=20261127b",
+    "option_b_image_url": "/images/non-verbal/options/nv-18-opt-b.webp?v=20261127b",
+    "option_c_image_url": "/images/non-verbal/options/nv-18-opt-c.webp?v=20261127b",
+    "option_d_image_url": "/images/non-verbal/options/nv-18-opt-d.webp?v=20261127b"
   },
   {
     "id": 1019,
@@ -338,11 +338,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "C",
     "explanation": "In figures (a), (b), (d), (e), and (f) the shaded sections are opposite, whereas in (c) the shading orientation is altered.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-19.jpg?v=20261127b",
-    "option_a_image_url": "/images/non-verbal/options/nv-19-opt-a.jpg?v=20261127b",
-    "option_b_image_url": "/images/non-verbal/options/nv-19-opt-b.jpg?v=20261127b",
-    "option_c_image_url": "/images/non-verbal/options/nv-19-opt-c.jpg?v=20261127b",
-    "option_d_image_url": "/images/non-verbal/options/nv-19-opt-d.jpg?v=20261127b"
+    "question_image_url": "/images/non-verbal/questions/nv-q-19.webp?v=20261127b",
+    "option_a_image_url": "/images/non-verbal/options/nv-19-opt-a.webp?v=20261127b",
+    "option_b_image_url": "/images/non-verbal/options/nv-19-opt-b.webp?v=20261127b",
+    "option_c_image_url": "/images/non-verbal/options/nv-19-opt-c.webp?v=20261127b",
+    "option_d_image_url": "/images/non-verbal/options/nv-19-opt-d.webp?v=20261127b"
   },
   {
     "id": 1020,
@@ -355,11 +355,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "B",
     "explanation": "Looking across rows: the element count doubles or increments predictably. Row 2 has 3 squares, so the missing box has 4 or 6 squares.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-20.jpg?v=20261127b",
-    "option_a_image_url": "/images/non-verbal/options/nv-20-opt-a.jpg?v=20261127b",
-    "option_b_image_url": "/images/non-verbal/options/nv-20-opt-b.jpg?v=20261127b",
-    "option_c_image_url": "/images/non-verbal/options/nv-20-opt-c.jpg?v=20261127b",
-    "option_d_image_url": "/images/non-verbal/options/nv-20-opt-d.jpg?v=20261127b"
+    "question_image_url": "/images/non-verbal/questions/nv-q-20.webp?v=20261127b",
+    "option_a_image_url": "/images/non-verbal/options/nv-20-opt-a.webp?v=20261127b",
+    "option_b_image_url": "/images/non-verbal/options/nv-20-opt-b.webp?v=20261127b",
+    "option_c_image_url": "/images/non-verbal/options/nv-20-opt-c.webp?v=20261127b",
+    "option_d_image_url": "/images/non-verbal/options/nv-20-opt-d.webp?v=20261127b"
   },
   {
     "id": 1021,
@@ -372,11 +372,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "A",
     "explanation": "The 4x4 sub-grid cross patterns follow logical XOR addition across each row.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-21.jpg?v=20261127b",
-    "option_a_image_url": "/images/non-verbal/options/nv-21-opt-a.jpg?v=20261127b",
-    "option_b_image_url": "/images/non-verbal/options/nv-21-opt-b.jpg?v=20261127b",
-    "option_c_image_url": "/images/non-verbal/options/nv-21-opt-c.jpg?v=20261127b",
-    "option_d_image_url": "/images/non-verbal/options/nv-21-opt-d.jpg?v=20261127b"
+    "question_image_url": "/images/non-verbal/questions/nv-q-21.webp?v=20261127b",
+    "option_a_image_url": "/images/non-verbal/options/nv-21-opt-a.webp?v=20261127b",
+    "option_b_image_url": "/images/non-verbal/options/nv-21-opt-b.webp?v=20261127b",
+    "option_c_image_url": "/images/non-verbal/options/nv-21-opt-c.webp?v=20261127b",
+    "option_d_image_url": "/images/non-verbal/options/nv-21-opt-d.webp?v=20261127b"
   },
   {
     "id": 1022,
@@ -389,11 +389,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "C",
     "explanation": "The plus symbol shifts position relative to the circle (left -> top -> right -> bottom).",
-    "question_image_url": "/images/non-verbal/questions/nv-q-22.jpg?v=20261127b",
-    "option_a_image_url": "/images/non-verbal/options/nv-22-opt-a.jpg?v=20261127b",
-    "option_b_image_url": "/images/non-verbal/options/nv-22-opt-b.jpg?v=20261127b",
-    "option_c_image_url": "/images/non-verbal/options/nv-22-opt-c.jpg?v=20261127b",
-    "option_d_image_url": "/images/non-verbal/options/nv-22-opt-d.jpg?v=20261127b"
+    "question_image_url": "/images/non-verbal/questions/nv-q-22.webp?v=20261127b",
+    "option_a_image_url": "/images/non-verbal/options/nv-22-opt-a.webp?v=20261127b",
+    "option_b_image_url": "/images/non-verbal/options/nv-22-opt-b.webp?v=20261127b",
+    "option_c_image_url": "/images/non-verbal/options/nv-22-opt-c.webp?v=20261127b",
+    "option_d_image_url": "/images/non-verbal/options/nv-22-opt-d.webp?v=20261127b"
   },
   {
     "id": 1023,
@@ -406,11 +406,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "B",
     "explanation": "Concentric shapes alternate between circle, triangle, and hexagon across rows and columns.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-23.jpg?v=20261127b",
-    "option_a_image_url": "/images/non-verbal/options/nv-23-opt-a.jpg?v=20261127b",
-    "option_b_image_url": "/images/non-verbal/options/nv-23-opt-b.jpg?v=20261127b",
-    "option_c_image_url": "/images/non-verbal/options/nv-23-opt-c.jpg?v=20261127b",
-    "option_d_image_url": "/images/non-verbal/options/nv-23-opt-d.jpg?v=20261127b"
+    "question_image_url": "/images/non-verbal/questions/nv-q-23.webp?v=20261127b",
+    "option_a_image_url": "/images/non-verbal/options/nv-23-opt-a.webp?v=20261127b",
+    "option_b_image_url": "/images/non-verbal/options/nv-23-opt-b.webp?v=20261127b",
+    "option_c_image_url": "/images/non-verbal/options/nv-23-opt-c.webp?v=20261127b",
+    "option_d_image_url": "/images/non-verbal/options/nv-23-opt-d.webp?v=20261127b"
   },
   {
     "id": 1024,
@@ -423,11 +423,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "C",
     "explanation": "Grid lines subdivide the square from 1 to 2 to 4 quadrants.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-24.jpg?v=20261127b",
-    "option_a_image_url": "/images/non-verbal/options/nv-24-opt-a.jpg?v=20261127b",
-    "option_b_image_url": "/images/non-verbal/options/nv-24-opt-b.jpg?v=20261127b",
-    "option_c_image_url": "/images/non-verbal/options/nv-24-opt-c.jpg?v=20261127b",
-    "option_d_image_url": "/images/non-verbal/options/nv-24-opt-d.jpg?v=20261127b"
+    "question_image_url": "/images/non-verbal/questions/nv-q-24.webp?v=20261127b",
+    "option_a_image_url": "/images/non-verbal/options/nv-24-opt-a.webp?v=20261127b",
+    "option_b_image_url": "/images/non-verbal/options/nv-24-opt-b.webp?v=20261127b",
+    "option_c_image_url": "/images/non-verbal/options/nv-24-opt-c.webp?v=20261127b",
+    "option_d_image_url": "/images/non-verbal/options/nv-24-opt-d.webp?v=20261127b"
   },
   {
     "id": 1025,
@@ -440,11 +440,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "C",
     "explanation": "Circular sectors shade 1/4 clockwise at each consecutive step.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-25.jpg?v=20261127b",
-    "option_a_image_url": "/images/non-verbal/options/nv-25-opt-a.jpg?v=20261127b",
-    "option_b_image_url": "/images/non-verbal/options/nv-25-opt-b.jpg?v=20261127b",
-    "option_c_image_url": "/images/non-verbal/options/nv-25-opt-c.jpg?v=20261127b",
-    "option_d_image_url": "/images/non-verbal/options/nv-25-opt-d.jpg?v=20261127b"
+    "question_image_url": "/images/non-verbal/questions/nv-q-25.webp?v=20261127b",
+    "option_a_image_url": "/images/non-verbal/options/nv-25-opt-a.webp?v=20261127b",
+    "option_b_image_url": "/images/non-verbal/options/nv-25-opt-b.webp?v=20261127b",
+    "option_c_image_url": "/images/non-verbal/options/nv-25-opt-c.webp?v=20261127b",
+    "option_d_image_url": "/images/non-verbal/options/nv-25-opt-d.webp?v=20261127b"
   },
   {
     "id": 1026,
@@ -457,11 +457,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "C",
     "explanation": "The colored triangular wedge rotates clockwise by 45 degrees around the octant grid.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-26.jpg?v=20261127b",
-    "option_a_image_url": "/images/non-verbal/options/nv-26-opt-a.jpg?v=20261127b",
-    "option_b_image_url": "/images/non-verbal/options/nv-26-opt-b.jpg?v=20261127b",
-    "option_c_image_url": "/images/non-verbal/options/nv-26-opt-c.jpg?v=20261127b",
-    "option_d_image_url": "/images/non-verbal/options/nv-26-opt-d.jpg?v=20261127b"
+    "question_image_url": "/images/non-verbal/questions/nv-q-26.webp?v=20261127b",
+    "option_a_image_url": "/images/non-verbal/options/nv-26-opt-a.webp?v=20261127b",
+    "option_b_image_url": "/images/non-verbal/options/nv-26-opt-b.webp?v=20261127b",
+    "option_c_image_url": "/images/non-verbal/options/nv-26-opt-c.webp?v=20261127b",
+    "option_d_image_url": "/images/non-verbal/options/nv-26-opt-d.webp?v=20261127b"
   },
   {
     "id": 1027,
@@ -474,11 +474,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "A",
     "explanation": "Geometric base alternates triangle and circle, while top crown alternates square and triangle.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-27.jpg?v=20261127b",
-    "option_a_image_url": "/images/non-verbal/options/nv-27-opt-a.jpg?v=20261127b",
-    "option_b_image_url": "/images/non-verbal/options/nv-27-opt-b.jpg?v=20261127b",
-    "option_c_image_url": "/images/non-verbal/options/nv-27-opt-c.jpg?v=20261127b",
-    "option_d_image_url": "/images/non-verbal/options/nv-27-opt-d.jpg?v=20261127b"
+    "question_image_url": "/images/non-verbal/questions/nv-q-27.webp?v=20261127b",
+    "option_a_image_url": "/images/non-verbal/options/nv-27-opt-a.webp?v=20261127b",
+    "option_b_image_url": "/images/non-verbal/options/nv-27-opt-b.webp?v=20261127b",
+    "option_c_image_url": "/images/non-verbal/options/nv-27-opt-c.webp?v=20261127b",
+    "option_d_image_url": "/images/non-verbal/options/nv-27-opt-d.webp?v=20261127b"
   },
   {
     "id": 1028,
@@ -491,11 +491,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "C",
     "explanation": "The star symbol shifts across quadrants while the bounding triangle rotates 90 degrees.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-28.jpg?v=20261127b",
-    "option_a_image_url": "/images/non-verbal/options/nv-28-opt-a.jpg?v=20261127b",
-    "option_b_image_url": "/images/non-verbal/options/nv-28-opt-b.jpg?v=20261127b",
-    "option_c_image_url": "/images/non-verbal/options/nv-28-opt-c.jpg?v=20261127b",
-    "option_d_image_url": "/images/non-verbal/options/nv-28-opt-d.jpg?v=20261127b"
+    "question_image_url": "/images/non-verbal/questions/nv-q-28.webp?v=20261127b",
+    "option_a_image_url": "/images/non-verbal/options/nv-28-opt-a.webp?v=20261127b",
+    "option_b_image_url": "/images/non-verbal/options/nv-28-opt-b.webp?v=20261127b",
+    "option_c_image_url": "/images/non-verbal/options/nv-28-opt-c.webp?v=20261127b",
+    "option_d_image_url": "/images/non-verbal/options/nv-28-opt-d.webp?v=20261127b"
   },
   {
     "id": 1029,
@@ -508,11 +508,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "B",
     "explanation": "The geometric profile rotates 45 degrees clockwise in each successive frame.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-29.jpg?v=20261127b",
-    "option_a_image_url": "/images/non-verbal/options/nv-29-opt-a.jpg?v=20261127b",
-    "option_b_image_url": "/images/non-verbal/options/nv-29-opt-b.jpg?v=20261127b",
-    "option_c_image_url": "/images/non-verbal/options/nv-29-opt-c.jpg?v=20261127b",
-    "option_d_image_url": "/images/non-verbal/options/nv-29-opt-d.jpg?v=20261127b"
+    "question_image_url": "/images/non-verbal/questions/nv-q-29.webp?v=20261127b",
+    "option_a_image_url": "/images/non-verbal/options/nv-29-opt-a.webp?v=20261127b",
+    "option_b_image_url": "/images/non-verbal/options/nv-29-opt-b.webp?v=20261127b",
+    "option_c_image_url": "/images/non-verbal/options/nv-29-opt-c.webp?v=20261127b",
+    "option_d_image_url": "/images/non-verbal/options/nv-29-opt-d.webp?v=20261127b"
   },
   {
     "id": 1030,
@@ -525,11 +525,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "A",
     "explanation": "The star marker steps across the 2x2 grid in counter-clockwise sequence.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-30.jpg?v=20261127b",
-    "option_a_image_url": "/images/non-verbal/options/nv-30-opt-a.jpg?v=20261127b",
-    "option_b_image_url": "/images/non-verbal/options/nv-30-opt-b.jpg?v=20261127b",
-    "option_c_image_url": "/images/non-verbal/options/nv-30-opt-c.jpg?v=20261127b",
-    "option_d_image_url": "/images/non-verbal/options/nv-30-opt-d.jpg?v=20261127b"
+    "question_image_url": "/images/non-verbal/questions/nv-q-30.webp?v=20261127b",
+    "option_a_image_url": "/images/non-verbal/options/nv-30-opt-a.webp?v=20261127b",
+    "option_b_image_url": "/images/non-verbal/options/nv-30-opt-b.webp?v=20261127b",
+    "option_c_image_url": "/images/non-verbal/options/nv-30-opt-c.webp?v=20261127b",
+    "option_d_image_url": "/images/non-verbal/options/nv-30-opt-d.webp?v=20261127b"
   },
   {
     "id": 1031,
@@ -542,11 +542,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "C",
     "explanation": "The vector arrow rotates 90 degrees clockwise at each step.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-31.jpg?v=20261127b",
-    "option_a_image_url": "/images/non-verbal/options/nv-31-opt-a.jpg?v=20261127b",
-    "option_b_image_url": "/images/non-verbal/options/nv-31-opt-b.jpg?v=20261127b",
-    "option_c_image_url": "/images/non-verbal/options/nv-31-opt-c.jpg?v=20261127b",
-    "option_d_image_url": "/images/non-verbal/options/nv-31-opt-d.jpg?v=20261127b"
+    "question_image_url": "/images/non-verbal/questions/nv-q-31.webp?v=20261127b",
+    "option_a_image_url": "/images/non-verbal/options/nv-31-opt-a.webp?v=20261127b",
+    "option_b_image_url": "/images/non-verbal/options/nv-31-opt-b.webp?v=20261127b",
+    "option_c_image_url": "/images/non-verbal/options/nv-31-opt-c.webp?v=20261127b",
+    "option_d_image_url": "/images/non-verbal/options/nv-31-opt-d.webp?v=20261127b"
   },
   {
     "id": 1032,
@@ -559,11 +559,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "B",
     "explanation": "The horizontal pointer rotates 45 degrees clockwise, pointing diagonally up-right in step 2 and upward in step 3.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-32.jpg?v=20261127b",
-    "option_a_image_url": "/images/non-verbal/options/nv-32-opt-a.jpg?v=20261127b",
-    "option_b_image_url": "/images/non-verbal/options/nv-32-opt-b.jpg?v=20261127b",
-    "option_c_image_url": "/images/non-verbal/options/nv-32-opt-c.jpg?v=20261127b",
-    "option_d_image_url": "/images/non-verbal/options/nv-32-opt-d.jpg?v=20261127b"
+    "question_image_url": "/images/non-verbal/questions/nv-q-32.webp?v=20261127b",
+    "option_a_image_url": "/images/non-verbal/options/nv-32-opt-a.webp?v=20261127b",
+    "option_b_image_url": "/images/non-verbal/options/nv-32-opt-b.webp?v=20261127b",
+    "option_c_image_url": "/images/non-verbal/options/nv-32-opt-c.webp?v=20261127b",
+    "option_d_image_url": "/images/non-verbal/options/nv-32-opt-d.webp?v=20261127b"
   },
   {
     "id": 1033,
@@ -576,11 +576,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "C",
     "explanation": "The green corner square advances clockwise along the corners of the black bounding box.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-33.jpg?v=20261127b",
-    "option_a_image_url": "/images/non-verbal/options/nv-33-opt-a.jpg?v=20261127b",
-    "option_b_image_url": "/images/non-verbal/options/nv-33-opt-b.jpg?v=20261127b",
-    "option_c_image_url": "/images/non-verbal/options/nv-33-opt-c.jpg?v=20261127b",
-    "option_d_image_url": "/images/non-verbal/options/nv-33-opt-d.jpg?v=20261127b"
+    "question_image_url": "/images/non-verbal/questions/nv-q-33.webp?v=20261127b",
+    "option_a_image_url": "/images/non-verbal/options/nv-33-opt-a.webp?v=20261127b",
+    "option_b_image_url": "/images/non-verbal/options/nv-33-opt-b.webp?v=20261127b",
+    "option_c_image_url": "/images/non-verbal/options/nv-33-opt-c.webp?v=20261127b",
+    "option_d_image_url": "/images/non-verbal/options/nv-33-opt-d.webp?v=20261127b"
   },
   {
     "id": 1034,
@@ -593,11 +593,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "B",
     "explanation": "The fold lines alternate orientation across horizontal and vertical axes.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-34.jpg?v=20261127b",
-    "option_a_image_url": "/images/non-verbal/options/nv-34-opt-a.jpg?v=20261127b",
-    "option_b_image_url": "/images/non-verbal/options/nv-34-opt-b.jpg?v=20261127b",
-    "option_c_image_url": "/images/non-verbal/options/nv-34-opt-c.jpg?v=20261127b",
-    "option_d_image_url": "/images/non-verbal/options/nv-34-opt-d.jpg?v=20261127b"
+    "question_image_url": "/images/non-verbal/questions/nv-q-34.webp?v=20261127b",
+    "option_a_image_url": "/images/non-verbal/options/nv-34-opt-a.webp?v=20261127b",
+    "option_b_image_url": "/images/non-verbal/options/nv-34-opt-b.webp?v=20261127b",
+    "option_c_image_url": "/images/non-verbal/options/nv-34-opt-c.webp?v=20261127b",
+    "option_d_image_url": "/images/non-verbal/options/nv-34-opt-d.webp?v=20261127b"
   },
   {
     "id": 1035,
@@ -610,11 +610,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "C",
     "explanation": "Across rows, the liquid bottle tilts 0 -> 45 -> 90 degrees while the volume level remains consistent.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-35.jpg?v=20261127b",
-    "option_a_image_url": "/images/non-verbal/options/nv-35-opt-a.jpg?v=20261127b",
-    "option_b_image_url": "/images/non-verbal/options/nv-35-opt-b.jpg?v=20261127b",
-    "option_c_image_url": "/images/non-verbal/options/nv-35-opt-c.jpg?v=20261127b",
-    "option_d_image_url": "/images/non-verbal/options/nv-35-opt-d.jpg?v=20261127b"
+    "question_image_url": "/images/non-verbal/questions/nv-q-35.webp?v=20261127b",
+    "option_a_image_url": "/images/non-verbal/options/nv-35-opt-a.webp?v=20261127b",
+    "option_b_image_url": "/images/non-verbal/options/nv-35-opt-b.webp?v=20261127b",
+    "option_c_image_url": "/images/non-verbal/options/nv-35-opt-c.webp?v=20261127b",
+    "option_d_image_url": "/images/non-verbal/options/nv-35-opt-d.webp?v=20261127b"
   },
   {
     "id": 1036,
@@ -627,11 +627,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "C",
     "explanation": "The insect antennae and leg counts follow an arithmetic progression (2 -> 4 -> 6 appendages).",
-    "question_image_url": "/images/non-verbal/questions/nv-q-36.jpg?v=20261127b",
-    "option_a_image_url": "/images/non-verbal/options/nv-36-opt-a.jpg?v=20261127b",
-    "option_b_image_url": "/images/non-verbal/options/nv-36-opt-b.jpg?v=20261127b",
-    "option_c_image_url": "/images/non-verbal/options/nv-36-opt-c.jpg?v=20261127b",
-    "option_d_image_url": "/images/non-verbal/options/nv-36-opt-d.jpg?v=20261127b"
+    "question_image_url": "/images/non-verbal/questions/nv-q-36.webp?v=20261127b",
+    "option_a_image_url": "/images/non-verbal/options/nv-36-opt-a.webp?v=20261127b",
+    "option_b_image_url": "/images/non-verbal/options/nv-36-opt-b.webp?v=20261127b",
+    "option_c_image_url": "/images/non-verbal/options/nv-36-opt-c.webp?v=20261127b",
+    "option_d_image_url": "/images/non-verbal/options/nv-36-opt-d.webp?v=20261127b"
   },
   {
     "id": 1037,
@@ -644,11 +644,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "A",
     "explanation": "The geometric envelope shape rotates 90 degrees counter-clockwise.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-37.jpg?v=20261127b",
-    "option_a_image_url": "/images/non-verbal/options/nv-37-opt-a.jpg?v=20261127b",
-    "option_b_image_url": "/images/non-verbal/options/nv-37-opt-b.jpg?v=20261127b",
-    "option_c_image_url": "/images/non-verbal/options/nv-37-opt-c.jpg?v=20261127b",
-    "option_d_image_url": "/images/non-verbal/options/nv-37-opt-d.jpg?v=20261127b"
+    "question_image_url": "/images/non-verbal/questions/nv-q-37.webp?v=20261127b",
+    "option_a_image_url": "/images/non-verbal/options/nv-37-opt-a.webp?v=20261127b",
+    "option_b_image_url": "/images/non-verbal/options/nv-37-opt-b.webp?v=20261127b",
+    "option_c_image_url": "/images/non-verbal/options/nv-37-opt-c.webp?v=20261127b",
+    "option_d_image_url": "/images/non-verbal/options/nv-37-opt-d.webp?v=20261127b"
   },
   {
     "id": 1038,
@@ -661,11 +661,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "B",
     "explanation": "The arrow arrows alternate directions: row 1 arrows invert and shift symmetrically.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-38.jpg?v=20261127b",
-    "option_a_image_url": "/images/non-verbal/options/nv-38-opt-a.jpg?v=20261127b",
-    "option_b_image_url": "/images/non-verbal/options/nv-38-opt-b.jpg?v=20261127b",
-    "option_c_image_url": "/images/non-verbal/options/nv-38-opt-c.jpg?v=20261127b",
-    "option_d_image_url": "/images/non-verbal/options/nv-38-opt-d.jpg?v=20261127b"
+    "question_image_url": "/images/non-verbal/questions/nv-q-38.webp?v=20261127b",
+    "option_a_image_url": "/images/non-verbal/options/nv-38-opt-a.webp?v=20261127b",
+    "option_b_image_url": "/images/non-verbal/options/nv-38-opt-b.webp?v=20261127b",
+    "option_c_image_url": "/images/non-verbal/options/nv-38-opt-c.webp?v=20261127b",
+    "option_d_image_url": "/images/non-verbal/options/nv-38-opt-d.webp?v=20261127b"
   },
   {
     "id": 1039,
@@ -678,11 +678,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "D",
     "explanation": "First pair rotates 90 degrees and inverts color fill. Second pair follows the same transformation rule.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-39.jpg?v=20261127b",
-    "option_a_image_url": "/images/non-verbal/options/nv-39-opt-a.jpg?v=20261127b",
-    "option_b_image_url": "/images/non-verbal/options/nv-39-opt-b.jpg?v=20261127b",
-    "option_c_image_url": "/images/non-verbal/options/nv-39-opt-c.jpg?v=20261127b",
-    "option_d_image_url": "/images/non-verbal/options/nv-39-opt-d.jpg?v=20261127b"
+    "question_image_url": "/images/non-verbal/questions/nv-q-39.webp?v=20261127b",
+    "option_a_image_url": "/images/non-verbal/options/nv-39-opt-a.webp?v=20261127b",
+    "option_b_image_url": "/images/non-verbal/options/nv-39-opt-b.webp?v=20261127b",
+    "option_c_image_url": "/images/non-verbal/options/nv-39-opt-c.webp?v=20261127b",
+    "option_d_image_url": "/images/non-verbal/options/nv-39-opt-d.webp?v=20261127b"
   },
   {
     "id": 1041,
@@ -695,11 +695,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "C",
     "explanation": "The stick figure limb positions alternate swinging motion (left leg -> both legs -> right leg).",
-    "question_image_url": "/images/non-verbal/questions/nv-q-41.jpg?v=20261127b",
-    "option_a_image_url": "/images/non-verbal/options/nv-41-opt-a.jpg?v=20261127b",
-    "option_b_image_url": "/images/non-verbal/options/nv-41-opt-b.jpg?v=20261127b",
-    "option_c_image_url": "/images/non-verbal/options/nv-41-opt-c.jpg?v=20261127b",
-    "option_d_image_url": "/images/non-verbal/options/nv-41-opt-d.jpg?v=20261127b"
+    "question_image_url": "/images/non-verbal/questions/nv-q-41.webp?v=20261127b",
+    "option_a_image_url": "/images/non-verbal/options/nv-41-opt-a.webp?v=20261127b",
+    "option_b_image_url": "/images/non-verbal/options/nv-41-opt-b.webp?v=20261127b",
+    "option_c_image_url": "/images/non-verbal/options/nv-41-opt-c.webp?v=20261127b",
+    "option_d_image_url": "/images/non-verbal/options/nv-41-opt-d.webp?v=20261127b"
   },
   {
     "id": 1044,
@@ -712,11 +712,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "A",
     "explanation": "The diagonal arrow pointing top-right reflects across the vertical mirror plane to point top-left.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-44.jpg?v=20261127b",
-    "option_a_image_url": "/images/non-verbal/options/nv-44-opt-a.jpg?v=20261127b",
-    "option_b_image_url": "/images/non-verbal/options/nv-44-opt-b.jpg?v=20261127b",
-    "option_c_image_url": "/images/non-verbal/options/nv-44-opt-c.jpg?v=20261127b",
-    "option_d_image_url": "/images/non-verbal/options/nv-44-opt-d.jpg?v=20261127b"
+    "question_image_url": "/images/non-verbal/questions/nv-q-44.webp?v=20261127b",
+    "option_a_image_url": "/images/non-verbal/options/nv-44-opt-a.webp?v=20261127b",
+    "option_b_image_url": "/images/non-verbal/options/nv-44-opt-b.webp?v=20261127b",
+    "option_c_image_url": "/images/non-verbal/options/nv-44-opt-c.webp?v=20261127b",
+    "option_d_image_url": "/images/non-verbal/options/nv-44-opt-d.webp?v=20261127b"
   },
   {
     "id": 1045,
@@ -729,11 +729,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "D",
     "explanation": "Word mirror reflection of \"jealous\" reverses letter sequence and inverts each character laterally.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-45.jpg?v=20261127b",
-    "option_a_image_url": "/images/non-verbal/options/nv-45-opt-a.jpg?v=20261127b",
-    "option_b_image_url": "/images/non-verbal/options/nv-45-opt-b.jpg?v=20261127b",
-    "option_c_image_url": "/images/non-verbal/options/nv-45-opt-c.jpg?v=20261127b",
-    "option_d_image_url": "/images/non-verbal/options/nv-45-opt-d.jpg?v=20261127b"
+    "question_image_url": "/images/non-verbal/questions/nv-q-45.webp?v=20261127b",
+    "option_a_image_url": "/images/non-verbal/options/nv-45-opt-a.webp?v=20261127b",
+    "option_b_image_url": "/images/non-verbal/options/nv-45-opt-b.webp?v=20261127b",
+    "option_c_image_url": "/images/non-verbal/options/nv-45-opt-c.webp?v=20261127b",
+    "option_d_image_url": "/images/non-verbal/options/nv-45-opt-d.webp?v=20261127b"
   },
   {
     "id": 1046,
@@ -746,11 +746,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "B",
     "explanation": "The cylinder orientation flips horizontally: the front circle with dots reflects to the opposite side.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-46.jpg?v=20261127b",
-    "option_a_image_url": "/images/non-verbal/options/nv-46-opt-a.jpg?v=20261127b",
-    "option_b_image_url": "/images/non-verbal/options/nv-46-opt-b.jpg?v=20261127b",
-    "option_c_image_url": "/images/non-verbal/options/nv-46-opt-c.jpg?v=20261127b",
-    "option_d_image_url": "/images/non-verbal/options/nv-46-opt-d.jpg?v=20261127b"
+    "question_image_url": "/images/non-verbal/questions/nv-q-46.webp?v=20261127b",
+    "option_a_image_url": "/images/non-verbal/options/nv-46-opt-a.webp?v=20261127b",
+    "option_b_image_url": "/images/non-verbal/options/nv-46-opt-b.webp?v=20261127b",
+    "option_c_image_url": "/images/non-verbal/options/nv-46-opt-c.webp?v=20261127b",
+    "option_d_image_url": "/images/non-verbal/options/nv-46-opt-d.webp?v=20261127b"
   },
   {
     "id": 1047,
@@ -763,11 +763,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "C",
     "explanation": "Two vectors reflecting across vertical axis mirror their angles symmetrically across the plane.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-47.jpg?v=20261127b",
-    "option_a_image_url": "/images/non-verbal/options/nv-47-opt-a.jpg?v=20261127b",
-    "option_b_image_url": "/images/non-verbal/options/nv-47-opt-b.jpg?v=20261127b",
-    "option_c_image_url": "/images/non-verbal/options/nv-47-opt-c.jpg?v=20261127b",
-    "option_d_image_url": "/images/non-verbal/options/nv-47-opt-d.jpg?v=20261127b"
+    "question_image_url": "/images/non-verbal/questions/nv-q-47.webp?v=20261127b",
+    "option_a_image_url": "/images/non-verbal/options/nv-47-opt-a.webp?v=20261127b",
+    "option_b_image_url": "/images/non-verbal/options/nv-47-opt-b.webp?v=20261127b",
+    "option_c_image_url": "/images/non-verbal/options/nv-47-opt-c.webp?v=20261127b",
+    "option_d_image_url": "/images/non-verbal/options/nv-47-opt-d.webp?v=20261127b"
   },
   {
     "id": 1048,
@@ -780,11 +780,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "B",
     "explanation": "The cylindrical object with striped tail reflects across the vertical plane.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-48.jpg?v=20261127b",
-    "option_a_image_url": "/images/non-verbal/options/nv-48-opt-a.jpg?v=20261127b",
-    "option_b_image_url": "/images/non-verbal/options/nv-48-opt-b.jpg?v=20261127b",
-    "option_c_image_url": "/images/non-verbal/options/nv-48-opt-c.jpg?v=20261127b",
-    "option_d_image_url": "/images/non-verbal/options/nv-48-opt-d.jpg?v=20261127b"
+    "question_image_url": "/images/non-verbal/questions/nv-q-48.webp?v=20261127b",
+    "option_a_image_url": "/images/non-verbal/options/nv-48-opt-a.webp?v=20261127b",
+    "option_b_image_url": "/images/non-verbal/options/nv-48-opt-b.webp?v=20261127b",
+    "option_c_image_url": "/images/non-verbal/options/nv-48-opt-c.webp?v=20261127b",
+    "option_d_image_url": "/images/non-verbal/options/nv-48-opt-d.webp?v=20261127b"
   },
   {
     "id": 1050,
@@ -797,11 +797,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "C",
     "explanation": "Symmetric vector mirror reflection verifies arrow orientation in option (3).",
-    "question_image_url": "/images/non-verbal/questions/nv-q-50.jpg?v=20261127b",
-    "option_a_image_url": "/images/non-verbal/options/nv-50-opt-a.jpg?v=20261127b",
-    "option_b_image_url": "/images/non-verbal/options/nv-50-opt-b.jpg?v=20261127b",
-    "option_c_image_url": "/images/non-verbal/options/nv-50-opt-c.jpg?v=20261127b",
-    "option_d_image_url": "/images/non-verbal/options/nv-50-opt-d.jpg?v=20261127b"
+    "question_image_url": "/images/non-verbal/questions/nv-q-50.webp?v=20261127b",
+    "option_a_image_url": "/images/non-verbal/options/nv-50-opt-a.webp?v=20261127b",
+    "option_b_image_url": "/images/non-verbal/options/nv-50-opt-b.webp?v=20261127b",
+    "option_c_image_url": "/images/non-verbal/options/nv-50-opt-c.webp?v=20261127b",
+    "option_d_image_url": "/images/non-verbal/options/nv-50-opt-d.webp?v=20261127b"
   },
   {
     "id": 1051,
@@ -814,11 +814,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "C",
     "explanation": "The circle with angled pin reflects across vertical axis, flipping the pin direction.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-51.jpg?v=20261127b",
-    "option_a_image_url": "/images/non-verbal/options/nv-51-opt-a.jpg?v=20261127b",
-    "option_b_image_url": "/images/non-verbal/options/nv-51-opt-b.jpg?v=20261127b",
-    "option_c_image_url": "/images/non-verbal/options/nv-51-opt-c.jpg?v=20261127b",
-    "option_d_image_url": "/images/non-verbal/options/nv-51-opt-d.jpg?v=20261127b"
+    "question_image_url": "/images/non-verbal/questions/nv-q-51.webp?v=20261127b",
+    "option_a_image_url": "/images/non-verbal/options/nv-51-opt-a.webp?v=20261127b",
+    "option_b_image_url": "/images/non-verbal/options/nv-51-opt-b.webp?v=20261127b",
+    "option_c_image_url": "/images/non-verbal/options/nv-51-opt-c.webp?v=20261127b",
+    "option_d_image_url": "/images/non-verbal/options/nv-51-opt-d.webp?v=20261127b"
   },
   {
     "id": 1052,
@@ -831,11 +831,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "B",
     "explanation": "The S-curve with central dot and arrow flips horizontally across the vertical mirror axis.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-52.jpg?v=20261127b",
-    "option_a_image_url": "/images/non-verbal/options/nv-52-opt-a.jpg?v=20261127b",
-    "option_b_image_url": "/images/non-verbal/options/nv-52-opt-b.jpg?v=20261127b",
-    "option_c_image_url": "/images/non-verbal/options/nv-52-opt-c.jpg?v=20261127b",
-    "option_d_image_url": "/images/non-verbal/options/nv-52-opt-d.jpg?v=20261127b"
+    "question_image_url": "/images/non-verbal/questions/nv-q-52.webp?v=20261127b",
+    "option_a_image_url": "/images/non-verbal/options/nv-52-opt-a.webp?v=20261127b",
+    "option_b_image_url": "/images/non-verbal/options/nv-52-opt-b.webp?v=20261127b",
+    "option_c_image_url": "/images/non-verbal/options/nv-52-opt-c.webp?v=20261127b",
+    "option_d_image_url": "/images/non-verbal/options/nv-52-opt-d.webp?v=20261127b"
   },
   {
     "id": 1101,
@@ -848,11 +848,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "C",
     "explanation": "In A, B, and D the number of interior dots equals the number of polygon sides (3, 4, 6), whereas C has a 5-sided pentagon with only 4 dots.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-odd-1.jpg?v=20261127c",
-    "option_a_image_url": "/images/non-verbal/options/nv-odd-1-opt-a.jpg?v=20261127c",
-    "option_b_image_url": "/images/non-verbal/options/nv-odd-1-opt-b.jpg?v=20261127c",
-    "option_c_image_url": "/images/non-verbal/options/nv-odd-1-opt-c.jpg?v=20261127c",
-    "option_d_image_url": "/images/non-verbal/options/nv-odd-1-opt-d.jpg?v=20261127c"
+    "question_image_url": "/images/non-verbal/questions/nv-q-odd-1.webp?v=20261127c",
+    "option_a_image_url": "/images/non-verbal/options/nv-odd-1-opt-a.webp?v=20261127c",
+    "option_b_image_url": "/images/non-verbal/options/nv-odd-1-opt-b.webp?v=20261127c",
+    "option_c_image_url": "/images/non-verbal/options/nv-odd-1-opt-c.webp?v=20261127c",
+    "option_d_image_url": "/images/non-verbal/options/nv-odd-1-opt-d.webp?v=20261127c"
   },
   {
     "id": 1102,
@@ -865,11 +865,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "D",
     "explanation": "Curved arrows A, B, and C rotate clockwise, whereas arrow D rotates counter-clockwise.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-odd-2.jpg?v=20261127c",
-    "option_a_image_url": "/images/non-verbal/options/nv-odd-2-opt-a.jpg?v=20261127c",
-    "option_b_image_url": "/images/non-verbal/options/nv-odd-2-opt-b.jpg?v=20261127c",
-    "option_c_image_url": "/images/non-verbal/options/nv-odd-2-opt-c.jpg?v=20261127c",
-    "option_d_image_url": "/images/non-verbal/options/nv-odd-2-opt-d.jpg?v=20261127c"
+    "question_image_url": "/images/non-verbal/questions/nv-q-odd-2.webp?v=20261127c",
+    "option_a_image_url": "/images/non-verbal/options/nv-odd-2-opt-a.webp?v=20261127c",
+    "option_b_image_url": "/images/non-verbal/options/nv-odd-2-opt-b.webp?v=20261127c",
+    "option_c_image_url": "/images/non-verbal/options/nv-odd-2-opt-c.webp?v=20261127c",
+    "option_d_image_url": "/images/non-verbal/options/nv-odd-2-opt-d.webp?v=20261127c"
   },
   {
     "id": 1103,
@@ -882,11 +882,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "D",
     "explanation": "Figures A, B, and C are divided into two equal halves, whereas D is divided unequally.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-odd-3.jpg?v=20261127c",
-    "option_a_image_url": "/images/non-verbal/options/nv-odd-3-opt-a.jpg?v=20261127c",
-    "option_b_image_url": "/images/non-verbal/options/nv-odd-3-opt-b.jpg?v=20261127c",
-    "option_c_image_url": "/images/non-verbal/options/nv-odd-3-opt-c.jpg?v=20261127c",
-    "option_d_image_url": "/images/non-verbal/options/nv-odd-3-opt-d.jpg?v=20261127c"
+    "question_image_url": "/images/non-verbal/questions/nv-q-odd-3.webp?v=20261127c",
+    "option_a_image_url": "/images/non-verbal/options/nv-odd-3-opt-a.webp?v=20261127c",
+    "option_b_image_url": "/images/non-verbal/options/nv-odd-3-opt-b.webp?v=20261127c",
+    "option_c_image_url": "/images/non-verbal/options/nv-odd-3-opt-c.webp?v=20261127c",
+    "option_d_image_url": "/images/non-verbal/options/nv-odd-3-opt-d.webp?v=20261127c"
   },
   {
     "id": 1104,
@@ -899,11 +899,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "C",
     "explanation": "A, B, and D show parallel lines, whereas C shows intersecting lines.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-odd-4.jpg?v=20261127c",
-    "option_a_image_url": "/images/non-verbal/options/nv-odd-4-opt-a.jpg?v=20261127c",
-    "option_b_image_url": "/images/non-verbal/options/nv-odd-4-opt-b.jpg?v=20261127c",
-    "option_c_image_url": "/images/non-verbal/options/nv-odd-4-opt-c.jpg?v=20261127c",
-    "option_d_image_url": "/images/non-verbal/options/nv-odd-4-opt-d.jpg?v=20261127c"
+    "question_image_url": "/images/non-verbal/questions/nv-q-odd-4.webp?v=20261127c",
+    "option_a_image_url": "/images/non-verbal/options/nv-odd-4-opt-a.webp?v=20261127c",
+    "option_b_image_url": "/images/non-verbal/options/nv-odd-4-opt-b.webp?v=20261127c",
+    "option_c_image_url": "/images/non-verbal/options/nv-odd-4-opt-c.webp?v=20261127c",
+    "option_d_image_url": "/images/non-verbal/options/nv-odd-4-opt-d.webp?v=20261127c"
   },
   {
     "id": 1105,
@@ -916,11 +916,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "C",
     "explanation": "A, B, and D have 1/4 of their area shaded, whereas C has 1/2 shaded.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-odd-5.jpg?v=20261127c",
-    "option_a_image_url": "/images/non-verbal/options/nv-odd-5-opt-a.jpg?v=20261127c",
-    "option_b_image_url": "/images/non-verbal/options/nv-odd-5-opt-b.jpg?v=20261127c",
-    "option_c_image_url": "/images/non-verbal/options/nv-odd-5-opt-c.jpg?v=20261127c",
-    "option_d_image_url": "/images/non-verbal/options/nv-odd-5-opt-d.jpg?v=20261127c"
+    "question_image_url": "/images/non-verbal/questions/nv-q-odd-5.webp?v=20261127c",
+    "option_a_image_url": "/images/non-verbal/options/nv-odd-5-opt-a.webp?v=20261127c",
+    "option_b_image_url": "/images/non-verbal/options/nv-odd-5-opt-b.webp?v=20261127c",
+    "option_c_image_url": "/images/non-verbal/options/nv-odd-5-opt-c.webp?v=20261127c",
+    "option_d_image_url": "/images/non-verbal/options/nv-odd-5-opt-d.webp?v=20261127c"
   },
   {
     "id": 1106,
@@ -933,11 +933,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "B",
     "explanation": "A, C, and D are closed geometric figures, whereas B is an open shape.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-odd-6.jpg?v=20261127c",
-    "option_a_image_url": "/images/non-verbal/options/nv-odd-6-opt-a.jpg?v=20261127c",
-    "option_b_image_url": "/images/non-verbal/options/nv-odd-6-opt-b.jpg?v=20261127c",
-    "option_c_image_url": "/images/non-verbal/options/nv-odd-6-opt-c.jpg?v=20261127c",
-    "option_d_image_url": "/images/non-verbal/options/nv-odd-6-opt-d.jpg?v=20261127c"
+    "question_image_url": "/images/non-verbal/questions/nv-q-odd-6.webp?v=20261127c",
+    "option_a_image_url": "/images/non-verbal/options/nv-odd-6-opt-a.webp?v=20261127c",
+    "option_b_image_url": "/images/non-verbal/options/nv-odd-6-opt-b.webp?v=20261127c",
+    "option_c_image_url": "/images/non-verbal/options/nv-odd-6-opt-c.webp?v=20261127c",
+    "option_d_image_url": "/images/non-verbal/options/nv-odd-6-opt-d.webp?v=20261127c"
   },
   {
     "id": 1107,
@@ -950,11 +950,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "D",
     "explanation": "Letters A, M, and T have vertical mirror symmetry, whereas F is asymmetric.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-odd-7.jpg?v=20261127c",
-    "option_a_image_url": "/images/non-verbal/options/nv-odd-7-opt-a.jpg?v=20261127c",
-    "option_b_image_url": "/images/non-verbal/options/nv-odd-7-opt-b.jpg?v=20261127c",
-    "option_c_image_url": "/images/non-verbal/options/nv-odd-7-opt-c.jpg?v=20261127c",
-    "option_d_image_url": "/images/non-verbal/options/nv-odd-7-opt-d.jpg?v=20261127c"
+    "question_image_url": "/images/non-verbal/questions/nv-q-odd-7.webp?v=20261127c",
+    "option_a_image_url": "/images/non-verbal/options/nv-odd-7-opt-a.webp?v=20261127c",
+    "option_b_image_url": "/images/non-verbal/options/nv-odd-7-opt-b.webp?v=20261127c",
+    "option_c_image_url": "/images/non-verbal/options/nv-odd-7-opt-c.webp?v=20261127c",
+    "option_d_image_url": "/images/non-verbal/options/nv-odd-7-opt-d.webp?v=20261127c"
   },
   {
     "id": 1108,
@@ -967,11 +967,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "C",
     "explanation": "In A, B, and D the inner and outer shapes are identical, whereas C has a circle inside a triangle.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-odd-8.jpg?v=20261127c",
-    "option_a_image_url": "/images/non-verbal/options/nv-odd-8-opt-a.jpg?v=20261127c",
-    "option_b_image_url": "/images/non-verbal/options/nv-odd-8-opt-b.jpg?v=20261127c",
-    "option_c_image_url": "/images/non-verbal/options/nv-odd-8-opt-c.jpg?v=20261127c",
-    "option_d_image_url": "/images/non-verbal/options/nv-odd-8-opt-d.jpg?v=20261127c"
+    "question_image_url": "/images/non-verbal/questions/nv-q-odd-8.webp?v=20261127c",
+    "option_a_image_url": "/images/non-verbal/options/nv-odd-8-opt-a.webp?v=20261127c",
+    "option_b_image_url": "/images/non-verbal/options/nv-odd-8-opt-b.webp?v=20261127c",
+    "option_c_image_url": "/images/non-verbal/options/nv-odd-8-opt-c.webp?v=20261127c",
+    "option_d_image_url": "/images/non-verbal/options/nv-odd-8-opt-d.webp?v=20261127c"
   },
   {
     "id": 1109,
@@ -984,11 +984,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "C",
     "explanation": "In A, B, and D the dot is near the arrow tail, whereas in C the dot is near the arrowhead.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-odd-9.jpg?v=20261127c",
-    "option_a_image_url": "/images/non-verbal/options/nv-odd-9-opt-a.jpg?v=20261127c",
-    "option_b_image_url": "/images/non-verbal/options/nv-odd-9-opt-b.jpg?v=20261127c",
-    "option_c_image_url": "/images/non-verbal/options/nv-odd-9-opt-c.jpg?v=20261127c",
-    "option_d_image_url": "/images/non-verbal/options/nv-odd-9-opt-d.jpg?v=20261127c"
+    "question_image_url": "/images/non-verbal/questions/nv-q-odd-9.webp?v=20261127c",
+    "option_a_image_url": "/images/non-verbal/options/nv-odd-9-opt-a.webp?v=20261127c",
+    "option_b_image_url": "/images/non-verbal/options/nv-odd-9-opt-b.webp?v=20261127c",
+    "option_c_image_url": "/images/non-verbal/options/nv-odd-9-opt-c.webp?v=20261127c",
+    "option_d_image_url": "/images/non-verbal/options/nv-odd-9-opt-d.webp?v=20261127c"
   },
   {
     "id": 1110,
@@ -1001,11 +1001,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "C",
     "explanation": "Circles A, B, and D are divided by 4 spokes, whereas C has 5 spokes.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-odd-10.jpg?v=20261127c",
-    "option_a_image_url": "/images/non-verbal/options/nv-odd-10-opt-a.jpg?v=20261127c",
-    "option_b_image_url": "/images/non-verbal/options/nv-odd-10-opt-b.jpg?v=20261127c",
-    "option_c_image_url": "/images/non-verbal/options/nv-odd-10-opt-c.jpg?v=20261127c",
-    "option_d_image_url": "/images/non-verbal/options/nv-odd-10-opt-d.jpg?v=20261127c"
+    "question_image_url": "/images/non-verbal/questions/nv-q-odd-10.webp?v=20261127c",
+    "option_a_image_url": "/images/non-verbal/options/nv-odd-10-opt-a.webp?v=20261127c",
+    "option_b_image_url": "/images/non-verbal/options/nv-odd-10-opt-b.webp?v=20261127c",
+    "option_c_image_url": "/images/non-verbal/options/nv-odd-10-opt-c.webp?v=20261127c",
+    "option_d_image_url": "/images/non-verbal/options/nv-odd-10-opt-d.webp?v=20261127c"
   },
   {
     "id": 1111,
@@ -1018,11 +1018,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "D",
     "explanation": "A, B, and C are rotations of the same L-shape, whereas D is a mirror reflection.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-odd-11.jpg?v=20261127c",
-    "option_a_image_url": "/images/non-verbal/options/nv-odd-11-opt-a.jpg?v=20261127c",
-    "option_b_image_url": "/images/non-verbal/options/nv-odd-11-opt-b.jpg?v=20261127c",
-    "option_c_image_url": "/images/non-verbal/options/nv-odd-11-opt-c.jpg?v=20261127c",
-    "option_d_image_url": "/images/non-verbal/options/nv-odd-11-opt-d.jpg?v=20261127c"
+    "question_image_url": "/images/non-verbal/questions/nv-q-odd-11.webp?v=20261127c",
+    "option_a_image_url": "/images/non-verbal/options/nv-odd-11-opt-a.webp?v=20261127c",
+    "option_b_image_url": "/images/non-verbal/options/nv-odd-11-opt-b.webp?v=20261127c",
+    "option_c_image_url": "/images/non-verbal/options/nv-odd-11-opt-c.webp?v=20261127c",
+    "option_d_image_url": "/images/non-verbal/options/nv-odd-11-opt-d.webp?v=20261127c"
   },
   {
     "id": 1112,
@@ -1035,11 +1035,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "C",
     "explanation": "A, B, and D are straight-edged polygons, whereas C is a curved circle.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-odd-12.jpg?v=20261127c",
-    "option_a_image_url": "/images/non-verbal/options/nv-odd-12-opt-a.jpg?v=20261127c",
-    "option_b_image_url": "/images/non-verbal/options/nv-odd-12-opt-b.jpg?v=20261127c",
-    "option_c_image_url": "/images/non-verbal/options/nv-odd-12-opt-c.jpg?v=20261127c",
-    "option_d_image_url": "/images/non-verbal/options/nv-odd-12-opt-d.jpg?v=20261127c"
+    "question_image_url": "/images/non-verbal/questions/nv-q-odd-12.webp?v=20261127c",
+    "option_a_image_url": "/images/non-verbal/options/nv-odd-12-opt-a.webp?v=20261127c",
+    "option_b_image_url": "/images/non-verbal/options/nv-odd-12-opt-b.webp?v=20261127c",
+    "option_c_image_url": "/images/non-verbal/options/nv-odd-12-opt-c.webp?v=20261127c",
+    "option_d_image_url": "/images/non-verbal/options/nv-odd-12-opt-d.webp?v=20261127c"
   },
   {
     "id": 1113,
@@ -1052,11 +1052,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "D",
     "explanation": "Squares A, B, and C contain 3 parallel lines, whereas D contains 4 parallel lines.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-odd-13.jpg?v=20261127c",
-    "option_a_image_url": "/images/non-verbal/options/nv-odd-13-opt-a.jpg?v=20261127c",
-    "option_b_image_url": "/images/non-verbal/options/nv-odd-13-opt-b.jpg?v=20261127c",
-    "option_c_image_url": "/images/non-verbal/options/nv-odd-13-opt-c.jpg?v=20261127c",
-    "option_d_image_url": "/images/non-verbal/options/nv-odd-13-opt-d.jpg?v=20261127c"
+    "question_image_url": "/images/non-verbal/questions/nv-q-odd-13.webp?v=20261127c",
+    "option_a_image_url": "/images/non-verbal/options/nv-odd-13-opt-a.webp?v=20261127c",
+    "option_b_image_url": "/images/non-verbal/options/nv-odd-13-opt-b.webp?v=20261127c",
+    "option_c_image_url": "/images/non-verbal/options/nv-odd-13-opt-c.webp?v=20261127c",
+    "option_d_image_url": "/images/non-verbal/options/nv-odd-13-opt-d.webp?v=20261127c"
   },
   {
     "id": 1114,
@@ -1069,11 +1069,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "B",
     "explanation": "In A, C, and D the dot is inside the shape, whereas in B the dot is outside.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-odd-14.jpg?v=20261127c",
-    "option_a_image_url": "/images/non-verbal/options/nv-odd-14-opt-a.jpg?v=20261127c",
-    "option_b_image_url": "/images/non-verbal/options/nv-odd-14-opt-b.jpg?v=20261127c",
-    "option_c_image_url": "/images/non-verbal/options/nv-odd-14-opt-c.jpg?v=20261127c",
-    "option_d_image_url": "/images/non-verbal/options/nv-odd-14-opt-d.jpg?v=20261127c"
+    "question_image_url": "/images/non-verbal/questions/nv-q-odd-14.webp?v=20261127c",
+    "option_a_image_url": "/images/non-verbal/options/nv-odd-14-opt-a.webp?v=20261127c",
+    "option_b_image_url": "/images/non-verbal/options/nv-odd-14-opt-b.webp?v=20261127c",
+    "option_c_image_url": "/images/non-verbal/options/nv-odd-14-opt-c.webp?v=20261127c",
+    "option_d_image_url": "/images/non-verbal/options/nv-odd-14-opt-d.webp?v=20261127c"
   },
   {
     "id": 1115,
@@ -1086,11 +1086,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "D",
     "explanation": "A, B, and C feature a vertical-horizontal plus (+) cross, whereas D features a diagonal (X) cross.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-odd-15.jpg?v=20261127c",
-    "option_a_image_url": "/images/non-verbal/options/nv-odd-15-opt-a.jpg?v=20261127c",
-    "option_b_image_url": "/images/non-verbal/options/nv-odd-15-opt-b.jpg?v=20261127c",
-    "option_c_image_url": "/images/non-verbal/options/nv-odd-15-opt-c.jpg?v=20261127c",
-    "option_d_image_url": "/images/non-verbal/options/nv-odd-15-opt-d.jpg?v=20261127c"
+    "question_image_url": "/images/non-verbal/questions/nv-q-odd-15.webp?v=20261127c",
+    "option_a_image_url": "/images/non-verbal/options/nv-odd-15-opt-a.webp?v=20261127c",
+    "option_b_image_url": "/images/non-verbal/options/nv-odd-15-opt-b.webp?v=20261127c",
+    "option_c_image_url": "/images/non-verbal/options/nv-odd-15-opt-c.webp?v=20261127c",
+    "option_d_image_url": "/images/non-verbal/options/nv-odd-15-opt-d.webp?v=20261127c"
   },
   {
     "id": 1116,
@@ -1103,11 +1103,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "C",
     "explanation": "Clocks A, B, and D show a 90-degree right angle between hands, whereas C shows a 180-degree straight angle.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-odd-16.jpg?v=20261127c",
-    "option_a_image_url": "/images/non-verbal/options/nv-odd-16-opt-a.jpg?v=20261127c",
-    "option_b_image_url": "/images/non-verbal/options/nv-odd-16-opt-b.jpg?v=20261127c",
-    "option_c_image_url": "/images/non-verbal/options/nv-odd-16-opt-c.jpg?v=20261127c",
-    "option_d_image_url": "/images/non-verbal/options/nv-odd-16-opt-d.jpg?v=20261127c"
+    "question_image_url": "/images/non-verbal/questions/nv-q-odd-16.webp?v=20261127c",
+    "option_a_image_url": "/images/non-verbal/options/nv-odd-16-opt-a.webp?v=20261127c",
+    "option_b_image_url": "/images/non-verbal/options/nv-odd-16-opt-b.webp?v=20261127c",
+    "option_c_image_url": "/images/non-verbal/options/nv-odd-16-opt-c.webp?v=20261127c",
+    "option_d_image_url": "/images/non-verbal/options/nv-odd-16-opt-d.webp?v=20261127c"
   },
   {
     "id": 1117,
@@ -1120,11 +1120,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "C",
     "explanation": "A, B, and D have 2 concentric shapes, whereas C has 3 concentric circles.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-odd-17.jpg?v=20261127c",
-    "option_a_image_url": "/images/non-verbal/options/nv-odd-17-opt-a.jpg?v=20261127c",
-    "option_b_image_url": "/images/non-verbal/options/nv-odd-17-opt-b.jpg?v=20261127c",
-    "option_c_image_url": "/images/non-verbal/options/nv-odd-17-opt-c.jpg?v=20261127c",
-    "option_d_image_url": "/images/non-verbal/options/nv-odd-17-opt-d.jpg?v=20261127c"
+    "question_image_url": "/images/non-verbal/questions/nv-q-odd-17.webp?v=20261127c",
+    "option_a_image_url": "/images/non-verbal/options/nv-odd-17-opt-a.webp?v=20261127c",
+    "option_b_image_url": "/images/non-verbal/options/nv-odd-17-opt-b.webp?v=20261127c",
+    "option_c_image_url": "/images/non-verbal/options/nv-odd-17-opt-c.webp?v=20261127c",
+    "option_d_image_url": "/images/non-verbal/options/nv-odd-17-opt-d.webp?v=20261127c"
   },
   {
     "id": 1118,
@@ -1137,11 +1137,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "C",
     "explanation": "In A, B, and D the two shapes overlap, whereas in C the two triangles are separated.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-odd-18.jpg?v=20261127c",
-    "option_a_image_url": "/images/non-verbal/options/nv-odd-18-opt-a.jpg?v=20261127c",
-    "option_b_image_url": "/images/non-verbal/options/nv-odd-18-opt-b.jpg?v=20261127c",
-    "option_c_image_url": "/images/non-verbal/options/nv-odd-18-opt-c.jpg?v=20261127c",
-    "option_d_image_url": "/images/non-verbal/options/nv-odd-18-opt-d.jpg?v=20261127c"
+    "question_image_url": "/images/non-verbal/questions/nv-q-odd-18.webp?v=20261127c",
+    "option_a_image_url": "/images/non-verbal/options/nv-odd-18-opt-a.webp?v=20261127c",
+    "option_b_image_url": "/images/non-verbal/options/nv-odd-18-opt-b.webp?v=20261127c",
+    "option_c_image_url": "/images/non-verbal/options/nv-odd-18-opt-c.webp?v=20261127c",
+    "option_d_image_url": "/images/non-verbal/options/nv-odd-18-opt-d.webp?v=20261127c"
   },
   {
     "id": 1119,
@@ -1154,11 +1154,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "C",
     "explanation": "In A, B, and D opposite corners are shaded, whereas in C adjacent (top) corners are shaded.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-odd-19.jpg?v=20261127c",
-    "option_a_image_url": "/images/non-verbal/options/nv-odd-19-opt-a.jpg?v=20261127c",
-    "option_b_image_url": "/images/non-verbal/options/nv-odd-19-opt-b.jpg?v=20261127c",
-    "option_c_image_url": "/images/non-verbal/options/nv-odd-19-opt-c.jpg?v=20261127c",
-    "option_d_image_url": "/images/non-verbal/options/nv-odd-19-opt-d.jpg?v=20261127c"
+    "question_image_url": "/images/non-verbal/questions/nv-q-odd-19.webp?v=20261127c",
+    "option_a_image_url": "/images/non-verbal/options/nv-odd-19-opt-a.webp?v=20261127c",
+    "option_b_image_url": "/images/non-verbal/options/nv-odd-19-opt-b.webp?v=20261127c",
+    "option_c_image_url": "/images/non-verbal/options/nv-odd-19-opt-c.webp?v=20261127c",
+    "option_d_image_url": "/images/non-verbal/options/nv-odd-19-opt-d.webp?v=20261127c"
   },
   {
     "id": 1120,
@@ -1171,11 +1171,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "D",
     "explanation": "A, B, and C are single-headed arrows, whereas D is a double-headed arrow.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-odd-20.jpg?v=20261127c",
-    "option_a_image_url": "/images/non-verbal/options/nv-odd-20-opt-a.jpg?v=20261127c",
-    "option_b_image_url": "/images/non-verbal/options/nv-odd-20-opt-b.jpg?v=20261127c",
-    "option_c_image_url": "/images/non-verbal/options/nv-odd-20-opt-c.jpg?v=20261127c",
-    "option_d_image_url": "/images/non-verbal/options/nv-odd-20-opt-d.jpg?v=20261127c"
+    "question_image_url": "/images/non-verbal/questions/nv-q-odd-20.webp?v=20261127c",
+    "option_a_image_url": "/images/non-verbal/options/nv-odd-20-opt-a.webp?v=20261127c",
+    "option_b_image_url": "/images/non-verbal/options/nv-odd-20-opt-b.webp?v=20261127c",
+    "option_c_image_url": "/images/non-verbal/options/nv-odd-20-opt-c.webp?v=20261127c",
+    "option_d_image_url": "/images/non-verbal/options/nv-odd-20-opt-d.webp?v=20261127c"
   },
   {
     "id": 1201,
@@ -1188,11 +1188,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "A",
     "explanation": "The arrow inside the circle rotates 45 degrees clockwise at each step.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat1-1.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat1-1-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat1-1-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat1-1-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat1-1-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat1-1.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat1-1-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat1-1-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat1-1-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat1-1-opt-d.webp?v=20261127d"
   },
   {
     "id": 1202,
@@ -1205,11 +1205,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "C",
     "explanation": "Polygon sides increase by +1 at each step (3 -> 4 -> 5 -> 6).",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat1-2.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat1-2-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat1-2-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat1-2-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat1-2-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat1-2.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat1-2-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat1-2-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat1-2-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat1-2-opt-d.webp?v=20261127d"
   },
   {
     "id": 1203,
@@ -1222,11 +1222,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "A",
     "explanation": "The black dot steps clockwise to the next corner at each step.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat1-3.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat1-3-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat1-3-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat1-3-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat1-3-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat1-3.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat1-3-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat1-3-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat1-3-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat1-3-opt-d.webp?v=20261127d"
   },
   {
     "id": 1204,
@@ -1239,11 +1239,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "C",
     "explanation": "The shaded quadrant rotates 90 degrees clockwise at each step.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat1-4.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat1-4-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat1-4-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat1-4-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat1-4-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat1-4.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat1-4-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat1-4-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat1-4-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat1-4-opt-d.webp?v=20261127d"
   },
   {
     "id": 1205,
@@ -1256,11 +1256,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "A",
     "explanation": "One additional parallel line is added inside the square at each step (1 -> 2 -> 3 -> 4).",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat1-5.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat1-5-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat1-5-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat1-5-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat1-5-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat1-5.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat1-5-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat1-5-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat1-5-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat1-5-opt-d.webp?v=20261127d"
   },
   {
     "id": 1206,
@@ -1273,11 +1273,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "B",
     "explanation": "The arrow inside the circle rotates 90 degrees clockwise at each step.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat1-6.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat1-6-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat1-6-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat1-6-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat1-6-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat1-6.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat1-6-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat1-6-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat1-6-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat1-6-opt-d.webp?v=20261127d"
   },
   {
     "id": 1207,
@@ -1290,11 +1290,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "D",
     "explanation": "Polygon sides increase by +1 at each step (4 -> 5 -> 6 -> 7).",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat1-7.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat1-7-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat1-7-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat1-7-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat1-7-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat1-7.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat1-7-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat1-7-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat1-7-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat1-7-opt-d.webp?v=20261127d"
   },
   {
     "id": 1208,
@@ -1307,11 +1307,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "B",
     "explanation": "The black dot steps clockwise to the next corner at each step.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat1-8.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat1-8-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat1-8-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat1-8-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat1-8-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat1-8.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat1-8-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat1-8-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat1-8-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat1-8-opt-d.webp?v=20261127d"
   },
   {
     "id": 1209,
@@ -1324,11 +1324,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "D",
     "explanation": "The shaded quadrant rotates 90 degrees clockwise at each step.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat1-9.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat1-9-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat1-9-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat1-9-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat1-9-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat1-9.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat1-9-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat1-9-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat1-9-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat1-9-opt-d.webp?v=20261127d"
   },
   {
     "id": 1210,
@@ -1341,11 +1341,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "B",
     "explanation": "One additional parallel line is added inside the square at each step (1 -> 2 -> 3 -> 4).",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat1-10.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat1-10-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat1-10-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat1-10-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat1-10-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat1-10.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat1-10-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat1-10-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat1-10-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat1-10-opt-d.webp?v=20261127d"
   },
   {
     "id": 1211,
@@ -1358,11 +1358,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "C",
     "explanation": "The arrow inside the circle rotates 45 degrees clockwise at each step.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat1-11.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat1-11-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat1-11-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat1-11-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat1-11-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat1-11.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat1-11-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat1-11-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat1-11-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat1-11-opt-d.webp?v=20261127d"
   },
   {
     "id": 1212,
@@ -1375,11 +1375,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "A",
     "explanation": "Polygon sides increase by +1 at each step (3 -> 4 -> 5 -> 6).",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat1-12.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat1-12-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat1-12-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat1-12-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat1-12-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat1-12.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat1-12-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat1-12-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat1-12-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat1-12-opt-d.webp?v=20261127d"
   },
   {
     "id": 1213,
@@ -1392,11 +1392,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "C",
     "explanation": "The black dot steps clockwise to the next corner at each step.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat1-13.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat1-13-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat1-13-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat1-13-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat1-13-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat1-13.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat1-13-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat1-13-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat1-13-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat1-13-opt-d.webp?v=20261127d"
   },
   {
     "id": 1214,
@@ -1409,11 +1409,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "A",
     "explanation": "The shaded quadrant rotates 90 degrees clockwise at each step.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat1-14.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat1-14-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat1-14-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat1-14-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat1-14-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat1-14.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat1-14-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat1-14-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat1-14-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat1-14-opt-d.webp?v=20261127d"
   },
   {
     "id": 1215,
@@ -1426,11 +1426,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "C",
     "explanation": "One additional parallel line is added inside the square at each step (1 -> 2 -> 3 -> 4).",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat1-15.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat1-15-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat1-15-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat1-15-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat1-15-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat1-15.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat1-15-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat1-15-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat1-15-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat1-15-opt-d.webp?v=20261127d"
   },
   {
     "id": 1216,
@@ -1443,11 +1443,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "D",
     "explanation": "The arrow inside the circle rotates 90 degrees clockwise at each step.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat1-16.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat1-16-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat1-16-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat1-16-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat1-16-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat1-16.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat1-16-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat1-16-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat1-16-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat1-16-opt-d.webp?v=20261127d"
   },
   {
     "id": 1217,
@@ -1460,11 +1460,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "B",
     "explanation": "Polygon sides increase by +1 at each step (4 -> 5 -> 6 -> 7).",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat1-17.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat1-17-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat1-17-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat1-17-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat1-17-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat1-17.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat1-17-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat1-17-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat1-17-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat1-17-opt-d.webp?v=20261127d"
   },
   {
     "id": 1218,
@@ -1477,11 +1477,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "D",
     "explanation": "The black dot steps clockwise to the next corner at each step.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat1-18.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat1-18-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat1-18-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat1-18-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat1-18-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat1-18.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat1-18-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat1-18-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat1-18-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat1-18-opt-d.webp?v=20261127d"
   },
   {
     "id": 1219,
@@ -1494,11 +1494,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "B",
     "explanation": "The shaded quadrant rotates 90 degrees clockwise at each step.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat1-19.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat1-19-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat1-19-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat1-19-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat1-19-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat1-19.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat1-19-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat1-19-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat1-19-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat1-19-opt-d.webp?v=20261127d"
   },
   {
     "id": 1220,
@@ -1511,11 +1511,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "D",
     "explanation": "One additional parallel line is added inside the square at each step (1 -> 2 -> 3 -> 4).",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat1-20.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat1-20-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat1-20-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat1-20-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat1-20-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat1-20.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat1-20-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat1-20-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat1-20-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat1-20-opt-d.webp?v=20261127d"
   },
   {
     "id": 1221,
@@ -1528,11 +1528,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "A",
     "explanation": "First figure becomes solid-filled in the second; apply the same rule to the third figure.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat2-1.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat2-1-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat2-1-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat2-1-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat2-1-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat2-1.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat2-1-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat2-1-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat2-1-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat2-1-opt-d.webp?v=20261127d"
   },
   {
     "id": 1222,
@@ -1545,11 +1545,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "C",
     "explanation": "The arrow reverses direction by 180 degrees in the pair.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat2-2.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat2-2-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat2-2-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat2-2-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat2-2-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat2-2.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat2-2-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat2-2-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat2-2-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat2-2-opt-d.webp?v=20261127d"
   },
   {
     "id": 1223,
@@ -1562,11 +1562,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "A",
     "explanation": "The inner and outer shapes swap positions.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat2-3.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat2-3-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat2-3-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat2-3-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat2-3-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat2-3.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat2-3-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat2-3-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat2-3-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat2-3-opt-d.webp?v=20261127d"
   },
   {
     "id": 1224,
@@ -1579,11 +1579,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "C",
     "explanation": "A single shape becomes an overlapping pair of the same shape.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat2-4.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat2-4-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat2-4-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat2-4-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat2-4-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat2-4.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat2-4-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat2-4-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat2-4-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat2-4-opt-d.webp?v=20261127d"
   },
   {
     "id": 1225,
@@ -1596,11 +1596,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "A",
     "explanation": "The figure rotates 90 degrees clockwise from first to second.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat2-5.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat2-5-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat2-5-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat2-5-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat2-5-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat2-5.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat2-5-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat2-5-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat2-5-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat2-5-opt-d.webp?v=20261127d"
   },
   {
     "id": 1226,
@@ -1613,11 +1613,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "B",
     "explanation": "First figure becomes solid-filled in the second; apply the same rule to the third figure.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat2-6.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat2-6-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat2-6-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat2-6-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat2-6-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat2-6.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat2-6-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat2-6-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat2-6-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat2-6-opt-d.webp?v=20261127d"
   },
   {
     "id": 1227,
@@ -1630,11 +1630,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "D",
     "explanation": "The arrow reverses direction by 180 degrees in the pair.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat2-7.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat2-7-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat2-7-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat2-7-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat2-7-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat2-7.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat2-7-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat2-7-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat2-7-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat2-7-opt-d.webp?v=20261127d"
   },
   {
     "id": 1228,
@@ -1647,11 +1647,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "B",
     "explanation": "The inner and outer shapes swap positions.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat2-8.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat2-8-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat2-8-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat2-8-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat2-8-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat2-8.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat2-8-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat2-8-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat2-8-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat2-8-opt-d.webp?v=20261127d"
   },
   {
     "id": 1229,
@@ -1664,11 +1664,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "D",
     "explanation": "A single shape becomes an overlapping pair of the same shape.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat2-9.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat2-9-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat2-9-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat2-9-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat2-9-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat2-9.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat2-9-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat2-9-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat2-9-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat2-9-opt-d.webp?v=20261127d"
   },
   {
     "id": 1230,
@@ -1681,11 +1681,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "B",
     "explanation": "The figure rotates 90 degrees clockwise from first to second.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat2-10.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat2-10-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat2-10-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat2-10-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat2-10-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat2-10.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat2-10-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat2-10-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat2-10-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat2-10-opt-d.webp?v=20261127d"
   },
   {
     "id": 1231,
@@ -1698,11 +1698,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "C",
     "explanation": "First figure becomes solid-filled in the second; apply the same rule to the third figure.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat2-11.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat2-11-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat2-11-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat2-11-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat2-11-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat2-11.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat2-11-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat2-11-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat2-11-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat2-11-opt-d.webp?v=20261127d"
   },
   {
     "id": 1232,
@@ -1715,11 +1715,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "A",
     "explanation": "The arrow reverses direction by 180 degrees in the pair.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat2-12.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat2-12-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat2-12-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat2-12-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat2-12-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat2-12.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat2-12-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat2-12-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat2-12-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat2-12-opt-d.webp?v=20261127d"
   },
   {
     "id": 1233,
@@ -1732,11 +1732,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "C",
     "explanation": "The inner and outer shapes swap positions.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat2-13.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat2-13-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat2-13-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat2-13-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat2-13-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat2-13.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat2-13-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat2-13-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat2-13-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat2-13-opt-d.webp?v=20261127d"
   },
   {
     "id": 1234,
@@ -1749,11 +1749,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "A",
     "explanation": "A single shape becomes an overlapping pair of the same shape.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat2-14.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat2-14-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat2-14-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat2-14-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat2-14-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat2-14.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat2-14-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat2-14-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat2-14-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat2-14-opt-d.webp?v=20261127d"
   },
   {
     "id": 1235,
@@ -1766,11 +1766,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "C",
     "explanation": "The figure rotates 90 degrees clockwise from first to second.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat2-15.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat2-15-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat2-15-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat2-15-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat2-15-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat2-15.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat2-15-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat2-15-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat2-15-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat2-15-opt-d.webp?v=20261127d"
   },
   {
     "id": 1236,
@@ -1783,11 +1783,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "D",
     "explanation": "First figure becomes solid-filled in the second; apply the same rule to the third figure.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat2-16.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat2-16-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat2-16-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat2-16-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat2-16-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat2-16.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat2-16-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat2-16-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat2-16-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat2-16-opt-d.webp?v=20261127d"
   },
   {
     "id": 1237,
@@ -1800,11 +1800,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "B",
     "explanation": "The arrow reverses direction by 180 degrees in the pair.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat2-17.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat2-17-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat2-17-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat2-17-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat2-17-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat2-17.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat2-17-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat2-17-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat2-17-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat2-17-opt-d.webp?v=20261127d"
   },
   {
     "id": 1238,
@@ -1817,11 +1817,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "D",
     "explanation": "The inner and outer shapes swap positions.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat2-18.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat2-18-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat2-18-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat2-18-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat2-18-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat2-18.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat2-18-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat2-18-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat2-18-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat2-18-opt-d.webp?v=20261127d"
   },
   {
     "id": 1239,
@@ -1834,11 +1834,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "B",
     "explanation": "A single shape becomes an overlapping pair of the same shape.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat2-19.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat2-19-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat2-19-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat2-19-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat2-19-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat2-19.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat2-19-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat2-19-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat2-19-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat2-19-opt-d.webp?v=20261127d"
   },
   {
     "id": 1240,
@@ -1851,11 +1851,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "D",
     "explanation": "The figure rotates 90 degrees clockwise from first to second.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat2-20.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat2-20-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat2-20-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat2-20-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat2-20-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat2-20.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat2-20-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat2-20-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat2-20-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat2-20-opt-d.webp?v=20261127d"
   },
   {
     "id": 1241,
@@ -1868,11 +1868,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "A",
     "explanation": "Each row and column contains Circle, Square, and Triangle exactly once.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat4-1.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat4-1-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat4-1-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat4-1-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat4-1-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat4-1.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat4-1-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat4-1-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat4-1-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat4-1-opt-d.webp?v=20261127d"
   },
   {
     "id": 1242,
@@ -1885,11 +1885,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "B",
     "explanation": "Each row keeps the same shape while shading progresses: Outline -> Light -> Solid.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat4-2.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat4-2-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat4-2-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat4-2-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat4-2-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat4-2.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat4-2-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat4-2-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat4-2-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat4-2-opt-d.webp?v=20261127d"
   },
   {
     "id": 1243,
@@ -1902,11 +1902,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "C",
     "explanation": "In each row, Column 1 dots + Column 2 dots = Column 3 dots (2 + 2 = 4).",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat4-3.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat4-3-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat4-3-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat4-3-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat4-3-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat4-3.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat4-3-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat4-3-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat4-3-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat4-3-opt-d.webp?v=20261127d"
   },
   {
     "id": 1244,
@@ -1919,11 +1919,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "D",
     "explanation": "The arrow rotates 45 degrees clockwise across each column and down each row.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat4-4.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat4-4-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat4-4-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat4-4-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat4-4-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat4-4.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat4-4-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat4-4-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat4-4-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat4-4-opt-d.webp?v=20261127d"
   },
   {
     "id": 1245,
@@ -1936,11 +1936,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "A",
     "explanation": "Each row and column contains Circle, Square, and Triangle exactly once.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat4-5.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat4-5-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat4-5-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat4-5-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat4-5-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat4-5.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat4-5-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat4-5-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat4-5-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat4-5-opt-d.webp?v=20261127d"
   },
   {
     "id": 1246,
@@ -1953,11 +1953,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "B",
     "explanation": "Each row keeps the same shape while shading progresses: Outline -> Light -> Solid.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat4-6.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat4-6-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat4-6-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat4-6-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat4-6-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat4-6.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat4-6-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat4-6-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat4-6-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat4-6-opt-d.webp?v=20261127d"
   },
   {
     "id": 1247,
@@ -1970,11 +1970,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "C",
     "explanation": "In each row, Column 1 dots + Column 2 dots = Column 3 dots (2 + 2 = 4).",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat4-7.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat4-7-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat4-7-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat4-7-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat4-7-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat4-7.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat4-7-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat4-7-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat4-7-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat4-7-opt-d.webp?v=20261127d"
   },
   {
     "id": 1248,
@@ -1987,11 +1987,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "D",
     "explanation": "The arrow rotates 45 degrees clockwise across each column and down each row.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat4-8.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat4-8-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat4-8-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat4-8-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat4-8-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat4-8.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat4-8-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat4-8-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat4-8-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat4-8-opt-d.webp?v=20261127d"
   },
   {
     "id": 1249,
@@ -2004,11 +2004,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "A",
     "explanation": "Each row and column contains Circle, Square, and Triangle exactly once.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat4-9.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat4-9-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat4-9-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat4-9-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat4-9-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat4-9.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat4-9-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat4-9-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat4-9-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat4-9-opt-d.webp?v=20261127d"
   },
   {
     "id": 1250,
@@ -2021,11 +2021,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "B",
     "explanation": "Each row keeps the same shape while shading progresses: Outline -> Light -> Solid.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat4-10.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat4-10-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat4-10-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat4-10-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat4-10-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat4-10.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat4-10-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat4-10-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat4-10-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat4-10-opt-d.webp?v=20261127d"
   },
   {
     "id": 1251,
@@ -2038,11 +2038,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "C",
     "explanation": "In each row, Column 1 dots + Column 2 dots = Column 3 dots (2 + 2 = 4).",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat4-11.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat4-11-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat4-11-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat4-11-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat4-11-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat4-11.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat4-11-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat4-11-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat4-11-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat4-11-opt-d.webp?v=20261127d"
   },
   {
     "id": 1252,
@@ -2055,11 +2055,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "D",
     "explanation": "The arrow rotates 45 degrees clockwise across each column and down each row.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat4-12.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat4-12-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat4-12-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat4-12-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat4-12-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat4-12.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat4-12-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat4-12-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat4-12-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat4-12-opt-d.webp?v=20261127d"
   },
   {
     "id": 1253,
@@ -2072,11 +2072,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "A",
     "explanation": "Each row and column contains Circle, Square, and Triangle exactly once.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat4-13.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat4-13-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat4-13-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat4-13-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat4-13-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat4-13.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat4-13-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat4-13-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat4-13-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat4-13-opt-d.webp?v=20261127d"
   },
   {
     "id": 1254,
@@ -2089,11 +2089,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "B",
     "explanation": "Each row keeps the same shape while shading progresses: Outline -> Light -> Solid.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat4-14.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat4-14-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat4-14-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat4-14-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat4-14-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat4-14.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat4-14-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat4-14-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat4-14-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat4-14-opt-d.webp?v=20261127d"
   },
   {
     "id": 1255,
@@ -2106,11 +2106,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "C",
     "explanation": "In each row, Column 1 dots + Column 2 dots = Column 3 dots (2 + 2 = 4).",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat4-15.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat4-15-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat4-15-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat4-15-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat4-15-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat4-15.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat4-15-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat4-15-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat4-15-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat4-15-opt-d.webp?v=20261127d"
   },
   {
     "id": 1256,
@@ -2123,11 +2123,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "D",
     "explanation": "The arrow rotates 45 degrees clockwise across each column and down each row.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat4-16.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat4-16-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat4-16-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat4-16-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat4-16-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat4-16.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat4-16-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat4-16-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat4-16-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat4-16-opt-d.webp?v=20261127d"
   },
   {
     "id": 1257,
@@ -2140,11 +2140,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "A",
     "explanation": "Each row and column contains Circle, Square, and Triangle exactly once.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat4-17.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat4-17-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat4-17-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat4-17-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat4-17-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat4-17.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat4-17-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat4-17-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat4-17-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat4-17-opt-d.webp?v=20261127d"
   },
   {
     "id": 1258,
@@ -2157,11 +2157,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "B",
     "explanation": "Each row keeps the same shape while shading progresses: Outline -> Light -> Solid.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat4-18.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat4-18-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat4-18-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat4-18-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat4-18-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat4-18.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat4-18-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat4-18-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat4-18-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat4-18-opt-d.webp?v=20261127d"
   },
   {
     "id": 1259,
@@ -2174,11 +2174,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "C",
     "explanation": "In each row, Column 1 dots + Column 2 dots = Column 3 dots (2 + 2 = 4).",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat4-19.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat4-19-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat4-19-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat4-19-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat4-19-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat4-19.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat4-19-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat4-19-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat4-19-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat4-19-opt-d.webp?v=20261127d"
   },
   {
     "id": 1260,
@@ -2191,11 +2191,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "D",
     "explanation": "The arrow rotates 45 degrees clockwise across each column and down each row.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat4-20.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat4-20-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat4-20-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat4-20-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat4-20-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat4-20.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat4-20-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat4-20-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat4-20-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat4-20-opt-d.webp?v=20261127d"
   },
   {
     "id": 1261,
@@ -2208,11 +2208,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "A",
     "explanation": "Option A is a pure rotation of the target figure without mirror flipping.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat5-1.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat5-1-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat5-1-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat5-1-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat5-1-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat5-1.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat5-1-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat5-1-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat5-1-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat5-1-opt-d.webp?v=20261127d"
   },
   {
     "id": 1262,
@@ -2225,11 +2225,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "B",
     "explanation": "Option B is a pure rotation of the target figure without mirror flipping.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat5-2.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat5-2-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat5-2-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat5-2-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat5-2-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat5-2.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat5-2-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat5-2-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat5-2-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat5-2-opt-d.webp?v=20261127d"
   },
   {
     "id": 1263,
@@ -2242,11 +2242,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "C",
     "explanation": "Option C is a pure rotation of the target figure without mirror flipping.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat5-3.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat5-3-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat5-3-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat5-3-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat5-3-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat5-3.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat5-3-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat5-3-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat5-3-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat5-3-opt-d.webp?v=20261127d"
   },
   {
     "id": 1264,
@@ -2259,11 +2259,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "D",
     "explanation": "Option D is a pure rotation of the target figure without mirror flipping.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat5-4.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat5-4-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat5-4-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat5-4-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat5-4-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat5-4.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat5-4-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat5-4-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat5-4-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat5-4-opt-d.webp?v=20261127d"
   },
   {
     "id": 1265,
@@ -2276,11 +2276,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "A",
     "explanation": "Option A is a pure rotation of the target figure without mirror flipping.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat5-5.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat5-5-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat5-5-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat5-5-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat5-5-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat5-5.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat5-5-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat5-5-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat5-5-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat5-5-opt-d.webp?v=20261127d"
   },
   {
     "id": 1266,
@@ -2293,11 +2293,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "B",
     "explanation": "Option B is a pure rotation of the target figure without mirror flipping.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat5-6.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat5-6-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat5-6-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat5-6-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat5-6-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat5-6.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat5-6-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat5-6-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat5-6-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat5-6-opt-d.webp?v=20261127d"
   },
   {
     "id": 1267,
@@ -2310,11 +2310,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "C",
     "explanation": "Option C is a pure rotation of the target figure without mirror flipping.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat5-7.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat5-7-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat5-7-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat5-7-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat5-7-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat5-7.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat5-7-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat5-7-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat5-7-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat5-7-opt-d.webp?v=20261127d"
   },
   {
     "id": 1268,
@@ -2327,11 +2327,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "D",
     "explanation": "Option D is a pure rotation of the target figure without mirror flipping.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat5-8.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat5-8-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat5-8-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat5-8-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat5-8-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat5-8.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat5-8-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat5-8-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat5-8-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat5-8-opt-d.webp?v=20261127d"
   },
   {
     "id": 1269,
@@ -2344,11 +2344,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "A",
     "explanation": "Option A is a pure rotation of the target figure without mirror flipping.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat5-9.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat5-9-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat5-9-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat5-9-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat5-9-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat5-9.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat5-9-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat5-9-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat5-9-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat5-9-opt-d.webp?v=20261127d"
   },
   {
     "id": 1270,
@@ -2361,11 +2361,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "B",
     "explanation": "Option B is a pure rotation of the target figure without mirror flipping.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat5-10.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat5-10-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat5-10-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat5-10-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat5-10-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat5-10.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat5-10-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat5-10-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat5-10-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat5-10-opt-d.webp?v=20261127d"
   },
   {
     "id": 1271,
@@ -2378,11 +2378,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "C",
     "explanation": "Option C is a pure rotation of the target figure without mirror flipping.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat5-11.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat5-11-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat5-11-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat5-11-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat5-11-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat5-11.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat5-11-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat5-11-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat5-11-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat5-11-opt-d.webp?v=20261127d"
   },
   {
     "id": 1272,
@@ -2395,11 +2395,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "D",
     "explanation": "Option D is a pure rotation of the target figure without mirror flipping.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat5-12.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat5-12-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat5-12-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat5-12-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat5-12-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat5-12.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat5-12-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat5-12-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat5-12-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat5-12-opt-d.webp?v=20261127d"
   },
   {
     "id": 1273,
@@ -2412,11 +2412,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "A",
     "explanation": "Option A is a pure rotation of the target figure without mirror flipping.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat5-13.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat5-13-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat5-13-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat5-13-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat5-13-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat5-13.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat5-13-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat5-13-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat5-13-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat5-13-opt-d.webp?v=20261127d"
   },
   {
     "id": 1274,
@@ -2429,11 +2429,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "B",
     "explanation": "Option B is a pure rotation of the target figure without mirror flipping.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat5-14.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat5-14-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat5-14-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat5-14-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat5-14-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat5-14.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat5-14-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat5-14-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat5-14-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat5-14-opt-d.webp?v=20261127d"
   },
   {
     "id": 1275,
@@ -2446,11 +2446,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "C",
     "explanation": "Option C is a pure rotation of the target figure without mirror flipping.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat5-15.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat5-15-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat5-15-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat5-15-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat5-15-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat5-15.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat5-15-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat5-15-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat5-15-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat5-15-opt-d.webp?v=20261127d"
   },
   {
     "id": 1276,
@@ -2463,11 +2463,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "D",
     "explanation": "Option D is a pure rotation of the target figure without mirror flipping.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat5-16.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat5-16-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat5-16-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat5-16-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat5-16-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat5-16.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat5-16-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat5-16-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat5-16-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat5-16-opt-d.webp?v=20261127d"
   },
   {
     "id": 1277,
@@ -2480,11 +2480,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "A",
     "explanation": "Option A is a pure rotation of the target figure without mirror flipping.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat5-17.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat5-17-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat5-17-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat5-17-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat5-17-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat5-17.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat5-17-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat5-17-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat5-17-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat5-17-opt-d.webp?v=20261127d"
   },
   {
     "id": 1278,
@@ -2497,11 +2497,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "B",
     "explanation": "Option B is a pure rotation of the target figure without mirror flipping.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat5-18.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat5-18-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat5-18-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat5-18-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat5-18-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat5-18.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat5-18-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat5-18-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat5-18-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat5-18-opt-d.webp?v=20261127d"
   },
   {
     "id": 1279,
@@ -2514,11 +2514,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "C",
     "explanation": "Option C is a pure rotation of the target figure without mirror flipping.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat5-19.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat5-19-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat5-19-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat5-19-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat5-19-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat5-19.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat5-19-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat5-19-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat5-19-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat5-19-opt-d.webp?v=20261127d"
   },
   {
     "id": 1280,
@@ -2531,11 +2531,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "D",
     "explanation": "Option D is a pure rotation of the target figure without mirror flipping.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat5-20.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat5-20-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat5-20-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat5-20-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat5-20-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat5-20.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat5-20-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat5-20-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat5-20-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat5-20-opt-d.webp?v=20261127d"
   },
   {
     "id": 1281,
@@ -2548,11 +2548,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "A",
     "explanation": "Vertical mirror image of 'PREDICTION' reverses character order from right to left and laterally inverts each glyph.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat6-1.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat6-1-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat6-1-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat6-1-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat6-1-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat6-1.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat6-1-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat6-1-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat6-1-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat6-1-opt-d.webp?v=20261127d"
   },
   {
     "id": 1282,
@@ -2565,11 +2565,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "B",
     "explanation": "Vertical mirror image of 'HOSPITAL' reverses character order from right to left and laterally inverts each glyph.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat6-2.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat6-2-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat6-2-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat6-2-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat6-2-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat6-2.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat6-2-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat6-2-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat6-2-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat6-2-opt-d.webp?v=20261127d"
   },
   {
     "id": 1283,
@@ -2582,11 +2582,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "C",
     "explanation": "Vertical mirror image of 'DARPAN' reverses character order from right to left and laterally inverts each glyph.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat6-3.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat6-3-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat6-3-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat6-3-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat6-3-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat6-3.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat6-3-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat6-3-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat6-3-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat6-3-opt-d.webp?v=20261127d"
   },
   {
     "id": 1284,
@@ -2599,11 +2599,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "D",
     "explanation": "Vertical mirror image of 'STRIDENT' reverses character order from right to left and laterally inverts each glyph.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat6-4.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat6-4-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat6-4-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat6-4-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat6-4-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat6-4.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat6-4-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat6-4-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat6-4-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat6-4-opt-d.webp?v=20261127d"
   },
   {
     "id": 1285,
@@ -2616,11 +2616,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "A",
     "explanation": "Vertical mirror image of 'OPULENT' reverses character order from right to left and laterally inverts each glyph.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat6-5.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat6-5-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat6-5-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat6-5-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat6-5-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat6-5.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat6-5-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat6-5-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat6-5-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat6-5-opt-d.webp?v=20261127d"
   },
   {
     "id": 1286,
@@ -2633,11 +2633,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "B",
     "explanation": "Vertical mirror image of '32596' reverses character order from right to left and laterally inverts each glyph.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat6-6.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat6-6-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat6-6-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat6-6-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat6-6-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat6-6.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat6-6-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat6-6-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat6-6-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat6-6-opt-d.webp?v=20261127d"
   },
   {
     "id": 1287,
@@ -2650,11 +2650,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "C",
     "explanation": "Vertical mirror image of '8932' reverses character order from right to left and laterally inverts each glyph.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat6-7.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat6-7-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat6-7-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat6-7-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat6-7-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat6-7.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat6-7-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat6-7-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat6-7-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat6-7-opt-d.webp?v=20261127d"
   },
   {
     "id": 1288,
@@ -2667,11 +2667,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "D",
     "explanation": "Vertical mirror image of '786' reverses character order from right to left and laterally inverts each glyph.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat6-8.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat6-8-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat6-8-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat6-8-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat6-8-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat6-8.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat6-8-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat6-8-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat6-8-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat6-8-opt-d.webp?v=20261127d"
   },
   {
     "id": 1289,
@@ -2684,11 +2684,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "A",
     "explanation": "Vertical mirror image of '10190' reverses character order from right to left and laterally inverts each glyph.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat6-9.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat6-9-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat6-9-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat6-9-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat6-9-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat6-9.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat6-9-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat6-9-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat6-9-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat6-9-opt-d.webp?v=20261127d"
   },
   {
     "id": 1290,
@@ -2701,11 +2701,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "B",
     "explanation": "Vertical mirror image of '8964' reverses character order from right to left and laterally inverts each glyph.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat6-10.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat6-10-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat6-10-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat6-10-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat6-10-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat6-10.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat6-10-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat6-10-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat6-10-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat6-10-opt-d.webp?v=20261127d"
   },
   {
     "id": 1291,
@@ -2718,11 +2718,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "C",
     "explanation": "Horizontal water reflection inverts top-to-bottom across the water surface line.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat6-11.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat6-11-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat6-11-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat6-11-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat6-11-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat6-11.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat6-11-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat6-11-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat6-11-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat6-11-opt-d.webp?v=20261127d"
   },
   {
     "id": 1292,
@@ -2735,11 +2735,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "D",
     "explanation": "Horizontal water reflection inverts top-to-bottom across the water surface line.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat6-12.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat6-12-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat6-12-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat6-12-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat6-12-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat6-12.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat6-12-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat6-12-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat6-12-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat6-12-opt-d.webp?v=20261127d"
   },
   {
     "id": 1293,
@@ -2752,11 +2752,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "A",
     "explanation": "Horizontal water reflection inverts top-to-bottom across the water surface line.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat6-13.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat6-13-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat6-13-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat6-13-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat6-13-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat6-13.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat6-13-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat6-13-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat6-13-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat6-13-opt-d.webp?v=20261127d"
   },
   {
     "id": 1294,
@@ -2769,11 +2769,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "B",
     "explanation": "Horizontal water reflection inverts top-to-bottom across the water surface line.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat6-14.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat6-14-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat6-14-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat6-14-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat6-14-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat6-14.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat6-14-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat6-14-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat6-14-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat6-14-opt-d.webp?v=20261127d"
   },
   {
     "id": 1295,
@@ -2786,11 +2786,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "C",
     "explanation": "Horizontal water reflection inverts top-to-bottom across the water surface line.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat6-15.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat6-15-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat6-15-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat6-15-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat6-15-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat6-15.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat6-15-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat6-15-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat6-15-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat6-15-opt-d.webp?v=20261127d"
   },
   {
     "id": 1296,
@@ -2803,11 +2803,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "D",
     "explanation": "Horizontal water reflection inverts top-to-bottom across the water surface line.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat6-16.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat6-16-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat6-16-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat6-16-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat6-16-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat6-16.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat6-16-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat6-16-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat6-16-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat6-16-opt-d.webp?v=20261127d"
   },
   {
     "id": 1297,
@@ -2820,11 +2820,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "A",
     "explanation": "Horizontal water reflection inverts top-to-bottom across the water surface line.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat6-17.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat6-17-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat6-17-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat6-17-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat6-17-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat6-17.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat6-17-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat6-17-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat6-17-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat6-17-opt-d.webp?v=20261127d"
   },
   {
     "id": 1298,
@@ -2837,11 +2837,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "B",
     "explanation": "Horizontal water reflection inverts top-to-bottom across the water surface line.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat6-18.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat6-18-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat6-18-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat6-18-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat6-18-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat6-18.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat6-18-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat6-18-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat6-18-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat6-18-opt-d.webp?v=20261127d"
   },
   {
     "id": 1299,
@@ -2854,11 +2854,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "C",
     "explanation": "Horizontal water reflection inverts top-to-bottom across the water surface line.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat6-19.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat6-19-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat6-19-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat6-19-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat6-19-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat6-19.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat6-19-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat6-19-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat6-19-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat6-19-opt-d.webp?v=20261127d"
   },
   {
     "id": 1300,
@@ -2871,11 +2871,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "D",
     "explanation": "Horizontal water reflection inverts top-to-bottom across the water surface line.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat6-20.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat6-20-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat6-20-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat6-20-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat6-20-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat6-20.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat6-20-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat6-20-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat6-20-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat6-20-opt-d.webp?v=20261127d"
   },
   {
     "id": 1301,
@@ -2888,11 +2888,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "A",
     "explanation": "The exact target shape is embedded inside composite figure A.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat7-1.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat7-1-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat7-1-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat7-1-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat7-1-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat7-1.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat7-1-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat7-1-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat7-1-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat7-1-opt-d.webp?v=20261127d"
   },
   {
     "id": 1302,
@@ -2905,11 +2905,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "B",
     "explanation": "The exact target shape is embedded inside composite figure B.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat7-2.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat7-2-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat7-2-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat7-2-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat7-2-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat7-2.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat7-2-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat7-2-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat7-2-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat7-2-opt-d.webp?v=20261127d"
   },
   {
     "id": 1303,
@@ -2922,11 +2922,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "C",
     "explanation": "The exact target shape is embedded inside composite figure C.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat7-3.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat7-3-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat7-3-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat7-3-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat7-3-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat7-3.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat7-3-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat7-3-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat7-3-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat7-3-opt-d.webp?v=20261127d"
   },
   {
     "id": 1304,
@@ -2939,11 +2939,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "D",
     "explanation": "The exact target shape is embedded inside composite figure D.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat7-4.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat7-4-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat7-4-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat7-4-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat7-4-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat7-4.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat7-4-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat7-4-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat7-4-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat7-4-opt-d.webp?v=20261127d"
   },
   {
     "id": 1305,
@@ -2956,11 +2956,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "A",
     "explanation": "The exact target shape is embedded inside composite figure A.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat7-5.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat7-5-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat7-5-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat7-5-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat7-5-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat7-5.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat7-5-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat7-5-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat7-5-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat7-5-opt-d.webp?v=20261127d"
   },
   {
     "id": 1306,
@@ -2973,11 +2973,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "B",
     "explanation": "The exact target shape is embedded inside composite figure B.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat7-6.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat7-6-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat7-6-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat7-6-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat7-6-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat7-6.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat7-6-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat7-6-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat7-6-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat7-6-opt-d.webp?v=20261127d"
   },
   {
     "id": 1307,
@@ -2990,11 +2990,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "C",
     "explanation": "The exact target shape is embedded inside composite figure C.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat7-7.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat7-7-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat7-7-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat7-7-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat7-7-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat7-7.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat7-7-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat7-7-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat7-7-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat7-7-opt-d.webp?v=20261127d"
   },
   {
     "id": 1308,
@@ -3007,11 +3007,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "D",
     "explanation": "The exact target shape is embedded inside composite figure D.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat7-8.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat7-8-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat7-8-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat7-8-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat7-8-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat7-8.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat7-8-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat7-8-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat7-8-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat7-8-opt-d.webp?v=20261127d"
   },
   {
     "id": 1309,
@@ -3024,11 +3024,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "A",
     "explanation": "The exact target shape is embedded inside composite figure A.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat7-9.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat7-9-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat7-9-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat7-9-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat7-9-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat7-9.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat7-9-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat7-9-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat7-9-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat7-9-opt-d.webp?v=20261127d"
   },
   {
     "id": 1310,
@@ -3041,11 +3041,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "B",
     "explanation": "The exact target shape is embedded inside composite figure B.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat7-10.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat7-10-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat7-10-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat7-10-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat7-10-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat7-10.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat7-10-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat7-10-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat7-10-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat7-10-opt-d.webp?v=20261127d"
   },
   {
     "id": 1311,
@@ -3058,11 +3058,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "C",
     "explanation": "The exact target shape is embedded inside composite figure C.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat7-11.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat7-11-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat7-11-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat7-11-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat7-11-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat7-11.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat7-11-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat7-11-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat7-11-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat7-11-opt-d.webp?v=20261127d"
   },
   {
     "id": 1312,
@@ -3075,11 +3075,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "D",
     "explanation": "The exact target shape is embedded inside composite figure D.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat7-12.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat7-12-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat7-12-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat7-12-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat7-12-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat7-12.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat7-12-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat7-12-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat7-12-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat7-12-opt-d.webp?v=20261127d"
   },
   {
     "id": 1313,
@@ -3092,11 +3092,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "A",
     "explanation": "The exact target shape is embedded inside composite figure A.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat7-13.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat7-13-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat7-13-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat7-13-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat7-13-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat7-13.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat7-13-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat7-13-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat7-13-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat7-13-opt-d.webp?v=20261127d"
   },
   {
     "id": 1314,
@@ -3109,11 +3109,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "B",
     "explanation": "The exact target shape is embedded inside composite figure B.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat7-14.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat7-14-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat7-14-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat7-14-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat7-14-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat7-14.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat7-14-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat7-14-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat7-14-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat7-14-opt-d.webp?v=20261127d"
   },
   {
     "id": 1315,
@@ -3126,11 +3126,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "C",
     "explanation": "The exact target shape is embedded inside composite figure C.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat7-15.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat7-15-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat7-15-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat7-15-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat7-15-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat7-15.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat7-15-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat7-15-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat7-15-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat7-15-opt-d.webp?v=20261127d"
   },
   {
     "id": 1316,
@@ -3143,11 +3143,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "D",
     "explanation": "The exact target shape is embedded inside composite figure D.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat7-16.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat7-16-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat7-16-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat7-16-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat7-16-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat7-16.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat7-16-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat7-16-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat7-16-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat7-16-opt-d.webp?v=20261127d"
   },
   {
     "id": 1317,
@@ -3160,11 +3160,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "A",
     "explanation": "The exact target shape is embedded inside composite figure A.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat7-17.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat7-17-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat7-17-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat7-17-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat7-17-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat7-17.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat7-17-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat7-17-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat7-17-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat7-17-opt-d.webp?v=20261127d"
   },
   {
     "id": 1318,
@@ -3177,11 +3177,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "B",
     "explanation": "The exact target shape is embedded inside composite figure B.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat7-18.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat7-18-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat7-18-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat7-18-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat7-18-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat7-18.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat7-18-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat7-18-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat7-18-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat7-18-opt-d.webp?v=20261127d"
   },
   {
     "id": 1319,
@@ -3194,11 +3194,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "C",
     "explanation": "The exact target shape is embedded inside composite figure C.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat7-19.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat7-19-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat7-19-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat7-19-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat7-19-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat7-19.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat7-19-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat7-19-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat7-19-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat7-19-opt-d.webp?v=20261127d"
   },
   {
     "id": 1320,
@@ -3211,11 +3211,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "D",
     "explanation": "The exact target shape is embedded inside composite figure D.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat7-20.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat7-20-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat7-20-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat7-20-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat7-20-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat7-20.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat7-20-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat7-20-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat7-20-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat7-20-opt-d.webp?v=20261127d"
   },
   {
     "id": 1321,
@@ -3228,11 +3228,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "A",
     "explanation": "Unfolding twice mirrors the punched holes symmetrically across both fold lines.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat8-1.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat8-1-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat8-1-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat8-1-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat8-1-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat8-1.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat8-1-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat8-1-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat8-1-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat8-1-opt-d.webp?v=20261127d"
   },
   {
     "id": 1322,
@@ -3245,11 +3245,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "B",
     "explanation": "Unfolding twice mirrors the punched holes symmetrically across both fold lines.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat8-2.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat8-2-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat8-2-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat8-2-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat8-2-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat8-2.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat8-2-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat8-2-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat8-2-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat8-2-opt-d.webp?v=20261127d"
   },
   {
     "id": 1323,
@@ -3262,11 +3262,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "C",
     "explanation": "Unfolding twice mirrors the punched holes symmetrically across both fold lines.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat8-3.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat8-3-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat8-3-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat8-3-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat8-3-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat8-3.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat8-3-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat8-3-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat8-3-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat8-3-opt-d.webp?v=20261127d"
   },
   {
     "id": 1324,
@@ -3279,11 +3279,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "D",
     "explanation": "Unfolding twice mirrors the punched holes symmetrically across both fold lines.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat8-4.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat8-4-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat8-4-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat8-4-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat8-4-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat8-4.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat8-4-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat8-4-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat8-4-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat8-4-opt-d.webp?v=20261127d"
   },
   {
     "id": 1325,
@@ -3296,11 +3296,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "A",
     "explanation": "Unfolding twice mirrors the punched holes symmetrically across both fold lines.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat8-5.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat8-5-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat8-5-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat8-5-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat8-5-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat8-5.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat8-5-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat8-5-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat8-5-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat8-5-opt-d.webp?v=20261127d"
   },
   {
     "id": 1326,
@@ -3313,11 +3313,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "B",
     "explanation": "Unfolding twice mirrors the punched holes symmetrically across both fold lines.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat8-6.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat8-6-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat8-6-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat8-6-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat8-6-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat8-6.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat8-6-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat8-6-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat8-6-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat8-6-opt-d.webp?v=20261127d"
   },
   {
     "id": 1327,
@@ -3330,11 +3330,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "C",
     "explanation": "Unfolding twice mirrors the punched holes symmetrically across both fold lines.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat8-7.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat8-7-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat8-7-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat8-7-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat8-7-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat8-7.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat8-7-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat8-7-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat8-7-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat8-7-opt-d.webp?v=20261127d"
   },
   {
     "id": 1328,
@@ -3347,11 +3347,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "D",
     "explanation": "Unfolding twice mirrors the punched holes symmetrically across both fold lines.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat8-8.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat8-8-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat8-8-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat8-8-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat8-8-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat8-8.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat8-8-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat8-8-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat8-8-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat8-8-opt-d.webp?v=20261127d"
   },
   {
     "id": 1329,
@@ -3364,11 +3364,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "A",
     "explanation": "Unfolding twice mirrors the punched holes symmetrically across both fold lines.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat8-9.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat8-9-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat8-9-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat8-9-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat8-9-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat8-9.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat8-9-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat8-9-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat8-9-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat8-9-opt-d.webp?v=20261127d"
   },
   {
     "id": 1330,
@@ -3381,11 +3381,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "B",
     "explanation": "Unfolding twice mirrors the punched holes symmetrically across both fold lines.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat8-10.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat8-10-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat8-10-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat8-10-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat8-10-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat8-10.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat8-10-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat8-10-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat8-10-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat8-10-opt-d.webp?v=20261127d"
   },
   {
     "id": 1331,
@@ -3398,11 +3398,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "C",
     "explanation": "Unfolding twice mirrors the punched holes symmetrically across both fold lines.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat8-11.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat8-11-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat8-11-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat8-11-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat8-11-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat8-11.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat8-11-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat8-11-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat8-11-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat8-11-opt-d.webp?v=20261127d"
   },
   {
     "id": 1332,
@@ -3415,11 +3415,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "D",
     "explanation": "Unfolding twice mirrors the punched holes symmetrically across both fold lines.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat8-12.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat8-12-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat8-12-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat8-12-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat8-12-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat8-12.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat8-12-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat8-12-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat8-12-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat8-12-opt-d.webp?v=20261127d"
   },
   {
     "id": 1333,
@@ -3432,11 +3432,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "A",
     "explanation": "Unfolding twice mirrors the punched holes symmetrically across both fold lines.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat8-13.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat8-13-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat8-13-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat8-13-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat8-13-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat8-13.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat8-13-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat8-13-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat8-13-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat8-13-opt-d.webp?v=20261127d"
   },
   {
     "id": 1334,
@@ -3449,11 +3449,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "B",
     "explanation": "Unfolding twice mirrors the punched holes symmetrically across both fold lines.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat8-14.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat8-14-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat8-14-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat8-14-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat8-14-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat8-14.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat8-14-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat8-14-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat8-14-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat8-14-opt-d.webp?v=20261127d"
   },
   {
     "id": 1335,
@@ -3466,11 +3466,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "C",
     "explanation": "Unfolding twice mirrors the punched holes symmetrically across both fold lines.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat8-15.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat8-15-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat8-15-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat8-15-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat8-15-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat8-15.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat8-15-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat8-15-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat8-15-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat8-15-opt-d.webp?v=20261127d"
   },
   {
     "id": 1336,
@@ -3483,11 +3483,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "D",
     "explanation": "Unfolding twice mirrors the punched holes symmetrically across both fold lines.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat8-16.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat8-16-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat8-16-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat8-16-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat8-16-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat8-16.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat8-16-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat8-16-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat8-16-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat8-16-opt-d.webp?v=20261127d"
   },
   {
     "id": 1337,
@@ -3500,11 +3500,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "A",
     "explanation": "Unfolding twice mirrors the punched holes symmetrically across both fold lines.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat8-17.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat8-17-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat8-17-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat8-17-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat8-17-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat8-17.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat8-17-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat8-17-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat8-17-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat8-17-opt-d.webp?v=20261127d"
   },
   {
     "id": 1338,
@@ -3517,11 +3517,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "B",
     "explanation": "Unfolding twice mirrors the punched holes symmetrically across both fold lines.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat8-18.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat8-18-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat8-18-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat8-18-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat8-18-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat8-18.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat8-18-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat8-18-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat8-18-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat8-18-opt-d.webp?v=20261127d"
   },
   {
     "id": 1339,
@@ -3534,11 +3534,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "C",
     "explanation": "Unfolding twice mirrors the punched holes symmetrically across both fold lines.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat8-19.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat8-19-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat8-19-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat8-19-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat8-19-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat8-19.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat8-19-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat8-19-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat8-19-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat8-19-opt-d.webp?v=20261127d"
   },
   {
     "id": 1340,
@@ -3551,11 +3551,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "D",
     "explanation": "Unfolding twice mirrors the punched holes symmetrically across both fold lines.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat8-20.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat8-20-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat8-20-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat8-20-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat8-20-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat8-20.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat8-20-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat8-20-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat8-20-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat8-20-opt-d.webp?v=20261127d"
   },
   {
     "id": 1341,
@@ -3568,11 +3568,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "A",
     "explanation": "Only figure A satisfies the exact same region-overlap condition for placing the dot.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat9-1.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat9-1-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat9-1-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat9-1-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat9-1-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat9-1.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat9-1-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat9-1-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat9-1-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat9-1-opt-d.webp?v=20261127d"
   },
   {
     "id": 1342,
@@ -3585,11 +3585,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "B",
     "explanation": "Only figure B satisfies the exact same region-overlap condition for placing the dot.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat9-2.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat9-2-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat9-2-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat9-2-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat9-2-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat9-2.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat9-2-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat9-2-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat9-2-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat9-2-opt-d.webp?v=20261127d"
   },
   {
     "id": 1343,
@@ -3602,11 +3602,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "C",
     "explanation": "Only figure C satisfies the exact same region-overlap condition for placing the dot.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat9-3.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat9-3-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat9-3-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat9-3-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat9-3-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat9-3.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat9-3-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat9-3-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat9-3-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat9-3-opt-d.webp?v=20261127d"
   },
   {
     "id": 1344,
@@ -3619,11 +3619,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "D",
     "explanation": "Only figure D satisfies the exact same region-overlap condition for placing the dot.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat9-4.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat9-4-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat9-4-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat9-4-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat9-4-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat9-4.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat9-4-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat9-4-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat9-4-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat9-4-opt-d.webp?v=20261127d"
   },
   {
     "id": 1345,
@@ -3636,11 +3636,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "A",
     "explanation": "Only figure A satisfies the exact same region-overlap condition for placing the dot.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat9-5.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat9-5-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat9-5-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat9-5-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat9-5-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat9-5.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat9-5-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat9-5-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat9-5-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat9-5-opt-d.webp?v=20261127d"
   },
   {
     "id": 1346,
@@ -3653,11 +3653,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "B",
     "explanation": "Only figure B satisfies the exact same region-overlap condition for placing the dot.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat9-6.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat9-6-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat9-6-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat9-6-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat9-6-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat9-6.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat9-6-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat9-6-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat9-6-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat9-6-opt-d.webp?v=20261127d"
   },
   {
     "id": 1347,
@@ -3670,11 +3670,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "C",
     "explanation": "Only figure C satisfies the exact same region-overlap condition for placing the dot.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat9-7.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat9-7-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat9-7-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat9-7-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat9-7-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat9-7.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat9-7-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat9-7-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat9-7-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat9-7-opt-d.webp?v=20261127d"
   },
   {
     "id": 1348,
@@ -3687,11 +3687,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "D",
     "explanation": "Only figure D satisfies the exact same region-overlap condition for placing the dot.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat9-8.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat9-8-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat9-8-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat9-8-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat9-8-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat9-8.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat9-8-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat9-8-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat9-8-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat9-8-opt-d.webp?v=20261127d"
   },
   {
     "id": 1349,
@@ -3704,11 +3704,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "A",
     "explanation": "Only figure A satisfies the exact same region-overlap condition for placing the dot.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat9-9.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat9-9-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat9-9-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat9-9-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat9-9-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat9-9.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat9-9-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat9-9-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat9-9-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat9-9-opt-d.webp?v=20261127d"
   },
   {
     "id": 1350,
@@ -3721,11 +3721,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "B",
     "explanation": "Only figure B satisfies the exact same region-overlap condition for placing the dot.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat9-10.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat9-10-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat9-10-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat9-10-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat9-10-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat9-10.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat9-10-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat9-10-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat9-10-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat9-10-opt-d.webp?v=20261127d"
   },
   {
     "id": 1351,
@@ -3738,11 +3738,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "C",
     "explanation": "Only figure C satisfies the exact same region-overlap condition for placing the dot.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat9-11.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat9-11-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat9-11-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat9-11-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat9-11-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat9-11.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat9-11-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat9-11-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat9-11-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat9-11-opt-d.webp?v=20261127d"
   },
   {
     "id": 1352,
@@ -3755,11 +3755,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "D",
     "explanation": "Only figure D satisfies the exact same region-overlap condition for placing the dot.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat9-12.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat9-12-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat9-12-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat9-12-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat9-12-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat9-12.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat9-12-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat9-12-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat9-12-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat9-12-opt-d.webp?v=20261127d"
   },
   {
     "id": 1353,
@@ -3772,11 +3772,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "A",
     "explanation": "Only figure A satisfies the exact same region-overlap condition for placing the dot.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat9-13.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat9-13-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat9-13-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat9-13-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat9-13-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat9-13.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat9-13-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat9-13-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat9-13-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat9-13-opt-d.webp?v=20261127d"
   },
   {
     "id": 1354,
@@ -3789,11 +3789,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "B",
     "explanation": "Only figure B satisfies the exact same region-overlap condition for placing the dot.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat9-14.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat9-14-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat9-14-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat9-14-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat9-14-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat9-14.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat9-14-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat9-14-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat9-14-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat9-14-opt-d.webp?v=20261127d"
   },
   {
     "id": 1355,
@@ -3806,11 +3806,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "C",
     "explanation": "Only figure C satisfies the exact same region-overlap condition for placing the dot.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat9-15.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat9-15-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat9-15-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat9-15-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat9-15-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat9-15.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat9-15-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat9-15-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat9-15-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat9-15-opt-d.webp?v=20261127d"
   },
   {
     "id": 1356,
@@ -3823,11 +3823,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "D",
     "explanation": "Only figure D satisfies the exact same region-overlap condition for placing the dot.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat9-16.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat9-16-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat9-16-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat9-16-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat9-16-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat9-16.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat9-16-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat9-16-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat9-16-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat9-16-opt-d.webp?v=20261127d"
   },
   {
     "id": 1357,
@@ -3840,11 +3840,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "A",
     "explanation": "Only figure A satisfies the exact same region-overlap condition for placing the dot.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat9-17.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat9-17-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat9-17-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat9-17-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat9-17-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat9-17.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat9-17-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat9-17-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat9-17-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat9-17-opt-d.webp?v=20261127d"
   },
   {
     "id": 1358,
@@ -3857,11 +3857,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "B",
     "explanation": "Only figure B satisfies the exact same region-overlap condition for placing the dot.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat9-18.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat9-18-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat9-18-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat9-18-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat9-18-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat9-18.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat9-18-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat9-18-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat9-18-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat9-18-opt-d.webp?v=20261127d"
   },
   {
     "id": 1359,
@@ -3874,11 +3874,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "C",
     "explanation": "Only figure C satisfies the exact same region-overlap condition for placing the dot.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat9-19.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat9-19-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat9-19-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat9-19-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat9-19-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat9-19.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat9-19-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat9-19-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat9-19-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat9-19-opt-d.webp?v=20261127d"
   },
   {
     "id": 1360,
@@ -3891,11 +3891,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "D",
     "explanation": "Only figure D satisfies the exact same region-overlap condition for placing the dot.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat9-20.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat9-20-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat9-20-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat9-20-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat9-20-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat9-20.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat9-20-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat9-20-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat9-20-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat9-20-opt-d.webp?v=20261127d"
   },
   {
     "id": 1361,
@@ -3908,11 +3908,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "A",
     "explanation": "Joining the given separate pieces forms figure A.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat10-1.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat10-1-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat10-1-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat10-1-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat10-1-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat10-1.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat10-1-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat10-1-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat10-1-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat10-1-opt-d.webp?v=20261127d"
   },
   {
     "id": 1362,
@@ -3925,11 +3925,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "B",
     "explanation": "Joining the given separate pieces forms figure B.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat10-2.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat10-2-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat10-2-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat10-2-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat10-2-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat10-2.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat10-2-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat10-2-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat10-2-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat10-2-opt-d.webp?v=20261127d"
   },
   {
     "id": 1363,
@@ -3942,11 +3942,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "C",
     "explanation": "Joining the given separate pieces forms figure C.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat10-3.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat10-3-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat10-3-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat10-3-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat10-3-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat10-3.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat10-3-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat10-3-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat10-3-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat10-3-opt-d.webp?v=20261127d"
   },
   {
     "id": 1364,
@@ -3959,11 +3959,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "D",
     "explanation": "Joining the given separate pieces forms figure D.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat10-4.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat10-4-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat10-4-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat10-4-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat10-4-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat10-4.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat10-4-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat10-4-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat10-4-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat10-4-opt-d.webp?v=20261127d"
   },
   {
     "id": 1365,
@@ -3976,11 +3976,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "A",
     "explanation": "Joining the given separate pieces forms figure A.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat10-5.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat10-5-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat10-5-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat10-5-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat10-5-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat10-5.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat10-5-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat10-5-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat10-5-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat10-5-opt-d.webp?v=20261127d"
   },
   {
     "id": 1366,
@@ -3993,11 +3993,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "B",
     "explanation": "Joining the given separate pieces forms figure B.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat10-6.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat10-6-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat10-6-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat10-6-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat10-6-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat10-6.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat10-6-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat10-6-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat10-6-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat10-6-opt-d.webp?v=20261127d"
   },
   {
     "id": 1367,
@@ -4010,11 +4010,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "C",
     "explanation": "Joining the given separate pieces forms figure C.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat10-7.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat10-7-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat10-7-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat10-7-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat10-7-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat10-7.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat10-7-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat10-7-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat10-7-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat10-7-opt-d.webp?v=20261127d"
   },
   {
     "id": 1368,
@@ -4027,11 +4027,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "D",
     "explanation": "Joining the given separate pieces forms figure D.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat10-8.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat10-8-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat10-8-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat10-8-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat10-8-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat10-8.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat10-8-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat10-8-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat10-8-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat10-8-opt-d.webp?v=20261127d"
   },
   {
     "id": 1369,
@@ -4044,11 +4044,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "A",
     "explanation": "Joining the given separate pieces forms figure A.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat10-9.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat10-9-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat10-9-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat10-9-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat10-9-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat10-9.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat10-9-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat10-9-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat10-9-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat10-9-opt-d.webp?v=20261127d"
   },
   {
     "id": 1370,
@@ -4061,11 +4061,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "B",
     "explanation": "Joining the given separate pieces forms figure B.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat10-10.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat10-10-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat10-10-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat10-10-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat10-10-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat10-10.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat10-10-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat10-10-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat10-10-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat10-10-opt-d.webp?v=20261127d"
   },
   {
     "id": 1371,
@@ -4078,11 +4078,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "C",
     "explanation": "Joining the given separate pieces forms figure C.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat10-11.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat10-11-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat10-11-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat10-11-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat10-11-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat10-11.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat10-11-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat10-11-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat10-11-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat10-11-opt-d.webp?v=20261127d"
   },
   {
     "id": 1372,
@@ -4095,11 +4095,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "D",
     "explanation": "Joining the given separate pieces forms figure D.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat10-12.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat10-12-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat10-12-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat10-12-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat10-12-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat10-12.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat10-12-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat10-12-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat10-12-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat10-12-opt-d.webp?v=20261127d"
   },
   {
     "id": 1373,
@@ -4112,11 +4112,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "A",
     "explanation": "Joining the given separate pieces forms figure A.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat10-13.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat10-13-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat10-13-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat10-13-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat10-13-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat10-13.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat10-13-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat10-13-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat10-13-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat10-13-opt-d.webp?v=20261127d"
   },
   {
     "id": 1374,
@@ -4129,11 +4129,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "B",
     "explanation": "Joining the given separate pieces forms figure B.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat10-14.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat10-14-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat10-14-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat10-14-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat10-14-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat10-14.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat10-14-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat10-14-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat10-14-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat10-14-opt-d.webp?v=20261127d"
   },
   {
     "id": 1375,
@@ -4146,11 +4146,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "C",
     "explanation": "Joining the given separate pieces forms figure C.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat10-15.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat10-15-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat10-15-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat10-15-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat10-15-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat10-15.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat10-15-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat10-15-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat10-15-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat10-15-opt-d.webp?v=20261127d"
   },
   {
     "id": 1376,
@@ -4163,11 +4163,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "D",
     "explanation": "Joining the given separate pieces forms figure D.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat10-16.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat10-16-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat10-16-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat10-16-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat10-16-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat10-16.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat10-16-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat10-16-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat10-16-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat10-16-opt-d.webp?v=20261127d"
   },
   {
     "id": 1377,
@@ -4180,11 +4180,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "A",
     "explanation": "Joining the given separate pieces forms figure A.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat10-17.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat10-17-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat10-17-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat10-17-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat10-17-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat10-17.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat10-17-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat10-17-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat10-17-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat10-17-opt-d.webp?v=20261127d"
   },
   {
     "id": 1378,
@@ -4197,11 +4197,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "B",
     "explanation": "Joining the given separate pieces forms figure B.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat10-18.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat10-18-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat10-18-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat10-18-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat10-18-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat10-18.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat10-18-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat10-18-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat10-18-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat10-18-opt-d.webp?v=20261127d"
   },
   {
     "id": 1379,
@@ -4214,11 +4214,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "C",
     "explanation": "Joining the given separate pieces forms figure C.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat10-19.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat10-19-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat10-19-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat10-19-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat10-19-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat10-19.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat10-19-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat10-19-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat10-19-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat10-19-opt-d.webp?v=20261127d"
   },
   {
     "id": 1380,
@@ -4231,11 +4231,11 @@ export const NON_VERBAL_52_BANK: BankQuestion[] = [
     "option_d": "Pattern 4 (Figure D)",
     "correct_option": "D",
     "explanation": "Joining the given separate pieces forms figure D.",
-    "question_image_url": "/images/non-verbal/questions/nv-q-cat10-20.jpg?v=20261127d",
-    "option_a_image_url": "/images/non-verbal/options/nv-cat10-20-opt-a.jpg?v=20261127d",
-    "option_b_image_url": "/images/non-verbal/options/nv-cat10-20-opt-b.jpg?v=20261127d",
-    "option_c_image_url": "/images/non-verbal/options/nv-cat10-20-opt-c.jpg?v=20261127d",
-    "option_d_image_url": "/images/non-verbal/options/nv-cat10-20-opt-d.jpg?v=20261127d"
+    "question_image_url": "/images/non-verbal/questions/nv-q-cat10-20.webp?v=20261127d",
+    "option_a_image_url": "/images/non-verbal/options/nv-cat10-20-opt-a.webp?v=20261127d",
+    "option_b_image_url": "/images/non-verbal/options/nv-cat10-20-opt-b.webp?v=20261127d",
+    "option_c_image_url": "/images/non-verbal/options/nv-cat10-20-opt-c.webp?v=20261127d",
+    "option_d_image_url": "/images/non-verbal/options/nv-cat10-20-opt-d.webp?v=20261127d"
   }
 ];
 
@@ -4245,6 +4245,38 @@ export const NON_VERBAL_500_BANK: BankQuestion[] = NON_VERBAL_52_BANK;
 export function getRandomNonVerbalQuizQuestions(): QuizQuestion[] {
   // Return the authentic 52 visual questions corresponding to the provided diagram images
   return NON_VERBAL_52_BANK.map((q, index) => ({
+    id: q.id,
+    quiz_id: 2,
+    category: q.category,
+    question_text: q.question_text,
+    option_a: q.option_a,
+    option_b: q.option_b,
+    option_c: q.option_c,
+    option_d: q.option_d,
+    correct_option: q.correct_option,
+    explanation: q.explanation,
+    question_image_url: q.question_image_url,
+    option_a_image_url: q.option_a_image_url,
+    option_b_image_url: q.option_b_image_url,
+    option_c_image_url: q.option_c_image_url,
+    option_d_image_url: q.option_d_image_url,
+    order_index: index + 1,
+  }));
+}
+
+export function getRandom20NonVerbalFromPdf(categoryId?: number): QuizQuestion[] {
+  const pool = categoryId
+    ? NON_VERBAL_52_BANK.filter((q) => q.category_id === categoryId)
+    : [...NON_VERBAL_52_BANK];
+
+  const source = pool.length >= 20 ? [...pool] : [...pool, ...NON_VERBAL_52_BANK.filter((q) => q.category_id !== categoryId)];
+  // Fisher-Yates shuffle
+  for (let i = source.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [source[i], source[j]] = [source[j], source[i]];
+  }
+
+  return source.slice(0, 20).map((q, index) => ({
     id: q.id,
     quiz_id: 2,
     category: q.category,

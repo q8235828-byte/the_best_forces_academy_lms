@@ -666,3 +666,101 @@ export const SAMPLE_LESSONS: Record<number, Lesson[]> = {
     }
   ]
 };
+
+export interface NonVerbalVideoMeta {
+  categoryId: number;
+  title: string;
+  videoUrl: string;
+  durationMinutes: number;
+}
+
+export const NON_VERBAL_VIDEO_LECTURES: NonVerbalVideoMeta[] = [
+  {
+    categoryId: 1,
+    title: 'Non-Verbal Lecture 1 (Urdu AI): Pattern Series Completion (10 Solved Qs)',
+    videoUrl: '/videos/non-verbal/cat_1_pattern_series.mp4',
+    durationMinutes: 4,
+  },
+  {
+    categoryId: 2,
+    title: 'Non-Verbal Lecture 2 (Urdu AI): Analogy of Figures (10 Solved Qs)',
+    videoUrl: '/videos/non-verbal/cat_2_analogy_of_figures.mp4',
+    durationMinutes: 4,
+  },
+  {
+    categoryId: 4,
+    title: 'Non-Verbal Lecture 3 (Urdu AI): Matrix & Pattern Completion (10 Solved Qs)',
+    videoUrl: '/videos/non-verbal/cat_4_matrix_completion.mp4',
+    durationMinutes: 4,
+  },
+  {
+    categoryId: 5,
+    title: 'Non-Verbal Lecture 4 (Urdu AI): Spatial Rotation & Orientation (10 Solved Qs)',
+    videoUrl: '/videos/non-verbal/cat_5_spatial_rotation.mp4',
+    durationMinutes: 4,
+  },
+  {
+    categoryId: 6,
+    title: 'Non-Verbal Lecture 5 (Urdu AI): Mirror & Water Reflection (10 Solved Qs)',
+    videoUrl: '/videos/non-verbal/cat_6_mirror_water_reflection.mp4',
+    durationMinutes: 4,
+  },
+  {
+    categoryId: 7,
+    title: 'Non-Verbal Lecture 6 (Urdu AI): Embedded & Hidden Figures (10 Solved Qs)',
+    videoUrl: '/videos/non-verbal/cat_7_embedded_figures.mp4',
+    durationMinutes: 4,
+  },
+  {
+    categoryId: 8,
+    title: 'Non-Verbal Lecture 7 (Urdu AI): Paper Folding & Cutting (10 Solved Qs)',
+    videoUrl: '/videos/non-verbal/cat_8_paper_folding_cutting.mp4',
+    durationMinutes: 4,
+  },
+  {
+    categoryId: 9,
+    title: 'Non-Verbal Lecture 8 (Urdu AI): Dot Situation Logic (10 Solved Qs)',
+    videoUrl: '/videos/non-verbal/cat_9_dot_situation_logic.mp4',
+    durationMinutes: 4,
+  },
+  {
+    categoryId: 10,
+    title: 'Non-Verbal Lecture 9 (Urdu AI): Figure Formation & Grouping (10 Solved Qs)',
+    videoUrl: '/videos/non-verbal/cat_10_figure_formation.mp4',
+    durationMinutes: 4,
+  },
+];
+
+export function getLessonNonVerbalCategoryId(videoUrl: string): number | undefined {
+  const match = NON_VERBAL_VIDEO_LECTURES.find((v) => v.videoUrl === videoUrl);
+  return match?.categoryId;
+}
+
+export function getCourseLessonsWithNonVerbal(courseId: number, courseTitle: string): Lesson[] {
+  const baseLessons: Lesson[] = SAMPLE_LESSONS[courseId] || [
+    {
+      id: 9001,
+      course_id: courseId,
+      title: `Lecture 1: ${courseTitle} Comprehensive Overview & Test Syllabus (Free Demo)`,
+      order_index: 1,
+      video_url: '/videos/non-verbal/cat_1_pattern_series.mp4',
+      is_free_preview: 1,
+      duration_minutes: 4,
+    },
+  ];
+
+  const existingUrls = new Set(baseLessons.map((l) => l.video_url));
+  const extraNonVerbal: Lesson[] = NON_VERBAL_VIDEO_LECTURES.filter(
+    (nv) => !existingUrls.has(nv.videoUrl)
+  ).map((nv, idx) => ({
+    id: 8000 + nv.categoryId,
+    course_id: courseId,
+    title: nv.title,
+    order_index: baseLessons.length + idx + 1,
+    video_url: nv.videoUrl,
+    is_free_preview: idx === 0 && !existingUrls.has('/videos/non-verbal/cat_1_pattern_series.mp4') ? 1 : 0,
+    duration_minutes: nv.durationMinutes,
+  }));
+
+  return [...baseLessons, ...extraNonVerbal];
+}

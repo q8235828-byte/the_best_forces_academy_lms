@@ -12,6 +12,7 @@ interface VideoPlayerWithWatermarkProps {
   studentName?: string;
   studentPhone?: string;
   onOpenEnrollmentModal?: () => void;
+  onVideoEnded?: () => void;
 }
 
 export default function VideoPlayerWithWatermark({
@@ -20,7 +21,8 @@ export default function VideoPlayerWithWatermark({
   isEnrolled,
   studentName = "Candidate",
   studentPhone = "+92 305 4599659",
-  onOpenEnrollmentModal
+  onOpenEnrollmentModal,
+  onVideoEnded
 }: VideoPlayerWithWatermarkProps) {
   // Free Lesson 1 rule:
   const isFree = lesson.order_index === 1 || lesson.is_free_preview === 1;
@@ -56,6 +58,7 @@ export default function VideoPlayerWithWatermark({
               poster={course.thumbnail_url || 'https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=800&q=80'}
               className="w-full h-full object-contain"
               src={lesson.video_url}
+              onEnded={onVideoEnded}
             >
               Your browser does not support HTML5 video streaming.
             </video>

@@ -1,7 +1,8 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useEffect, Suspense } from 'react';
 import Link from 'next/link';
+import { useSearchParams } from 'next/navigation';
 import QuizEngine from '@/components/QuizEngine';
 import { 
   ArrowLeft, 
@@ -18,7 +19,7 @@ import {
 } from 'lucide-react';
 import { Quiz, QuizQuestion } from '@/types';
 import { getRandomVerbalQuizQuestions } from '@/lib/verbal-questions-bank';
-import { getRandomNonVerbalQuizQuestions } from '@/lib/non-verbal-questions-bank';
+import { getRandomNonVerbalQuizQuestions, getRandom20NonVerbalFromPdf } from '@/lib/non-verbal-questions-bank';
 import { VERBAL_REASONING_TYPES, NON_VERBAL_REASONING_TYPES } from '@/lib/quizzes-data';
 
 interface QuizAttemptClientProps {
@@ -26,7 +27,13 @@ interface QuizAttemptClientProps {
   questions: QuizQuestion[];
 }
 
-export default function QuizAttemptClient({ quiz, questions }: QuizAttemptClientProps) {
+function QuizAttemptClientInner({ quiz, questions }: QuizAttemptClientProps) {
+  const searchParams = useSearchParams();
+  const countParam = Number(searchParams.get('count') || '0');
+  const catParam = searchParams.get('cat');
+  const categoryId = catParam && !isNaN(Number(catParam)) ? Number(catParam) : undefined;
+  const isPdf20Mode = quiz.id === 2 && countParam === 20;
+
   const isVerbal = quiz.id === 1;
   const isNonVerbal = quiz.id === 2;
   const isMatric = quiz.id === 3;
@@ -38,16 +45,32 @@ export default function QuizAttemptClient({ quiz, questions }: QuizAttemptClient
     if (isVerbal) {
       return getRandomVerbalQuizQuestions();
     }
+    if (isPdf20Mode) {
+      return getRandom20NonVerbalFromPdf(categoryId);
+    }
     if (isNonVerbal) {
       return getRandomNonVerbalQuizQuestions();
     }
     return questions;
   });
 
+  useEffect(() => {
+    if (isPdf20Mode) {
+      setActiveQuestions(getRandom20NonVerbalFromPdf(categoryId));
+    }
+  }, [isPdf20Mode, categoryId]);
+
   const handleStartExam = () => {
     if (isVerbal) {
       setActiveQuestions(getRandomVerbalQuizQuestions());
-    } else if (isNonVerbal) {
+    } else if (isPdf20Mode) {
+      setActiveQuestions(getRandom20NonVerbalFromPdf(categoryId));
+    } else if (isPdf20Mode) {
+    stepLabel = 'Course QuizBank • 20 Random Questions from PDF';
+    testTitle = 'Non-Verbal PDF QuizBank (20 Random Questions)';
+    testSummary = '20 questions randomly selected from the Additional Course Solved PDF Guide.';
+    categoriesList = NON_VERBAL_REASONING_TYPES;
+  } else if (isNonVerbal) {
       setActiveQuestions(getRandomNonVerbalQuizQuestions());
     }
     setHasStarted(true);
@@ -64,6 +87,11 @@ export default function QuizAttemptClient({ quiz, questions }: QuizAttemptClient
     testTitle = 'Verbal Intelligence Test (100 Questions)';
     testSummary = '100 questions randomly selected (10 questions from each of the 10 verbal reasoning types).';
     categoriesList = VERBAL_REASONING_TYPES;
+  } else if (isPdf20Mode) {
+    stepLabel = 'Course QuizBank • 20 Random Questions from PDF';
+    testTitle = 'Non-Verbal PDF QuizBank (20 Random Questions)';
+    testSummary = '20 questions randomly selected from the Additional Course Solved PDF Guide.';
+    categoriesList = NON_VERBAL_REASONING_TYPES;
   } else if (isNonVerbal) {
     stepLabel = 'Step 2 of 4 • Visual & Spatial Intelligence Exam';
     testTitle = 'Non-Verbal Intelligence Test (52 Questions)';
@@ -278,5 +306,13 @@ export default function QuizAttemptClient({ quiz, questions }: QuizAttemptClient
 
       </div>
     </div>
+  );
+}
+
+export default function QuizAttemptClient(props: QuizAttemptClientProps) {
+  return (
+    <Suspense fallback={<div className="py-20 text-center text-gray-500 font-bold">Loading Exam Terminal...</div>}>
+      <QuizAttemptClientInner {...props} />
+    </Suspense>
   );
 }

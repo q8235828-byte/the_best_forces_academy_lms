@@ -1,7 +1,8 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useEffect, Suspense } from 'react';
 import Link from 'next/link';
+import { useSearchParams } from 'next/navigation';
 import { NON_VERBAL_500_BANK, BankQuestion } from '@/lib/non-verbal-questions-bank';
 import { NON_VERBAL_REASONING_TYPES } from '@/lib/quizzes-data';
 import { 
@@ -21,11 +22,23 @@ import { ACADEMY_CONFIG } from '@/lib/constants';
 
 const QUESTIONS_PER_PAGE = 20;
 
-export default function NonVerbalPdfGuidePage() {
-  const [selectedCategory, setSelectedCategory] = useState<number | 'all'>('all');
+function NonVerbalPdfGuideContent() {
+  const searchParams = useSearchParams();
+  const catParam = searchParams.get('cat');
+  const initialCat = catParam && !isNaN(Number(catParam)) ? Number(catParam) : 'all';
+
+  const [selectedCategory, setSelectedCategory] = useState<number | 'all'>(initialCat);
   const [searchQuery, setSearchQuery] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
   const [viewAllMode, setViewAllMode] = useState(false);
+
+  useEffect(() => {
+    const c = searchParams.get('cat');
+    if (c && !isNaN(Number(c))) {
+      setSelectedCategory(Number(c));
+      setCurrentPage(1);
+    }
+  }, [searchParams]);
 
   const filteredQuestions = NON_VERBAL_500_BANK.filter((q) => {
     const matchesCat = selectedCategory === 'all' || q.category_id === selectedCategory;
@@ -308,11 +321,11 @@ export default function NonVerbalPdfGuidePage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
               <div className="bg-white p-2 rounded-xl border border-emerald-100 flex justify-center">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/images/non-verbal/mirror-words-ref.jpg" alt="Mirror Images of Certain Words and Numbers" className="max-h-72 w-auto object-contain rounded" />
+                <img src="/images/non-verbal/mirror-words-ref.webp" alt="Mirror Images of Certain Words and Numbers" className="max-h-72 w-auto object-contain rounded" />
               </div>
               <div className="bg-white p-2 rounded-xl border border-emerald-100 flex justify-center">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/images/non-verbal/mirror-letters-ref.jpg" alt="Mirror Images of Capital, Small Letters and Numbers" className="max-h-72 w-auto object-contain rounded" />
+                <img src="/images/non-verbal/mirror-letters-ref.webp" alt="Mirror Images of Capital, Small Letters and Numbers" className="max-h-72 w-auto object-contain rounded" />
               </div>
             </div>
           </div>
@@ -484,5 +497,13 @@ export default function NonVerbalPdfGuidePage() {
       </div>
 
     </div>
+  );
+}
+
+export default function NonVerbalPdfGuidePage() {
+  return (
+    <Suspense fallback={<div className="py-20 text-center text-gray-500 font-bold">Loading Solved PDF Guide...</div>}>
+      <NonVerbalPdfGuideContent />
+    </Suspense>
   );
 }

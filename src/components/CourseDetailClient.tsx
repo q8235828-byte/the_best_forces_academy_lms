@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import VideoPlayerWithWatermark from '@/components/VideoPlayerWithWatermark';
-import { SAMPLE_LESSONS } from '@/lib/courses-data';
+import { getCourseLessonsWithNonVerbal, getLessonNonVerbalCategoryId } from '@/lib/courses-data';
 import { ACADEMY_CONFIG, PAYMENT_ACCOUNTS } from '@/lib/constants';
 import { getCurrentUser } from '@/lib/auth';
 import { getCourseEligibility, getCourseTestPattern, getCourseSelectionProcedure } from '@/lib/eligibility';
@@ -60,38 +60,60 @@ export default function CourseDetailClient({ course }: CourseDetailClientProps) 
   const [trxId, setTrxId] = useState('');
   const [formSubmitted, setFormSubmitted] = useState(false);
 
-  // Load sample lessons or default 3 lessons
-  const lessons: Lesson[] = SAMPLE_LESSONS[course.id] || [
-    {
-      id: 9001,
-      course_id: course.id,
-      title: `Lecture 1: ${course.title} Comprehensive Overview & Test Syllabus (Free Demo)`,
-      order_index: 1,
-      video_url: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
-      is_free_preview: 1,
-      duration_minutes: 45
-    },
-    {
-      id: 9002,
-      course_id: course.id,
-      title: `Lecture 2: Core Concept Mastery & Computer Screen Speed Shortcuts`,
-      order_index: 2,
-      video_url: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4',
-      is_free_preview: 0,
-      duration_minutes: 50
-    },
-    {
-      id: 9003,
-      course_id: course.id,
-      title: `Lecture 3: Advanced Past Papers & Selection Board Strategy`,
-      order_index: 3,
-      video_url: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4',
-      is_free_preview: 0,
-      duration_minutes: 42
-    }
-  ];
+  // Load course lessons including the 9 Non-Verbal Urdu AI voiceover videos
+  const lessons: Lesson[] = getCourseLessonsWithNonVerbal(course.id, course.title);
 
-  const currentLesson = lessons[activeLessonIndex];
+  const currentLesson = lessons[activeLessonIndex] || lessons[0];
+  const currentNvCatId = getLessonNonVerbalCategoryId(currentLesson.video_url);
+
+  // 3-Step Progression: Video Completed -> Additional Course PDF -> 20-Question QuizBank
+  const [completedLessons, setCompletedLessons] = useState<number[]>([]);
+  const [studiedPdfs, setStudiedPdfs] = useState<number[]>([]);
+
+  useEffect(() => {
+    try {
+      const saved = localStorage.getItem(`course_progress_${course.id}`);
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        if (Array.isArray(parsed.completedLessons)) setCompletedLessons(parsed.completedLessons);
+        if (Array.isArray(parsed.studiedPdfs)) setStudiedPdfs(parsed.studiedPdfs);
+      }
+    } catch {
+      // ignore storage errors
+    }
+  }, [course.id]);
+
+  const saveProgress = (nextCompleted: number[], nextPdfs: number[]) => {
+    try {
+      localStorage.setItem(
+        `course_progress_${course.id}`,
+        JSON.stringify({ completedLessons: nextCompleted, studiedPdfs: nextPdfs })
+      );
+    } catch {
+      // ignore storage errors
+    }
+  };
+
+  const handleVideoCompleted = () => {
+    if (!completedLessons.includes(currentLesson.id)) {
+      const next = [...completedLessons, currentLesson.id];
+      setCompletedLessons(next);
+      saveProgress(next, studiedPdfs);
+    }
+  };
+
+  const handlePdfOpened = () => {
+    if (!studiedPdfs.includes(currentLesson.id)) {
+      const next = [...studiedPdfs, currentLesson.id];
+      setStudiedPdfs(next);
+      saveProgress(completedLessons, next);
+    }
+  };
+
+  const isVideoCompleted = completedLessons.includes(currentLesson.id);
+  const isPdfStudied = studiedPdfs.includes(currentLesson.id);
+  const pdfHref = currentNvCatId ? `/tests/non-verbal-pdf?cat=${currentNvCatId}` : '/tests/non-verbal-pdf';
+  const quizHref = currentNvCatId ? `/tests/2?count=20&cat=${currentNvCatId}` : '/tests/2?count=20';
 
   const handleEnrollmentSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -173,7 +195,136 @@ export default function CourseDetailClient({ course }: CourseDetailClientProps) 
               studentName={candidateName || "Candidate"}
               studentPhone={candidatePhone || "+92 305 4599659"}
               onOpenEnrollmentModal={() => setShowEnrollModal(true)}
+              onVideoEnded={handleVideoCompleted}
             />
+
+            {/* 3-Step Course Progression: 1. Video -> 2. Additional Course PDF -> 3. 20-Question QuizBank */}
+            <div className="bg-white rounded-2xl border border-gray-200 shadow-sm p-5 sm:p-6 space-y-4">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                <div>
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-700">
+                    Guided Learning Path
+                  </span>
+                  <h3 className="text-base sm:text-lg font-extrabold text-gray-900">
+                    Complete Video → Study Additional PDF → Attempt 20-Question QuizBank
+                  </h3>
+                </div>
+                {!isVideoCompleted && (
+                  <span className="text-xs font-semibold text-amber-700 bg-amber-50 border border-amber-200 px-3 py-1 rounded-full self-start sm:self-auto">
+                    Watch full video to unlock PDF & QuizBank
+                  </span>
+                )}
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                {/* Step 1: Watch Video */}
+                <div className={`p-4 rounded-xl border transition-all ${
+                  isVideoCompleted
+                    ? 'bg-emerald-50/70 border-emerald-300'
+                    : 'bg-slate-50 border-[#183B2B]/30'
+                }`}>
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-xs font-black uppercase text-[#183B2B]">Step 1: Watch Video</span>
+                    {isVideoCompleted ? (
+                      <CheckCircle className="w-4 h-4 text-emerald-600" />
+                    ) : (
+                      <Play className="w-4 h-4 text-amber-600" />
+                    )}
+                  </div>
+                  <p className="text-xs text-gray-600 leading-relaxed mb-3">
+                    {isVideoCompleted
+                      ? 'Video lecture completed! Your Additional Course PDF is now unlocked.'
+                      : 'Watch the full lecture above. When the video finishes, Step 2 unlocks automatically.'}
+                  </p>
+                  <div className="text-[11px] font-bold text-emerald-700">
+                    {isVideoCompleted ? 'Status: Completed ✓' : 'Status: In Progress...'}
+                  </div>
+                </div>
+
+                {/* Step 2: Additional Course PDF */}
+                <div className={`p-4 rounded-xl border transition-all ${
+                  !isVideoCompleted
+                    ? 'bg-gray-100/80 border-gray-200 opacity-75'
+                    : isPdfStudied
+                    ? 'bg-emerald-50/70 border-emerald-300'
+                    : 'bg-amber-50/60 border-amber-300'
+                }`}>
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-xs font-black uppercase text-gray-900">Step 2: Additional PDF</span>
+                    {!isVideoCompleted ? (
+                      <Lock className="w-4 h-4 text-gray-400" />
+                    ) : isPdfStudied ? (
+                      <CheckCircle className="w-4 h-4 text-emerald-600" />
+                    ) : (
+                      <FileText className="w-4 h-4 text-amber-700" />
+                    )}
+                  </div>
+                  <p className="text-xs text-gray-600 leading-relaxed mb-3">
+                    {isVideoCompleted
+                      ? 'Open and study the solved PDF notes for this lecture to unlock the 20-question QuizBank.'
+                      : 'Locked until you finish watching the video lecture.'}
+                  </p>
+                  {isVideoCompleted ? (
+                    <Link
+                      href={pdfHref}
+                      onClick={handlePdfOpened}
+                      className="inline-flex items-center justify-center gap-1.5 w-full bg-[#183B2B] hover:bg-[#2A5A44] text-white text-xs font-bold px-3 py-2.5 rounded-lg transition-all"
+                    >
+                      <FileText className="w-3.5 h-3.5 text-honor-gold" />
+                      <span>{isPdfStudied ? 'Re-open Course PDF' : 'Open Additional Course PDF'}</span>
+                    </Link>
+                  ) : (
+                    <button
+                      type="button"
+                      disabled
+                      className="inline-flex items-center justify-center gap-1.5 w-full bg-gray-200 text-gray-500 text-xs font-bold px-3 py-2.5 rounded-lg cursor-not-allowed"
+                    >
+                      <Lock className="w-3.5 h-3.5" />
+                      <span>Locked (Finish Video First)</span>
+                    </button>
+                  )}
+                </div>
+
+                {/* Step 3: QuizBank (20 Random Questions from PDF) */}
+                <div className={`p-4 rounded-xl border transition-all ${
+                  !isPdfStudied
+                    ? 'bg-gray-100/80 border-gray-200 opacity-75'
+                    : 'bg-emerald-50/70 border-emerald-400'
+                }`}>
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-xs font-black uppercase text-gray-900">Step 3: QuizBank (20 Qs)</span>
+                    {!isPdfStudied ? (
+                      <Lock className="w-4 h-4 text-gray-400" />
+                    ) : (
+                      <Award className="w-4 h-4 text-emerald-600" />
+                    )}
+                  </div>
+                  <p className="text-xs text-gray-600 leading-relaxed mb-3">
+                    {isPdfStudied
+                      ? 'QuizBank ready! Attempt 20 random questions generated directly from the PDF.'
+                      : 'Locked until you open the Additional Course PDF in Step 2.'}
+                  </p>
+                  {isPdfStudied ? (
+                    <Link
+                      href={quizHref}
+                      className="inline-flex items-center justify-center gap-1.5 w-full bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold px-3 py-2.5 rounded-lg shadow-sm transition-all"
+                    >
+                      <Play className="w-3.5 h-3.5 fill-white" />
+                      <span>Start 20-Q Random QuizBank</span>
+                    </Link>
+                  ) : (
+                    <button
+                      type="button"
+                      disabled
+                      className="inline-flex items-center justify-center gap-1.5 w-full bg-gray-200 text-gray-500 text-xs font-bold px-3 py-2.5 rounded-lg cursor-not-allowed"
+                    >
+                      <Lock className="w-3.5 h-3.5" />
+                      <span>Locked (Open PDF First)</span>
+                    </button>
+                  )}
+                </div>
+              </div>
+            </div>
 
             {/* Course Overview & Syllabus / Eligibility Tabs */}
             <div className="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
