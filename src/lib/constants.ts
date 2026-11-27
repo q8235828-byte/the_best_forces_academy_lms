@@ -15,8 +15,8 @@ export const ACADEMY_CONFIG = {
 export const PAYMENT_ACCOUNTS = {
   jazzcash: {
     title: "JazzCash Account",
-    accountNumber: "0305 4599659",
-    accountTitle: "Mentor"
+    accountNumber: "0305-4599659",
+    accountTitle: "M.Ijaz"
   },
   easypaisa: {
     title: "EasyPaisa Account",

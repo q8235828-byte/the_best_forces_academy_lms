@@ -6,7 +6,7 @@ import VideoPlayerWithWatermark from '@/components/VideoPlayerWithWatermark';
 import { SAMPLE_LESSONS } from '@/lib/courses-data';
 import { ACADEMY_CONFIG, PAYMENT_ACCOUNTS } from '@/lib/constants';
 import { getCurrentUser } from '@/lib/auth';
-import { getCourseEligibility } from '@/lib/eligibility';
+import { getCourseEligibility, getCourseTestPattern, getCourseSelectionProcedure } from '@/lib/eligibility';
 import { 
   Shield, 
   Lock, 
@@ -24,7 +24,9 @@ import {
   Ruler,
   GraduationCap,
   Calendar,
-  ArrowRight
+  ArrowRight,
+  Layers,
+  ListChecks
 } from 'lucide-react';
 import { Course, Lesson } from '@/types';
 
@@ -34,10 +36,12 @@ interface CourseDetailClientProps {
 
 export default function CourseDetailClient({ course }: CourseDetailClientProps) {
   const [activeLessonIndex, setActiveLessonIndex] = useState(0);
-  const [activeTab, setActiveTab] = useState<'eligibility' | 'syllabus'>('eligibility');
+  const [activeTab, setActiveTab] = useState<'eligibility' | 'pattern' | 'procedure' | 'syllabus'>('eligibility');
   const [isEnrolled, setIsEnrolled] = useState(false);
   const [showEnrollModal, setShowEnrollModal] = useState(false);
   const eligibility = getCourseEligibility(course);
+  const testPattern = getCourseTestPattern(course);
+  const selectionSteps = getCourseSelectionProcedure(course);
 
   // Check paid course clearance from Admin / session
   useEffect(() => {
@@ -174,11 +178,11 @@ export default function CourseDetailClient({ course }: CourseDetailClientProps) 
             {/* Course Overview & Syllabus / Eligibility Tabs */}
             <div className="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
               {/* Tab Bar */}
-              <div className="flex border-b border-gray-200 bg-slate-50/70 px-4 sm:px-6 pt-3 gap-2">
+              <div className="flex flex-wrap border-b border-gray-200 bg-slate-50/70 px-4 sm:px-6 pt-3 gap-1.5 sm:gap-2">
                 <button
                   type="button"
                   onClick={() => setActiveTab('eligibility')}
-                  className={`px-4 py-3 text-xs sm:text-sm font-bold rounded-t-xl border-b-2 transition-all flex items-center gap-2 ${
+                  className={`px-3.5 py-3 text-xs sm:text-sm font-bold rounded-t-xl border-b-2 transition-all flex items-center gap-1.5 ${
                     activeTab === 'eligibility'
                       ? 'border-[#183B2B] text-[#183B2B] bg-white shadow-sm'
                       : 'border-transparent text-gray-500 hover:text-gray-800'
@@ -189,19 +193,109 @@ export default function CourseDetailClient({ course }: CourseDetailClientProps) 
                 </button>
                 <button
                   type="button"
+                  onClick={() => setActiveTab('pattern')}
+                  className={`px-3.5 py-3 text-xs sm:text-sm font-bold rounded-t-xl border-b-2 transition-all flex items-center gap-1.5 ${
+                    activeTab === 'pattern'
+                      ? 'border-[#183B2B] text-[#183B2B] bg-white shadow-sm'
+                      : 'border-transparent text-gray-500 hover:text-gray-800'
+                  }`}
+                >
+                  <Layers className="w-4 h-4 text-blue-600" />
+                  <span>Test Pattern</span>
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setActiveTab('procedure')}
+                  className={`px-3.5 py-3 text-xs sm:text-sm font-bold rounded-t-xl border-b-2 transition-all flex items-center gap-1.5 ${
+                    activeTab === 'procedure'
+                      ? 'border-[#183B2B] text-[#183B2B] bg-white shadow-sm'
+                      : 'border-transparent text-gray-500 hover:text-gray-800'
+                  }`}
+                >
+                  <ListChecks className="w-4 h-4 text-amber-600" />
+                  <span>Selection Procedure</span>
+                </button>
+                <button
+                  type="button"
                   onClick={() => setActiveTab('syllabus')}
-                  className={`px-4 py-3 text-xs sm:text-sm font-bold rounded-t-xl border-b-2 transition-all flex items-center gap-2 ${
+                  className={`px-3.5 py-3 text-xs sm:text-sm font-bold rounded-t-xl border-b-2 transition-all flex items-center gap-1.5 ${
                     activeTab === 'syllabus'
                       ? 'border-[#183B2B] text-[#183B2B] bg-white shadow-sm'
                       : 'border-transparent text-gray-500 hover:text-gray-800'
                   }`}
                 >
                   <FileText className="w-4 h-4" />
-                  <span>Syllabus & Training Roadmap</span>
+                  <span>Syllabus & Roadmap</span>
                 </button>
               </div>
 
-              {activeTab === 'syllabus' ? (
+              {activeTab === 'pattern' ? (
+                <div className="p-6 sm:p-8 space-y-6">
+                  <div>
+                    <h3 className="text-lg font-bold text-gray-900">
+                      Official Examination Test Pattern
+                    </h3>
+                    <p className="text-xs text-gray-500 mt-0.5">
+                      {testPattern.mode}
+                    </p>
+                  </div>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+                    <div className="p-3.5 rounded-xl bg-emerald-50/70 border border-emerald-200">
+                      <span className="font-bold text-emerald-800 uppercase block text-[10px]">Passing Criteria</span>
+                      <span className="font-bold text-gray-900 text-sm">{testPattern.passingScore}</span>
+                    </div>
+                    <div className="p-3.5 rounded-xl bg-blue-50/70 border border-blue-200">
+                      <span className="font-bold text-blue-800 uppercase block text-[10px]">Negative Marking</span>
+                      <span className="font-bold text-gray-900 text-sm">{testPattern.negativeMarking}</span>
+                    </div>
+                  </div>
+
+                  <div className="space-y-3">
+                    {testPattern.sections.map((sec, idx) => (
+                      <div key={idx} className="p-4 rounded-xl bg-slate-50 border border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                        <div className="space-y-1">
+                          <div className="text-sm font-bold text-gray-900">{sec.title}</div>
+                          <p className="text-xs text-gray-600">{sec.details}</p>
+                        </div>
+                        <div className="flex items-center gap-2 flex-shrink-0">
+                          <span className="px-3 py-1 rounded-lg bg-white border border-gray-200 text-xs font-bold text-[#183B2B]">
+                            {sec.questions}
+                          </span>
+                          <span className="px-3 py-1 rounded-lg bg-[#183B2B] text-white text-xs font-bold">
+                            {sec.duration}
+                          </span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ) : activeTab === 'procedure' ? (
+                <div className="p-6 sm:p-8 space-y-6">
+                  <div>
+                    <h3 className="text-lg font-bold text-gray-900">
+                      Step-by-Step Selection Procedure
+                    </h3>
+                    <p className="text-xs text-gray-500 mt-0.5">
+                      Complete induction journey from registration to final joining for {course.title}
+                    </p>
+                  </div>
+
+                  <div className="space-y-3">
+                    {selectionSteps.map((st) => (
+                      <div key={st.step} className="p-4 rounded-xl bg-slate-50 border border-slate-200 flex items-start gap-4">
+                        <div className="w-8 h-8 rounded-full bg-[#183B2B] text-honor-gold font-black text-xs flex items-center justify-center flex-shrink-0 shadow-sm">
+                          {st.step}
+                        </div>
+                        <div>
+                          <div className="text-sm font-bold text-gray-900">{st.title}</div>
+                          <p className="text-xs text-gray-600 mt-0.5 leading-relaxed">{st.description}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ) : activeTab === 'syllabus' ? (
                 <div className="p-6 sm:p-8 space-y-6">
                   <div>
                     <h3 className="text-lg font-bold text-gray-900 mb-2">

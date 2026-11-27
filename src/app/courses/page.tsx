@@ -1,10 +1,10 @@
 "use client";
 
-import React, { useState, useMemo, Suspense } from 'react';
+import React, { useState, useMemo, useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import CourseCard from '@/components/CourseCard';
 import { INITIAL_COURSES } from '@/lib/courses-data';
-import { Search, Filter, Shield, BookOpen, Check } from 'lucide-react';
+import { Search, Filter, Shield, BookOpen, Check, Plane, Anchor } from 'lucide-react';
 import { CourseCategory, TargetGender } from '@/types';
 
 function CoursesContent() {
@@ -14,6 +14,10 @@ function CoursesContent() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>(initialCategory);
   const [selectedGender, setSelectedGender] = useState<string>('all');
+
+  useEffect(() => {
+    setSelectedCategory(searchParams.get('cat') || 'all');
+  }, [searchParams]);
 
   const categories = [
     { id: 'all', label: 'All Categories' },
@@ -91,6 +95,32 @@ function CoursesContent() {
               ))}
             </div>
           </div>
+        </div>
+
+        {/* Armed Forces Quick Filter Buttons (Army, Air Force, Navy) */}
+        <div className="grid grid-cols-3 gap-2.5 sm:gap-4">
+          {[
+            { id: 'army', label: 'Army', icon: Shield },
+            { id: 'paf', label: 'Air Force', icon: Plane },
+            { id: 'navy', label: 'Navy', icon: Anchor },
+          ].map((force) => {
+            const Icon = force.icon;
+            const isActive = selectedCategory === force.id;
+            return (
+              <button
+                key={force.id}
+                onClick={() => setSelectedCategory(isActive ? 'all' : force.id)}
+                className={`flex items-center justify-center gap-2 py-3 px-3 sm:px-5 rounded-xl text-xs sm:text-sm font-bold border transition-all ${
+                  isActive
+                    ? 'bg-[#183B2B] text-white border-[#183B2B] shadow-md ring-2 ring-[#183B2B]/20'
+                    : 'bg-white text-gray-800 border-gray-200 hover:border-[#183B2B] hover:bg-gray-50 shadow-sm'
+                }`}
+              >
+                <Icon className={`w-4 h-4 shrink-0 ${isActive ? 'text-honor-gold' : 'text-[#183B2B]'}`} />
+                <span>{force.label}</span>
+              </button>
+            );
+          })}
         </div>
 
         {/* Category Pills Bar */}

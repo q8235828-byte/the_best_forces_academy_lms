@@ -163,10 +163,10 @@ export default function QuizAttemptClient({ quiz, questions }: QuizAttemptClient
                       ⭐ Mentor Recommendation (Must Read)
                     </span>
                     <h3 className="text-lg sm:text-xl font-black text-gray-900">
-                      Test Shuru Karne Se Pehle 500 Questions Solved PDF Guide Study Karein!
+                      Study the Complete Solved PDF Guide Before Starting Your Exam!
                     </h3>
                     <p className="text-xs sm:text-sm text-gray-700 leading-relaxed">
-                      Passing ratio barhane ke liye Mentor ne tamam 10 categories ke 50-50 solved questions (Total 500 Questions) with authentic shortcuts & solutions tayar kiye hain. Is PDF ko read karne se aap ka exam 1st attempt mein 90%+ marks ke sath clear hoga.
+                      To maximize your passing score, our Mentor has compiled authentic solved questions across all 10 reasoning categories with proven shortcuts and step-by-step solutions. Reviewing this PDF guide beforehand helps candidates clear the computerized exam on their 1st attempt with 90%+ marks.
                     </p>
                   </div>
                 </div>
@@ -178,7 +178,7 @@ export default function QuizAttemptClient({ quiz, questions }: QuizAttemptClient
                     className="bg-[#183B2B] hover:bg-[#2A5A44] text-white font-bold px-6 py-3 rounded-xl text-xs sm:text-sm flex items-center justify-center gap-2 shadow-md hover:scale-[1.01] transition-all"
                   >
                     <Download className="w-4 h-4 text-honor-gold" />
-                    <span>Download / View 500 Solved Questions PDF Guide</span>
+                    <span>Download / View Complete Solved Questions PDF Guide</span>
                   </Link>
 
                   <button

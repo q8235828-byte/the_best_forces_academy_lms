@@ -486,3 +486,162 @@ export function checkCandidateEligibility(
     summaryMessage,
   };
 }
+
+export interface TestPatternSection {
+  title: string;
+  questions: string;
+  duration: string;
+  details: string;
+}
+
+export interface CourseTestPattern {
+  mode: string;
+  passingScore: string;
+  negativeMarking: string;
+  sections: TestPatternSection[];
+}
+
+export interface SelectionStep {
+  step: number;
+  title: string;
+  description: string;
+}
+
+export function getCourseTestPattern(course: Course): CourseTestPattern {
+  const s = course.slug;
+  const cat = course.category;
+
+  if (cat === 'issb' || s === 'issb-complete-prep') {
+    return {
+      mode: '5-Day Comprehensive Selection Board (Kohat / Gujranwala / Malir / Quetta)',
+      passingScore: 'Board Recommendation (Psych + GTO + Deputy President)',
+      negativeMarking: 'No negative marking; continuous personality & leadership grading',
+      sections: [
+        { title: 'Day 1: Screening & Psychological Tests', questions: '100+ WAT, 26 SRT, 4 Picture/Pointer Stories', duration: 'Day 1–2', details: '10-second Word Association (WAT), Sentence Completion, Self-Description & OPI.' },
+        { title: 'Day 2–3: GTO Indoor & Outdoor Tasks', questions: 'GD, Lecturette, PGT, HGT, Command Task', duration: 'Day 2–4', details: 'Group Discussion, Military Planning, Progressive Group Task, Individual Obstacles.' },
+        { title: 'Day 3–4: Deputy President Interview', questions: 'One-on-One Board Interview', duration: '25–40 mins', details: 'Biographical verification, GK, current affairs, rapid-fire situational stress questions.' },
+      ],
+    };
+  }
+
+  if (s === 'pma-long-course' || s === 'tcc-technical-cadet' || s === 'pn-cadet' || s === 'paf-gdp' || s === 'paf-cae' || s === 'paf-ad' || s === 'paf-asd' || s === 'paf-logistics' || s === 'amc-medical-cadet') {
+    const academicSubj =
+      s === 'amc-medical-cadet'
+        ? 'Biology, Chemistry, Physics & English'
+        : s === 'tcc-technical-cadet' || s === 'paf-cae' || s === 'pn-cadet'
+        ? 'Mathematics, Physics, Chemistry/Computer & English'
+        : 'English, General Math, Pak Studies, Islamic Studies & General Knowledge';
+    return {
+      mode: 'Computerized E-Testing at AS&RC / PN / PAF Selection Centers',
+      passingScore: 'Minimum 50–60% in each module (Sequential Pass)',
+      negativeMarking: 'No negative marking',
+      sections: [
+        { title: '1. Verbal Intelligence Test', questions: '84 MCQs', duration: '30 Minutes', details: 'Number/Letter series, coding-decoding, blood relations, odd one out, analogies, directions.' },
+        { title: '2. Non-Verbal Intelligence Test', questions: '64 MCQs', duration: '30 Minutes', details: 'Pattern series, matrices, mirror/water reflection, paper folding, rotation & spatial logic.' },
+        { title: '3. Academic Test', questions: '50 MCQs', duration: '25–30 Minutes', details: academicSubj },
+      ],
+    };
+  }
+
+  if (s === 'afns-nursing') {
+    return {
+      mode: 'Computerized Initial Test at Army Selection & Recruitment Centers (AS&RC)',
+      passingScore: 'Minimum 50% per section',
+      negativeMarking: 'No negative marking',
+      sections: [
+        { title: '1. Verbal Intelligence Test', questions: '84 MCQs', duration: '30 Minutes', details: 'Series, analogies, logical reasoning, direction sense & comprehension.' },
+        { title: '2. Non-Verbal Intelligence Test', questions: '64 MCQs', duration: '30 Minutes', details: 'Visual pattern series, odd figure out, matrices & mirror reflections.' },
+        { title: '3. Academic Test (Pre-Medical)', questions: '50 MCQs', duration: '30 Minutes', details: 'FSc Biology, Chemistry, Physics & English Grammar.' },
+      ],
+    };
+  }
+
+  if (cat === 'cadet_college') {
+    return {
+      mode: 'Written Entrance Examination + Intelligence & Interview',
+      passingScore: 'Merit-Based Top Cutoff (60%+)',
+      negativeMarking: 'No negative marking',
+      sections: [
+        { title: '1. English & Composition', questions: '100 Marks', duration: '60 Minutes', details: 'Grammar, comprehension, essay/letter writing, translation & vocabulary.' },
+        { title: '2. Mathematics & General Science', questions: '100 Marks', duration: '60 Minutes', details: 'Class-level arithmetic, algebra, geometry & core science concepts.' },
+        { title: '3. Urdu / Islamiat & Intelligence', questions: '50–100 Marks', duration: '45 Minutes', details: 'Urdu grammar, Islamic studies, Pak Studies & basic IQ.' },
+      ],
+    };
+  }
+
+  if (cat === 'entry_test') {
+    return {
+      mode: 'Standardized University / Medical / Law Entry Test Pattern',
+      passingScore: 'Minimum 50–65% (Merit Aggregate)',
+      negativeMarking: 'As per PMDC / ECAT / HEC policy',
+      sections: [
+        { title: '1. Core Major Subjects', questions: '120–150 MCQs', duration: '120 Minutes', details: 'Biology/Math, Physics, Chemistry based on selected track (MDCAT/ECAT/LAT).' },
+        { title: '2. English & Analytical Reasoning', questions: '30–50 MCQs', duration: '45 Minutes', details: 'Vocabulary, grammar, critical reading & logical deduction.' },
+      ],
+    };
+  }
+
+  // Soldier, Sailor, Airman, Clerk, FMT, FMA, etc.
+  return {
+    mode: 'Computerized / Written Initial Test at Recruitment Centers',
+    passingScore: 'Minimum 50% in Intelligence & Academic modules',
+    negativeMarking: 'No negative marking',
+    sections: [
+      { title: '1. Intelligence Test (Verbal + Non-Verbal)', questions: '60–80 MCQs', duration: '30 Minutes', details: 'Basic number/figure series, odd one out, analogies & pattern completion.' },
+      { title: '2. Academic Test', questions: '40–50 MCQs', duration: '30 Minutes', details: `${course.qualification}-level English, General Math, Pak Studies, Islamic Studies & General Knowledge.` },
+      { title: '3. Physical & Trade Test', questions: 'Practical Standards', duration: 'Same Day / Next Day', details: '1.6 km running, push-ups, sit-ups, chin-ups & trade/medical screening.' },
+    ],
+  };
+}
+
+export function getCourseSelectionProcedure(course: Course): SelectionStep[] {
+  const s = course.slug;
+  const cat = course.category;
+
+  if (s === 'pma-long-course' || s === 'tcc-technical-cadet' || s === 'pn-cadet' || s === 'paf-gdp' || s === 'paf-cae' || s === 'paf-ad' || s === 'paf-asd' || s === 'paf-logistics' || s === 'amc-medical-cadet' || s === 'army-ssc' || s === 'army-lcc' || s === 'navy-ssc') {
+    return [
+      { step: 1, title: 'Online Registration', description: 'Apply online via official Join Pak Army / Navy / PAF portal and download your Registration Slip.' },
+      { step: 2, title: 'Initial Computerized Test', description: 'Appear at your selected AS&RC / Selection Center for Verbal, Non-Verbal & Academic tests.' },
+      { step: 3, title: 'Initial Medical & Physical Test', description: 'Height, weight, eyesight, chest check plus 1.6 km run, push-ups, sit-ups & chin-ups.' },
+      { step: 4, title: 'ISSB Call & 5-Day Selection Board', description: 'Shortlisted candidates receive ISSB call letter for Psychological, GTO & Deputy President assessments.' },
+      { step: 5, title: 'Final Medical & GHQ/NHQ/AHQ Merit List', description: 'CMB final medical clearance followed by final merit list & Academy Joining Letter.' },
+    ];
+  }
+
+  if (s === 'afns-nursing') {
+    return [
+      { step: 1, title: 'Online Registration', description: 'Register on Join Pak Army portal during AFNS induction window.' },
+      { step: 2, title: 'Initial Computerized Test', description: 'Pass Verbal, Non-Verbal & Pre-Medical Academic test at AS&RC.' },
+      { step: 3, title: 'Initial Medical Examination', description: 'Preliminary height, weight, vision & general medical fitness screening.' },
+      { step: 4, title: 'GHQ Selection Board Interview', description: 'Panel interview assessing communication, confidence & nursing aptitude.' },
+      { step: 5, title: 'Final Merit & AFNS Training', description: 'Final medical & merit selection for 4-Year BSc Nursing at Armed Forces Nursing Colleges.' },
+    ];
+  }
+
+  if (cat === 'cadet_college') {
+    return [
+      { step: 1, title: 'Admission Form Submission', description: 'Submit college admission form with B-Form and school record before deadline.' },
+      { step: 2, title: 'Written Entrance Exam', description: 'Appear in English, Mathematics, Science & Urdu/Islamiat test at designated center.' },
+      { step: 3, title: 'Intelligence & Interview', description: 'Qualified candidates appear before Principal & Selection Board for interview.' },
+      { step: 4, title: 'Medical Fitness & Joining', description: 'Final medical checkup followed by fee challan & cadet college induction.' },
+    ];
+  }
+
+  if (cat === 'entry_test' || cat === 'academics' || cat === 'initial_prep' || cat === 'issb') {
+    return [
+      { step: 1, title: 'Course Enrollment', description: 'Enroll in the preparation batch and unlock all video lectures, PDFs & mock exams.' },
+      { step: 2, title: 'Daily Topic Mastery', description: 'Follow the structured syllabus roadmap and practice timed computerized MCQs.' },
+      { step: 3, title: 'Mock Exams & Leaderboard', description: 'Attempt full-length simulated tests and review detailed step-by-step solutions.' },
+      { step: 4, title: 'Mentor Feedback & Final Readiness', description: 'Get personal guidance via VIP WhatsApp batch until your final exam day.' },
+    ];
+  }
+
+  // Soldier, Sailor, Airman, Clerk, etc.
+  return [
+    { step: 1, title: 'Online / Center Registration', description: 'Register online or visit nearest Army/Navy/PAF Selection & Recruitment Center with original documents.' },
+    { step: 2, title: 'Document & Physical Verification', description: 'Verification of CNIC, Domicile, Matric certificate plus height & chest measurement.' },
+    { step: 3, title: 'Physical Efficiency Test', description: '1.6 km running within 8 minutes, push-ups, sit-ups & pull-ups.' },
+    { step: 4, title: 'Written / Computerized Test', description: 'Intelligence & Matric-level Academic MCQs test.' },
+    { step: 5, title: 'Final Medical & Training Call Letter', description: 'Medical clearance by Classified Specialist followed by Training Center Joining Letter.' },
+  ];
+}

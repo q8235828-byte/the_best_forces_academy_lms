@@ -240,27 +240,27 @@ export default function Navbar() {
                       </div>
                       <ul className="space-y-1.5 text-xs">
                         <li>
-                          <Link href="/courses?cat=army" className="text-gray-300 hover:text-honor-gold hover:pl-1 transition-all block">
+                          <Link href="/courses/pma-long-course" className="text-gray-300 hover:text-honor-gold hover:pl-1 transition-all block">
                             PMA Long Course (154-156)
                           </Link>
                         </li>
                         <li>
-                          <Link href="/courses?cat=army" className="text-gray-300 hover:text-honor-gold hover:pl-1 transition-all block">
+                          <Link href="/courses/tcc-technical-cadet" className="text-gray-300 hover:text-honor-gold hover:pl-1 transition-all block">
                             Technical Cadet (TCC)
                           </Link>
                         </li>
                         <li>
-                          <Link href="/courses?cat=army" className="text-gray-300 hover:text-honor-gold hover:pl-1 transition-all block">
+                          <Link href="/courses/army-soldier" className="text-gray-300 hover:text-honor-gold hover:pl-1 transition-all block">
                             Soldier Recruitment
                           </Link>
                         </li>
                         <li>
-                          <Link href="/courses?cat=army" className="text-gray-300 hover:text-honor-gold hover:pl-1 transition-all block">
+                          <Link href="/courses/army-lcc" className="text-gray-300 hover:text-honor-gold hover:pl-1 transition-all block">
                             Lady Cadet Course (LCC)
                           </Link>
                         </li>
                         <li>
-                          <Link href="/courses?cat=army" className="text-gray-300 hover:text-honor-gold hover:pl-1 transition-all block">
+                          <Link href="/courses/amc-medical-cadet" className="text-gray-300 hover:text-honor-gold hover:pl-1 transition-all block">
                             Army Medical College (AMC)
                           </Link>
                         </li>
@@ -286,27 +286,27 @@ export default function Navbar() {
                       </div>
                       <ul className="space-y-1.5 text-xs">
                         <li>
-                          <Link href="/courses?cat=paf" className="text-gray-300 hover:text-honor-gold hover:pl-1 transition-all block">
+                          <Link href="/courses/paf-gdp" className="text-gray-300 hover:text-honor-gold hover:pl-1 transition-all block">
                             GD Pilot (GDP)
                           </Link>
                         </li>
                         <li>
-                          <Link href="/courses?cat=paf" className="text-gray-300 hover:text-honor-gold hover:pl-1 transition-all block">
+                          <Link href="/courses/paf-cae" className="text-gray-300 hover:text-honor-gold hover:pl-1 transition-all block">
                             Aeronautical Engineering
                           </Link>
                         </li>
                         <li>
-                          <Link href="/courses?cat=paf" className="text-gray-300 hover:text-honor-gold hover:pl-1 transition-all block">
+                          <Link href="/courses/paf-ad" className="text-gray-300 hover:text-honor-gold hover:pl-1 transition-all block">
                             Air Defence / Logistics
                           </Link>
                         </li>
                         <li>
-                          <Link href="/courses?cat=paf" className="text-gray-300 hover:text-honor-gold hover:pl-1 transition-all block">
+                          <Link href="/courses/paf-aerotrade" className="text-gray-300 hover:text-honor-gold hover:pl-1 transition-all block">
                             Aero Trades & Airmen
                           </Link>
                         </li>
                         <li>
-                          <Link href="/courses?cat=paf" className="text-gray-300 hover:text-honor-gold hover:pl-1 transition-all block">
+                          <Link href="/courses/paf-asd" className="text-gray-300 hover:text-honor-gold hover:pl-1 transition-all block">
                             Admin & Special Duties
                           </Link>
                         </li>
@@ -332,28 +332,28 @@ export default function Navbar() {
                       </div>
                       <ul className="space-y-1.5 text-xs">
                         <li>
-                          <Link href="/courses?cat=navy" className="text-gray-300 hover:text-honor-gold hover:pl-1 transition-all block">
+                          <Link href="/courses/pn-cadet" className="text-gray-300 hover:text-honor-gold hover:pl-1 transition-all block">
                             PN Cadet Commission
                           </Link>
                         </li>
                         <li>
-                          <Link href="/courses?cat=navy" className="text-gray-300 hover:text-honor-gold hover:pl-1 transition-all block">
-                            Operations Branch
+                          <Link href="/courses/navy-technical" className="text-gray-300 hover:text-honor-gold hover:pl-1 transition-all block">
+                            Technical Branch
                           </Link>
                         </li>
                         <li>
-                          <Link href="/courses?cat=navy" className="text-gray-300 hover:text-honor-gold hover:pl-1 transition-all block">
-                            Marine Engineering
+                          <Link href="/courses/navy-marine" className="text-gray-300 hover:text-honor-gold hover:pl-1 transition-all block">
+                            Marine Branch
                           </Link>
                         </li>
                         <li>
-                          <Link href="/courses?cat=navy" className="text-gray-300 hover:text-honor-gold hover:pl-1 transition-all block">
+                          <Link href="/courses/navy-sailor" className="text-gray-300 hover:text-honor-gold hover:pl-1 transition-all block">
                             Sailor Recruitment
                           </Link>
                         </li>
                         <li>
-                          <Link href="/courses?cat=navy" className="text-gray-300 hover:text-honor-gold hover:pl-1 transition-all block">
-                            Direct Short Service
+                          <Link href="/courses/navy-ssc" className="text-gray-300 hover:text-honor-gold hover:pl-1 transition-all block">
+                            Direct Short Service (SSC)
                           </Link>
                         </li>
                       </ul>
@@ -378,7 +378,7 @@ export default function Navbar() {
                       </div>
                       <ul className="space-y-1.5 text-xs">
                         <li>
-                          <Link href="/courses?cat=issb" className="text-gray-300 hover:text-honor-gold hover:pl-1 transition-all block font-medium">
+                          <Link href="/courses/issb-complete-prep" className="text-gray-300 hover:text-honor-gold hover:pl-1 transition-all block font-medium">
                             ISSB 4-Day Master Pack
                           </Link>
                         </li>
@@ -388,17 +388,17 @@ export default function Navbar() {
                           </Link>
                         </li>
                         <li>
-                          <Link href="/courses?cat=initial_prep" className="text-gray-300 hover:text-honor-gold hover:pl-1 transition-all block">
+                          <Link href="/courses/initial-intelligence-mastery" className="text-gray-300 hover:text-honor-gold hover:pl-1 transition-all block">
                             Verbal & Non-Verbal Intel
                           </Link>
                         </li>
                         <li>
-                          <Link href="/courses?cat=initial_prep" className="text-gray-300 hover:text-honor-gold hover:pl-1 transition-all block">
+                          <Link href="/courses/initial-academic-mastery" className="text-gray-300 hover:text-honor-gold hover:pl-1 transition-all block">
                             Academic Test Mastery
                           </Link>
                         </li>
                         <li>
-                          <Link href="/courses?cat=cadet_college" className="text-gray-300 hover:text-honor-gold hover:pl-1 transition-all block">
+                          <Link href="/courses/cadet-college-prep" className="text-gray-300 hover:text-honor-gold hover:pl-1 transition-all block">
                             Cadet Colleges & Entry
                           </Link>
                         </li>
@@ -516,7 +516,7 @@ export default function Navbar() {
             {/* Admission & Roll Slip */}
             <Link
               href="/admission-form"
-              className={`px-3 py-2 rounded-lg text-sm font-semibold flex items-center gap-1.5 transition-all ${
+              className={`px-3 py-2 rounded-lg text-sm font-semibold flex items-center gap-1.5 transition-all whitespace-nowrap ${
                 pathname === '/admission-form' 
                   ? 'bg-[#2A5A44] text-honor-gold border border-honor-gold/40' 
                   : 'text-gray-200 hover:text-white hover:bg-[#2A5A44]/60'
@@ -524,6 +524,19 @@ export default function Navbar() {
             >
               <FileText className="w-4 h-4 text-honor-gold" />
               <span>Admission & Roll Slip</span>
+            </Link>
+
+            {/* Success Stories */}
+            <Link
+              href="/success-stories"
+              className={`px-3 py-2 rounded-lg text-sm font-semibold flex items-center gap-1.5 transition-all whitespace-nowrap ${
+                pathname === '/success-stories' 
+                  ? 'bg-[#2A5A44] text-honor-gold border border-honor-gold/40' 
+                  : 'text-gray-200 hover:text-white hover:bg-[#2A5A44]/60'
+              }`}
+            >
+              <Award className="w-4 h-4 text-honor-gold" />
+              <span>Success Stories</span>
             </Link>
 
             {/* Cadet Portal Direct Link (if logged in) or Admin */}
@@ -791,6 +804,16 @@ export default function Navbar() {
           >
             <FileText className="w-4 h-4 text-honor-gold" />
             <span>Admission Form & Roll Slip</span>
+          </Link>
+
+          {/* Success Stories */}
+          <Link
+            href="/success-stories"
+            onClick={() => setMobileMenuOpen(false)}
+            className="flex items-center gap-2 px-3 py-2.5 rounded-lg text-sm font-bold text-gray-200 hover:text-white hover:bg-[#2A5A44]"
+          >
+            <Award className="w-4 h-4 text-honor-gold" />
+            <span>Success Stories</span>
           </Link>
 
           {/* Officer Command Center Link */}
