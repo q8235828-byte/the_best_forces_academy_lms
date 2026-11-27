@@ -1044,7 +1044,7 @@ export default function CourseDetailClient({ course }: CourseDetailClientProps) 
               (() => {
                 const evalResult = checkCandidateEligibility(course, {
                   dob: eligDob,
-                  gender: eligGender,
+                  gender: (eligGender === 'Female' ? 'Female' : 'Male'),
                   height: eligHeight,
                   matricMarks: eligMatric,
                   fscMarks: eligFsc,
