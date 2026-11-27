@@ -31,7 +31,7 @@ import {
   addCadetRecord,
   deleteCadetRecord,
   toggleCadetCourseAccess,
-  getCurrentAdmin,
+  getCurrentUser,
   logoutUser,
 } from '@/lib/auth';
 import {
@@ -98,8 +98,8 @@ export default function AdminCommandCenterPage() {
   };
 
   useEffect(() => {
-    const admin = getCurrentAdmin();
-    if (!admin) {
+    const user = getCurrentUser();
+    if (!user || user.role !== 'admin') {
       setIsAuthorized(false);
     }
     refreshAll();

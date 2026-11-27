@@ -120,16 +120,11 @@ export default function Navbar() {
                   New Registration
                 </Link>
                 <span className="text-gray-600">|</span>
-                <Link href="/admin/login" className="text-gray-400 hover:text-white flex items-center gap-1 transition-colors">
-                  <Lock className="w-3 h-3 text-gray-500" />
-                  <span>Admin</span>
-                </Link>
-                <span className="text-gray-600">|</span>
               </div>
             ) : (
               <div className="hidden lg:flex items-center gap-3 text-[11px]">
                 <Link 
-                  href={currentUser.role === 'admin' ? '/admin/courses' : '/portal/dashboard'} 
+                  href={currentUser.role === 'admin' ? '/admin' : '/portal/dashboard'} 
                   className="text-honor-gold font-bold hover:underline flex items-center gap-1"
                 >
                   <UserCheck className="w-3.5 h-3.5" />
@@ -539,10 +534,10 @@ export default function Navbar() {
               <span>Success Stories</span>
             </Link>
 
-            {/* Cadet Portal Direct Link (if logged in) or Admin */}
-            {currentUser ? (
+            {/* Cadet Portal Direct Link (if logged in) */}
+            {currentUser && (
               <Link
-                href={currentUser.role === 'admin' ? '/admin/courses' : '/portal/dashboard'}
+                href={currentUser.role === 'admin' ? '/admin' : '/portal/dashboard'}
                 className={`px-3 py-2 rounded-lg text-sm font-semibold flex items-center gap-1.5 transition-all ${
                   pathname.startsWith('/portal/dashboard') || pathname.startsWith('/admin')
                     ? 'bg-[#2A5A44] text-honor-gold border border-honor-gold/40' 
@@ -551,19 +546,6 @@ export default function Navbar() {
               >
                 <UserCheck className="w-4 h-4 text-emerald-400" />
                 <span>{currentUser.role === 'admin' ? 'Officer Portal' : 'My Dashboard'}</span>
-              </Link>
-            ) : (
-              <Link
-                href="/admin/login"
-                className={`px-2.5 py-2 rounded-lg text-xs font-semibold flex items-center gap-1 transition-all ${
-                  pathname.startsWith('/admin') 
-                    ? 'bg-[#2A5A44] text-honor-gold border border-honor-gold/40' 
-                    : 'text-gray-300 hover:text-white hover:bg-[#2A5A44]/40'
-                }`}
-                title="Admin Officer Portal"
-              >
-                <Lock className="w-3.5 h-3.5 text-gray-400" />
-                <span>Admin</span>
               </Link>
             )}
           </nav>
@@ -587,7 +569,7 @@ export default function Navbar() {
               </div>
             ) : (
               <Link
-                href={currentUser.role === 'admin' ? '/admin/courses' : '/portal/dashboard'}
+                href={currentUser.role === 'admin' ? '/admin' : '/portal/dashboard'}
                 className="px-3 py-2 rounded-xl text-xs font-bold text-honor-gold bg-[#0F261C] border border-honor-gold/60 hover:bg-[#183B2B] flex items-center gap-1.5 transition-all flex-shrink-0"
                 title={currentUser.role === 'admin' ? 'Officer HQ - Mentor' : currentUser.full_name}
               >
@@ -814,16 +796,6 @@ export default function Navbar() {
           >
             <Award className="w-4 h-4 text-honor-gold" />
             <span>Success Stories</span>
-          </Link>
-
-          {/* Officer Command Center Link */}
-          <Link
-            href="/admin/login"
-            onClick={() => setMobileMenuOpen(false)}
-            className="flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-semibold text-gray-400 hover:text-honor-gold"
-          >
-            <Lock className="w-3.5 h-3.5" />
-            <span>Officer Command Portal</span>
           </Link>
 
           {/* Mobile WhatsApp Button */}
