@@ -423,3 +423,42 @@ export function logoutUser(): void {
     window.dispatchEvent(new Event('bfa_auth_changed'));
   }
 }
+
+/**
+ * Admin CRUD: Update an existing student/cadet record
+ */
+export function updateCadetRecord(cadetId: string, patch: Partial<CadetSession>): CadetSession[] {
+  const cadets = getAllRegisteredCadets();
+  const updated = cadets.map((c) => (c.id === cadetId ? { ...c, ...patch } : c));
+  if (typeof window !== 'undefined') {
+    localStorage.setItem(REGISTERED_CADETS_KEY, JSON.stringify(updated));
+    window.dispatchEvent(new Event('bfa_cadets_updated'));
+  }
+  return updated;
+}
+
+/**
+ * Admin CRUD: Add a new student/cadet record
+ */
+export function addCadetRecord(cadet: CadetSession): CadetSession[] {
+  const cadets = getAllRegisteredCadets();
+  const updated = [cadet, ...cadets];
+  if (typeof window !== 'undefined') {
+    localStorage.setItem(REGISTERED_CADETS_KEY, JSON.stringify(updated));
+    window.dispatchEvent(new Event('bfa_cadets_updated'));
+  }
+  return updated;
+}
+
+/**
+ * Admin CRUD: Delete a student/cadet record
+ */
+export function deleteCadetRecord(cadetId: string): CadetSession[] {
+  const cadets = getAllRegisteredCadets();
+  const updated = cadets.filter((c) => c.id !== cadetId);
+  if (typeof window !== 'undefined') {
+    localStorage.setItem(REGISTERED_CADETS_KEY, JSON.stringify(updated));
+    window.dispatchEvent(new Event('bfa_cadets_updated'));
+  }
+  return updated;
+}

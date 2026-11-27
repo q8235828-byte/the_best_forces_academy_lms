@@ -35,7 +35,7 @@ export default function AdminLoginPage() {
     setTimeout(() => {
       const res = loginAdmin(username, pin);
       if (res.success) {
-        router.push('/admin/courses');
+        router.push('/admin');
       } else {
         setError(res.error || 'Access Denied: Invalid Security Pin or Username.');
         setIsLoading(false);
@@ -47,7 +47,7 @@ export default function AdminLoginPage() {
     setUsername('qa034942@gmail.com');
     setPin('Qa034942@#$');
     loginAdmin('qa034942@gmail.com', 'Qa034942@#$');
-    router.push('/admin/courses');
+    router.push('/admin');
   };
 
   return (

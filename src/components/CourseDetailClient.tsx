@@ -5,6 +5,7 @@ import Link from 'next/link';
 import VideoPlayerWithWatermark from '@/components/VideoPlayerWithWatermark';
 import { getCourseLessonsWithNonVerbal, getLessonNonVerbalCategoryId } from '@/lib/courses-data';
 import { ACADEMY_CONFIG, PAYMENT_ACCOUNTS } from '@/lib/constants';
+import { getPaymentAccounts, addPaymentTransaction, PaymentAccountsConfig } from '@/lib/admin-store';
 import { getCurrentUser } from '@/lib/auth';
 import { getCourseEligibility, getCourseTestPattern, getCourseSelectionProcedure } from '@/lib/eligibility';
 import { 
@@ -55,10 +56,18 @@ export default function CourseDetailClient({ course }: CourseDetailClientProps) 
   
   // Payment Form State
   const [paymentMethod, setPaymentMethod] = useState<'jazzcash' | 'easypaisa' | 'bank_transfer'>('jazzcash');
+  const [paymentAccounts, setPaymentAccounts] = useState<PaymentAccountsConfig>(PAYMENT_ACCOUNTS);
   const [candidateName, setCandidateName] = useState('');
   const [candidatePhone, setCandidatePhone] = useState('');
   const [trxId, setTrxId] = useState('');
   const [formSubmitted, setFormSubmitted] = useState(false);
+
+  useEffect(() => {
+    setPaymentAccounts(getPaymentAccounts());
+    const onPayUpdate = () => setPaymentAccounts(getPaymentAccounts());
+    window.addEventListener('bfa_payments_updated', onPayUpdate);
+    return () => window.removeEventListener('bfa_payments_updated', onPayUpdate);
+  }, []);
 
   // Load course lessons including the 9 Non-Verbal Urdu AI voiceover videos
   const lessons: Lesson[] = getCourseLessonsWithNonVerbal(course.id, course.title);
@@ -121,6 +130,16 @@ export default function CourseDetailClient({ course }: CourseDetailClientProps) 
       alert("Please fill all required enrollment details.");
       return;
     }
+    addPaymentTransaction({
+      candidateName,
+      candidatePhone,
+      courseId: course.id,
+      courseTitle: course.title,
+      amount: course.sale_price,
+      method: paymentMethod,
+      trxId,
+      status: 'pending',
+    });
     setFormSubmitted(true);
     setIsEnrolled(true); // Locally unlock premium lectures for demo
   };
@@ -717,12 +736,16 @@ export default function CourseDetailClient({ course }: CourseDetailClientProps) 
                 {/* Account Details Box */}
                 <div className="p-4 bg-gray-50 rounded-xl border border-gray-200 text-xs text-gray-700 space-y-1">
                   <div><strong>Account Number / IBAN:</strong> {
-                    paymentMethod === 'jazzcash' ? PAYMENT_ACCOUNTS.jazzcash.accountNumber :
-                    paymentMethod === 'easypaisa' ? PAYMENT_ACCOUNTS.easypaisa.accountNumber :
-                    PAYMENT_ACCOUNTS.bank.iban
+                    paymentMethod === 'jazzcash' ? paymentAccounts.jazzcash.accountNumber :
+                    paymentMethod === 'easypaisa' ? paymentAccounts.easypaisa.accountNumber :
+                    paymentAccounts.bank.iban
                   }</div>
                   <div><strong>Account Title:</strong> {
-                    paymentMethod === 'bank_transfer' ? PAYMENT_ACCOUNTS.bank.accountTitle : PAYMENT_ACCOUNTS.jazzcash.accountTitle
+                    paymentMethod === 'bank_transfer'
+                      ? paymentAccounts.bank.accountTitle
+                      : paymentMethod === 'easypaisa'
+                      ? paymentAccounts.easypaisa.accountTitle
+                      : paymentAccounts.jazzcash.accountTitle
                   }</div>
                 </div>
 
