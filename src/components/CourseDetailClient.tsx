@@ -34,7 +34,7 @@ interface CourseDetailClientProps {
 
 export default function CourseDetailClient({ course }: CourseDetailClientProps) {
   const [activeLessonIndex, setActiveLessonIndex] = useState(0);
-  const [activeTab, setActiveTab] = useState<'syllabus' | 'eligibility'>('syllabus');
+  const [activeTab, setActiveTab] = useState<'eligibility' | 'syllabus'>('eligibility');
   const [isEnrolled, setIsEnrolled] = useState(false);
   const [showEnrollModal, setShowEnrollModal] = useState(false);
   const eligibility = getCourseEligibility(course);
@@ -177,18 +177,6 @@ export default function CourseDetailClient({ course }: CourseDetailClientProps) 
               <div className="flex border-b border-gray-200 bg-slate-50/70 px-4 sm:px-6 pt-3 gap-2">
                 <button
                   type="button"
-                  onClick={() => setActiveTab('syllabus')}
-                  className={`px-4 py-3 text-xs sm:text-sm font-bold rounded-t-xl border-b-2 transition-all flex items-center gap-2 ${
-                    activeTab === 'syllabus'
-                      ? 'border-[#183B2B] text-[#183B2B] bg-white shadow-sm'
-                      : 'border-transparent text-gray-500 hover:text-gray-800'
-                  }`}
-                >
-                  <FileText className="w-4 h-4" />
-                  <span>Syllabus & Training Roadmap</span>
-                </button>
-                <button
-                  type="button"
                   onClick={() => setActiveTab('eligibility')}
                   className={`px-4 py-3 text-xs sm:text-sm font-bold rounded-t-xl border-b-2 transition-all flex items-center gap-2 ${
                     activeTab === 'eligibility'
@@ -198,6 +186,18 @@ export default function CourseDetailClient({ course }: CourseDetailClientProps) 
                 >
                   <ClipboardCheck className="w-4 h-4 text-emerald-600" />
                   <span>Eligibility Criteria</span>
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setActiveTab('syllabus')}
+                  className={`px-4 py-3 text-xs sm:text-sm font-bold rounded-t-xl border-b-2 transition-all flex items-center gap-2 ${
+                    activeTab === 'syllabus'
+                      ? 'border-[#183B2B] text-[#183B2B] bg-white shadow-sm'
+                      : 'border-transparent text-gray-500 hover:text-gray-800'
+                  }`}
+                >
+                  <FileText className="w-4 h-4" />
+                  <span>Syllabus & Training Roadmap</span>
                 </button>
               </div>
 
